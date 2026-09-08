@@ -1,0 +1,151 @@
+[
+  {
+    "source": "assets\\art\\source\\band_working_01.png",
+    "source_sha256": "7d8296604b1c8eb019a722e56185e33ca70ff0a4d4f2180bfb11a2c6df9cb5fa",
+    "size": [
+      1024,
+      128
+    ],
+    "content_bounds": [
+      0,
+      31,
+      1983,
+      769
+    ],
+    "alpha_method": "source alpha preserved",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "band",
+    "pivot": [
+      0,
+      64.0
+    ],
+    "repeats": 3,
+    "edge_rgba_mean_absolute_error": 3.0078125,
+    "output_sha256": "ce488124fea91e03f1d4f65c3a82cb632d182df6870eaf0562362c0d1ef23d4c",
+    "output": "assets\\art\\bands\\band_working_01.png"
+  },
+  {
+    "source": "assets\\art\\source\\decal_sheet_01.png",
+    "source_sha256": "ec5ce16ec30fc264916c3f9be1bb7832ae2b15a025cd59d5752d8ba1b64e8099",
+    "size": [
+      1024,
+      1024
+    ],
+    "content_bounds": [
+      29,
+      186,
+      1232,
+      1051
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "sheet",
+    "pivot": null,
+    "output_sha256": "83bdbda8ff1348c82950c22c9a25964b568e7adc35baeee19f1f27e5a0797b16",
+    "output": "assets\\art\\decals\\decal_sheet_01.png"
+  },
+  {
+    "source": "assets\\art\\source\\building_mount_01.png",
+    "source_sha256": "0911afe9b3b20c4d71cae44f1597d98ceba9aa6879e87d7caf16558f55eed381",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      95,
+      55,
+      1159,
+      1180
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      617
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.216696269982238,
+    "paste_offset": [
+      13,
+      6
+    ],
+    "pivot_note": "Reviewed projected ground centre; head uses attachment axis.",
+    "output_sha256": "6af33aa18906b167c31db24ec2014660772e2c59d72aed11bc88b19e3d3a7704",
+    "output": "assets\\art\\buildings\\mount_01.png"
+  },
+  {
+    "source": "assets\\art\\source\\head_mass_driver_01.png",
+    "source_sha256": "baf498a6747ef3fd178e4babbabd2bce5e7f9e5da25917573f168f98d3b2bbb5",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      103,
+      50,
+      1149,
+      1189
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      440
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.1628838451268358,
+    "paste_offset": [
+      43,
+      64
+    ],
+    "pivot_note": "Reviewed projected ground centre; head uses attachment axis.",
+    "output_sha256": "d7131f9c55d1440be3a93d4ef564f2313c3ddd14811bcd404a3b7257115a09a8",
+    "output": "assets\\art\\buildings\\head_mass_driver.png"
+  },
+  {
+    "source": "assets\\art\\source\\machine_standard_01.png",
+    "source_sha256": "536a758b136fff5a0b49812a681f13783496e33fb51573264da29ddcc09b6654",
+    "size": [
+      64,
+      64
+    ],
+    "content_bounds": [
+      35,
+      125,
+      1218,
+      1137
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      650
+    ],
+    "pivot": [
+      32.0,
+      32.0
+    ],
+    "scale": 0.05067567567567568,
+    "paste_offset": [
+      2,
+      5
+    ],
+    "pivot_note": "Reviewed projected ground centre; head uses attachment axis.",
+    "output_sha256": "7225aa2a18bac7c796bea23aab583d2147448066bda4e5ad6a93e923fd436741",
+    "output": "assets\\art\\machines\\machine_standard.png"
+  }
+]

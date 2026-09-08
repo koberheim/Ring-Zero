@@ -3392,3 +3392,21 @@ Real, partial success. The octagonal mounting base now reads as a genuine flat t
 Kevin approved `anchor_v2_02.png` (flattest, most shadowless lighting of the three, matching the common block's "flat, even, shadowless" requirement), locked as `assets/art/anchor/anchor_approved.png`. The remaining barrel-length gap is accepted as a property of this asset's shape — a long-projecting weapon inherently shows more length than a squat object would at any camera angle, since it extends outward rather than sitting flat — rather than a camera-angle failure requiring a further correction round. D-123's 20° target is **not** revised; this asset's barrel foreshortening is treated as an acceptable approximation, not evidence the spec is wrong.
 
 **Blocking:** clears T-078 Step 1 (anchor). All later object-category prompts (mount, remaining building heads, machines, elites, Assembler) reference `anchor_approved.png` for wear level, palette and detail density, and its camera angle as the practical (not theoretical-perfect) target.
+
+### D-126 — T-078 pipeline mechanics accepted; asset-level issues deferred
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** T-078; docs/reviews/T-078-vertical-slice.md
+
+**What this is about**
+T-078's own report explicitly declined to claim a full production pass: the generate → normalize → import → review pipeline works and is reusable (4 normalization regression tests, 59/59 existing art-preview tests passing), but three concrete issues were found and reported honestly rather than fudged — the standard machine is ~2px and illegible at strategic zoom, dissolving into mush under dense crowd overlap; the working-tier band strip's tiling seam has a measurable (if not visually obvious) mismatch; and the normalize script's illumination suppression is bounded, not true flat-albedo recovery. Astra verified all three findings directly against the capture images before bringing this to Kevin.
+
+**Resolution - 2026-09-08**
+- **Pipeline mechanics: accepted.** T-078's core question is answered — the pipeline is reusable and proceeds to T-079 (remaining ~30 production assets).
+- **Standard machine legibility: deferred, not dismissed.** The crowd test used deliberately adversarial overlap density, not real in-game spacing, and the "mass at range, individual up close" scale model (§5 of the style guide) explicitly wants standard machines to blend into an undifferentiated tide at strategic zoom rather than stay individually countable — the failure may be partially by design. Re-test once T-074/T-075/T-079 wire up the real sprite renderer with actual pathing-driven spacing before concluding the asset itself needs rework.
+- **Band tiling seam: accepted as-is.** Invisible at every zoom tested in this flat preview fixture; not worth a normalize-script change against a defect with no observed visual consequence yet. Revisit only if T-074's real angular-repeat band renderer exposes it differently than this flat preview did.
+- **Albedo flatness: accepted as a known, bounded limitation** of the current normalization approach, per the report's own honest framing — not silently relied upon as if it were physically correct.
+
+**Blocking:** clears T-079 (remaining production assets) to begin. The machine-legibility and band-seam questions are carried forward as open watch items against T-074/T-075's real renderer, not closed as resolved.
