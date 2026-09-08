@@ -2,11 +2,11 @@
 
 ## Current authority and later review
 
-**Updated:** 2026-09-08. Kevin authorizes feature completion and delegates non-art choices, to be logged and highlighted for later confirmation. This supersedes earlier individual phase/design approval stops. UI direction is explicitly gritty industrial sci-fi; final gameplay art and animations are excluded.
+**Updated:** 2026-09-08. Kevin authorizes feature completion and delegates non-art choices, to be logged and highlighted for later confirmation. This supersedes earlier individual phase/design approval stops. UI direction is explicitly gritty industrial sci-fi. **Final world art direction is now decided (D-120, resolving D-030)** — see `docs/art-direction-style-guide.md` and `docs/art-asset-pipeline.md`. That pass also produced two rule/UI decisions: D-121 (wedge destruction destroys occupants, with salvage refund) and D-122 (Alt-held tactical overlay); both need implementation.
 
 **Status:** Feature implementation and private package verification are complete. All 39 final suites pass; exported Start/build/pause/abandon/Quit/reload passes through owned-window input. Later reviews cover the delegated decisions below, final art and measured large-crowd performance. No new approval is needed to try the candidate.
 
-**Provisional decisions to confirm later:** [D-111 through D-119](docs/reviews/delegated-decisions-2026-09-08.md). D-028/D-029/D-042 and non-art D-032/D-035 details are resolved provisionally there under delegated authority; historical pending entries below are retained as history, not active blockers. D-034 final branding and D-030 final game art remain Kevin's reviews. D-007 final crowd capacity and balance quality remain measured/playtest reviews, not permission blockers for implementation.
+**Provisional decisions to confirm later:** [D-111 through D-119](docs/reviews/delegated-decisions-2026-09-08.md). D-028/D-029/D-042 and non-art D-032/D-035 details are resolved provisionally there under delegated authority; historical pending entries below are retained as history, not active blockers. D-034 final branding remains Kevin's review; **D-030 is now resolved by D-120** (final art direction decided 2026-09-08), with D-121/D-122 raised by that pass and awaiting implementation. D-007 final crowd capacity and balance quality remain measured/playtest reviews, not permission blockers for implementation.
 ## Authority and coverage
 
 ### D-102 — Interim hotkeys and UI usability
@@ -1187,9 +1187,11 @@ Prefer A as a proposed later experiment, never a launch commitment. Kevin must a
 ### D-030 — Choose final art direction
 **Date:** 2026-09-06
 **Tier:** 2
-**Decided by:** PENDING — needs Kevin
-**Status:** 🟡 Awaiting decision
+**Decided by:** Kevin
+**Status:** 🟢 Resolved 2026-09-08 by D-120
 **Source:** §15
+
+**Resolution - 2026-09-08:** Superseded by **D-120**. None of the four original candidates was chosen outright: the decided direction is industrial hardware as the lit figure on a near-black ground, with the painterly candidate's contribution delivered as light and atmosphere (corona bleed through open void) rather than as surface treatment, and the schematic candidate borrowed only as a strategic-zoom state-colouring layer. See `docs/art-direction-style-guide.md`.
 
 **What this is about**
 Art direction is explicitly undecided and reserved for Kevin. Style-agnostic slice placeholders are already authorized but do not settle any production style.
@@ -3225,3 +3227,126 @@ Persist settings/progression and exactly-once reward receipts, with backup recov
 **Source:** §10; D-107,D-110
 
 Transfer gets a private finite-speed path along the skipped ring's inner boundary after its one hop, respecting inner walls/debris; sealed targetless interiors wait for a path. Other machines cannot use this corridor. Preserve current Assembler final-wedge-plus-destroyed-contents collapse growth attribution and reject overflow atomically. This closes rule bypasses without adding hop depth. Shared corridor caching and mixed tests must verify scale/correctness; waiting behavior is a later gameplay review.
+### D-120 — Final art direction
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** §15; resolves D-030; supersedes D-098's exploratory toggle
+
+**What this is about**
+D-030 left final art direction open with four candidates (schematic, industrial, painterly, CRT). D-098 authorized T-049 to build two of them playably for comparison. Kevin's direction was "a combination of industrial-gritty and painterly-awe," which needed turning into concrete, buildable rules — including the value structure the two references actually disagree on.
+
+**Resolution - 2026-09-08**
+Worked through in a structured Q&A pass. Full detail in `docs/art-direction-style-guide.md`; production method in `docs/art-asset-pipeline.md`. The decided direction:
+
+**Identity:** *Lit industrial hardware, painterly light, mostly void.* Structure is the lit figure; space is near-black ground (the industrial reference's value relationship, not the painterly one's — never inverted). The painterly half is delivered as light and atmosphere, not as painted surfaces.
+
+**Rings:** thin structural bands at each ring's outer radius, with radial truss spokes on wedge boundary lines, shared between adjacent wedges. Most of the annulus is open void — that is where turrets project and machines travel. This replaces T-049's wide opaque plates, which are the direct cause of its flat grey strategic view. Turrets mount on the band facing outward. A destroyed wedge's band segment disappears (reappears on repair); a shared spoke is lost only when both adjacent wedges are destroyed. Ring index carries a material/temperature gradient (inner hot/scorched → outer cold/pale). Battle damage persists through repair as patch welds.
+
+**Damage read:** local working lights fail progressively (steady → flicker/amber → dark) as wedge HP falls; exact values come from the Alt overlay (D-122), not the world.
+
+**Star:** one canonical star per run whose corona is a live status display (power draw, brownout, solar cast), drawn from a pool of skins (red giant/yellow/white and variations) randomized on a fresh run and persistent within a continuous run. Consequence: no other colour may depend on a particular star skin. Star dominance shrinks as the player expands outward.
+
+**Void:** corona bleeds outward through the gaps and tapers into a mostly dark starfield.
+
+**Buildings:** one shared generated mount reused under all thirteen buildings; identity lives in distinct heads that telegraph mechanism.
+
+**Horde:** purpose-built harvester-drone species, deliberately simplified (a swarm at heart). Emissive is rank, and cold: standard machines are pure dark silhouettes, elites and the Assembler carry cold cyan/white accents. Elite silhouettes telegraph their mechanic. Scale follows the *They Are Billions* model — an indistinguishable mass at strategic zoom, individuals when zoomed in.
+
+**Colour:** warm belongs to the star and the player; cold belongs to the horde; terrain is desaturated neutral; amber warns, red is critical.
+
+**Lighting:** star key on inward faces, local industrial lamps on outward faces (which is also what makes the damage read free).
+
+**VFX:** distinct per-weapon firing language, drawn procedurally at no image cost — this also settles the approach for the queued T-056. Machine kills are deliberately restrained; wedge and ring loss are loud.
+
+**Terrain:** physical by default, exact zones on the Alt overlay.
+
+**Production:** ~35–45 AI-generated source images, processed to game-ready, with four mandatory consistency mechanisms (style anchor first, fixed prompt templates, post-process normalisation, in-game review gate).
+
+**What this does NOT settle:** final branding/title (D-034), audio, world assets beyond this first pass, and numeric tuning of tier boundaries/salvage/light thresholds (first-pass under D-033).
+
+---
+### D-121 — Wedge destruction destroys its occupants, with salvage refund
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** §§11-12; raised by the D-120 art pass
+
+**What this is about**
+Weapons on a destroyed wedge currently keep firing at full effect — `WeaponRules._step_owned` never checks wedge HP, and occupants are only cleared on full ring collapse. The art pass surfaced this: if a destroyed wedge's band segment disappears, its turrets would be left firing over open space. That is a depiction problem, but the underlying rule was never deliberately decided.
+
+**The options**
+- **Option A:** Keep the rule; depict turrets clinging to surviving spokes.
+- **Option B:** Destroying a wedge destroys everything on it, no refund.
+- **Option C:** Destroying a wedge destroys everything on it, with a partial salvage refund.
+- **Option D:** Weapons die, passive structures and terrain survive.
+
+**Resolution - 2026-09-08**
+Kevin approved **Option C**. A destroyed wedge loses *all* occupants — the five weapon types, Armor Plating, Repair Nodes, and the three terrain items — and returns a fraction of the energy spent on them as salvage.
+
+**What this changes:** a breach now compounds rather than merely opening a hole, making defence in depth substantially more valuable and repair more urgent. The salvage refund keeps it recoverable and hands the player funds exactly when they need to rebuild. The salvage fraction is a new first-pass tuning value under D-033, adjusted by Kevin's play.
+
+**Blocking:** implementation and a balance retune pass; the art direction assumes it (no floating hardware to depict).
+
+---
+### D-122 — Alt-held tactical overlay
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** §§8-9; D-115, D-119; raised by the D-120 art pass
+
+**What this is about**
+Several rules are invisible in the world: continuous wedge HP, terrain effect zones and their exact edges, tractor lane direction, weapon range. The art direction commits to a clean, physical battlefield, which makes "always-on markings" the wrong answer — and T-071 had just finished removing clutter from that same screen space.
+
+**Resolution - 2026-09-08**
+Kevin requested wedge HP bars on a held Alt key; this is adopted as the general pattern. **Holding Alt reveals one tactical layer** carrying every rule the world hides — wedge HP bars, terrain effect zones with exact edges, tractor direction arrows, and weapon range arcs. Normal play stays clean and physical; all hidden numbers are one key away, learned once.
+
+This is the standing pattern going forward: any future invisible rule belongs on the Alt layer rather than becoming permanent world clutter. Complements D-115's UI skin and D-119's strategic-zoom marker suppression rather than replacing either.
+
+**Blocking:** new presentation/input work (does not exist yet); terrain zone legibility in the art guide assumes it.
+
+### D-123 — Camera tilt: 20 degrees from vertical
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** §§1, 15; refines D-008; affects D-120
+
+**What this is about**
+The view has been true top-down (straight down the star's pole) since D-008. Kevin asked to tilt it slightly toward isometric while keeping orientation fixed (no map rotation), and asked for honest feedback on the idea.
+
+**The analysis**
+Implementation is cheap: picking already routes through `get_canvas_transform().affine_inverse()`, so applying the tilt as a Y-scale on the world transform makes rendering, input, ability aiming and slot selection all transform consistently with no math changes.
+
+The honest caveat is what the angle actually buys. Ground-plane foreshortening is `cos(tilt)` and visible object height is `sin(tilt)` per unit:
+
+| Tilt from vertical | Ground squash | Height visible | Sprite-rotation error |
+|---|---|---|---|
+| 15° | 3.4% | 0.26× | negligible |
+| 20° | 6.0% | 0.34× | small |
+| 30° | 13.4% | 0.50× | noticeable |
+| 45° | 29.3% | 0.71× | severe |
+
+At 15-20° the ground plane barely changes — a 3-6% ellipse is imperceptible. Essentially all of the effect comes from objects having visible height, which makes this fundamentally an art change that the camera tilt makes *honest*: faked height in a true top-down view points one way on screen and therefore fights the requirement that sprites rotate to face outward at twelve different bearings.
+
+The cost is that a tilt breaks radial symmetry. In true top-down, one sprite rotated twelve ways is exactly correct; with tilt it becomes an approximation whose error grows with angle. Keeping the angle small is precisely what keeps one-sprite-per-building affordable, protects unbounded-zoom ring readability, and preserves the near-circular mandala silhouette that is the game's signature image.
+
+**Resolution - 2026-09-08**
+**Tilt is 20° from vertical**, orientation stays fixed (no rotation), and the polar grid, coordinates and rules are all unchanged. Compatible with the spec's "2.5D view from above the star's pole" and with D-008's fixed north-up requirement — this refines the projection rather than contradicting it.
+
+- **Buildings use one sprite each, rotated** — the small lean error at 20° is accepted, keeping the D-120 asset budget intact. If it reads badly in engine, the fix is to reduce the angle, not to add art; T-078's review gate catches it on the very first weapon head.
+- **Ring bands and spokes get real depth** — beams and girders with visible side faces, not flat lines. Procedural geometry, so no image cost, and it is where most of the industrial weight comes from. Thickness also gives the damage read somewhere to live: buckling and shearing become visible in profile.
+
+**Implementation notes that follow from the tilt:**
+- The squash applies to the **ground plane only**. The star is a sphere and spheres project as circles from any angle; squashing it globally would make it subtly and incorrectly elliptical. Same for the corona.
+- Draw order becomes painter's algorithm by screen Y so height overlaps resolve correctly.
+- Sprites anchor at their **ground point**, so a building's footprint sits on its true slot position and clicking still matches what the player sees.
+- World-space text — building labels and the D-122 Alt HP bars — must not inherit the squash or the height offset.
+- **Generation specs split by asset type:** flat surface art (band strips, decals, damage) is still generated *flat top-down* because the engine applies the foreshortening; objects (building mount, heads, machines, elites, Assembler) are generated *at 20° from vertical* to match the camera.
+
+**Timing:** raised before T-078 generates anything, so the change costs nothing. After ~40 images existed it would have cost the entire art budget.
+
+**Blocking:** T-074 (ring geometry gains depth), T-080 (camera tilt), and the D-120 pipeline's generation specs.
