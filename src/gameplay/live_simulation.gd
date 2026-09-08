@@ -659,6 +659,13 @@ func _attack_surface(machine: Dictionary, route: Dictionary, staged: Dictionary,
 		events.broken_wedges.append(cell)
 		context.dirty = true
 		if machine.get("kind") == &"assembler": _grant_assembler_growth(machine, 1, profile, context)
+		# A breach destroys its mounted hardware immediately, not only at collapse.
+		var lost_hardware: int = plate.occupants.size() + (1 if plate.has("wall") else 0)
+		context.assimilation_grants += lost_hardware
+		if machine.get("kind") == &"assembler" and lost_hardware > 0: _grant_assembler_growth(machine, lost_hardware, profile, context)
+		plate.occupants = {}
+		plate.erase("wall")
+		plate.max_hp = RingPurchaseRules._dimensions(profile,cell.x).wedge_hp
 		var broken := 0
 		for wedge in staged.rings[cell.x].wedges.values():
 			if wedge.hp == 0: broken += 1

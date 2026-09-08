@@ -24,7 +24,7 @@ static func _completed(time: float, first: float, interval: float) -> float:
 	return maxf(0.0, floorf(units + ARRIVAL_EPSILON) + 1.0)
 
 static func arrivals_between(profile: BalanceProfile, start_seconds: float, end_seconds: float) -> Dictionary:
-	if profile == null or not BalanceProfile.from_dict(profile.snapshot()).ok:
+	if profile == null or not profile.is_validated():
 		return _arrival_failure("Invalid balance profile")
 	if not is_finite(start_seconds) or not is_finite(end_seconds) or start_seconds < 0 or end_seconds < start_seconds:
 		return _arrival_failure("Arrival interval must be finite and satisfy 0 <= start <= end")
@@ -40,7 +40,7 @@ static func arrivals_between(profile: BalanceProfile, start_seconds: float, end_
 	return {"ok": true, "first_sequence": previous_count + 1, "count": int(completed) - previous_count, "errors": PackedStringArray()}
 
 static func spawn_descriptor(profile: BalanceProfile, sequence: int, outer_ring: int) -> Dictionary:
-	if profile == null or not BalanceProfile.from_dict(profile.snapshot()).ok:
+	if profile == null or not profile.is_validated():
 		return _failure(PackedStringArray(["Invalid balance profile"]))
 	if sequence < 1 or outer_ring < 0:
 		return _failure(PackedStringArray(["Sequence must be positive and outer ring nonnegative"]))

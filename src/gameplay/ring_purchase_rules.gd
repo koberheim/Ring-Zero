@@ -8,7 +8,7 @@ static func number(value: Variant) -> bool:
 	return (typeof(value) == TYPE_INT or typeof(value) == TYPE_FLOAT) and is_finite(float(value))
 
 static func valid_profile(profile: BalanceProfile) -> bool:
-	return profile != null and BalanceProfile.from_dict(profile.snapshot()).ok
+	return profile != null and profile.is_validated()
 
 static func validate_state(state: Dictionary, profile: BalanceProfile) -> PackedStringArray:
 	if not valid_profile(profile):

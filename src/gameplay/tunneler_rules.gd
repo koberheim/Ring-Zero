@@ -21,7 +21,7 @@ static func _completed(time: float, first: float, interval: float) -> float:
 	return maxf(0.0, floorf(units + ARRIVAL_EPSILON) + 1.0)
 
 static func arrivals_between(profile: BalanceProfile, start_seconds: float, end_seconds: float) -> Dictionary:
-	if profile == null or not BalanceProfile.from_dict(profile.snapshot()).ok:
+	if profile == null or not profile.is_validated():
 		return _arrival_failure("Invalid balance profile")
 	if not is_finite(start_seconds) or not is_finite(end_seconds) or start_seconds < 0 or end_seconds < start_seconds:
 		return _arrival_failure("Arrival interval must be finite and satisfy 0 <= start <= end")

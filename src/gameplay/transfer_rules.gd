@@ -15,7 +15,7 @@ static func _failure(message: String) -> Dictionary:
 	return {"ok": false, "spawn": null, "errors": PackedStringArray([message])}
 
 static func _valid_profile(profile: BalanceProfile) -> bool:
-	return profile != null and BalanceProfile.from_dict(profile.snapshot()).ok
+	return profile != null and profile.is_validated()
 
 static func _completed(time: float, first: float, interval: float) -> float:
 	if time == 0.0: return 0.0

@@ -7,7 +7,7 @@ const INTEGER_LIMIT_EXCLUSIVE := 9223372036854775808.0
 const MAX_INTEGER := 9223372036854775807
 
 static func _valid_profile(profile: BalanceProfile) -> bool:
-	return profile != null and BalanceProfile.from_dict(profile.snapshot()).ok
+	return profile != null and profile.is_validated()
 
 static func _failure(message: String, field: String) -> Dictionary:
 	return {"ok": false, field: null, "errors": PackedStringArray([message])}

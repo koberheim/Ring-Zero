@@ -1141,7 +1141,7 @@ func _tunneler_checks() -> void:
 	_ticks_ok(wall, 1, "Underfoot wedge destruction")
 	var wall_id: int = wall.pool.active_ids()[0]
 	_check(wall.last_events.broken_wedges == [Vector2i(1, 12)] and wall.pool.payload_for(wall_id).phase == &"roaming", "Wedge breaker transitions to normal roaming")
-	_check(wall.state.rings[1].wedges[12].has("wall") and not WallRules.is_blocking(wall.state, 1, 12), "Broken support retains inactive nonblocking wall record")
+	_check(not wall.state.rings[1].wedges[12].has("wall") and not WallRules.is_blocking(wall.state, 1, 12), "Release breach destroys unsupported wall rather than retaining a repair resurrection")
 	_ticks_ok(wall, 40, "Roaming reaches core from inner gap")
 	_check(wall.core_hp < 200, "Post-break Tunneler applies normal core pressure")
 	var changed := _tunnel_sim()

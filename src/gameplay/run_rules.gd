@@ -3,6 +3,7 @@ extends RefCounted
 
 const CAMPAIGN_PATH := "res://data/balance/campaign.json"
 const MAX_SAFE_INTEGER := 9007199254740991
+const OPERATION_SECONDS := 900.0
 const WEAPONS: Array[StringName] = [&"flak", &"mass_driver", &"point_defense", &"emp_node", &"lance_emitter"]
 
 static func _failure(message: String) -> Dictionary:
@@ -165,12 +166,13 @@ static func create_run(base: BalanceProfile, choices: Dictionary, progress: Dict
 
 static func reward(summary: Dictionary, multiplier: float = 1.0) -> Dictionary:
 	var fail := {"ok": false, "errors": PackedStringArray(["Invalid run summary or reward multiplier"]), "amount": 0, "breakdown": {}}
-	if summary.size() != 5 or summary.get("outcome") not in ["defeat", "abandoned", "error", "practice"] or not RingPurchaseRules.number(summary.get("elapsed_seconds")) or summary.elapsed_seconds < 0 or not is_finite(multiplier) or multiplier < 0: return fail
+	if summary.size() != 5 or summary.get("outcome") not in ["victory", "defeat", "abandoned", "error", "practice"] or not RingPurchaseRules.number(summary.get("elapsed_seconds")) or summary.elapsed_seconds < 0 or not is_finite(multiplier) or multiplier < 0: return fail
 	for key in ["kills", "highest_ring", "relay_rebuilds"]:
 		if typeof(summary.get(key)) != TYPE_INT or not _whole(summary[key], 1 if key == "highest_ring" else 0): return fail
 	var data := _campaign()
 	if data.is_empty(): return fail
-	if summary.outcome != "defeat": return {"ok": true, "errors": PackedStringArray(), "amount": 0, "breakdown": {"eligible": false, "outcome": summary.outcome}}
+	if summary.outcome not in ["defeat", "victory"]: return {"ok": true, "errors": PackedStringArray(), "amount": 0, "breakdown": {"eligible": false, "outcome": summary.outcome}}
+	if summary.outcome == "victory" and summary.elapsed_seconds < OPERATION_SECONDS: return fail
 	var r: Dictionary = data.rules.reward
 	var breakdown := {"survival": floorf(float(summary.elapsed_seconds) / r.seconds_per_unit) * r.survival_per_unit, "kills": floorf(float(summary.kills) / r.kills_per_unit), "rings": r.ring_bonus * maxi(0, summary.highest_ring - 1), "survive_300": r.survival_challenge_bonus if summary.elapsed_seconds >= r.survival_challenge_seconds else 0.0, "kills_250": r.kill_challenge_bonus if summary.kills >= r.kill_challenge_count else 0.0, "rebuild_relay": r.relay_challenge_bonus if summary.relay_rebuilds >= r.relay_challenge_count else 0.0}
 	var subtotal := 0.0

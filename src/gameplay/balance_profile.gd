@@ -143,6 +143,8 @@ const SCHEMA: Dictionary = {
 }
 
 var _data: Dictionary = {}
+var _scalar_values: Dictionary = {}
+var _validated := false
 
 
 static func from_dict(raw: Dictionary) -> Dictionary:
@@ -153,6 +155,13 @@ static func from_dict(raw: Dictionary) -> Dictionary:
 		return _failure(errors)
 	var profile := BalanceProfile.new()
 	profile._data = candidate
+	profile._validated = true
+	for group in candidate:
+		if candidate[group] is Dictionary:
+			for key in candidate[group]:
+				var value: Variant = candidate[group][key]
+				if not value is Dictionary and not value is Array:
+					profile._scalar_values[String(group)+"."+String(key)] = value
 	return {"ok": true, "profile": profile, "errors": errors}
 
 
@@ -188,8 +197,14 @@ func with_overrides(overrides: Dictionary) -> Dictionary:
 func snapshot() -> Dictionary:
 	return _data.duplicate(true)
 
+func is_validated() -> bool:
+	# Profiles only enter through from_dict; overrides construct a new profile.
+	# Public reads return scalars or copies, so validation remains valid for life.
+	return _validated
+
 
 func value(path: String) -> Variant:
+	if _scalar_values.has(path): return _scalar_values[path]
 	var current: Variant = _data
 	for part in path.split("."):
 		if not current is Dictionary or not current.has(part):
