@@ -127,7 +127,7 @@ func marker(tick: int, event: String, data: Dictionary = {}) -> Dictionary:
 	return _append(tick, {"type":"marker", "event":event, "data":data.duplicate(true)})
 
 func finish(tick: int, outcome: String, summary: Dictionary) -> Dictionary:
-	if outcome not in ["defeat", "abandoned", "error", "practice"]: return _recording_failure("Invalid trace outcome")
+	if outcome not in ["victory", "defeat", "abandoned", "error", "practice"]: return _recording_failure("Invalid trace outcome")
 	var result := _append(tick, {"type":"end", "outcome":outcome, "summary":summary.duplicate(true)})
 	if result.ok: _finished = true
 	return result
@@ -199,7 +199,7 @@ static func load_trace(path: String) -> Dictionary:
 		elif row.get("type") == "marker":
 			if row.get("event") not in ["pause", "resume", "error", "abandon", "diagnostic"] or not row.get("data") is Dictionary: return _failure("Invalid marker")
 		elif row.get("type") == "end":
-			if row.get("outcome") not in ["defeat", "abandoned", "error", "practice"] or not row.get("summary") is Dictionary: return _failure("Invalid end record")
+			if row.get("outcome") not in ["victory", "defeat", "abandoned", "error", "practice"] or not row.get("summary") is Dictionary: return _failure("Invalid end record")
 			complete = true
 		else: return _failure("Unknown record type")
 		row.tick = int(row.tick)

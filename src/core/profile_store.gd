@@ -5,7 +5,7 @@ extends RefCounted
 const MAX_EXACT := 9007199254740991
 const HISTORY_LIMIT := 128
 const DEFAULT_PATH := "user://profile.json"
-const KEYS := ["version", "currency", "unlocks", "upgrades", "settings", "tutorial_completed", "next_run_id", "pending_run_id", "settled_run_ids", "settled_run_amounts", "revision"]
+const KEYS := ["version", "currency", "unlocks", "upgrades", "settings", "tutorial_completed", "next_run_id", "pending_run_id", "settled_run_ids", "settled_run_amounts", "revision", "achievements"]
 
 static func defaults() -> Dictionary:
 	return {"version":1, "revision":0, "currency":0, "unlocks":[], "upgrades":{}, "settings":{"fullscreen":false, "ui_scale":1.0, "reduced_motion":false, "effects":true}, "tutorial_completed":false, "next_run_id":1, "pending_run_id":"", "settled_run_ids":[], "settled_run_amounts":{}}
@@ -38,12 +38,19 @@ static func validate(profile: Dictionary) -> Dictionary:
 	for key in profile:
 		if key not in KEYS: return _fail("Unknown profile field: %s" % key)
 	for key in KEYS:
-		if key not in ["settled_run_amounts", "revision"] and not profile.has(key): return _fail("Missing profile field: %s" % key)
+		if key not in ["settled_run_amounts", "revision", "achievements"] and not profile.has(key): return _fail("Missing profile field: %s" % key)
 	if not _integer(profile.version, 1, 1): return _fail("Unsupported profile version; preserve the file and use a compatible application")
 	if not _integer(profile.currency, 0, MAX_EXACT) or not _integer(profile.next_run_id, 1, MAX_EXACT): return _fail("Invalid currency or run counter")
 	if typeof(profile.tutorial_completed) != TYPE_BOOL: return _fail("Invalid tutorial flag")
 	if typeof(profile.unlocks) != TYPE_ARRAY or typeof(profile.upgrades) != TYPE_DICTIONARY or typeof(profile.settings) != TYPE_DICTIONARY or typeof(profile.settled_run_ids) != TYPE_ARRAY: return _fail("Invalid profile collection types")
 	var result := profile.duplicate(true)
+	var achievements: Variant = result.get("achievements",[])
+	if not achievements is Array or achievements.size() > AchievementHooks.IDS.size(): return _fail("Invalid achievements")
+	var achievement_seen := {}
+	for id in achievements:
+		if id not in AchievementHooks.IDS or achievement_seen.has(id): return _fail("Invalid or duplicate achievement")
+		achievement_seen[id] = true
+	result.achievements = achievements.duplicate()
 	if not _integer(result.get("revision", 0), 0, MAX_EXACT): return _fail("Invalid profile revision")
 	result.revision = int(result.get("revision", 0))
 	result.currency = int(result.currency)
