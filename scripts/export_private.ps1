@@ -59,6 +59,11 @@ try {
         Copy-Item -LiteralPath (Join-Path $exportRoot "assets/ui/fonts/barlow/$notice") -Destination (Join-Path $fontNotices $notice)
     }
     Copy-Item -LiteralPath (Join-Path $exportRoot 'data/build_info.json') -Destination (Join-Path $exportDirectory 'build_info.json')
+    $engineNotices = Join-Path $exportDirectory 'licenses/godot'
+    $null = New-Item -ItemType Directory -Path $engineNotices -Force
+    foreach ($notice in @('LICENSE.txt','THIRD-PARTY.txt')) {
+        Copy-Item -LiteralPath (Join-Path $exportRoot "assets/licenses/godot/$notice") -Destination (Join-Path $engineNotices $notice)
+    }
     Write-Output "Private build: $(Join-Path $exportDirectory 'RingZero.exe') (keep adjacent exported files). Not published."
 } finally {
     $env:APPDATA = $oldAppData
