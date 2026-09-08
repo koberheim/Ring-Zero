@@ -1,6 +1,8 @@
 # RING ZERO — Production Prompt Templates, v1
 
 **Status:** Locked for T-078 (pipeline vertical slice). Per `docs/art-asset-pipeline.md` §3.2 — versioned alongside the assets they produce. Do not edit in place once assets exist against this version; copy to v2 instead, so regenerating an old asset later still matches what shipped.
+
+**Correction (2026-09-08, before any asset accepted):** the original object-camera phrasing — "20° from vertical" — was too abstract and produced five anchor candidates all rendered at roughly a 40–60° hero-shot elevation instead of the intended near-overhead view. None had been locked in yet, so this is edited in place rather than bumped to v2; the object-camera block below replaces the old phrasing everywhere it appeared. Candidate #4's *design* (wear level, panel density, intake-port depth, hazard striping) was approved on its merits — only the angle needs a redo.
 **Differs from the mockup brief:** `docs/art-mockup-brief.md` produced full dramatic scene composites for direction review. These templates produce **isolated, flat-lit, single-subject** source images meant to become actual game assets. Do not reuse mockup-brief phrasing here — the lighting and framing rules are opposite on purpose (baked scene lighting must never end up on a production asset that has to relight dynamically in engine).
 
 ---
@@ -26,7 +28,29 @@ NEGATIVE   no text, no logos, no UI, no characters, no scene lighting,
 ## Camera split (D-123) — read this before generating anything
 
 - **Flat surface categories** (band strip, decal sheet) → **flat, direct top-down, orthographic.** They lie on a surface the engine foreshortens; pre-tilting them bakes the squash in twice.
-- **Object categories** (mount, building head, machine) → **20° from vertical**, matching the in-game camera. Every object in this version must use the *same* 20° and the *same* nominal facing (imagine the object's "front" pointing toward the bottom of frame) — they will be rotated in-engine to face outward at twelve bearings, and inconsistent facing between assets will show.
+- **Object categories** (mount, building head, machine) → the **locked object-camera block** below, matching the in-game camera. Every object in this version must use the *same* angle and the *same* nominal facing — they will be rotated in-engine to face outward at twelve bearings, and inconsistent facing between assets will show.
+
+**Locked object-camera block** (referenced as `[OBJECT CAMERA]` in every object template below):
+
+```
+CAMERA     bird's-eye drone shot from nearly directly overhead, tilted
+           only slightly off straight-down — NOT a hero shot, NOT a
+           three-quarter view, NOT eye-level, NOT an oblique angle
+FRAMING    you are looking down at the TOP of the object. Roughly 80-90%
+           of the visible surface is the top face; only a thin strip of
+           front-facing geometry is visible at the near edge, like the
+           lip of a manhole cover or a turret cupola seen from a
+           quadcopter almost directly above it
+RATIO      visible front-face height should be no more than 1/4 of the
+           visible top-face depth — if the front face dominates the
+           image the angle is wrong, regenerate
+FACING     object's front points toward the bottom of frame
+NEGATIVE   no hero angle, no product-shot angle, no eye-level camera,
+           no three-quarter perspective, no view that shows the object's
+           full front face or side elevation
+```
+
+This was tightened after the first anchor pass produced a much steeper hero-shot angle across all five candidates — the abstract phrase "20° from vertical" alone did not reliably constrain the generator. If a generated image still comes back closer to a hero shot than to a drone-overhead shot, reject and regenerate rather than accepting it as close enough.
 
 ---
 
@@ -36,7 +60,7 @@ NEGATIVE   no text, no logos, no UI, no characters, no scene lighting,
 
 ```
 [COMMON BLOCK]
-CAMERA    20° from vertical, object facing toward bottom of frame
+[OBJECT CAMERA]
 SUBJECT   a single turret head — twin-barrel mass driver rail assembly,
           heavy and mechanical — mounted on an armoured industrial base
           with visible cable runs, anchor bolts and hazard-striped edge
@@ -85,7 +109,7 @@ Output: `assets/art/source/decal_sheet_01.png`.
 
 ```
 [COMMON BLOCK]
-CAMERA    20° from vertical, facing toward bottom of frame
+[OBJECT CAMERA]
 SUBJECT   a bare armoured turret mounting base — no weapon or head
           attached — with a rotating ring collar, cable runs, anchor
           bolts, and a socket/interface where a head assembly would
@@ -102,8 +126,7 @@ Same subject as the approved anchor, generated as a standalone head (no base) si
 
 ```
 [COMMON BLOCK]
-CAMERA    20° from vertical, facing toward bottom of frame — identical
-          angle and facing to the building mount
+[OBJECT CAMERA] — identical angle and facing to the building mount
 SUBJECT   a twin-barrel mass driver rail assembly, heavy and mechanical,
           reads unmistakably as "long-range heavy weapon" by silhouette
           alone — long heavy rail, minimal ornamentation
@@ -121,7 +144,7 @@ Output: `assets/art/source/head_mass_driver_01.png`.
 
 ```
 [COMMON BLOCK]
-CAMERA    20° from vertical, facing toward bottom of frame
+[OBJECT CAMERA]
 SUBJECT   a small blunt harvester drone — von Neumann machine swarm
           unit — intake maw at the front, a grinding/processing head,
           a compact collection bay, small fixed solar vanes. Simple,
