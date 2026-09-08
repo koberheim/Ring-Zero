@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+Rendered fixture started effects=false vsync=1 initial={"active":1000,"assimilated":334,"burrowing":71,"hopped":0,"kinds":{"assembler":143,"breacher":143,"foundry":143,"normal":143,"sapper":143,"transfer":143,"tunneler":142},"roaming":0,"stunned":200,"surface_attack":71}
+Measured sample=0 wall_ms=215.246 ticks=8
+Measured sample=20 wall_ms=187.76 ticks=7
+Measured sample=40 wall_ms=198.764 ticks=8
+Measured sample=60 wall_ms=203.093 ticks=8
+Measured sample=80 wall_ms=192.307 ticks=8
+Measured sample=100 wall_ms=209.815 ticks=9
+{"draw_submission_ms":{"max":6.546,"median":6.1575,"p90":6.368},"effects":false,"final":{"active":1000,"assimilated":0,"burrowing":0,"hopped":143,"kinds":{"assembler":143,"breacher":143,"foundry":143,"normal":143,"sapper":143,"transfer":143,"tunneler":142},"roaming":0,"stunned":0,"surface_attack":142},"frames":{"max":234.531,"median":198.582,"p90":213.39},"max_live_effects":0,"raw_frame_ms":[215.246,231.013,187.659,234.531,210.765,210.569,209.668,214.063,213.24,208.653,213.699,210.572,207.231,206.86,203.945,205.625,207.384,208.808,212.368,213.734,187.76,213.356,231.392,204.583,183.744,207.261,230.593,210.281,207.741,208.745,211.23,218.869,205.207,203.067,207.318,210.707,210.297,205.322,203.25,177.664,198.764,226.381,197.463,175.833,199.674,218.302,202.885,199.081,198.4,198.335,199.633,199.116,199.15,196.462,198.044,175.238,206.377,203.619,226.605,201.231,203.093,205.498,197.915,199.996,200.821,195.495,174.329,195.318,213.39,189.641,167.918,191.609,212.553,191.349,190.733,191.498,196.114,169.078,191.258,212.495,192.307,200.573,192.871,190.386,186.96,190.731,188.285,191.956,189.824,189.885,191.511,190.053,192.326,188.293,188.709,187.021,188.08,190.173,165.806,186.805,209.815,193.686,188.444,186.989,185.112,164.746,190.405,207.525,186.817,186.425,192.411,188.927,187.64,187.79,184.313,185.359,185.419,165.689,206.888,187.982],"simulated_seconds":16.0,"simulation_callback_ms":{"max":213.031,"median":177.1265,"p90":191.891},"simulation_wall_ratio":0.671432156396692,"sync_ms":{"max":8.61,"median":7.7605,"p90":8.128},"ticks_per_frame":{"max":9,"median":8.0,"p90":8},"wall_seconds":23.82966}

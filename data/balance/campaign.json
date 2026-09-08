@@ -1,0 +1,385 @@
+{
+  "doctrines": {
+    "conservator": {
+      "label": "Conservator",
+      "description": "Repair and Reclaim cost 25% less; armor bonus +25%; weapon damage -10%.",
+      "modifiers": [
+        {
+          "path": "economy.repair_discount",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "economy.reclaim_discount",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "structure.armor_plating_hp_bonus",
+          "factor": 1.25,
+          "rounding": "none"
+        },
+        {
+          "path": "flak.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "mass_driver.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "emp_node.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "lance_emitter.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "point_defense.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        }
+      ]
+    },
+    "prospector": {
+      "label": "Prospector",
+      "description": "Kill energy +50% (rounded); wedge HP -20%.",
+      "modifiers": [
+        {
+          "path": "economy.kill_energy",
+          "factor": 1.5,
+          "rounding": "nearest"
+        },
+        {
+          "path": "health.wedge_base_hp",
+          "factor": 0.8,
+          "rounding": "none"
+        }
+      ]
+    },
+    "interdictor": {
+      "label": "Interdictor",
+      "description": "Terrain costs 25% less; Screen slow is stronger; weapon damage -10%.",
+      "modifiers": [
+        {
+          "path": "economy.debris_field_cost",
+          "factor": 0.75,
+          "rounding": "ceil"
+        },
+        {
+          "path": "economy.tractor_lane_cost",
+          "factor": 0.75,
+          "rounding": "ceil"
+        },
+        {
+          "path": "economy.occlusion_screen_cost",
+          "factor": 0.75,
+          "rounding": "ceil"
+        },
+        {
+          "path": "occlusion_screen.speed_multiplier",
+          "factor": 0.8,
+          "rounding": "none"
+        },
+        {
+          "path": "flak.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "mass_driver.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "emp_node.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "lance_emitter.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        },
+        {
+          "path": "point_defense.damage",
+          "factor": 0.9,
+          "rounding": "none"
+        }
+      ]
+    }
+  },
+  "loadouts": {
+    "balanced": {
+      "label": "Balanced",
+      "description": "Start with one Flak and 200 energy.",
+      "weapon": "flak",
+      "wall": false
+    },
+    "bulwark": {
+      "label": "Bulwark",
+      "description": "Start with Flak and a wall on wedge 12; pay the wall cost from starting energy.",
+      "weapon": "flak",
+      "wall": true
+    },
+    "battery": {
+      "label": "Battery",
+      "description": "Start with a Mass Driver instead of Flak; pay the positive price difference.",
+      "weapon": "mass_driver",
+      "wall": false
+    }
+  },
+  "mutators": {
+    "dense_swarm": {
+      "label": "Dense Swarm",
+      "description": "Normal arrival rate +50%; rewards +25%.",
+      "modifiers": [
+        {
+          "path": "pressure.spawn_per_second",
+          "factor": 1.5,
+          "rounding": "none"
+        }
+      ],
+      "reward_multiplier": 1.25
+    },
+    "fragile_core": {
+      "label": "Fragile Core",
+      "description": "Core HP -25%; rewards +20%.",
+      "modifiers": [
+        {
+          "path": "health.core_hp",
+          "factor": 0.75,
+          "rounding": "none"
+        }
+      ],
+      "reward_multiplier": 1.2
+    },
+    "rapid_elites": {
+      "label": "Rapid Elites",
+      "description": "All elite and boss schedule times -25%; rewards +25%.",
+      "modifiers": [
+        {
+          "path": "tunneler.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "tunneler.arrival_interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "foundry.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "foundry.arrival_interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "transfer.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "transfer.arrival_interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "sapper.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "sapper.arrival_interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "breacher.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "breacher.arrival_interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "assembler.first_arrival_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        },
+        {
+          "path": "assembler.interval_seconds",
+          "factor": 0.75,
+          "rounding": "none"
+        }
+      ],
+      "reward_multiplier": 1.25
+    }
+  },
+  "unlocks": {
+    "emp_node": {
+      "label": "EMP Node",
+      "description": "Unlock EMP Node for future runs.",
+      "cost": 25,
+      "category": "build",
+      "target": "emp_node"
+    },
+    "tractor_lane": {
+      "label": "Tractor Lane",
+      "description": "Unlock Tractor Lane for future runs.",
+      "cost": 25,
+      "category": "build",
+      "target": "tractor_lane"
+    },
+    "occlusion_screen": {
+      "label": "Occlusion Screen",
+      "description": "Unlock Occlusion Screen for future runs.",
+      "cost": 40,
+      "category": "build",
+      "target": "occlusion_screen"
+    },
+    "lance_emitter": {
+      "label": "Lance Emitter",
+      "description": "Unlock Lance Emitter for future runs.",
+      "cost": 50,
+      "category": "build",
+      "target": "lance_emitter"
+    },
+    "focused_flare": {
+      "label": "Focused Flare",
+      "description": "Unlock Focused Flare for future runs.",
+      "cost": 50,
+      "category": "ability",
+      "target": "focused_flare"
+    },
+    "bulwark": {
+      "label": "Bulwark",
+      "description": "Unlock Bulwark for future runs.",
+      "cost": 25,
+      "category": "loadout",
+      "target": "bulwark"
+    },
+    "battery": {
+      "label": "Battery",
+      "description": "Unlock Battery for future runs.",
+      "cost": 25,
+      "category": "loadout",
+      "target": "battery"
+    }
+  },
+  "upgrades": {
+    "core_hp": {
+      "label": "Core reinforcement",
+      "description": "+5% base HP per level.",
+      "max_level": 3,
+      "costs": [
+        25,
+        50,
+        75
+      ],
+      "path": "health.core_hp",
+      "amount": 0.05,
+      "operation": "percent"
+    },
+    "wedge_hp": {
+      "label": "Wedge reinforcement",
+      "description": "+5% base HP per level.",
+      "max_level": 3,
+      "costs": [
+        25,
+        50,
+        75
+      ],
+      "path": "health.wedge_base_hp",
+      "amount": 0.05,
+      "operation": "percent"
+    },
+    "starting_energy": {
+      "label": "Starting reserve",
+      "description": "+10 starting energy per level.",
+      "max_level": 3,
+      "costs": [
+        25,
+        50,
+        75
+      ],
+      "path": "",
+      "amount": 10,
+      "operation": "energy"
+    }
+  },
+  "reference": {
+    "normal": {
+      "label": "Standard machine",
+      "description": "Surface attacker: walls funnel it; close complete seals take reduced wall damage."
+    },
+    "foundry": {
+      "label": "Foundry",
+      "description": "Slow, durable surface attacker. Counter with Mass Drivers and focused fire."
+    },
+    "transfer": {
+      "label": "Transfer",
+      "description": "Hops past one ring, then follows ordinary defenses. Counter with defense in depth."
+    },
+    "sapper": {
+      "label": "Sapper",
+      "description": "Attacks exposed ring relays; loss browns out the outward chain. Camps at a dead relay, threatening Rebuild Relay, until topology changes or it is killed. Counter with Point Defense."
+    },
+    "breacher": {
+      "label": "Breacher",
+      "description": "Seeks walls and damages them at full rate. Use wall redundancy and area denial."
+    },
+    "tunneler": {
+      "label": "Tunneler",
+      "description": "Immune underground; attacks an inner wedge after surfacing. Counter with inner Point Defense and solar abilities."
+    },
+    "assembler": {
+      "label": "Assembler",
+      "description": "Boss ignores walls and permanently gains HP/damage from its own destruction. Use focused fire before growth."
+    }
+  },
+  "rules": {
+    "starting_energy": 200,
+    "starter_build_modes": [
+      "flak",
+      "mass_driver",
+      "point_defense",
+      "debris_field"
+    ],
+    "structural_modes": [
+      "expand",
+      "wall",
+      "armor",
+      "repair_node",
+      "repair",
+      "reclaim",
+      "rebuild_relay"
+    ],
+    "starter_abilities": [
+      "emp_burst"
+    ],
+    "reward": {
+      "seconds_per_unit": 60,
+      "survival_per_unit": 2,
+      "kills_per_unit": 25,
+      "ring_bonus": 5,
+      "survival_challenge_seconds": 300,
+      "survival_challenge_bonus": 10,
+      "kill_challenge_count": 250,
+      "kill_challenge_bonus": 10,
+      "relay_challenge_count": 1,
+      "relay_challenge_bonus": 5
+    }
+  }
+}

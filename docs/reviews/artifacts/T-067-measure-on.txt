@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+Rendered fixture started effects=true vsync=1 initial={"active":1000,"assimilated":334,"burrowing":71,"hopped":0,"kinds":{"assembler":143,"breacher":143,"foundry":143,"normal":143,"sapper":143,"transfer":143,"tunneler":142},"roaming":0,"stunned":200,"surface_attack":71}
+Measured sample=0 wall_ms=291.094 ticks=8
+Measured sample=20 wall_ms=282.281 ticks=8
+Measured sample=40 wall_ms=279.702 ticks=8
+Measured sample=60 wall_ms=267.374 ticks=8
+Measured sample=80 wall_ms=259.867 ticks=8
+Bounded probe failure sample=98 active=1000 error=

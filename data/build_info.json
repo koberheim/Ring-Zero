@@ -1,0 +1,894 @@
+{
+    "format":  1,
+    "build_id":  "b1df72c682cb1405d76422f67998cfdbffc2e858662c6a1b120e0507bd4f8fb3",
+    "frozen":  true,
+    "generated_utc":  "2026-09-08T11:12:11.9153015Z",
+    "engine":  "4.7.2.stable",
+    "source_files":  221,
+    "source_inventory":  [
+                             {
+                                 "path":  "assets/art/mockups/gritty_industrial_mockup.png",
+                                 "sha256":  "d3fab00ea40db6acd3b8f5dabe4b56efe2428a957613c86e37c4b0952abe4ead"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/gritty_industrial_mockup.png.import",
+                                 "sha256":  "ceffa1ffa7712283ac398742339a1867bedf57e53688f6a26a8d9ac6e0ae79e2"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/painterly_awe_mockup.png",
+                                 "sha256":  "5696fde932ccb34eac11dcce3147ac846dc35d1a6485c224304a6244b55af8ee"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/painterly_awe_mockup.png.import",
+                                 "sha256":  "d584948b1933ad418edb494bf9aeaeca9d578ce08abbef90102b5f70bcf68d27"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/schematic_readout_mockup.png",
+                                 "sha256":  "21d258b5bfaee367864be9cb30f78f2f5452641d9737128e1eea6ce52b328704"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/schematic_readout_mockup.png.import",
+                                 "sha256":  "eab9776ffcc5de98cf899ce317a0eb3eb5e29f25ae1e4877c1d646258ad4af7d"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/wide_establishing_legibility_mockup.png",
+                                 "sha256":  "91b11448a0a918c36cd3a2684d8008d4204158746971f20229a69da028bcbc7d"
+                             },
+                             {
+                                 "path":  "assets/art/mockups/wide_establishing_legibility_mockup.png.import",
+                                 "sha256":  "9781ce0c29fb065c17f8719dbce283ec8294c046168094efbfb493c1ec6c3d7b"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/Barlow-Regular.ttf",
+                                 "sha256":  "95aa02c7c43096e0dd44d787ba6216864a67157e402adab59b35572e0c1577ea"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/Barlow-Regular.ttf.import",
+                                 "sha256":  "0b578a663ce6605540409e5cd48cc26e10ceeb98eca21c53bbb9f1fc7f64b1ed"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/Barlow-SemiBold.ttf",
+                                 "sha256":  "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/Barlow-SemiBold.ttf.import",
+                                 "sha256":  "16eba9abbc6d53a2345b8231dd63869a9cbf8f473980c5b79506aa5720f40229"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/BarlowSemiCondensed-SemiBold.ttf",
+                                 "sha256":  "bd299f4bc5b44d30be8d42e9bad3a5df7d66af1cd55d0ed72a8b8916360a1424"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/BarlowSemiCondensed-SemiBold.ttf.import",
+                                 "sha256":  "99c3016d7328f06a8b0aee94d198434f6eb57f0c6ac3307540951d51c3f82e6a"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/OFL.txt",
+                                 "sha256":  "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+                             },
+                             {
+                                 "path":  "assets/ui/fonts/barlow/PROVENANCE.md",
+                                 "sha256":  "abc9ea63d6739cda4f52fdbd17e53191f5cdca3b6525dc50ea8c06182c69edd3"
+                             },
+                             {
+                                 "path":  "data/balance/campaign.json",
+                                 "sha256":  "294c87ad51cf436b2496201c393b150b1bda9332cc380814db8cfe9f7caaf937"
+                             },
+                             {
+                                 "path":  "data/balance/testing.json",
+                                 "sha256":  "5594846fe7f2e97b89fe5b8ece9b8e5cc9db0af8934aa6a4fde0fe03d770a8bf"
+                             },
+                             {
+                                 "path":  "export_presets.cfg",
+                                 "sha256":  "044bfb64ea5b943a4105bf8cdf8920e0ef607ecb91afeac5c7a2a675172dbf1f"
+                             },
+                             {
+                                 "path":  "project.godot",
+                                 "sha256":  "09008f9454500eeb6aa2e5bfbc521b612cc4b6bd334f85066cce3d8e31c01d34"
+                             },
+                             {
+                                 "path":  "scenes/application.tscn",
+                                 "sha256":  "91a5ba606efa0e197041a845639504148cb5a6283cbf20d0c0afc24c5552aa60"
+                             },
+                             {
+                                 "path":  "scenes/art_preview.tscn",
+                                 "sha256":  "ce6b96bf9e6bcf52a715e52bbf76c9f3a18e030136825c452d21e825ac04e1ea"
+                             },
+                             {
+                                 "path":  "scenes/build_view.tscn",
+                                 "sha256":  "72ac3f5c73c50d6c1004085ecb3708133d7a712255445514ff8e2d81fb0732af"
+                             },
+                             {
+                                 "path":  "scenes/foundation.tscn",
+                                 "sha256":  "dbc93346c4000dcccc1fe3eb94d40ce223070f97aa7fa2e007944a3d793d523c"
+                             },
+                             {
+                                 "path":  "scenes/grid_inspection.tscn",
+                                 "sha256":  "63292b0366d7172527cf2a2dfe7f093a993cc0724a4a888b4769ce518540675e"
+                             },
+                             {
+                                 "path":  "scenes/live_view.tscn",
+                                 "sha256":  "e2be86b1bad5f583a1cee234971406df6c5669555e5b7f393e9bbf954a94412e"
+                             },
+                             {
+                                 "path":  "scripts/export_private.ps1",
+                                 "sha256":  "def75115b71fa18cee82495608ed69ed83826a855247fb001209087d2fe18fc2"
+                             },
+                             {
+                                 "path":  "scripts/README.md",
+                                 "sha256":  "eabd3308b2f27c89aadeffb1df5dd1ccecd533ea9dc7fb3740cc0695f2c4de4f"
+                             },
+                             {
+                                 "path":  "scripts/run_tests.ps1",
+                                 "sha256":  "c063da65aa817084489a8b4290cb97374b1720d81de4c7d7e7b2b43813924ea8"
+                             },
+                             {
+                                 "path":  "scripts/run_tests.sh",
+                                 "sha256":  "453fdb29235f1fdc8f6a59655be03ed88bf098a00fc0773f306dbc38dd1feec0"
+                             },
+                             {
+                                 "path":  "scripts/smoke_packaged_input.ps1",
+                                 "sha256":  "6a03edd67a8175905327e9c9d0006b94796d37f8fb51c613ce58a7a0aebab059"
+                             },
+                             {
+                                 "path":  "scripts/smoke_private.ps1",
+                                 "sha256":  "2102377a3dfe9295e28e61c242134cebfb166b201193e30d8f155277ab203648"
+                             },
+                             {
+                                 "path":  "scripts/smoke_targeted.ps1",
+                                 "sha256":  "74eae76b22a6ba9453f0a4ec3a6e40eac34c4b4690d45222f591a4c9df8f9ed6"
+                             },
+                             {
+                                 "path":  "scripts/snapshot_source.ps1",
+                                 "sha256":  "b9034cd0b1918f169975567aeb0bc54eb2e84b64b202320eea0b2ba1aeffe303"
+                             },
+                             {
+                                 "path":  "scripts/verify_build_info.ps1",
+                                 "sha256":  "89dba3934c4a9d3ba847fc2387b3df9234a74c5167801bf3c17af4112e7d0181"
+                             },
+                             {
+                                 "path":  "scripts/verify_packaged.gd",
+                                 "sha256":  "c7e53acdefc84265997c347eedf73d7a37e17d8bcf26283d8abdcfb70b34acf4"
+                             },
+                             {
+                                 "path":  "scripts/verify_packaged.gd.uid",
+                                 "sha256":  "bc0e3f5b279341141b7290d0783766534651483b78b4c8bac546f70425a8439a"
+                             },
+                             {
+                                 "path":  "scripts/write_build_info.ps1",
+                                 "sha256":  "49f5a3f8d15fc476861e25f9251d89e6486a0ddb8f4a80255c4213c65812a99c"
+                             },
+                             {
+                                 "path":  "src/core/entity_pool.gd",
+                                 "sha256":  "b3a582ca51e9e9c356c253a907694f13e06479de088fe10aa4a2d4e44a2ff6d8"
+                             },
+                             {
+                                 "path":  "src/core/entity_pool.gd.uid",
+                                 "sha256":  "bcadfba60ecf34c46484dc9653a54c1804740bce5530e4ff83183707d34d8a94"
+                             },
+                             {
+                                 "path":  "src/core/fixed_step_clock.gd",
+                                 "sha256":  "9a64618ea48c72b1daa1737a6894188e349462b378751d89f73ab94ab8b34b24"
+                             },
+                             {
+                                 "path":  "src/core/fixed_step_clock.gd.uid",
+                                 "sha256":  "03a517c90839bc30efb6c42ed19252fe9e934320749036cdab6b391082e6f0d7"
+                             },
+                             {
+                                 "path":  "src/core/polar_grid.gd",
+                                 "sha256":  "b9a0a2f5a319dbf24b9d2af9257820ad834cc9affdedff117df1b0cdc0e14b0c"
+                             },
+                             {
+                                 "path":  "src/core/polar_grid.gd.uid",
+                                 "sha256":  "54fde0cfcdaf9884ea69d6865dc8d3b5e00cc3b3160e911abccaf01eda4898ed"
+                             },
+                             {
+                                 "path":  "src/core/polar_motion.gd",
+                                 "sha256":  "b33a9e70dfd3b06d7f5fd4988518823e57edccb4dade163439b82f13e1a87fbd"
+                             },
+                             {
+                                 "path":  "src/core/polar_motion.gd.uid",
+                                 "sha256":  "e2abf696223e63fc2b05bd00df7a04ad208f8aa453c6458dfcca7885ff9930b7"
+                             },
+                             {
+                                 "path":  "src/core/polar_position.gd",
+                                 "sha256":  "01998f5e89743faacb96defbe071cc0e70fc1675e6919f439cf13ade86ad8c3d"
+                             },
+                             {
+                                 "path":  "src/core/polar_position.gd.uid",
+                                 "sha256":  "7af0c329722809425e9f8916c609c1b25662352b02fa6025019f271158cb29f8"
+                             },
+                             {
+                                 "path":  "src/core/polar_route_field.gd",
+                                 "sha256":  "7ade3194c5ed29e21d3085f65182b256a7e19604df40aa47960b8bae5566871a"
+                             },
+                             {
+                                 "path":  "src/core/polar_route_field.gd.uid",
+                                 "sha256":  "919d5ce7a5eda21590709281bd7fe9c321760ba0dc82204dfabd414a24e9169c"
+                             },
+                             {
+                                 "path":  "src/core/profile_store.gd",
+                                 "sha256":  "19b66c96131b9e15a57c7971c6293facb44d32194ddad368b6b771c6a2fe5df6"
+                             },
+                             {
+                                 "path":  "src/core/profile_store.gd.uid",
+                                 "sha256":  "b2ef5b5517b22096f0a947e6d768e0e8c4688d898e0724aefea731e49cc28d42"
+                             },
+                             {
+                                 "path":  "src/core/run_recorder.gd",
+                                 "sha256":  "5308f74183c79966d9435e59def2a5f6e0087f45312f95b2e3577cec590e71c9"
+                             },
+                             {
+                                 "path":  "src/core/run_recorder.gd.uid",
+                                 "sha256":  "78e8d7cfffff1473388143dd9af70723e05645d383482f36e3c875635a2d186a"
+                             },
+                             {
+                                 "path":  "src/gameplay/ability_rules.gd",
+                                 "sha256":  "37f9c7ca10931716a06867b7a92667d0bd40c3363d7f661ec0a6b27e570b9c25"
+                             },
+                             {
+                                 "path":  "src/gameplay/ability_rules.gd.uid",
+                                 "sha256":  "5e6e10ecd52960cce15ca9c6fd50147f905bbcda4aab44ebd5ab5ec141e8803c"
+                             },
+                             {
+                                 "path":  "src/gameplay/assembler_rules.gd",
+                                 "sha256":  "9cb2ebc315fe352252c19d6e2260808106b1518dd00551173b6e23ddbf7eb4f9"
+                             },
+                             {
+                                 "path":  "src/gameplay/assembler_rules.gd.uid",
+                                 "sha256":  "bbdab933c913c98da4d4b0371608ad5468d389b186613aa02f682eaedd204ac7"
+                             },
+                             {
+                                 "path":  "src/gameplay/balance_profile.gd",
+                                 "sha256":  "0d2dd95d5c9f6af777a775d8c67a97384cace7cb28afa51a369b3728750cf6dd"
+                             },
+                             {
+                                 "path":  "src/gameplay/balance_profile.gd.uid",
+                                 "sha256":  "ec68a97ad6782e854052e390ecb9f067f602859434e6ccecc17e222e398f36e6"
+                             },
+                             {
+                                 "path":  "src/gameplay/breacher_rules.gd",
+                                 "sha256":  "ca4e71f59b926effe8b33dca72af25e6d42a2a3abba9700239469060af40c813"
+                             },
+                             {
+                                 "path":  "src/gameplay/breacher_rules.gd.uid",
+                                 "sha256":  "adc1138f384e69770d487f9bd008c25c1538b0d47228db39bc8f7e3d8c6cc97e"
+                             },
+                             {
+                                 "path":  "src/gameplay/building_rules.gd",
+                                 "sha256":  "515b55abfef22f256197fd8c9ec2ee6b8c3941bf210b2459d139e5769b3d7e25"
+                             },
+                             {
+                                 "path":  "src/gameplay/building_rules.gd.uid",
+                                 "sha256":  "9a70de0c3024f44f03b3ef6a3902bcc0860ccd13e9e1368d88cc4ba8cd6e623a"
+                             },
+                             {
+                                 "path":  "src/gameplay/foundry_rules.gd",
+                                 "sha256":  "6ee5c17aa777e47a2261252cea85b37a7d68c1db2dadde2588a49a27cc959462"
+                             },
+                             {
+                                 "path":  "src/gameplay/foundry_rules.gd.uid",
+                                 "sha256":  "4f2a0cd4000784d100ee81a874036f93e573e949f12383b9b8fa5e7426e39805"
+                             },
+                             {
+                                 "path":  "src/gameplay/live_simulation.gd",
+                                 "sha256":  "3ab76fa59133b62fa29a89bfa66b9ee03f4336761fa1468ad7bf1f477e747a4a"
+                             },
+                             {
+                                 "path":  "src/gameplay/live_simulation.gd.uid",
+                                 "sha256":  "38e329a425969e887f302c75106e9f4dffa3b60a8c5e65ed0236bd0949c5c886"
+                             },
+                             {
+                                 "path":  "src/gameplay/machine_spawn_rules.gd",
+                                 "sha256":  "9873f578a4044f688d91f383a7906f69e60eabaf0aa69e8ccffc39e231d494de"
+                             },
+                             {
+                                 "path":  "src/gameplay/machine_spawn_rules.gd.uid",
+                                 "sha256":  "5f9d9a5453af322565370e9f2a4b64690db46cc28fd1fce6f9d98adf12086fb0"
+                             },
+                             {
+                                 "path":  "src/gameplay/power_rules.gd",
+                                 "sha256":  "6011c1ef92215d6fb2cfc118d542da40e97bf225af98d6c2d16a681ef112b140"
+                             },
+                             {
+                                 "path":  "src/gameplay/power_rules.gd.uid",
+                                 "sha256":  "5526e9729946d49351c44d2bbedbbafa8c9d42a8c48335003a6f1acabc6075b3"
+                             },
+                             {
+                                 "path":  "src/gameplay/ring_purchase_rules.gd",
+                                 "sha256":  "59c5ea57952740cfdb5a6907e8a4e6c9754cff5f56186e9b12c1dba48f8be115"
+                             },
+                             {
+                                 "path":  "src/gameplay/ring_purchase_rules.gd.uid",
+                                 "sha256":  "95e2e995947755bdf32e9eeea15c64536da380714b132ef871030280c2c6c2a2"
+                             },
+                             {
+                                 "path":  "src/gameplay/run_rules.gd",
+                                 "sha256":  "b36483595b105aaf9b7b220549874b868ce42bc98e5bea7f364e5668607cb5ce"
+                             },
+                             {
+                                 "path":  "src/gameplay/run_rules.gd.uid",
+                                 "sha256":  "2c85acfcc2ee4894da34622f4620c756fde1d5d8957b3c601a5ed0b989403f64"
+                             },
+                             {
+                                 "path":  "src/gameplay/sapper_rules.gd",
+                                 "sha256":  "deb89c589aff1590054ccd9fa4dbb6070e24d993611458811258d0ca5b15c435"
+                             },
+                             {
+                                 "path":  "src/gameplay/sapper_rules.gd.uid",
+                                 "sha256":  "2f0d7c44e36cd065ca63ba200de024924babbca5be9e32fad1da1ce17450c5c9"
+                             },
+                             {
+                                 "path":  "src/gameplay/terrain_rules.gd",
+                                 "sha256":  "a359975012836c640f8a6d3c027bfdbde5090906edf4eb69cbcc985e03d5023f"
+                             },
+                             {
+                                 "path":  "src/gameplay/terrain_rules.gd.uid",
+                                 "sha256":  "95b99b9d2e82ef05de09e3904166d8344b655b4f1ea593339b056687384fb35e"
+                             },
+                             {
+                                 "path":  "src/gameplay/transfer_rules.gd",
+                                 "sha256":  "30f2b36d52290c1174ddfb499d1a2acddf1f4f75a73b01395d063fdf8ef744d5"
+                             },
+                             {
+                                 "path":  "src/gameplay/transfer_rules.gd.uid",
+                                 "sha256":  "6352a68a298a87a9bcd36db7b56f040058ceeb9b184d48734aee04f77c014947"
+                             },
+                             {
+                                 "path":  "src/gameplay/tunneler_rules.gd",
+                                 "sha256":  "0fbb216dfbdba2b52872802340496539318787d8f21e324727b0723ba4784be5"
+                             },
+                             {
+                                 "path":  "src/gameplay/tunneler_rules.gd.uid",
+                                 "sha256":  "b6f894627b1b42b11ab823ecb04d6468d28eff7f686969f31216cc383a699c48"
+                             },
+                             {
+                                 "path":  "src/gameplay/wall_navigation.gd",
+                                 "sha256":  "05dba7605d849a4566020f1102c1fe8357365952acd7f4c196168f45db30c506"
+                             },
+                             {
+                                 "path":  "src/gameplay/wall_navigation.gd.uid",
+                                 "sha256":  "6cdc32ced281e6c02ea59f4d55b47b8f1bc641acfd5a5c6d9a47d557051a272d"
+                             },
+                             {
+                                 "path":  "src/gameplay/wall_rules.gd",
+                                 "sha256":  "31012c2b3d46cdcec0b1e3b7bdfeffbd61e3c0c25eaf3a4659b5ba5690dd9a77"
+                             },
+                             {
+                                 "path":  "src/gameplay/wall_rules.gd.uid",
+                                 "sha256":  "cf06234225ce75de4510a51eb8c6d656adaf9e376ef2cf4f40a497abbf940e52"
+                             },
+                             {
+                                 "path":  "src/gameplay/weapon_rules.gd",
+                                 "sha256":  "1c81fbd21d312c4713de77bf9b26be762e541e07e5383fd07e3fa54d62991f58"
+                             },
+                             {
+                                 "path":  "src/gameplay/weapon_rules.gd.uid",
+                                 "sha256":  "8f13ddd8c25c7acb8ab3b2b7f5099fb3544e7054ad770ac31f7d6aac925fb080"
+                             },
+                             {
+                                 "path":  "src/presentation/application.gd",
+                                 "sha256":  "a4e8829cdb90f489e31064fbaf3d20e8e24d2af30d3acbe5806ab0a552508f40"
+                             },
+                             {
+                                 "path":  "src/presentation/application.gd.uid",
+                                 "sha256":  "5e3ff2f92b06c0cc96967df3effc7cdf42a2c09dbafaca5679067eb3b237f864"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview.gd",
+                                 "sha256":  "40784e35a583231eeb337b56de794aa86ad79910a1d358378f1fe7378d68a1df"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview.gd.uid",
+                                 "sha256":  "2d80216e2750bf82d34766e5596e51d578f4f36df205de75eb33de5f7d05b83a"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/atmosphere.gdshader",
+                                 "sha256":  "6e7ebecd8c871c2b951cac7943f63236b8e4b393e2f91eb00d30d6070e16210f"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/atmosphere.gdshader.uid",
+                                 "sha256":  "e3d63611db3b289dedfebc7d53f2944d65de757dd6b83b67478e308a1ffcf4fa"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/space.gdshader",
+                                 "sha256":  "f27c77b4bf15fb662865b11577b9db11aea49cf3b58cf908dd9dee7f10a72e00"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/space.gdshader.uid",
+                                 "sha256":  "3a96013fd01cfb423d34b08510b197b235813d569f4be1abb597015b2f21bf20"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/sun.gdshader",
+                                 "sha256":  "0e626341146f03473da1f51d6713eb8bab23eb3563eaabc68f565d31b38c940e"
+                             },
+                             {
+                                 "path":  "src/presentation/art_preview/sun.gdshader.uid",
+                                 "sha256":  "04095b8f6516bb27b88db99e1ad323449379028c22601bf03945b192f5e0ebae"
+                             },
+                             {
+                                 "path":  "src/presentation/build_view.gd",
+                                 "sha256":  "9fe78f951b4d59416951be6d187e07c0341a088eb07802641be809465430d804"
+                             },
+                             {
+                                 "path":  "src/presentation/build_view.gd.uid",
+                                 "sha256":  "73995ac72bf45e4a0e00886fa2b525e577b36d171d9f34d5109711b4fddafd9e"
+                             },
+                             {
+                                 "path":  "src/presentation/grid_inspection.gd",
+                                 "sha256":  "07e3d74285ccd792c9e441ef78043799e678c8d662956e43e6ef731ff5ce91b4"
+                             },
+                             {
+                                 "path":  "src/presentation/grid_inspection.gd.uid",
+                                 "sha256":  "70c510775fec0ea5cdddd3044bff82f71302ab3c33e2cf26f55db477f3b0405b"
+                             },
+                             {
+                                 "path":  "src/presentation/industrial_theme.gd",
+                                 "sha256":  "b9841b67428b6df4e3d0782e9fe5a268e375785222197670cdb020389c762e85"
+                             },
+                             {
+                                 "path":  "src/presentation/industrial_theme.gd.uid",
+                                 "sha256":  "d2e20a89b2f638b38f2b1fa34e2e003907639b0ace67fa3b3ebcc01fcdfc8f4c"
+                             },
+                             {
+                                 "path":  "src/presentation/live_view.gd",
+                                 "sha256":  "a8198a6cad6375ad38a99f766b1084a967f564a4bd2684da21dce6043453afc0"
+                             },
+                             {
+                                 "path":  "src/presentation/live_view.gd.uid",
+                                 "sha256":  "7d26acc0ffc8cfc2f0b8ecd2d9d811eceee8ee40c86d2e68f450c9dcd9556c42"
+                             },
+                             {
+                                 "path":  "src/presentation/ring_status_hud.gd",
+                                 "sha256":  "68639cad232d93bf88fac97e8c21f96f5e3335c4480947e2183a11498c743a24"
+                             },
+                             {
+                                 "path":  "src/presentation/ring_status_hud.gd.uid",
+                                 "sha256":  "ceff38023e3b0b6415220c01a7fa0937d43ad0679c1b0bf82c6f467cbb8650f2"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_grid.gd",
+                                 "sha256":  "673ecccd94f214ce4adaa7e3cffd27496a09fc141594c4b2c4738c72eae24225"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_grid.gd.uid",
+                                 "sha256":  "b8124b5ef0448f02fbb74541c2d216d7950b9ac8e96de575c6587a3a196dc699"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_motion.gd",
+                                 "sha256":  "c48cb4260c9f34716c1f0b68f93be683d40788895f24538b5796a9ea6f502205"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_motion.gd.uid",
+                                 "sha256":  "d512c39223f3b8b14de75534272e3e04ff66ded8c578487519dcfb70ab5ab3c5"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_route_field.gd",
+                                 "sha256":  "d6a37ca2c696db89bd9f7220e85cbcf4e7fef23b5f83eb73a5b9fa7216d8b036"
+                             },
+                             {
+                                 "path":  "tests/core/test_polar_route_field.gd.uid",
+                                 "sha256":  "db514106cbe17566c34cf5dadefe7f8f10c985e8834b2df3fcf8b5033e7751c1"
+                             },
+                             {
+                                 "path":  "tests/core/test_profile_store.gd",
+                                 "sha256":  "a27ad8007926dbb44ece6eac883155722b1b8cf8b7b80502f5b477822d059ab6"
+                             },
+                             {
+                                 "path":  "tests/core/test_profile_store.gd.uid",
+                                 "sha256":  "e954f9b89365ae294753457e50bcb6e48ed7d4f09544c5e59e6c84961ea3abfc"
+                             },
+                             {
+                                 "path":  "tests/core/test_run_recorder.gd",
+                                 "sha256":  "8b1d3ba78d4d630289aed29ff1ced6a5e209d07e4b652a7b048feccf261d51da"
+                             },
+                             {
+                                 "path":  "tests/core/test_run_recorder.gd.uid",
+                                 "sha256":  "78314ea0d65d7010aa7dabcf57ca00d6c8373a406de54e7bc7931c586c826c02"
+                             },
+                             {
+                                 "path":  "tests/core/test_simulation_foundation.gd",
+                                 "sha256":  "32be8f5a5fb14a40720c91cdcc7821139e9df46091a30b2d87644283a197a037"
+                             },
+                             {
+                                 "path":  "tests/core/test_simulation_foundation.gd.uid",
+                                 "sha256":  "002be7efcf687204478898b3be270f2ac1181e993ba944f90446f15d6de361f3"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_ability_rules.gd",
+                                 "sha256":  "64dd504de0d59e7048eb689db7c46dfdea53e920fe08ae89a281049f27978257"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_ability_rules.gd.uid",
+                                 "sha256":  "0f889a9e5149dbc385d7f0dea3893aafc364e4bf4d81f0278c5db2fe85a538c6"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_assembler_rules.gd",
+                                 "sha256":  "5443477450d4e30c3705a55d4cb43061715f672fea71a71e2083965a10d1c560"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_assembler_rules.gd.uid",
+                                 "sha256":  "0310f713175d557b41889d8db0e2c653b2ecc5ec27fbb978bc046e1b3c865866"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_balance_profile.gd",
+                                 "sha256":  "5706d762de4d2b1cb7333b5291761605b6674bcc4b6c67180ce65e63b57f8ac3"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_balance_profile.gd.uid",
+                                 "sha256":  "dbf1fa1f2cb9823cb71be6d36b52cf652cf070c0b8849afa167be3cfc78ee240"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_breacher_rules.gd",
+                                 "sha256":  "274f4d3ce3161a5c6d9424ad599e0deefece0232ad89b1260b2b0e5818c6a576"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_breacher_rules.gd.uid",
+                                 "sha256":  "bdf11b858f8718ba61d09e1cc63a7fbda0d0c27cdb809cfe1a0de664a687e5b4"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_building_rules.gd",
+                                 "sha256":  "ac4bb61a0a5e56b6cbaf6f90759d152ad6aabe7ca806fd5793de7b47a986a4d7"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_building_rules.gd.uid",
+                                 "sha256":  "24eddeccccb5e7fb98560e35c6bb4b84c7e6387a61188f087f7e3bae7023a356"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_foundry_rules.gd",
+                                 "sha256":  "44e0928416efdfe0fe895c9a02f08d0a19602922b2800e38ae2f252645c6392f"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_foundry_rules.gd.uid",
+                                 "sha256":  "9e87559897bf2546eeae6e4442fa0266ce7b3bf02eb460d7d065dd679fe1fa31"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_live_simulation.gd",
+                                 "sha256":  "4c32e6594911ba3867bf67e76406982312103f0e6cdad731ab017544d68eb7e7"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_live_simulation.gd.uid",
+                                 "sha256":  "85c0c6287795bbfe643c52c0b603fd8289cc43746b7324c615a6329a8af2e35c"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_machine_spawn_rules.gd",
+                                 "sha256":  "aa4ea19484317565bcd878148f595efc7d1a6b00fbae54752c77f76650e52fc7"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_machine_spawn_rules.gd.uid",
+                                 "sha256":  "92c7b851a9d12f2558ce08eba3d4ae7f067e9f38fa6f47cba758f5da9416c508"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_numerical_movement.gd",
+                                 "sha256":  "87639c021239cd8e909dc592b5d4ea702201598bdc705ae9ae345dc180ac62ee"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_numerical_movement.gd.uid",
+                                 "sha256":  "cd5db428008c83a087b03ef0bfd6c0b513a58c608f3d4f1ceca79947091dfc4c"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_phase9_corrections.gd",
+                                 "sha256":  "6371f21e1779708daae067232235b624e736237d9df0e7da2ef48b2a3ef2cf1f"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_phase9_corrections.gd.uid",
+                                 "sha256":  "46112620b501d6e68eb2c85ea8d13cd71a88151875e4b4351d73685f3f7cc880"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_run_rules.gd",
+                                 "sha256":  "a4b903e5a243627fac40c2fc980467153e924ab0af377b2e8226d80c47a5bdd3"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_run_rules.gd.uid",
+                                 "sha256":  "f0ed2d2722dfcf3ed4ee724bfd3762c4b88eeab443251166e94a5c6cbbe1d9cc"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_sapper_rules.gd",
+                                 "sha256":  "3fc903ba5c8bdd1e0a95417ba800a17d825c3d9a5c024a6726ef92e6e07e1fbf"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_sapper_rules.gd.uid",
+                                 "sha256":  "72cc6a468d9aa300eb77a0628172577fb3d0a5c40de407e3d6e415ae6e826166"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_terrain_rules.gd",
+                                 "sha256":  "f6815317ed36ee320587d9b8eace28f5875f9262e6874bf8288b0b5d0524e6fc"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_terrain_rules.gd.uid",
+                                 "sha256":  "db14233ce8926648a56086d38030f462fdb3206cd2902aa74613aa5051d807c7"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_transfer_rules.gd",
+                                 "sha256":  "8c5a42ea87d4762587e5947cf5b2664e4424d856f40965cfab5e501cb1bef589"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_transfer_rules.gd.uid",
+                                 "sha256":  "6bf5307b55d5c7ba82782c9c471c0b15fda6d58310218f2ebd049f652e7cf3e7"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_tunneler_rules.gd",
+                                 "sha256":  "8a8ad494a532fb91820174f6239073c8dc69b512461e9d17a47bf5a349c9a004"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_tunneler_rules.gd.uid",
+                                 "sha256":  "3610a500b2bc32e64fbd5c481c9f361344caf8fa8c3cdd940b85575bf326cde6"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_wall_navigation.gd",
+                                 "sha256":  "7b9a524624c71dfed482e253268f7d79c5cb303b8592258968ebc4c723c196e6"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_wall_navigation.gd.uid",
+                                 "sha256":  "fe13348da7967c84ceab16f7a1d02b6e85e2ba3bb79f6ad3001bd448a1756a72"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_wall_rules.gd",
+                                 "sha256":  "aaefc9553d6188b8e26511d8742319a955c430fbb1774161d9b495921f8fbbdc"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_wall_rules.gd.uid",
+                                 "sha256":  "a30968be42b1ec0e70f0587521792d8aef60304fc71205e68a8160ccd893d4dc"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_weapon_rules.gd",
+                                 "sha256":  "3f8d8ea0e8a53fb3c1990c57e8ac006bda5fb2f98ca83bbd2af4b56620975b0e"
+                             },
+                             {
+                                 "path":  "tests/gameplay/test_weapon_rules.gd.uid",
+                                 "sha256":  "cf916b81cc4a41b7b1ec07a31b4284c029da0f13abb87ee0c720f55f249b49b2"
+                             },
+                             {
+                                 "path":  "tests/performance/baselines/README.md",
+                                 "sha256":  "e8d0eb67e768cd98bacb284a3032058b3e8de64fc80a558852c5a52d88ae4edf"
+                             },
+                             {
+                                 "path":  "tests/performance/baselines/t-023-sustained-cost-digests.bin",
+                                 "sha256":  "f166a56c3b5efc09effad853bb46dac22195efba4c8b5cc81c8881d8c15effee"
+                             },
+                             {
+                                 "path":  "tests/performance/benchmark_crowds.gd",
+                                 "sha256":  "5f057daf124179e0e3af8783825d72ea476b472818c4a878107692d32176d3d8"
+                             },
+                             {
+                                 "path":  "tests/performance/benchmark_crowds.gd.uid",
+                                 "sha256":  "55c9efae183b6fb4e728b63fc20dbbb1d95e5fdff78bfe61b0b5bec93a36940c"
+                             },
+                             {
+                                 "path":  "tests/performance/measure_application.gd",
+                                 "sha256":  "28d36836da7c1837f67962d67183a0b576b0c4ec3312d0899d625d713b356cc4"
+                             },
+                             {
+                                 "path":  "tests/performance/measure_application.gd.uid",
+                                 "sha256":  "894d67fa38029bc3073ebf37f3a52ec5c203b3f6adf5f5964aa4dc9ebd262c41"
+                             },
+                             {
+                                 "path":  "tests/performance/measure_feature_candidate.gd",
+                                 "sha256":  "7c3df5e9dda6e7b65542102b8a419c1476655d0a7268dcc619cd15230c8f41a6"
+                             },
+                             {
+                                 "path":  "tests/performance/measure_feature_candidate.gd.uid",
+                                 "sha256":  "476af6db67e360fdc1be0da84ce5c4c6968380318f1015444a61c8e7b6ede4ac"
+                             },
+                             {
+                                 "path":  "tests/presentation/application_crowd_fixture.gd",
+                                 "sha256":  "9223a42903c49c2ab9b3e211dbc8a9cac1c23d898c7954d023d10ab9219b8f0e"
+                             },
+                             {
+                                 "path":  "tests/presentation/application_crowd_fixture.gd.uid",
+                                 "sha256":  "2f486ad88a2a6848003ef956148966a3e50a987f795d24c3741d4cc94d01b273"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_application.gd",
+                                 "sha256":  "386d722a867fde883066a333bb6136facb2f6bdcb1b9aab962b04a8b33d0e9cf"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_application.gd.uid",
+                                 "sha256":  "5bf3bfd64cc5da5eaa42500d0f08ff9c1ff05468db1fe37a711ba7e810e3bdc0"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_art_preview.gd",
+                                 "sha256":  "65d71e81b373bb1f61e819dd505e13b2d629c3f2f179cae07013a15fba794e7f"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_art_preview.gd.uid",
+                                 "sha256":  "c43ff0ef69e2b277d6767f97bfaab1246727c7f4e0cde1dc772c31811ee0cbe6"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_growing_world_view.gd",
+                                 "sha256":  "5593c292df3e24e9eadf2423c2d2cf20d28f5a62de357bc01fcc370eb5ac44c1"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_growing_world_view.gd.uid",
+                                 "sha256":  "d427b0872a1f009383daf5fb735b276438cab066e363c8f88a7e7e1e42a15a3b"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_hotkeys_compact_ui.gd",
+                                 "sha256":  "660a1a2d3bdda8766a0a38d8bee81f95ba058476cfb58706993fceff9a8e520b"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_hotkeys_compact_ui.gd.uid",
+                                 "sha256":  "793b23c832ca9f56f0370ffb71342c136a942b346ddef77575e7d2497002ed85"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_live_view.gd",
+                                 "sha256":  "fca41b8dbf6037b75c4d9407275d9a4ba9e2e0f886c85374d13f8d14aea78cec"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_live_view.gd.uid",
+                                 "sha256":  "bdac50c6cd163d1045443683536e0db1676a66123c108b9fa971f73dd4ed8692"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_ring_status_hud.gd",
+                                 "sha256":  "2e2c821510eb99427e278396f129eb9e1eb23fbfd080c5e22f8d7143be8a9111"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_ring_status_hud.gd.uid",
+                                 "sha256":  "d470fc678d10a8b0510dff1583b24bd558fbaba79b6b0d4d05d8e20cee1bc7e7"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_structure_view.gd",
+                                 "sha256":  "8a17d98b2ea4444c5ff84c1c2c829030cf9bbae87170baefc7e2d0b7341dee77"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_structure_view.gd.uid",
+                                 "sha256":  "5890fd20f9e4aaaba0c03bd4d9dd6032529128668a8f3d1876e1f4611b6ce106"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_terrain_ability_view.gd",
+                                 "sha256":  "07930f3f6a92e18b644b060c36800a3ef597f939c8c21bbce09120526aa05ee8"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_terrain_ability_view.gd.uid",
+                                 "sha256":  "495ed267d92bc50016c93ca5fe85b5553f9fe0486bae59e08c9b9ead011cd2e3"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_tunneler_view.gd",
+                                 "sha256":  "a695f86ecca155bfd2b8693e2a687c5bfb6afa5758e06f5fb9271cdce0d72ba7"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_tunneler_view.gd.uid",
+                                 "sha256":  "50d324b51ad56f7655c16647e9a1f0342871e29ab35faec42fe167b353cd996a"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_wall_view.gd",
+                                 "sha256":  "a93e7a0a4223dae666d1497a27414fa8ed6406f281b1b5f73f192799e320ee8e"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_wall_view.gd.uid",
+                                 "sha256":  "7421b3be3d1f88e7d45f8eea452ed0c4d8acaf617debb072dd86e293e8bee9f8"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_weapon_catalogue_view.gd",
+                                 "sha256":  "8176476d1153749a42259731573794f086425cb58bc8edfc5684f87cd2a6a9b0"
+                             },
+                             {
+                                 "path":  "tests/presentation/capture_weapon_catalogue_view.gd.uid",
+                                 "sha256":  "4060a6c6eeb67f65a8bf7e3ca9707ee475808295c6c5c9615de8674d1e8b56b3"
+                             },
+                             {
+                                 "path":  "tests/presentation/measure_application.gd.uid",
+                                 "sha256":  "dcd71416b252bd65dd27e16658b1eebbc3944604e1e4e1d5fa6dc4e390651df4"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application.gd",
+                                 "sha256":  "f801da313fb92d8ccaa54530763db2beaa5a0fdbf056f3fb35610ef8bff4eba3"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application.gd.uid",
+                                 "sha256":  "c6c9e98f6c213a3eaaf6b4351ba38b4146917c4f81951a8c607c405bf80d01c5"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application_feedback.gd",
+                                 "sha256":  "911b1fa9357a1609a5261bd70b9c380ca4355e89f0eaa858a1c9db73989847c6"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application_feedback.gd.uid",
+                                 "sha256":  "fe30a85ca2bbf542916fc46c11f8354da3c5034c5a98ce0021547540d93b4fad"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application_recorder.gd",
+                                 "sha256":  "14844c7b3d4df899776d258742923cb7b29054759608d0268f7b5ec7d9afe6fd"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_application_recorder.gd.uid",
+                                 "sha256":  "1fb2b6798567b03d2bafcb2a1faeb10ffa9cef6cdd97ceb97f44cfba6eea4c6a"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_art_preview.gd",
+                                 "sha256":  "fa83061242fa192493352ed1e3b2a35a2d21917b34f6b6aa2a088d90eff6da04"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_art_preview.gd.uid",
+                                 "sha256":  "55db2eb2018a91e0b55ed08ef02d809fd1a5af5829d322c435a160e4ecae62c5"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_build_view.gd",
+                                 "sha256":  "ce08197c321e40fb04b7eb953053b2595a0653d636decfd110b847c0921c1154"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_build_view.gd.uid",
+                                 "sha256":  "b1b008f71ca51ce8b8668834ddd8aa44fe7aac12096d11c5ee6cdcf6b9eb332e"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_grid_inspection.gd",
+                                 "sha256":  "22af67f925cd230f7f79461f0469d86edae356aafb15de142e070d226062205b"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_grid_inspection.gd.uid",
+                                 "sha256":  "5e1ee13ff40c7604a60c921af3c987e932021cbd481fad9b72c6bd9b865feff4"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_growing_world_view.gd",
+                                 "sha256":  "11e67d911276e2c95b98d63fc6b285da06ca71ce75178e4ad0d6ea8080f8b7e7"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_growing_world_view.gd.uid",
+                                 "sha256":  "783735b9d257fa7dd2a2b8ed6a6c140d46ba3a26348590130d618ea750ee6259"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_hotkeys_compact_ui.gd",
+                                 "sha256":  "5b07949a465465502e4f5fe596c8f4dc2b95aaa982d7a32816c0b5878364afc2"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_hotkeys_compact_ui.gd.uid",
+                                 "sha256":  "577b896e29800e1a7166ba4a881f59cb15dbe3c472c6de5c7baf15b4cecfca9f"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_live_view.gd",
+                                 "sha256":  "ca841a80b43e097341086a7fb53358948d8804100618f451100ff192d08ee895"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_live_view.gd.uid",
+                                 "sha256":  "1b90441f95114be58325171cc7e422e86002caafc4df56a6ca27c6f7ef6ee874"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_strategic_detail.gd",
+                                 "sha256":  "c64c662cdd4492ef2aac84046e65954fffd9a634fd5cb31840506dc435500106"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_strategic_detail.gd.uid",
+                                 "sha256":  "97764524add72ed7e4d8de43f467180fb62ad3733a8e1dcdc8d7ec31c5b0f0d4"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_structure_view.gd",
+                                 "sha256":  "c54bf8c97dfdf3d59ec78f771209f3469b6d9354fb81786639e96d5ab583dbb5"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_structure_view.gd.uid",
+                                 "sha256":  "63d07bd8ffcf1f6cdf3b28a5db9c78aec69ff1f4308ab4d0f80096f76b291610"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_terrain_ability_view.gd",
+                                 "sha256":  "253ed1707384fc13566032d50567d25725982231b36f6bdee42045bb5e7679e8"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_terrain_ability_view.gd.uid",
+                                 "sha256":  "f754ba2da8b6bec75c168efeea4e9316f33df9bad175f321c6ab26bfd4dd783e"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_tunneler_view.gd",
+                                 "sha256":  "38d6222b9898d9053553a4af6786a23ca7f8e19ed1a13dadb805210292909b40"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_tunneler_view.gd.uid",
+                                 "sha256":  "503346172b877c6bee4a7761dde855c8723d49846ecf59b73f6c86f7a0964cfb"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_wall_view.gd",
+                                 "sha256":  "4ebb437fd05b634a329c082ee1409bd9b5d176ad78386d94db8c5ee4fadc0a09"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_wall_view.gd.uid",
+                                 "sha256":  "2a360745fa153477dc1332729e73f7de0e1deb1e482eef34b91d783f103357e9"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_weapon_catalogue_view.gd",
+                                 "sha256":  "81667fa15e613ef75913476b65fefbf0cff45a7afb231057fd69ab7ea32b9f83"
+                             },
+                             {
+                                 "path":  "tests/presentation/test_weapon_catalogue_view.gd.uid",
+                                 "sha256":  "b8470b2882629d100945f1348a30abd1454248171a6b9adf3b1bece5ce34db8f"
+                             }
+                         ]
+}

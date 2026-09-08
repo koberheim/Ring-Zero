@@ -1,0 +1,331 @@
+# RING ZERO
+### Design Specification — v0.1
+
+*Working title. Alternates: ECLIPTIC, PERIHELION, OCCULTATION.*
+*"Ring Zero" is the innermost orbital band and also the highest privilege level in a machine architecture — apt for a game about self-replicating machines.*
+
+---
+
+## 1. Elevator Pitch
+
+A real-time, semi-isometric siege roguelite. You are an intelligence at the center of a dying Dyson swarm, viewed from above the star's pole. You build concentric orbital rings outward from the core, and a self-replicating machine swarm eats them inward. Every ring you claim is more killing power and more surface to lose. The run ends when the last ring falls.
+
+**Run length:** 15–25 minutes.
+**Structure:** endless run with persistent meta progression between attempts.
+**Build target:** Godot 4, 2.5D isometric.
+
+---
+
+## 2. The Design Thesis
+
+**The central stat of a run is your radius.**
+
+Everything in the game is either buying radius or slowing its loss. Turrets, walls, terrain, abilities, power — all of it resolves to one legible number the player watches climb and then watches fall. This is what separates the game from a generic horde-survival title: most of them are about a growing character, and this one is about a growing *place*.
+
+Two consequences fall out of that, and both should be protected in every future design decision:
+
+1. **Expansion is simultaneously the goal and the gamble.** You want more rings because more rings mean more turret coverage, and more coverage means a higher kill rate, and kills are your entire economy. But perimeter length is a real cost, and a ring that falls destroys everything standing on it.
+2. **Credits buy space; cooldowns buy time.** Energy purchases position and structure. Abilities purchase seconds. These two currencies must never be convertible into each other, or the core tension collapses into a single resource-optimization problem.
+
+---
+
+## 3. Fiction
+
+The star is a power source, not an antagonist. It does not flare unbidden, it does not threaten you, and it has no hazard schedule. It is the reason anything here is alive.
+
+The swarm around it was built by someone. They are gone. You are what's left running.
+
+The horde is **self-replicating machines** — von Neumann harvesters that have been loose in the system long enough to have consumed everything else. They are solar-powered, like you. They want your swarm for two reasons: it is mass, and it is standing between them and the light.
+
+This does three pieces of mechanical work:
+
+- **Uniform omnidirectional pressure needs no explanation.** The machines are not marching from a homeland. They are already distributed through the system. Pressure comes from every bearing because they are everywhere at once.
+- **Shadow is a weapon.** They run on sunlight. Anything you build that casts an occlusion shadow starves them, which is the fictional grounding for slow zones.
+- **Your losses are their gains.** They eat wreckage to improve themselves. This justifies total-loss ring collapse and gives the death spiral genuine teeth.
+
+**Player framing:** you are not a hero and not a villain. You are a maintenance intelligence running a structure whose builders are dead, and you are losing.
+
+---
+
+## 4. Camera and Presentation
+
+**View:** looking down the ecliptic plane, from above the star's pole.
+
+This is the single most important technical decision in the document, because it means the radial grid is not a stylization — orbits genuinely are concentric rings, and orbital slots genuinely are wedges. The game is natively 2.5D and does not need to be 3D.
+
+- **Camera:** free pan and zoom. Core is not locked.
+- **Zoom range:** must accommodate an unbounded ring count. Assume the player will routinely be at ring 10+ and needs to read the whole structure at a glance.
+- **Orientation:** fixed north-up. No rotation. Bearings must be stable so that "eleven o'clock is collapsing" always means the same thing.
+
+---
+
+## 5. The Grid
+
+**Radial grid: concentric rings subdivided into wedges.**
+
+- **Ring 0** is the core itself.
+- **Wedge count: 12, fixed at every ring.** Twelve gives clock-face bearings, which are the most readable spatial callouts available in any language. Wedge 12 is north, wedge 3 is east, and so on.
+- **Fixed wedge count means outer wedges are physically larger.** This is the geometry doing balance work for free — see §7.
+- **Rings are unbounded.** No hard cap. The enemy escalation curve is what actually limits your radius, so no arbitrary number has to be chosen or defended.
+
+### 5.1 Cell scaling
+
+Because wedge count is fixed, a wedge at ring 10 has roughly ten times the area of a wedge at ring 1. Normalize as follows:
+
+| Property | Scales with ring index |
+|---|---|
+| Build slots per wedge | Increases |
+| Claim cost | Increases |
+| Wedge HP | Increases |
+| Energy throughput available | **Decreases** |
+
+That last row is the whole tradeoff. Inner rings are cramped and power-dense. Outer rings are spacious and starved.
+
+---
+
+## 6. Core Loop
+
+1. Kills award energy, banked automatically. No collection, no pickups, no downtime.
+2. Energy is spent in real time on weapons, structure, and terrain.
+3. Machines arrive continuously from every bearing, ramping in strength.
+4. Structures kill machines; machines damage wedges.
+5. When enough wedges in a ring break, the whole ring collapses — everything on it is destroyed, and the wreckage buffs the horde.
+6. You either retake the ring at cost, or hold at the new radius.
+7. Repeat until the core falls.
+
+There are no waves, no build phases, and no pauses. Escalation is continuous, punctuated by boss elites.
+
+---
+
+## 7. Economy
+
+**Single in-run currency: energy.**
+**Sole source: kills. Flat per-kill credit, auto-banked.**
+
+No territory income. No passive generation. No pickups to collect.
+
+This is deliberate and load-bearing. Because income comes only from kills, expansion buys **throughput, not yield** — you claim ground so your turrets can reach more machines and kill them faster, which funds more ground. Territory income would have short-circuited that flywheel and turned expansion into a pure land grab.
+
+**No in-run progression besides energy.** No level-up card picks, no research tree, no boss loot. This is a *builder*, not a draft. All build variety comes from meta unlocks, loadout selection, and AI core doctrine — see §13.
+
+> **Risk flagged:** with no in-run randomization, runs can feel identical. The variety burden falls entirely on loadouts, doctrines, and mutators. These must be strong and numerous at launch or the game will feel solved after ten runs. This is the single largest design risk in the document.
+
+---
+
+## 8. Power Routing
+
+Energy is abundant at the center and scarce at the rim — exactly backwards from where turrets need it.
+
+**Resolution: ring-level relays.** Each ring requires a relay to receive power from the ring inside it. Power flows strictly outward, ring by ring.
+
+- One relay decision per ring, not per tile. Low micromanagement.
+- **Relays are destructible.** Killing the ring-4 relay browns out rings 4, 5, 6 and everything beyond — turrets on those rings drop to minimal output until it's rebuilt.
+- Relay placement within a ring is the player's choice, which creates a protect-the-node subgame without adding a build-order puzzle.
+- When a ring collapses, its relay goes with it, so the loss cascades outward immediately.
+
+This gives the horde a second, invisible perimeter to attack, and gives skilled players something to defend that novices won't notice until it kills them.
+
+---
+
+## 9. Building
+
+**Three tabs.** Logistics is folded into Structure — it's too thin to justify its own tab, and tab-switching mid-fight is a real cost in a game with no pause.
+
+### 9.1 Weapons
+
+| Item | Role |
+|---|---|
+| **Flak Emplacement** | Low damage, wide arc, hits many targets. The volume answer. |
+| **Mass Driver** | High single-target, slow cycle, long range. The sponge answer. |
+| **EMP Node** | Pulsed area stun/slow, minimal damage. Crowd control. |
+| **Lance Emitter** | Piercing beam along a radial line. Clears a wedge corridor. |
+| **Point Defense** | Very short range, high rate of fire, defends only its own tile. The answer to burrowers and jumpers. |
+
+### 9.2 Structure
+
+| Item | Role |
+|---|---|
+| **Ring Plate** | Claims a wedge. This is how you expand. |
+| **Armor Plating** | Increases wedge HP. |
+| **Deflector Wall** | Funneling. Standard machines path around it; elites smash through. |
+| **Relay** | Powers this ring and everything outside it. |
+| **Repair Node** | Slowly restores wedge HP within its ring. |
+
+### 9.3 Terrain
+
+| Item | Role |
+|---|---|
+| **Debris Field** | Impassable. Free perimeter — shortens the frontage you actually have to defend. |
+| **Tractor Lane** | Reroutes movement without blocking it. Pulls machines along a chosen path, into kill boxes. |
+| **Occlusion Screen** | Casts a shadow. Solar-powered machines move slowly in shadow. Kill-box multiplier. |
+
+Terrain is a build category, purchased with energy like anything else — not an ability, not a cooldown, not a pre-placed map feature.
+
+---
+
+## 10. The Horde
+
+### 10.1 Baseline behavior
+
+- Spawns uniformly from all map edges, at all bearings.
+- Standard machines **path around** deflector walls and terrain. This is what makes funneling work.
+- They cannot bypass an intact ring. They break inward, ring by ring — **except** through gaps the player deliberately left, and except for specific elite types.
+
+### 10.2 Elites
+
+Elites do exactly two things: **break pathing rules**, or **stall a wedge**.
+
+| Elite | Behavior | Counter |
+|---|---|---|
+| **Tunneler** | Travels beneath ring structure. Ignores walls entirely. Surfaces inside your perimeter. | Point defense, layered interior coverage |
+| **Transfer** | Executes an orbital hop, skipping one ring outright. | Interception, defense in depth |
+| **Foundry** | Armored, enormous HP. Parks on a wedge and grinds it down. | Mass drivers, focused fire |
+| **Sapper** | Beelines for relays specifically. | Relay placement, point defense |
+| **Breacher** | Smashes deflector walls rather than pathing around them. | Wall redundancy, area denial |
+
+### 10.3 Bosses
+
+**Assemblers** punctuate the continuous ramp at intervals. Large, slow, ignores walls, and grows measurably stronger as it consumes structure. An Assembler that gets into a built-up ring becomes a run-ending problem.
+
+### 10.4 Assimilation
+
+**Destroyed structures buff existing machines. They do not spawn new ones.**
+
+When your structures are destroyed, the mass is consumed and applies a stacking buff to all active machines — damage, speed, or armor. Critically, this does **not** increase enemy count, which keeps entity counts bounded and performance predictable.
+
+> **Tuning note:** assimilation stacks must **decay over time**. If they're permanent, a single bad ring collapse becomes an unrecoverable death spiral and the comeback mechanic in §12 is dead on arrival. Model it as a spike the player must survive, not a permanent tax.
+
+---
+
+## 11. Ring Damage and Collapse
+
+- **Each wedge has its own HP pool.** Machines damage the wedge they're attacking.
+- **A ring collapses when a threshold number of wedges break.** Starting value: **5 of 12.**
+- **Collapse is total.** Every turret, wall, relay, and terrain feature on that ring is destroyed. Nothing is refunded and nothing survives as rubble.
+- Wreckage from the collapse feeds assimilation (§10.4).
+
+Per-wedge HP with a ring-wide collapse threshold is the specific combination that keeps funneling meaningful. If the ring were one shared HP pool, it wouldn't matter *where* the horde hit it, and every terrain and wall decision in the game would become pointless. Instead, funneling decides which wedges are bleeding, and the player is racing a total.
+
+---
+
+## 12. Retaking Ground
+
+Lost rings **can** be retaken mid-run. This is expensive but is a genuine comeback path, not a token gesture.
+
+Fictionally, you are reclaiming stolen mass, which pairs with assimilation — retaking ground should feel like taking back something that is currently making the enemy stronger.
+
+> **Balance requirement:** retake cost must sit below the energy income generated by the throughput the ring provides, or nobody will ever do it. If retaking is never correct, cut it rather than shipping a dead button.
+
+---
+
+## 13. Abilities
+
+**Gated by cooldown only. No cost, no charges, no resource.**
+
+The star is both your economy and your artillery.
+
+| Ability | Effect |
+|---|---|
+| **Focused Flare** | Directed solar discharge along a bearing. High damage, wide, long cooldown. The panic button. |
+| **EMP Burst** | Area stun. Machines are machines. Short cooldown, low damage, buys seconds. |
+
+Additional abilities unlock through meta progression. The design constraint is that abilities buy *time*, never *space* — no ability should ever place structure, claim a wedge, or grant energy.
+
+---
+
+## 14. Meta Progression
+
+**Two currencies:** energy in-run, and a separate persistent meta currency.
+
+**Meta currency is earned from:**
+- Survival time
+- Total kills
+- Milestones and challenges completed
+
+**Meta currency buys:**
+- Permanent stat upgrades
+- New build options and turret types
+- Expanded starting loadouts
+
+### 14.1 AI Cores
+
+Heroes are **AI cores** — different doctrines, no unit on the field. There is no controllable character anywhere in this game. It is a pure cursor game.
+
+Each core reshapes the run: different starting build access, different ability set, different structural bias. Illustrative doctrines:
+
+- **Conservator** — cheap repair, strong armor, weak offense. Plays for radius retention.
+- **Prospector** — higher kill income, fragile structures. Plays for aggressive expansion.
+- **Interdictor** — terrain-focused, superior funneling, few turret options. Plays for kill boxes.
+
+### 14.2 Mutators
+
+**Opt-in modifiers that multiply meta currency earnings.** Chosen before the run, stackable.
+
+A difficulty ladder was considered and rejected: it would compete with loadouts and doctrines for the same run-to-run-variety job, and this design already leans hard on those. Opt-in modifiers stack on top of them instead of substituting for them.
+
+---
+
+## 15. Art Direction
+
+**UNDECIDED.** Not locked. Do not treat any option below as chosen.
+
+Four candidates, with the tradeoffs that actually matter for this specific design:
+
+| Direction | What it is | For | Against |
+|---|---|---|---|
+| **Schematic readout** | Glowing vector geometry on black, structure rendered as luminous line work | Survives unbounded zoom; cheap solo; matches "you are an intelligence looking at its own body" | Risks feeling cold and unphysical; hard to make destruction feel visceral |
+| **Gritty industrial** | Detailed metal, grime, wear, physical panels and struts | Weight and materiality; ring collapse would feel genuinely violent | Expensive to produce; turns to mush at ring 12+; hardest solo option |
+| **Painterly / awe** | Star as spectacle, structures as silhouettes, color-driven | Strongest emotional register; the star deserves it | Readability under pressure is the weakest of the four |
+| **Retro terminal / CRT** | Phosphor palette, scanlines, deliberate low fidelity | Cheapest; strong identity; hides fidelity limits | Well-trodden in indie space; limits color as an information channel |
+
+**The real constraint to decide against:** ring count is unbounded and the camera has free zoom, so whatever style is chosen has to stay legible at extreme range. That's a harder filter than usual and it should drive the decision more than taste does.
+
+**Deferred until Kevin decides.** Vertical slice uses style-agnostic placeholders.
+
+---
+
+## 16. Technical Notes — Godot 4
+
+**Pathing.** Twelve wedges times an unbounded ring count, with high enemy volume, rules out per-agent A*. Use a **flow field** regenerated on structural change, in polar coordinates. The radial grid is an asset here: polar coordinates make "move inward" trivially cheap, and walls only ever perturb a mostly-inward flow.
+
+**Coordinate system.** Work in `(ring, wedge)` internally and convert to world space for rendering. Do not store positions in Cartesian. Every gameplay question — bearing, adjacency, ring membership, distance to core — is trivial in polar and painful in Cartesian.
+
+**Entity counts.** Assimilation buffing existing machines rather than spawning new ones is what makes this tractable. Pool aggressively and set a hard concurrent-machine cap; scale difficulty through stats, not population.
+
+**Rendering.** Ring geometry should be procedural regardless of art direction — generate arc meshes per `(ring, wedge)` at claim time rather than authoring sprites, since unbounded ring count makes hand-authored ring art impossible. Art style then applies as materials, shaders, and decoration on top of procedural geometry, which keeps §15 an open decision that doesn't block engineering.
+
+---
+
+## 17. Open Risks
+
+1. **Run sameness.** No in-run progression means variety rests entirely on loadouts, doctrines, and mutators. Highest-priority risk. Mitigation: ship more doctrines than feels necessary.
+2. **Death spiral.** Total-loss collapse plus assimilation could make any single ring loss terminal. Mitigation: decaying assimilation stacks; retake cost tuned to be genuinely correct.
+3. **Readability at scale.** Free pan and zoom over an unbounded arena needs a persistent ring-status HUD — a compact radial minimap showing per-ring wedge integrity and relay status — or the player will lose a ring they never saw being attacked.
+4. **Relay frustration.** A brownout the player doesn't understand is a bug report, not a mechanic. Relay state needs to be impossible to miss.
+5. **Wedge scaling math.** Costs, HP, build slots, and turret coverage all scale with ring index. Get these curves wrong and one radius becomes strictly optimal, which flattens the entire game.
+
+---
+
+## 18. Vertical Slice
+
+Prove the radial grid is readable and fun before building anything else. Nothing in the meta layer matters if the core view doesn't work.
+
+**Scope:**
+- 3 rings, 12 wedges
+- Ring Plate, Deflector Wall, Flak Emplacement, Mass Driver
+- One elite: the Tunneler
+- Flow-field pathing in polar coordinates
+- Per-wedge HP, ring collapse at 5 of 12
+- Energy from kills, no meta layer
+- Placeholder rendering, style-agnostic — art direction is not a slice dependency
+
+**The three questions the slice must answer:**
+1. Can a player read a radial grid under pressure and know which bearing is failing?
+2. Does funneling with deflector walls produce a satisfying kill box, or does the horde just smear evenly around the perimeter?
+3. Does losing a ring feel like a dramatic setback, or like an arbitrary punishment?
+
+If question 3 comes back wrong, revisit total-loss collapse before building anything else.
+
+---
+
+*End v0.1*
