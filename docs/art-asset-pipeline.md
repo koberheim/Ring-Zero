@@ -42,14 +42,18 @@ The budget only survives because most of the game is drawn by code. Anything in 
 | 2 | Ring band strips | 3 | hot / working / cold tiers (§3 of the guide) |
 | 3 | Decal sheet | 2 | isolated elements on transparent ground |
 | 4 | Damage sheet | 1 | scorch, pitting, tears, patch welds |
-| 5 | Shared building mount | 1 | reused under all 13 buildings |
-| 6 | Building heads | 13 | 5 weapons, 5 structures, 3 terrain |
+| 5 | Shared building mount | 1 | reused under the 8 mount-mounted buildings only |
+| 6 | Building heads (mount-mounted) | 8 | 5 weapons + Relay + Armor Plating + Repair Node |
+| 6b | Wall | 1 | ring-attached reinforcing plate, NOT mount-mounted (it attaches to a band segment, not a turret) |
+| 6c | Terrain objects | 3 | Debris Field, Tractor Lane, Occlusion Screen — standalone objects, NOT mount-mounted |
 | 7 | Standard machine | 1 | deliberately simple — swarm-first |
 | 8 | Elites | 5 | Tunneler, Transfer, Foundry, Sapper, Breacher |
 | 9 | Assembler | 1 | boss; growth is procedural on top |
-| | **Subtotal** | **32** | |
+| | **Subtotal** | **26** | |
 | | Iteration / rejects headroom | ~8–13 | |
-| | **Total** | **~40–45** | |
+| | **Total** | **~34–39** | |
+
+**Correction (T-079 prep):** the original "13 building heads, 5 structures" line didn't match the actual game data. Checked against `build_view.gd`'s real placeable list: only 3 slot-based structures exist (Relay, Armor Plating, Repair Node), and Wall is a separate ring/band-attached item, not a slot occupant at all. The 3 terrain items were also never turret-mounted objects — Debris Field is inert wreckage, Tractor Lane is a directional effect, Occlusion Screen is a screen panel; none of them sit on the shared mount. Corrected above; §3.2's per-category templates reflect the same split.
 
 ---
 
