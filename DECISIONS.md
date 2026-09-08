@@ -3350,3 +3350,27 @@ The cost is that a tilt breaks radial symmetry. In true top-down, one sprite rot
 **Timing:** raised before T-078 generates anything, so the change costs nothing. After ~40 images existed it would have cost the entire art budget.
 
 **Blocking:** T-074 (ring geometry gains depth), T-080 (camera tilt), and the D-120 pipeline's generation specs.
+
+### D-124 — Mockup review findings and pipeline adjustments
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** D-120, D-123; docs/art-mockup-brief.md
+
+**What this is about**
+Nine review mockups (the brief's four shots plus five variants: top-down comparisons for Shots 1/2, thicker-bands for Shot 2, red-giant/white-star for Shot 3) were generated and reviewed against D-120/D-123 before any production art. This decision records what the review found and how the pipeline responds.
+
+**Findings**
+- Structural silhouette variation plus visible ring-to-ring gaps solves T-049's flat-grey-disc failure mode; confirmed by direct comparison that thin bands read better than the thicker-bands variant.
+- Corona bleed delivers the intended signature image, and cold cyan elite accents survive all three star skins (yellow/white/red giant) — resolves the colour-survival risk D-120 flagged.
+- The tilted-vs-top-down scene renders are visually indistinguishable, as predicted by D-123's own math (≈6% ground squash at 20°, imperceptible in a full composed scene). This neither confirms nor refutes the tilt — a scene mockup was never going to show it; only individual-object review (T-078) tests it.
+- **Rule violation found:** several standard machines in the swarm shot carried small warm window-lights. Standard machines must be pure matte silhouette with zero emissive — only elites/Assembler carry the cold accent (§5 of the style guide). Real, not theoretical: it happened on the first attempt.
+
+**Resolution - 2026-09-08**
+- The 9 mockups are kept as **style/mood reference only** (palette, wear, lighting mood, silhouette language) — not cropped, not reused as production assets. They carry baked scene lighting that would fight dynamic in-engine relighting.
+- **T-078 (pipeline vertical slice) still runs as specified.** The mockups answered "is the direction right"; T-078 answers "does the isolated/flat/normalised production pipeline work end to end" — a different, still-open question.
+- **Yellow is the canonical star for the first production pass.** White and red giant remain in the skin pool as later variance checks rather than separately-tuned passes.
+- **Emissive-is-rank gets a hardened, explicit negative constraint** in the machine prompt template (`docs/art-asset-pipeline.md` §3.2), verified by one regenerated check before being locked into `docs/art-prompts/`.
+
+**Blocking:** none — these are pipeline refinements, not new open questions. Recorded so the fix doesn't get rediscovered from scratch when standard-machine art is actually generated (T-079).

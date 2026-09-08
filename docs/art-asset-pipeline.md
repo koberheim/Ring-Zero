@@ -4,6 +4,16 @@
 **Method:** Kevin generates source images; they are processed to game-ready assets and reviewed in the running game before acceptance.
 **Budget:** ~35–45 source images for a first complete pass.
 
+**Mockup review (2026-09-08):** the four-shot brief (`docs/art-mockup-brief.md`) plus five variants were generated and reviewed against D-120/D-123. Findings, recorded as **D-124**:
+- Structural silhouette variation + visible ring-to-ring gaps solves the flat-grey-disc failure mode. Thin bands confirmed over thicker (direct A/B).
+- Corona bleed delivers the signature image, and cold cyan elite accents survive all three star skins (yellow/white/red giant) — the open colour-survival risk from D-120 is answered.
+- Tilted-vs-top-down scene renders came back visually identical — expected: at 20°, full-scene ground squash is ~6%, imperceptible in a composed shot. This is not evidence for or against D-123; the tilt only shows up on individual objects, which is what T-078 tests, not a scene mockup.
+- **Rule violation found and must not recur:** several standard machines in the swarm shot carried small warm window-lights. Standard machines must be pure matte silhouette with zero emissive of any kind — only elites/Assembler carry the cold accent. Added as an explicit negative constraint below (§3.2).
+
+**These 9 images are kept as style/mood reference only** — palette, wear level, lighting mood, silhouette language. They are full dramatic scene composites (baked directional light, motion, dust) and are **not** cropped, reused, or treated as production assets; production assets are still generated fresh using the isolated/flat-lit templates below. They do not replace the pipeline's own vertical-slice checkpoint (stage 1) — the mockups validated *art direction*, stage 1 validates the *production pipeline itself* (an isolated, flat-lit, normalised, in-engine-reviewed asset surviving the whole process end to end), which is a different, still-open question.
+
+**Canonical star for the first production pass: yellow.** Baseline warmth, neither extreme — every other palette decision (band tint, decal wear, damage colour) gets tuned against it first; white and red giant remain in the skin pool and are treated as variance checks afterward, not separately tuned passes.
+
 ---
 
 ## 1. What is authored vs. what stays procedural
@@ -89,6 +99,22 @@ NEGATIVE  no text, no logos, no UI, no characters, no scene lighting,
 **Consistency requirement:** every object asset must be generated at the *same* 20° and the same nominal facing, or they will not sit together once rotated to their bearings. This belongs in the locked common block.
 
 **Machine colour note:** machines carry **cold** cyan/white accents; player structures carry **warm** amber. This inversion is load-bearing (§8) and belongs in the negative prompt for both sides.
+
+**Emissive-is-rank constraint (D-124, mandatory in the standard-machine prompt):** confirmed as a real failure mode in mockup review, not a theoretical risk — an early scene render put small warm window-lights on ordinary swarm machines, which breaks the rule that any glow means "not a standard machine."
+
+```
+STANDARD MACHINE
+  REQUIRED  matte, unlit dark hull; zero emissive of any kind;
+            silhouette carries all identity
+  NEGATIVE  no windows, no running lights, no glow, no light-up
+            details, no coloured accents of any kind
+
+ELITE / ASSEMBLER ONLY
+  REQUIRED  same hull language, PLUS one small cold cyan/white
+            emissive accent marking it as not-standard
+```
+
+Verify this constraint holds with a single regenerated check before it is treated as locked in `docs/art-prompts/`.
 
 ### 3.3 The polar-distortion constraint
 
@@ -199,6 +225,8 @@ Deliberately a vertical slice first — prove the whole pipeline end-to-end on a
 | **5. Integration** | VFX (procedural), Alt overlay, ring-tier tinting | full guide compliance pass |
 
 Stage 1 is the real decision point: if the pipeline produces a coherent, in-engine-verified slice of five assets, the remaining thirty-odd are mechanical. If it doesn't, the templates change before any budget is spent.
+
+**Stage 0-1 execution:** `docs/art-t078-brief.md` is the self-contained task brief (what to generate, normalize, check and report), and `docs/art-prompts/v1-templates.md` is the locked v1 prompt templates it uses — separate from and stricter than the mockup brief's scene-composite prompts, since these produce isolated flat-lit source images meant to become real assets.
 
 ---
 
