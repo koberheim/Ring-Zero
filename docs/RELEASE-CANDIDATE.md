@@ -4,7 +4,7 @@ Authority: September 8, 2026 autonomous release instruction. This supersedes ear
 
 ## Locked scope
 
-Single-player orbital survival strategy: protect the star, expand the fortress, counter seven machine families, and survive a 15-minute containment operation. The existing three doctrines, three loadouts, seven unlocks, capped upgrades and three combinable mutators supply replay variety. Practice remains separate and cannot earn currency. No multiplayer, procedural campaign map, monetization, workshop, or new enemy catalogue in 1.0.
+Single-player orbital survival strategy: protect the star, expand the fortress, counter seven machine families, and survive a 15-minute containment operation. The existing three doctrines, three loadouts, seven unlocks, capped upgrades and three combinable mutators supply replay variety. Practice remains separate and cannot earn currency. The production profile caps simultaneous machines at 128 and expansion at 12 rings; historical 1,000-machine stress fixtures remain unchanged. No multiplayer, procedural campaign map, monetization, workshop, or new enemy catalogue in 1.0.
 
 Keep the deterministic 60 Hz simulation, validated transactional commands, durable profile store, industrial interface, Barlow fonts, warm player hardware and cold enemy accents. Replace the live graybox with thin industrial bands and readable hardware. Favor clear silhouettes and bounded procedural effects over additional unreviewed generated images. Retain source art and failed reviews for provenance.
 

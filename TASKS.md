@@ -1,3 +1,5 @@
+> Current authority ? 2026-09-08: Kevin has authorized autonomous release-candidate design, implementation, assets and QA on release/v1.0-candidate. Earlier phase approval stops are superseded within this branch. See docs/RELEASE-CANDIDATE.md and docs/RELEASE-REPORT.md for current scope, evidence and external release limitations. Historical entries below are preserved.
+
 # RING ZERO — Tasks
 
 | Marker | Status | Meaning |

@@ -1,5 +1,9 @@
 # Correctness checks on Windows
 
+Release-candidate package verification: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/smoke_packaged_input.ps1`. This entry point now exercises the actual owned application window through `smoke_targeted.ps1`, with isolated progress and independent reload. The older external headless SceneTree driver timed out without executing its checks against the release export; it is retained as diagnostic source, not counted as passing package evidence. Current start-menu Quit position is 930,679 at the 1440x810 design size.
+
+Candidate asset preparation: `scripts/run_probe.ps1 -Script res://scripts/prepare_release_assets.gd -Label release-assets` extracts installed-engine notices and rasterizes the original achievement emblems. Run before a frozen export if those sources change. `scripts/run_probe.ps1 -Script res://tests/performance/measure_release.gd -Label release-performance -Rendered` measures the bounded GPU fixture. The standalone `play_operation.gd` probe exercises an unfunded deterministic starter strategy and is not a guaranteed winning player.
+
 From PowerShell, run:
 
 ```powershell

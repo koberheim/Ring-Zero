@@ -1,0 +1,106 @@
+﻿{
+    "ok":  true,
+    "input_method":  "owned_hwnd_messages",
+    "launches":  [
+                     {
+                         "label":  "first",
+                         "pid":  24448,
+                         "exit_code":  0
+                     },
+                     {
+                         "label":  "reload",
+                         "pid":  42676,
+                         "exit_code":  0
+                     }
+                 ],
+    "inputs":  [
+                   {
+                       "pid":  24448,
+                       "type":  "click",
+                       "x":  307.5,
+                       "y":  679,
+                       "right":  false,
+                       "utc":  "2026-09-08T23:06:37.4849780Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "key",
+                       "virtual_key":  49,
+                       "utc":  "2026-09-08T23:06:38.5165189Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "click",
+                       "x":  846.5,
+                       "y":  388.3,
+                       "right":  false,
+                       "utc":  "2026-09-08T23:06:38.7769142Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "click",
+                       "x":  846.5,
+                       "y":  388.3,
+                       "right":  true,
+                       "utc":  "2026-09-08T23:06:39.0399449Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-08T23:06:39.8043215Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-08T23:06:40.0690865Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-08T23:06:40.3335604Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "click",
+                       "x":  720,
+                       "y":  539,
+                       "right":  false,
+                       "utc":  "2026-09-08T23:06:40.5989688Z"
+                   },
+                   {
+                       "pid":  24448,
+                       "type":  "click",
+                       "x":  930,
+                       "y":  679,
+                       "right":  false,
+                       "utc":  "2026-09-08T23:06:40.8515035Z"
+                   },
+                   {
+                       "pid":  42676,
+                       "type":  "click",
+                       "x":  930,
+                       "y":  679,
+                       "right":  false,
+                       "utc":  "2026-09-08T23:06:42.8001199Z"
+                   }
+               ],
+    "build":  {
+                  "build_id":  "44c8b67728dd14ca38dec43818409a23ccb0eb7662c31dc271a51f3f3df76e1e",
+                  "engine":  "4.7.2.stable",
+                  "format":  1.0,
+                  "frozen":  true,
+                  "generated_utc":  "2026-09-08T23:06:30.9500562Z",
+                  "source_files":  379.0
+              },
+    "engine":  "4.7.2-stable (official)",
+    "run_id":  "1",
+    "ticks":  155,
+    "commands":  1,
+    "markers":  3,
+    "currency":  0,
+    "profile":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\package-targeted\\run-20260908-230635-295-40908\\appdata\\Godot\\app_userdata\\RING ZERO\\profile.json",
+    "trace":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\package-targeted\\run-20260908-230635-295-40908\\appdata\\Godot\\app_userdata\\RING ZERO\\runs\\run-1-24448-2152679.jsonl"
+}

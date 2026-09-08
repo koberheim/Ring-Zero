@@ -1,0 +1,362 @@
+﻿[
+    {
+        "Suite":  "tests/core/test_polar_grid.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.461,
+        "Summary":  "Polar grid: 1206 checks, 0 failures.",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\001-test_polar_grid.log"
+    },
+    {
+        "Suite":  "tests/core/test_polar_motion.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.371,
+        "Summary":  "polar_motion: PASS",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\002-test_polar_motion.log"
+    },
+    {
+        "Suite":  "tests/core/test_polar_route_field.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.65,
+        "Summary":  "route field checks=287 failures=0",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\003-test_polar_route_field.log"
+    },
+    {
+        "Suite":  "tests/core/test_profile_store.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.372,
+        "Summary":  "Profile store: 59 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\004-test_profile_store.log"
+    },
+    {
+        "Suite":  "tests/core/test_run_recorder.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.551,
+        "Summary":  "Run recorder: 59 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\005-test_run_recorder.log"
+    },
+    {
+        "Suite":  "tests/core/test_simulation_foundation.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.458,
+        "Summary":  "simulation_foundation: PASS",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\006-test_simulation_foundation.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_ability_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.368,
+        "Summary":  "Ability rules: 30 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\007-test_ability_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_assembler_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.372,
+        "Summary":  "Assembler rules: 42 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\008-test_assembler_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_balance_profile.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.369,
+        "Summary":  "Balance profile: 580 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\009-test_balance_profile.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_breacher_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.369,
+        "Summary":  "Breacher rules: 49 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\010-test_breacher_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_building_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.376,
+        "Summary":  "Building rules: 76 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\011-test_building_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_foundry_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.37,
+        "Summary":  "Foundry rules: 50 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\012-test_foundry_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_live_simulation.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  4.052,
+        "Summary":  "Live simulation: 704 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\013-test_live_simulation.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_machine_spawn_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.365,
+        "Summary":  "Machine spawn rules: 151 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\014-test_machine_spawn_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_numerical_movement.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.453,
+        "Summary":  "Numerical movement: 42 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\015-test_numerical_movement.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_phase9_corrections.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.452,
+        "Summary":  "Phase9 corrections: 14 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\016-test_phase9_corrections.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_run_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  17.523,
+        "Summary":  "Run rules: 104 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\017-test_run_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_sapper_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.267,
+        "Summary":  "Sapper rules: 49 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\018-test_sapper_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_terrain_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.364,
+        "Summary":  "Terrain rules: 48 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\019-test_terrain_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_transfer_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.365,
+        "Summary":  "Transfer rules: 49 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\020-test_transfer_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_tunneler_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.374,
+        "Summary":  "Tunneler rules: 224 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\021-test_tunneler_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_wall_navigation.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.368,
+        "Summary":  "Wall navigation: 507 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\022-test_wall_navigation.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_wall_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.368,
+        "Summary":  "Wall rules: 97 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\023-test_wall_rules.log"
+    },
+    {
+        "Suite":  "tests/gameplay/test_weapon_rules.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  1.014,
+        "Summary":  "Weapon rules: 409 checks, 0 failures",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\024-test_weapon_rules.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_application.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  2.772,
+        "Summary":  "Application checks: 77 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\025-test_application.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_application_feedback.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.921,
+        "Summary":  "Application feedback checks: 13 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\026-test_application_feedback.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_application_recorder.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  1.018,
+        "Summary":  "Application recorder checks: 9 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\027-test_application_recorder.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_art_preview.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.929,
+        "Summary":  "Art preview checks: 59 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\028-test_art_preview.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_build_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.464,
+        "Summary":  "Build view checks: 49 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\029-test_build_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_grid_inspection.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.363,
+        "Summary":  "Presentation checks: 6668 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\030-test_grid_inspection.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_growing_world_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.747,
+        "Summary":  "Growing world view checks: 58 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\031-test_growing_world_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_hotkeys_compact_ui.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  1.384,
+        "Summary":  "Hotkey/compact UI checks: 420 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\032-test_hotkeys_compact_ui.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_live_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  1.199,
+        "Summary":  "Live view checks: 85 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\033-test_live_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_release_candidate.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.923,
+        "Summary":  "Release candidate checks: 24 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\034-test_release_candidate.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_strategic_detail.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.545,
+        "Summary":  "Strategic detail checks: 11 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\035-test_strategic_detail.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_structure_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.547,
+        "Summary":  "Structure view checks: 13 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\036-test_structure_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_terrain_ability_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.914,
+        "Summary":  "Terrain/ability view checks: 116 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\037-test_terrain_ability_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_tunneler_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  5.121,
+        "Summary":  "Tunneler view checks: 47 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\038-test_tunneler_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_wall_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.639,
+        "Summary":  "Wall view checks: 84 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\039-test_wall_view.log"
+    },
+    {
+        "Suite":  "tests/presentation/test_weapon_catalogue_view.gd",
+        "Passed":  true,
+        "ExitCode":  0,
+        "TimedOut":  false,
+        "Seconds":  0.829,
+        "Summary":  "Weapon catalogue view checks: 73 passed, 0 failed",
+        "Log":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\test-logs\\run-20260908-225909-370-4664\\040-test_weapon_catalogue_view.log"
+    }
+]

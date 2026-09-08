@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"actors":0,"core":200.0,"energy":0.0,"kills":0,"rings":1,"seconds":0.0166666666666667}
+{"actors":3,"core":200.0,"energy":176.0,"kills":98,"rings":1,"seconds":60.0166666666667}
+{"actors":7,"core":200.0,"energy":17.0,"kills":223,"rings":2,"seconds":120.016666666667}
+{"actors":11,"core":200.0,"energy":200.0,"kills":349,"rings":2,"seconds":180.016666666667}
+{"actors":12,"core":200.0,"energy":264.0,"kills":477,"rings":2,"seconds":240.016666666667}
+{"actors":11,"core":200.0,"energy":357.0,"kills":606,"rings":2,"seconds":300.016666666667}
+{"actors":13,"core":200.0,"energy":338.0,"kills":734,"rings":2,"seconds":360.016666666667}
+{"actors":14,"core":200.0,"energy":331.0,"kills":862,"rings":2,"seconds":420.016666666667}
+{"actors":13,"core":200.0,"energy":180.0,"kills":991,"rings":2,"seconds":480.016666666667}
+{"actors":16,"core":200.0,"energy":57.0,"kills":1118,"rings":2,"seconds":540.016666666667}
+{"strategy":"starter profile, deterministic unfunded coverage bot","summary":{"elapsed_seconds":565.733333333333,"highest_ring":2,"kills":1169,"outcome":"defeat","relay_rebuilds":0},"wall_seconds":39.21}
