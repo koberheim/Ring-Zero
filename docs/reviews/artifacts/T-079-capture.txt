@@ -1,0 +1,35 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+Saved res://docs/reviews/artifacts/T-079-close-01.png
+Saved res://docs/reviews/artifacts/T-079-close-02.png
+Saved res://docs/reviews/artifacts/T-079-close-03.png
+Saved res://docs/reviews/artifacts/T-079-close-04.png
+Saved res://docs/reviews/artifacts/T-079-close-05.png
+Saved res://docs/reviews/artifacts/T-079-strategic-01.png
+Saved res://docs/reviews/artifacts/T-079-strategic-02.png
+Saved res://docs/reviews/artifacts/T-079-yellow-01.png
+Saved res://docs/reviews/artifacts/T-079-yellow-02.png
+Saved res://docs/reviews/artifacts/T-079-yellow-03.png
+Saved res://docs/reviews/artifacts/T-079-yellow-04.png
+Saved res://docs/reviews/artifacts/T-079-yellow-05.png
+Saved res://docs/reviews/artifacts/T-079-crowd-01.png
+Saved res://docs/reviews/artifacts/T-079-crowd-02.png
+Saved res://docs/reviews/artifacts/T-079-crowd-03.png
+Saved res://docs/reviews/artifacts/T-079-rotations-01.png
+Saved res://docs/reviews/artifacts/T-079-rotations-02.png
+Saved res://docs/reviews/artifacts/T-079-rotations-03.png
+Saved res://docs/reviews/artifacts/T-079-rotations-04.png
+Saved res://docs/reviews/artifacts/T-079-rotations-05.png
+Saved res://docs/reviews/artifacts/T-079-rotations-06.png
+Saved res://docs/reviews/artifacts/T-079-rotations-07.png
+Saved res://docs/reviews/artifacts/T-079-rotations-08.png
+Saved res://docs/reviews/artifacts/T-079-rotations-09.png
+Saved res://docs/reviews/artifacts/T-079-rotations-10.png
+Saved res://docs/reviews/artifacts/T-079-rotations-11.png
+Saved res://docs/reviews/artifacts/T-079-rotations-12.png
+Saved res://docs/reviews/artifacts/T-079-rotations-13.png
+Saved res://docs/reviews/artifacts/T-079-rotations-14.png
+Saved res://docs/reviews/artifacts/T-079-rotations-15.png
+Saved res://docs/reviews/artifacts/T-079-rotations-16.png
+Saved res://docs/reviews/artifacts/T-079-rotations-17.png

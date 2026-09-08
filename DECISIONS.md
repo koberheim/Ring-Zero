@@ -3410,3 +3410,40 @@ T-078's own report explicitly declined to claim a full production pass: the gene
 - **Albedo flatness: accepted as a known, bounded limitation** of the current normalization approach, per the report's own honest framing — not silently relied upon as if it were physically correct.
 
 **Blocking:** clears T-079 (remaining production assets) to begin. The machine-legibility and band-seam questions are carried forward as open watch items against T-074/T-075's real renderer, not closed as resolved.
+
+### D-127 — Deflector Wall: radially-outward-facing barrier; outermost-ring restriction is open
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟡 Partially decided — art direction set, ring-restriction mechanic explicitly TBD
+**Source:** T-079; docs/reviews/T-079-production-assets.md
+
+**What this is about**
+T-079's Wall asset came back as the same octagonal turret-mount pedestal as every building head — confirmed by direct image review, not just the generation report. It doesn't read as a standing barrier at all. Raised the question of what Wall should actually look like and how it should be mounted, given it's the only structure that attaches to a band segment rather than sitting in a slot.
+
+**Resolution - 2026-09-08 (art direction)**
+Wall is a barrier on the **outside edge of the wedge, facing radially outward** — not a turret-style object with a base plinth. The existing template (§17 in v1-templates.md) needs rework to reflect this: a flush, outward-facing barrier profile, explicitly not the octagonal mount shape used by turret heads.
+
+**Open, explicitly TBD (2026-09-08):** Kevin raised whether Wall should only ever exist on the **outermost owned ring** — when a new ring is purchased, the wall either migrates outward automatically or must be repurchased on the new frontier. This is a real rule change to how Wall currently works (today it can be placed on any owned ring's wedge, per D-066-068's wall mechanics) and needs its own decision once the mechanic is worked out. Not implemented; no code or rule changes made. Tracked here so it isn't lost, not because it's approved.
+
+**Blocking:** the Wall art regeneration can proceed independently using the new facing direction; the ring-restriction mechanic question blocks nothing yet since it isn't scheduled.
+
+---
+### D-128 — Elite identification: five distinct cold-family accent colours, one per elite
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** D-120 §5, D-124; T-079; docs/reviews/T-079-production-assets.md
+
+**What this is about**
+T-079's report — confirmed by direct image review — found that three of the five elites (Tunneler, Transfer, Breacher) converge on the same silhouette family (rectangular central hull, paired side masses) and are difficult to distinguish even at full close-up size, before any minification. Sapper and Foundry are genuinely distinct, proving the "silhouette telegraphs the mechanic" approach works in principle; the other three don't yet deliver it. D-120/D-124 established a single shared cold cyan/white accent for all elites, used purely as a rank signal ("any glow = not a standard machine"), not as an identity signal between elites.
+
+**Resolution - 2026-09-08**
+Rather than (or in addition to) reworking the three confused silhouettes, each of the five elites gets its **own distinct accent colour**, all staying within the cold family (never warm, never confusable with player-structure amber) so the existing warm-us/cold-them split from D-120 §8 is undisturbed. This **refines** D-120/D-124's emissive rule: "emissive is rank" still holds (standard machines stay zero-emissive; any glow still means elite-or-boss), but among elites, colour now also carries identity, which D-120 originally reserved for silhouette alone.
+
+**Provisional colour assignments** (Astra's proposal under normal execution latitude, not separately re-confirmed — flag if wrong): Tunneler cyan, Transfer blue, Foundry teal-green, Sapper violet, Breacher icy white. Assembler keeps a larger, more intense icy-white accent (not a 6th elite colour) so it still reads as boss-tier rather than "a sixth elite."
+
+**Follow-up not yet resolved:** using colour as the sole differentiator between silhouette-identical elites (Tunneler/Transfer/Breacher specifically) sits in tension with D-115's existing "non-colour-only status cues" accessibility commitment — a colour-blind player would lose the ability to tell those three apart if their silhouettes stay identical. Not blocking this decision, but worth a real answer before this ships, likely by still pursuing some silhouette differentiation for those three rather than treating colour as a full substitute.
+
+**Blocking:** the elite/Assembler prompt templates (§21-26 in v1-templates.md) need the accent-colour rule rewritten before any further elite generation; each of the 5 new hues also needs the same yellow/white/red-giant star-skin legibility check the single cyan accent already passed in the mockup review.

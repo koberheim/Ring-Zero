@@ -334,23 +334,29 @@ NEGATIVE  [common block negatives] plus: no mounting base, no ring
 
 Output: `assets/art/source/head_armor_plating_01.png`.
 
-## 17. Wall (Deflector Wall) — NOT mount-mounted
+## 17. Wall (Deflector Wall) — NOT mount-mounted, revised per D-127
 
-Wall is a ring/band-attached reinforcement, not a slot occupant — it does not sit on the shared turret mount at all. Generate as its own standalone object.
+**T-079 finding, confirmed by direct image review:** the first attempt came back as the same octagonal turret-mount pedestal every building head uses, just with hazard stripes — it read as another turret base, not a barrier. Referencing the anchor for style pulled its literal mount geometry along, not just its material. This revision adds an explicit negative naming that exact shape.
+
+**D-127:** Wall is a barrier on the **outside edge of the wedge, facing radially outward** — a flush-mounted plate along the band's outer face, not a free-standing turret-like object with its own base plinth.
 
 ```
 [COMMON BLOCK]
 [OBJECT CAMERA]
-SUBJECT   a standing armoured deflector plate/blast shield segment,
-          reads as a reinforcing barrier bolted directly onto a band
-          segment — bracing struts, hazard-striped edge, a slightly
-          raised/thickened profile relative to the plain band beneath
-          it. This attaches to a RING BAND, not a turret mount
-NEGATIVE  [common block negatives] plus: no turret mount, no ring
-          collar, no weapon silhouette, no barrels or dish of any kind
+SUBJECT   a flat, elongated armoured barrier plate that runs along a
+          band segment's OUTER edge, facing radially outward — bracing
+          struts along its back, hazard-striped leading face, a low
+          wide profile (wider than it is tall). Reads as a wall
+          section, not a piece of equipment sitting on the wedge
+NEGATIVE  [common block negatives] plus: NO octagonal plinth, NO
+          circular/polygonal turret base of any kind, NO ring collar,
+          NO radial symmetry (this is a linear barrier, not a turret),
+          no weapon silhouette, no barrels or dish
 ```
 
 Output: `assets/art/source/wall_deflector_01.png`.
+
+**Open, not yet scoped (D-127):** whether Wall should only ever exist on the outermost owned ring (migrating or requiring repurchase when a new ring is bought) is a separate rule question, explicitly TBD — does not block this art rework.
 
 ## 18. Terrain — Debris Field (NOT mount-mounted)
 
@@ -401,35 +407,48 @@ NEGATIVE  [common block negatives] plus: no turret mount, no weapon
 
 Output: `assets/art/source/terrain_occlusion_screen_01.png`.
 
-## 21-25. Elites — shared constraints, then per-elite subject
+## 21-25. Elites — shared constraints, then per-elite subject (revised per D-128)
 
-All five elites use the emissive-is-rank rule from the OTHER side: unlike the standard machine (§6, zero emissive), elites REQUIRE exactly one small cold cyan/white emissive accent marking them as not-standard. This is not optional either — an elite with no accent, or a warm accent, both violate D-124/the style guide equally.
+**T-079 finding, confirmed by direct image review:** Tunneler, Transfer and Breacher converged on the same silhouette family — rectangular central hull, paired side masses — and are hard to tell apart even at full close-up size, before any minification. Sapper and Foundry are genuinely distinct and prove the silhouette approach works; leave their subject descriptions as-is. Tunneler/Transfer/Breacher's subject descriptions below have been strengthened with explicit mutual-differentiation language.
+
+**D-128 supersedes the single-shared-accent rule.** Emissive is still rank (a standard machine, §6, stays zero-emissive — any glow at all still means "not standard"), but each elite now carries its OWN accent colour, all staying cold (never warm, never confusable with player-structure amber):
+
+| Elite | Accent colour |
+|---|---|
+| Tunneler | cyan |
+| Transfer | blue |
+| Foundry | teal-green |
+| Sapper | violet |
+| Breacher | icy white |
 
 ```
 [COMMON BLOCK]
 [OBJECT CAMERA]
 MATERIAL  matte dark hull, same family as the standard machine, PLUS
-          exactly one small COLD cyan/white emissive accent (never
-          warm, never absent) marking this as an elite, not a standard
-          machine
+          exactly one small emissive accent in THIS ELITE'S ASSIGNED
+          COLOUR (see table) — never warm, never absent, never a
+          different elite's colour
 NEGATIVE  [common block negatives] plus: no warm-coloured accents, no
-          multiple competing accent colours, not fully emissive (the
-          hull stays matte dark — only ONE small accent glows)
+          multiple competing accent colours, no other elite's assigned
+          colour, not fully emissive (the hull stays matte dark — only
+          ONE small accent glows)
 ```
 
-**21. Tunneler** — `SUBJECT: a low burrowing rig with a prominent drill head at the front, built for going under structure rather than over it`. Output: `assets/art/source/elite_tunneler_01.png`.
+**21. Tunneler** (cyan accent) — `SUBJECT: a low, elongated burrowing rig on the ground plane, with a prominent conical drill head projecting forward — the ONLY elite with a pointed drill nose. Built for going under structure rather than over it`. Output: `assets/art/source/elite_tunneler_01.png`.
 
-**22. Transfer** — `SUBJECT: a machine with visible boosters and launch rails along its body, built for a single powerful orbital hop rather than sustained ground movement`. Output: `assets/art/source/elite_transfer_01.png`.
+**22. Transfer** (blue accent) — `SUBJECT: a compact machine dominated by two large flared booster nozzles at its rear and short swept launch fins — the ONLY elite with visible rocket/booster nozzles. Built for a single powerful orbital hop rather than sustained ground movement. Must NOT share Tunneler's drill nose or Breacher's ram prow`. Output: `assets/art/source/elite_transfer_01.png`.
 
-**23. Foundry** — `SUBJECT: a huge, heavily anchored grinding press, wider and more massive than any other elite, built to park in place and grind rather than move`. Output: `assets/art/source/elite_foundry_01.png`.
+**23. Foundry** — unchanged — `SUBJECT: a huge, heavily anchored grinding press, wider and more massive than any other elite, built to park in place and grind rather than move`. Output: `assets/art/source/elite_foundry_01.png`.
 
-**24. Sapper** — `SUBJECT: a machine with fine seeking probes and a raised sensor mast, slender and precise, built for finding a specific target rather than brute force`. Output: `assets/art/source/elite_sapper_01.png`.
+**24. Sapper** — unchanged — `SUBJECT: a machine with fine seeking probes and a raised sensor mast, slender and precise, built for finding a specific target rather than brute force`. Output: `assets/art/source/elite_sapper_01.png`.
 
-**25. Breacher** — `SUBJECT: a machine with an armoured wedge-shaped ram prow at the front, built for smashing straight through barriers rather than pathing around them`. Output: `assets/art/source/elite_breacher_01.png`.
+**25. Breacher** (icy white accent) — `SUBJECT: a machine almost entirely occupied by a single massive angular wedge-shaped ram prow at its front, blunt and triangular from above — the ONLY elite where the front prow is wider than the rest of the hull. Built for smashing straight through barriers. Must NOT share Tunneler's conical drill or Transfer's booster nozzles`. Output: `assets/art/source/elite_breacher_01.png`.
+
+**Review requirement added by D-128:** each of the 5 accent colours (plus the Assembler's icy-white below) must pass the same yellow/white/red-giant star-skin legibility check the single shared cyan accent already passed in the mockup review — this hasn't been re-verified per-colour yet.
 
 ## 26. Assembler (boss)
 
-Largest and most distinct silhouette in the game — must be unmistakable even at strategic zoom. Its growth-over-time is procedural (D-110); this is the base, unaugmented form.
+Largest and most distinct silhouette in the game — must be unmistakable even at strategic zoom. Its growth-over-time is procedural (D-110); this is the base, unaugmented form. Per D-128, Assembler is NOT a sixth elite colour — it keeps a larger, more intense version of icy white so it reads as boss-tier rather than "one more elite."
 
 ```
 [COMMON BLOCK]
@@ -440,13 +459,17 @@ SUBJECT   a vast, heavily-built accreting-hull machine — visibly larger
           structure into itself, reads immediately as "boss", not
           "elite"
 MATERIAL  matte dark hull, same family as the standard machine and
-          elites, PLUS a larger/more prominent cold cyan-white emissive
-          accent than any elite carries — this is the largest, most
-          dangerous machine in the game and should read as such
+          elites, PLUS a larger/more prominent ICY WHITE emissive
+          accent than any elite carries (not one of the 5 elite hues)
+          — this is the largest, most dangerous machine in the game
 SCALE     noticeably larger in composition/proportion than the elite
           templates above — this is a boss, not another elite
 NEGATIVE  [common block negatives] plus: no warm-coloured accents, not
-          fully emissive (hull stays matte dark, accent stays localized)
+          fully emissive (hull stays matte dark, accent stays
+          localized), not one of the 5 elite accent colours, not
+          multiple separate glowing areas (T-079's first attempt was
+          rejected for exactly this — a lit disk plus separate lit
+          ring sectors both counted as separate glowing areas)
 ```
 
 Output: `assets/art/source/assembler_01.png`.

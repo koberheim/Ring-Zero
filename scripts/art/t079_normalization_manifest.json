@@ -1,0 +1,776 @@
+[
+  {
+    "source": "assets/art/source/band_hot_01.png",
+    "source_sha256": "403c04496769eceaf9f5cc9513983e20edee63ebd8ed9aa49deff8edaf3a9001",
+    "size": [
+      1024,
+      128
+    ],
+    "content_bounds": [
+      0,
+      81,
+      1983,
+      712
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "band",
+    "pivot": [
+      0,
+      64.0
+    ],
+    "repeats": 3,
+    "edge_rgba_mean_absolute_error": 9.650390625,
+    "output_sha256": "623844d03311a1fad5c8f752d5f6f5b9f23d4fa8be22f64b1414f42d4f8d8a0e",
+    "output": "assets/art/bands/band_hot_01.png",
+    "section": 7,
+    "name": "Hot band",
+    "world_width": 256,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "pivot_note": "Reviewed footprint/surface centre",
+    "edge_rgba_max_absolute_error": 110
+  },
+  {
+    "source": "assets/art/source/band_cold_01.png",
+    "source_sha256": "e35a498ff4946ce59e501751eb0ae7c0b7e704450b78df5b53cbf7f1afc57f33",
+    "size": [
+      1024,
+      128
+    ],
+    "content_bounds": [
+      0,
+      152,
+      1983,
+      642
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "band",
+    "pivot": [
+      0,
+      64.0
+    ],
+    "repeats": 2,
+    "edge_rgba_mean_absolute_error": 17.263671875,
+    "output_sha256": "e795e107172fcf8d8f0ed7754d5de647e8d618afcc1e834c845915d73dd49ab8",
+    "output": "assets/art/bands/band_cold_01.png",
+    "section": 8,
+    "name": "Cold band",
+    "world_width": 256,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "pivot_note": "Reviewed footprint/surface centre",
+    "edge_rgba_max_absolute_error": 169
+  },
+  {
+    "source": "assets/art/source/damage_sheet_01.png",
+    "source_sha256": "e39948f8a38196a64f71a81949072cb56b2ed53680d3efff359ba0cf3f7cedfa",
+    "size": [
+      1024,
+      1024
+    ],
+    "content_bounds": [
+      51,
+      29,
+      1223,
+      1179
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "sheet",
+    "pivot": null,
+    "output_sha256": "340289604756b0fe47730fb138fbd0328e9ddf6cc19488a5bc2f9af8833da2ed",
+    "output": "assets/art/decals/damage_sheet_01.png",
+    "section": 9,
+    "name": "Damage sheet",
+    "world_width": 128,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "pivot_note": "Reviewed footprint/surface centre"
+  },
+  {
+    "source": "assets/art/source/head_flak_01.png",
+    "source_sha256": "07ce688fb7f0e6cc453364050b2aaf5eb20473917d100fb841154717b351b2fa",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      85,
+      150,
+      1166,
+      1064
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      430
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.19242902208201892,
+    "paste_offset": [
+      24,
+      74
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "1fd19c9eefdd0b96e1e5737d5ef72adf46b57fa4c584386ce94ebb4c3c8941c2",
+    "output": "assets/art/buildings/head_flak.png",
+    "section": 10,
+    "name": "Flak",
+    "world_width": 43,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_emp_node_01.png",
+    "source_sha256": "6550d6b2bd6a2a9c9e1417215aea8d846aba15d0592f9da5bcbf4ebe47ffcf3b",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      55,
+      39,
+      1195,
+      1192
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      617
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.21107266435986158,
+    "paste_offset": [
+      7,
+      6
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "3c73e93cfc37602d023a3e2ebd6b50143dee89af8126e8df83bcf3817ba5081a",
+    "output": "assets/art/buildings/head_emp_node.png",
+    "section": 11,
+    "name": "EMP Node",
+    "world_width": 38,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_lance_emitter_01.png",
+    "source_sha256": "5a30c4510a419b67de965e8bd91cb3830d5935a32e810005cdbe9c410faf20d0",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      389,
+      36,
+      865,
+      1202
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      380
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.14841849148418493,
+    "paste_offset": [
+      93,
+      77
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "ceb4bb9356e9d00f4dc3da56f59fa9910b6a3ee5fee86cb628e44884d934ab0c",
+    "output": "assets/art/buildings/head_lance_emitter.png",
+    "section": 12,
+    "name": "Lance Emitter",
+    "world_width": 43,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_point_defense_01.png",
+    "source_sha256": "1491fbcc3f5183f3df926b01ff259ded3aa33d0a3c8137818dce51550d2c2739",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      169,
+      165,
+      1082,
+      1074
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      500
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.21254355400696864,
+    "paste_offset": [
+      31,
+      57
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "7248a3fa3ed3beaa3db7140b256d7a78200905144491c73b96ccdd5c1322a230",
+    "output": "assets/art/buildings/head_point_defense.png",
+    "section": 13,
+    "name": "Point Defense",
+    "world_width": 28,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_relay_01.png",
+    "source_sha256": "5f6f39fe1cacb07aea5f6f5ba4c770f008547c7bf164482eef0f2e2e66a86d59",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      204,
+      181,
+      1091,
+      1030
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      650
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.2601279317697228,
+    "paste_offset": [
+      18,
+      6
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "7e66c705925a0ac8cd512d61d41c1ee55b3319c9b29d85092120d023590ea97b",
+    "output": "assets/art/buildings/head_relay.png",
+    "section": 14,
+    "name": "Relay",
+    "world_width": 38,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_repair_node_01.png",
+    "source_sha256": "85a5b684ce81dc1c168257dc48fbc8e214df5769bd500e99c80cf148326cd47f",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      74,
+      45,
+      1185,
+      1187
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      265,
+      290
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.13260869565217392,
+    "paste_offset": [
+      103,
+      96
+    ],
+    "pivot_note": "Reviewed attachment axis",
+    "output_sha256": "5b6122d2034825d34bc4864e9b5f5dfe07b547a8cb6de4b2adade9cf32533c62",
+    "output": "assets/art/buildings/head_repair_node.png",
+    "section": 15,
+    "name": "Repair Node",
+    "world_width": 56,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/head_armor_plating_01.png",
+    "source_sha256": "fa0a20ecfe39d006f821dff5dff90b6fa9ff4866952c4e6c6f77c7b07853d891",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      94,
+      67,
+      1157,
+      1158
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      617
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.22181818181818183,
+    "paste_offset": [
+      10,
+      6
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "791872e2daf362799e229d5d254b93d6455c192b63b1be2baf365296753f6b81",
+    "output": "assets/art/buildings/head_armor_plating.png",
+    "section": 16,
+    "name": "Armor Plating",
+    "world_width": 32,
+    "acceptance": "review candidate",
+    "mount_mounted": true
+  },
+  {
+    "source": "assets/art/source/wall_deflector_01.png",
+    "source_sha256": "628883ba3445736b96f2ffe3cec11d0780b2df62dbad38c16853724f9f61372d",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      65,
+      189,
+      1188,
+      1059
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      640
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.21708185053380782,
+    "paste_offset": [
+      6,
+      30
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "de09adaeae07bb6a9888a364d636222cd8c8f292732d58ef7f3d5383f34025e1",
+    "output": "assets/art/walls/wall_deflector_01.png",
+    "section": 17,
+    "name": "Deflector Wall",
+    "world_width": 48,
+    "acceptance": "review candidate",
+    "mount_mounted": false
+  },
+  {
+    "source": "assets/art/source/terrain_debris_field_01.png",
+    "source_sha256": "c651187a8e4559edb1dec7940dd171bb3efba2ff8084ff4957c81678982f9c92",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      51,
+      62,
+      1215,
+      1171
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      627
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.20748299319727892,
+    "paste_offset": [
+      8,
+      11
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "3b28a81f0c1f05dc6b9ed84d7709cddc0e82590c5354dcc91a3774b81405d2a2",
+    "output": "assets/art/terrain/terrain_debris_field_01.png",
+    "section": 18,
+    "name": "Debris Field",
+    "world_width": 64,
+    "acceptance": "review candidate",
+    "mount_mounted": false
+  },
+  {
+    "source": "assets/art/source/terrain_tractor_lane_01.png",
+    "source_sha256": "7c4a3746c016c30ab72455d7d79fde90b4b1943c48ad09ee961a3f7e5ae9eed4",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      193,
+      44,
+      1061,
+      1180
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      627
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.20926243567753003,
+    "paste_offset": [
+      37,
+      6
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "774e0ff78852afe37d0e75211290be8c35cad01c2c661eeca4658513daf0f4de",
+    "output": "assets/art/terrain/terrain_tractor_lane_01.png",
+    "section": 19,
+    "name": "Tractor Lane",
+    "world_width": 48,
+    "acceptance": "review candidate",
+    "mount_mounted": false
+  },
+  {
+    "source": "assets/art/source/terrain_occlusion_screen_01.png",
+    "source_sha256": "775721fe60886da50a0be027a7fbc819188aa08402bd9daa85ad880ba6d3f5f4",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      94,
+      55,
+      1159,
+      1205
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      650
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.20504201680672268,
+    "paste_offset": [
+      19,
+      6
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "d1e0ad93be34a991ec58d0937c50c5a6b0aa12e74f2291fb7dde33c98e928b87",
+    "output": "assets/art/terrain/terrain_occlusion_screen_01.png",
+    "section": 20,
+    "name": "Occlusion Screen",
+    "world_width": 48,
+    "acceptance": "review candidate",
+    "mount_mounted": false
+  },
+  {
+    "source": "assets/art/source/elite_tunneler_01.png",
+    "source_sha256": "ff96282cd86c1b26903edffa817fcab29e481751e731066204b40e9bbca7472e",
+    "size": [
+      128,
+      128
+    ],
+    "content_bounds": [
+      179,
+      43,
+      1075,
+      1211
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      580
+    ],
+    "pivot": [
+      64.0,
+      64.0
+    ],
+    "scale": 0.09667194928684628,
+    "paste_offset": [
+      21,
+      12
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "89a3cbf0543127e3110a032dc11cdf8a712927e4dd9d9ef1bec56c385f530a6b",
+    "output": "assets/art/machines/elite_tunneler.png",
+    "section": 21,
+    "name": "Tunneler",
+    "world_width": 16,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 12,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  },
+  {
+    "source": "assets/art/source/elite_transfer_01.png",
+    "source_sha256": "555726cc961e9204d6be0256d66c1bf51031b44112fa221f3872e3ad50ff3d13",
+    "size": [
+      128,
+      128
+    ],
+    "content_bounds": [
+      98,
+      49,
+      1154,
+      1192
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      627
+    ],
+    "pivot": [
+      64.0,
+      64.0
+    ],
+    "scale": 0.10553633217993079,
+    "paste_offset": [
+      8,
+      3
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "81289545c1df792b1e2a3d9bd8f551350ee66bb4fd6ae690d8c6f45d9a229611",
+    "output": "assets/art/machines/elite_transfer.png",
+    "section": 22,
+    "name": "Transfer",
+    "world_width": 16,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 10,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  },
+  {
+    "source": "assets/art/source/elite_foundry_01.png",
+    "source_sha256": "9c9a3eb81a10c18972bad5564231dbd680c4209cf3a350f5f9dc2804393ce33c",
+    "size": [
+      128,
+      128
+    ],
+    "content_bounds": [
+      25,
+      94,
+      1228,
+      1160
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      627
+    ],
+    "pivot": [
+      64.0,
+      64.0
+    ],
+    "scale": 0.10132890365448505,
+    "paste_offset": [
+      3,
+      10
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "e03a729a3460d00613d81dfd6a26234dfe49db046b17693a77fb073a1adf315f",
+    "output": "assets/art/machines/elite_foundry.png",
+    "section": 23,
+    "name": "Foundry",
+    "world_width": 24,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 12,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  },
+  {
+    "source": "assets/art/source/elite_sapper_01.png",
+    "source_sha256": "d42325449adde55c376326f268dbbfab5a816781d951f32925e2e2ffea9041ca",
+    "size": [
+      128,
+      128
+    ],
+    "content_bounds": [
+      63,
+      19,
+      1190,
+      1212
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      650
+    ],
+    "pivot": [
+      64.0,
+      64.0
+    ],
+    "scale": 0.09667194928684628,
+    "paste_offset": [
+      9,
+      3
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "752bd5b01b3f837188128353c8117477215bbe64e134c8c926bd8ef4ee76f112",
+    "output": "assets/art/machines/elite_sapper.png",
+    "section": 24,
+    "name": "Sapper",
+    "world_width": 16,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 6,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  },
+  {
+    "source": "assets/art/source/elite_breacher_01.png",
+    "source_sha256": "ef1f0e6fb55f90e78367159885b8c7ec1c79dd45cc8d5f9cc8de2706d5007ab6",
+    "size": [
+      128,
+      128
+    ],
+    "content_bounds": [
+      141,
+      86,
+      1112,
+      1172
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      600
+    ],
+    "pivot": [
+      64.0,
+      64.0
+    ],
+    "scale": 0.10664335664335664,
+    "paste_offset": [
+      12,
+      9
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "2c48af948956af0c296929b4722a2e15a86ff8045a83470d957ab8eb30dfccbc",
+    "output": "assets/art/machines/elite_breacher.png",
+    "section": 25,
+    "name": "Breacher",
+    "world_width": 16,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 16,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  },
+  {
+    "source": "assets/art/source/assembler_01.png",
+    "source_sha256": "29ef97ae92103a1cfec9c6a629e43e022fb61d806f30d3315be995ddc54df311",
+    "size": [
+      256,
+      256
+    ],
+    "content_bounds": [
+      35,
+      33,
+      1220,
+      1212
+    ],
+    "alpha_method": "border-connected black removed",
+    "delight_strength": 0.35,
+    "alpha_encoding": "straight",
+    "kind": "object",
+    "source_pivot": [
+      627,
+      627
+    ],
+    "pivot": [
+      128.0,
+      128.0
+    ],
+    "scale": 0.2053872053872054,
+    "paste_offset": [
+      6,
+      6
+    ],
+    "pivot_note": "Reviewed footprint/surface centre",
+    "output_sha256": "1deeadabe8c1cb97f129387f59c593664ea4ce4db1d1989559ad5873a94e226c",
+    "output": "assets/art/machines/assembler.png",
+    "section": 26,
+    "name": "Assembler",
+    "world_width": 48,
+    "acceptance": "review candidate",
+    "mount_mounted": false,
+    "bright_cold_pixels": 418,
+    "bright_warm_pixels": 0,
+    "emissive_note": "Threshold counts support visual inspection; do not define glowing areas."
+  }
+]
