@@ -181,8 +181,12 @@ func _simulation_tick(delta_seconds: float) -> void:
 	var started := Time.get_ticks_usec()
 	effect_positions.clear()
 	if interface_settings.effects:
-		for target in simulation.targets_snapshot():
-			effect_positions[target.id] = PolarGrid.new(maxi(1,target.position.ring)).polar_to_world(target.position)
+		# Read positions only; avoid copying every status/position just for feedback.
+		var effect_grid := PolarGrid.new(1)
+		for id in simulation.pool.active_ids():
+			var payload := simulation.pool.payload_for(id)
+			effect_grid.ring_count = maxi(1,payload.position.ring)
+			effect_positions[id] = effect_grid.polar_to_world(payload.position)
 	var result := simulation.step(delta_seconds)
 	simulation_cpu_usec += Time.get_ticks_usec() - started
 	if not result.ok:
@@ -556,6 +560,7 @@ func set_menu_open(open: bool) -> void:
 	super.set_menu_open(open)
 
 func _input(event: InputEvent) -> void:
+	event = PCSettings.world_event(event)
 	if application_host != null and (application_host.state not in ["playing","tutorial"] or application_host.lock_notice != null):
 		return
 	# A GUI-consumed motion must not leave a target outline beneath its panel.
@@ -606,6 +611,7 @@ func ability_outline() -> PackedVector2Array:
 	return points
 
 func _unhandled_input(event: InputEvent) -> void:
+	event = PCSettings.world_event(event)
 	if application_host != null and (application_host.state not in ["playing","tutorial"] or application_host.lock_notice != null):
 		return
 	if ability_mode != &"" and not menu_open and not get_tree().paused and _can_build():

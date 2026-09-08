@@ -37,9 +37,17 @@ var tutorial_baseline: Dictionary = {}
 var settings_return := "start"
 var lock_notice: PanelContainer
 var lock_shield: ColorRect
+var audio: Node
+var rebinding := ""
+var rebinding_group := "keyboard"
+var controller: Node
+var achievement_hooks := AchievementHooks.new()
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	PCSettings.load_settings(profile_path.get_base_dir().path_join("pc_settings.cfg"))
+	audio = load("res://src/presentation/game_audio.gd").new()
+	add_child(audio)
 	rules = load("res://src/gameplay/run_rules.gd")
 	store = load("res://src/core/profile_store.gd").new()
 	var background := ColorRect.new()
@@ -70,12 +78,26 @@ func _ready() -> void:
 	layer.add_child(shell)
 	menu_backdrop = ColorRect.new()
 	menu_backdrop.color = Color("10161b")
+	var menu_material := ShaderMaterial.new()
+	menu_material.shader = load("res://src/presentation/menu_background.gdshader")
+	menu_backdrop.material = menu_material
 	menu_backdrop.size = Vector2(1440,810)
 	menu_backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	shell.add_child(menu_backdrop)
 	get_viewport().size_changed.connect(_resize)
 	_resize()
 	_load_profile()
+	controller = load("res://src/presentation/controller_pointer.gd").new()
+	controller.host = self
+	add_child(controller)
+	get_window().focus_exited.connect(_pause_on_focus_loss)
+	Input.joy_connection_changed.connect(func(_device: int, connected: bool):
+		if not connected: _pause_on_focus_loss()
+	)
+
+func _pause_on_focus_loss() -> void:
+	if live != null and state in ["playing","tutorial"] and not live.menu_open:
+		live.set_menu_open(true)
 
 func _resize() -> void:
 	if frame == null:
@@ -161,6 +183,7 @@ func _action(title: String, callback: Callable, parent: Node = null) -> Button:
 	button.custom_minimum_size.y = 36
 	(parent if parent != null else content).add_child(button)
 	button.pressed.connect(callback)
+	button.pressed.connect(func(): audio.play("ui"))
 	return button
 
 func _clear_game() -> void:
@@ -177,8 +200,9 @@ func show_start() -> void:
 	_clear_game()
 	state = "start"
 	_new_page("Ring Zero")
-	_text("Orbital defense / Run configuration")
+	_text("CONTAINMENT / Hold the star for 15 minutes. Expand, adapt, survive.")
 	_text("Credits: %d" % int(progress.currency))
+	_text("Service records: %d / %d" % [progress.get("achievements",[]).size(),AchievementHooks.IDS.size()])
 	var body := content
 	var columns := HBoxContainer.new()
 	body.add_child(columns)
@@ -232,14 +256,48 @@ func show_start() -> void:
 	_action("Tutorial",begin_run.bind(true),footer)
 	_action("Settings",show_settings.bind("start"),footer)
 	_action("Reference",show_reference.bind("start"),footer)
+	_action("Records",show_records,footer)
+	_action("Credits",show_credits,footer)
 	_action("Quit",func(): get_tree().quit(),footer)
 
+func show_records() -> void:
+	_new_page("Service records")
+	state = "records"
+	var names := ["First Watch — Survive five minutes","Machine Breaker — Destroy 250 machines in one run","Outer Frontier — Reach ring six","Power Restored — Rebuild a relay","Containment — Complete a 15-minute operation","Trial by Fire — Win with all three mutators"]
+	for index in AchievementHooks.IDS.size():
+		var id: String = AchievementHooks.IDS[index]
+		var earned: bool = id in progress.get("achievements",[])
+		var row := HBoxContainer.new()
+		content.add_child(row)
+		var icon := TextureRect.new()
+		icon.texture = load("res://assets/ui/achievements/"+id.to_lower()+".svg")
+		icon.custom_minimum_size = Vector2(48,48)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		icon.modulate = Color.WHITE if earned else Color(0.4,0.4,0.4)
+		row.add_child(icon)
+		var label := Label.new()
+		label.text = ("Earned: " if earned else "Locked: ")+names[index]
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(label)
+	_action("Back",show_start,footer)
+
+func show_credits() -> void:
+	_new_page("Credits")
+	state = "credits"
+	_text("RING ZERO\nCreated by Kevin with AI-assisted design and development.\nRelease candidate 1.0.0-rc1")
+	_text("Built with Godot Engine, distributed under the MIT license. Godot copyright and third-party notices accompany the build in licenses/godot.")
+	_text("Typography: Barlow and Barlow Semi Condensed. Copyright The Barlow Project Authors. SIL Open Font License 1.1; full license in licenses/barlow.")
+	_text("World hardware: generated source art from the RING ZERO asset pipeline. Fortress geometry, lighting shaders, interface symbols, service-record emblems and sound synthesis are authored for this project. No third-party music recordings are used.")
+	_action("Back",show_start,footer)
+
 func begin_run(practice: bool = false) -> void:
-	var base: Dictionary = BalanceProfile.load_json("res://data/balance/testing.json")
+	var base: Dictionary = BalanceProfile.load_json("res://data/balance/release.json")
 	if not base.ok:
 		feedback.text = _errors(base)
 		return
-	var prepared: Dictionary = rules.create_run(base.profile,choices,progress,practice)
+	var prepared: Dictionary = rules.create_run(base.profile,choices,progress,practice,12)
 	if not prepared.ok:
 		feedback.text = _errors(prepared)
 		return
@@ -263,7 +321,7 @@ func begin_run(practice: bool = false) -> void:
 	state = "tutorial" if practice else "playing"
 	page.hide()
 	menu_backdrop.hide()
-	live = load("res://scenes/live_view.tscn").instantiate()
+	live = load("res://scenes/release_view.tscn").instantiate()
 	live.prepared_run = prepared
 	live.application_host = self
 	live.industrial_ui = true
@@ -347,6 +405,8 @@ func _process(_delta: float) -> void:
 	if not recorder_error.is_empty(): live.feedback_label.text = recorder_error
 	if state in ["playing","tutorial"] and (live.simulation.ended or not live.last_error.is_empty()):
 		finish_run("practice" if current_run.get("practice",false) else ("error" if not live.last_error.is_empty() else "defeat"))
+	elif state == "playing" and live.simulation.elapsed_seconds >= RunRules.OPERATION_SECONDS:
+		finish_run("victory")
 	elif state == "tutorial":
 		_update_tutorial()
 
@@ -357,7 +417,9 @@ func finish_run(outcome: String) -> void:
 	get_tree().paused = true
 	var summary: Dictionary = live.simulation.run_summary(outcome)
 	var reward: Dictionary = rules.reward(summary,float(current_run.reward_multiplier))
-	_new_page("Run ended" if outcome != "practice" else "Practice ended")
+	_new_page("Containment complete" if outcome == "victory" else ("Run ended" if outcome != "practice" else "Practice ended"))
+	audio.play("victory" if outcome == "victory" else "defeat")
+	if outcome == "victory": _text("The star is secure. Your fortress held against the machine tide.")
 	if not recorder_error.is_empty(): _text(recorder_error)
 	if not live.last_error.is_empty(): _text(live.last_error)
 	_text("Survived %.1f seconds\nKills: %d\nHighest ring: %d\nRelays rebuilt: %d" % [summary.elapsed_seconds,summary.kills,summary.highest_ring,summary.relay_rebuilds])
@@ -382,7 +444,10 @@ func save_result() -> void:
 	if not settled.ok:
 		feedback.text = _errors(settled)
 		return
+	for id in AchievementHooks.earned(settlement.summary,choices.mutators):
+		if id not in settled.profile.achievements: settled.profile.achievements.append(id)
 	if _save_candidate(settled.profile):
+		achievement_hooks.replay_saved(progress.achievements)
 		feedback.text = "Result saved. Credits: %d" % progress.currency
 		result_reward.text = "Earned reward: %d credits (saved)" % settlement.reward.amount
 		result_save.disabled = true
@@ -460,8 +525,65 @@ func show_settings(return_to: String = "start") -> void:
 		if is_equal_approx(progress.settings.ui_scale,value): scale_choice.select(scale_choice.item_count-1)
 	scale_choice.item_selected.connect(func(index: int): _change_setting("ui_scale",[1.0,1.15,1.3][index]))
 	_text("Fonts: Barlow / Barlow Semi Condensed. Copyright The Barlow Project Authors. SIL Open Font License 1.1; bundled license in assets/ui/fonts/barlow/OFL.txt.")
+	for bus in ["master","music","effects"]:
+		_text(bus.capitalize() + " volume")
+		var slider := HSlider.new()
+		slider.min_value = 0
+		slider.max_value = 1
+		slider.step = 0.05
+		slider.value = PCSettings.master if bus == "master" else (PCSettings.music if bus == "music" else PCSettings.effects)
+		content.add_child(slider)
+		slider.value_changed.connect(func(value: float):
+			match bus:
+				"master": PCSettings.master = value
+				"music": PCSettings.music = value
+				"effects": PCSettings.effects = value
+			audio.apply_levels()
+			if PCSettings.save_settings() != OK: feedback.text = "Could not save audio settings."
+		)
+	_action("Controls",show_controls,footer)
 	_action("Back",close_settings,footer)
 	state = "settings"
+
+func show_controls() -> void:
+	_new_page("Controls")
+	state = "controls"
+	_text("Select a binding, then press a key. Duplicate bindings swap. Mouse: left place, right cancel, middle drag pan, wheel zoom. Gamepad: left stick pointer, A click, B cancel/back, Start pause, right stick pan, triggers zoom, shoulders cycle tools, X/Y solar abilities, D-pad scroll menus. Remapping changes keyboard shortcuts; this list is authoritative.")
+	for action in PCSettings.DEFAULT_KEYS:
+		_action("%s: %s" % [action, PCSettings.label(action)],func():
+			rebinding = action
+			rebinding_group = "keyboard"
+			feedback.text = "Press the new key for " + action
+		)
+	_text("Mouse (battlefield only; menus retain the primary button)")
+	for action in PCSettings.DEFAULT_MOUSE:
+		_action("%s: Mouse %d" % [action,PCSettings.mouse[action]],func():
+			rebinding = action
+			rebinding_group = "mouse"
+			feedback.text = "Press the new mouse button for " + action
+		)
+	_text("Controller buttons (standard south=0, east=1, west=2, north=3)")
+	for action in PCSettings.DEFAULT_PAD:
+		_action("%s: Pad %d" % [action,PCSettings.pad[action]],func():
+			rebinding = action
+			rebinding_group = "pad"
+			feedback.text = "Press the new controller button for " + action
+		)
+	_action("Reset",func():
+		var previous := PCSettings.bindings.duplicate()
+		var previous_pad := PCSettings.pad.duplicate()
+		var previous_mouse := PCSettings.mouse.duplicate()
+		PCSettings.bindings = PCSettings.DEFAULT_KEYS.duplicate()
+		PCSettings.pad = PCSettings.DEFAULT_PAD.duplicate()
+		PCSettings.mouse = PCSettings.DEFAULT_MOUSE.duplicate()
+		if PCSettings.save_settings() != OK:
+			PCSettings.bindings = previous
+			PCSettings.pad = previous_pad
+			PCSettings.mouse = previous_mouse
+			feedback.text = "Could not save bindings."
+		else: show_controls()
+	,footer)
+	_action("Back",show_settings.bind(settings_return),footer)
 
 func _change_setting(key: String, value: Variant) -> void:
 	var candidate := progress.duplicate(true)
@@ -491,14 +613,29 @@ func close_settings() -> void:
 	else: show_start()
 
 func _input(event: InputEvent) -> void:
+	if not rebinding.is_empty():
+		var error := ERR_BUSY
+		if rebinding_group == "keyboard" and event is InputEventKey and event.pressed and not event.echo:
+			error = PCSettings.rebind(rebinding,event.physical_keycode)
+		elif rebinding_group == "mouse" and event is InputEventMouseButton and event.pressed:
+			error = PCSettings.rebind_button("mouse",rebinding,event.button_index)
+		elif rebinding_group == "pad" and event is InputEventJoypadButton and event.pressed:
+			error = PCSettings.rebind_button("pad",rebinding,event.button_index)
+		else: return
+		rebinding = ""
+		show_controls()
+		if error != OK: feedback.text = "Could not save that binding."
+		get_viewport().set_input_as_handled()
+		return
 	if lock_notice != null:
 		if event is InputEventKey:
 			if event.pressed and not event.echo and event.physical_keycode == KEY_ESCAPE: _close_lock_notice()
 			get_viewport().set_input_as_handled()
 		return
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_ESCAPE:
-		if state in ["settings","reference"]: close_settings()
-		elif state == "shop": show_start()
+	if event is InputEventKey and event.pressed and not event.echo and PCSettings.logical_key(event.physical_keycode) == KEY_ESCAPE:
+		if state == "controls": show_settings(settings_return)
+		elif state in ["settings","reference"]: close_settings()
+		elif state in ["shop","records","credits"]: show_start()
 		elif state == "results":
 			if result_back != null and not result_back.disabled: show_start()
 			else: feedback.text = "Save the result successfully before leaving."

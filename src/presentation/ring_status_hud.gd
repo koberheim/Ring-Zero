@@ -55,7 +55,7 @@ static func _color_for(status: String) -> Color:
 		"broken": return Color(0.82, 0.24, 0.2)
 		"critical": return Color(0.88, 0.72, 0.2)
 		"collapsed": return Color(0.1, 0.1, 0.1)
-		_: return Color(0.55, 0.72, 0.85)
+		_: return Color(0.72, 0.55, 0.32)
 
 func _draw() -> void:
 	draw_circle(_center, CORE_RADIUS * 0.6, Color(0.85, 0.85, 0.85))

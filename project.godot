@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="RING ZERO"
+config/version="1.0.0-rc1"
+config/icon="res://assets/ui/ring_zero_icon.svg"
 run/main_scene="res://scenes/application.tscn"
 config/features=PackedStringArray("4.7")
 

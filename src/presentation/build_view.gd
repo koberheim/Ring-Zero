@@ -215,12 +215,12 @@ func _extra_key(_key: Key) -> bool:
 	return false
 
 func _handle_key(event: InputEventKey) -> bool:
-	if not event.pressed or event.echo or event.ctrl_pressed or event.alt_pressed or event.meta_pressed:
+	if not event.pressed or event.echo or event.ctrl_pressed or (event.alt_pressed and event.physical_keycode != KEY_ALT) or event.meta_pressed:
 		return false
 	var focus := get_viewport().gui_get_focus_owner()
 	if focus is LineEdit or focus is TextEdit:
 		return false
-	var key := event.physical_keycode
+	var key := PCSettings.logical_key(event.physical_keycode)
 	if key == KEY_ESCAPE:
 		if help_panel.visible:
 			help_panel.hide()
