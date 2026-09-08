@@ -14,11 +14,9 @@ If any generated image looks like a finished game screenshot, it's wrong for thi
 
 ---
 
-## Step 1 — Style anchor (do this first, and only this, until approved)
+## Step 1 — Style anchor (done — D-125)
 
-Generate the 5 anchor candidates from `docs/art-prompts/v1-templates.md` §1. Save to `assets/art/anchor/anchor_candidate_01.png` through `_05.png`.
-
-**Stop here and report back** with all 5 for review before continuing. The chosen anchor sets wear level, panel density and metal tone for every asset after it — nothing else should be generated until one is picked.
+**Approved:** `assets/art/anchor/anchor_approved.png`. Took two rounds: the first 5 candidates nailed the design (wear level, panel density) but came back at a hero-shot camera angle instead of near-overhead; `docs/art-prompts/v1-templates.md`'s object-camera block was tightened and the approved design regenerated at the corrected angle. See D-124/D-125 in DECISIONS.md for the full record. Every asset below matches this anchor's wear level, palette, detail density, and treats its achieved camera angle (not the ratio rule's theoretical ideal) as the practical target.
 
 ## Step 2 — Five-asset vertical slice
 
@@ -27,7 +25,7 @@ Once the anchor is approved, generate the five assets below using their template
 1. **Ring band strip** (working tier) — §2
 2. **Decal sheet** — §3
 3. **Building mount** — §4
-4. **Building head** (Mass Driver) — §5. If the approved anchor already reads as a clean standalone head, ask before deciding whether to reuse it or regenerate separately.
+4. **Building head** (Mass Driver) — §5. The approved anchor is a fused turret (head + mount as one integrated design), not a modular pair — generate the mount (§4) and head (§5) as separate fresh assets, each referencing the anchor for wear level, palette and angle, rather than cropping pieces out of it.
 5. **Standard machine** — §6, with its hardened emissive constraint
 
 Save raw outputs to `assets/art/source/` using the filenames given in each template section.

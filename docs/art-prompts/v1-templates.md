@@ -3,6 +3,8 @@
 **Status:** Locked for T-078 (pipeline vertical slice). Per `docs/art-asset-pipeline.md` §3.2 — versioned alongside the assets they produce. Do not edit in place once assets exist against this version; copy to v2 instead, so regenerating an old asset later still matches what shipped.
 
 **Correction (2026-09-08, before any asset accepted):** the original object-camera phrasing — "20° from vertical" — was too abstract and produced five anchor candidates all rendered at roughly a 40–60° hero-shot elevation instead of the intended near-overhead view. None had been locked in yet, so this is edited in place rather than bumped to v2; the object-camera block below replaces the old phrasing everywhere it appeared. Candidate #4's *design* (wear level, panel density, intake-port depth, hazard striping) was approved on its merits — only the angle needs a redo.
+
+**Anchor approved (D-125):** `assets/art/anchor/anchor_approved.png` (regenerated candidate #4 at the corrected angle). The correction above got the mounting base to read as a genuine flat top-down shape; the barrels still show somewhat more length than the ratio rule below calls for (an estimated ~30–35° apparent angle), accepted as this asset's shape rather than pushed further — a long-projecting weapon inherently shows more length than a squat object at any angle. Treat the approved anchor's angle, not the ratio rule's theoretical ideal, as the practical target for every later object-category asset.
 **Differs from the mockup brief:** `docs/art-mockup-brief.md` produced full dramatic scene composites for direction review. These templates produce **isolated, flat-lit, single-subject** source images meant to become actual game assets. Do not reuse mockup-brief phrasing here — the lighting and framing rules are opposite on purpose (baked scene lighting must never end up on a production asset that has to relight dynamically in engine).
 
 ---
@@ -122,7 +124,7 @@ Output: `assets/art/source/building_mount_01.png`.
 
 ## 5. Building head — Mass Driver
 
-Same subject as the approved anchor, generated as a standalone head (no base) sized to sit on the mount from #4. If the anchor is approved as-is, this step can reuse it directly instead of regenerating.
+Same subject as the approved anchor, generated as a standalone head (no base) sized to sit on the mount from #4. The approved anchor is a fused turret (head + mount as one integrated design) — generate this as a fresh asset referencing the anchor's wear level, palette and angle, not a crop of it.
 
 ```
 [COMMON BLOCK]

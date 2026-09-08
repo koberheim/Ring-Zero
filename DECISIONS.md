@@ -3374,3 +3374,21 @@ Nine review mockups (the brief's four shots plus five variants: top-down compari
 - **Emissive-is-rank gets a hardened, explicit negative constraint** in the machine prompt template (`docs/art-asset-pipeline.md` §3.2), verified by one regenerated check before being locked into `docs/art-prompts/`.
 
 **Blocking:** none — these are pipeline refinements, not new open questions. Recorded so the fix doesn't get rediscovered from scratch when standard-machine art is actually generated (T-079).
+
+### D-125 — Style anchor approved: anchor_approved.png
+**Date:** 2026-09-08
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** D-120, D-123, D-124; docs/art-prompts/v1-templates.md
+
+**What this is about**
+T-078's first checkpoint. Five initial anchor candidates all rendered at roughly a 40-60° hero-shot elevation instead of the near-overhead 20° D-123 specifies; the abstract phrase "20° from vertical" didn't reliably constrain the generator. `docs/art-prompts/v1-templates.md` was corrected with an explicit, checkable object-camera block (a front-face/top-face visibility ratio, concrete negative examples), and candidate #4's approved design (wear level, panel density, intake-port depth, hazard striping) was regenerated at the corrected angle.
+
+**Result of the correction**
+Real, partial success. The octagonal mounting base now reads as a genuine flat top-down shape — symmetric, all edges visible — which is the exact thing that was wrong before. The mass driver barrels still show more visible length than the ratio rule calls for (an estimated ~30-35° apparent angle rather than a true 20°), and three "variants" produced by the corrected prompt turned out to be the same composition re-rendered with only lighting differences, not independent angle attempts.
+
+**Resolution - 2026-09-08**
+Kevin approved `anchor_v2_02.png` (flattest, most shadowless lighting of the three, matching the common block's "flat, even, shadowless" requirement), locked as `assets/art/anchor/anchor_approved.png`. The remaining barrel-length gap is accepted as a property of this asset's shape — a long-projecting weapon inherently shows more length than a squat object would at any camera angle, since it extends outward rather than sitting flat — rather than a camera-angle failure requiring a further correction round. D-123's 20° target is **not** revised; this asset's barrel foreshortening is treated as an acceptable approximation, not evidence the spec is wrong.
+
+**Blocking:** clears T-078 Step 1 (anchor). All later object-category prompts (mount, remaining building heads, machines, elites, Assembler) reference `anchor_approved.png` for wear level, palette and detail density, and its camera angle as the practical (not theoretical-perfect) target.
