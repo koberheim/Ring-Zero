@@ -1,28 +1,28 @@
-> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
+> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Tasks
 
-## Phase 14 — Presentation performance (plan awaiting sign-off)
+## Phase 14 — Presentation performance (approved execution)
 
-**Updated:** 2026-09-09. **Current review:** D-135. No task below is assigned or begun. D-129/D-130/D-131 are resolved; D-132/D-133 are standing process corrections; D-134 covers provisional numeric presentation tuning. These task IDs were explicitly requested by Kevin for this planning phase. Earlier status summaries are historical; their RC label does not pass the open T-079 gate.
+**Updated:** 2026-09-09. **Current review:** D-135 approved; T-086 quick slice authorized for assignment. Other tasks await their dependency gates. D-129/D-130/D-131 are resolved; D-132/D-133 are standing process corrections; D-134 covers provisional numeric presentation tuning. These task IDs were explicitly requested by Kevin for this planning phase. Earlier status summaries are historical; their RC label does not pass the open T-079 gate.
 
 All tasks inherit [the shared contract](docs/contracts/presentation-v3.md). Full dependencies, editable paths, output shape, evidence and failure handling are in each individual contract. The baseline is 42 suites, not the older 39. Astra reviews; agents implement.
 
 | ID | Task | Owner | Status | Notes |
 |---|---|---|---|---|
-| T-081 | Renderer, lighting and cache performance proof | Sol | ⚪ Not started | Stream A; [contract](docs/contracts/T-081-renderer-lighting.md). D-135 blocks delegation. |
-| T-082 | Distinct weapon, hit and death performance | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-082-combat-feedback.md). D-135 blocks delegation. |
-| T-083 | Ring collapse vertical slice and catastrophe gate | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-083-ring-collapse.md). D-135 blocks delegation. |
-| T-084 | Camera impulse and purposeful interface motion | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-084-motion-language.md). D-135 blocks delegation. |
-| T-085 | Free online AI audio, score and event mix | Luna | ⚪ Not started | Stream C; [contract](docs/contracts/T-085-audio-design.md). D-135 blocks delegation. |
-| T-086 | CheckButton quick win and complete instrument theme | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-086-theme-toggles.md). D-135 blocks delegation. |
-| T-087 | Responsive native composition and correct map framing | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-087-responsive-layout.md). D-135 blocks delegation. |
-| T-088 | Start, HUD, pause, settings, controls and outcome composition | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-088-screen-presentation.md). D-135 blocks delegation. |
-| T-089 | Fortress state, structural depth and remaining T-079 asset failures | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-089-fortress-readability.md). D-135 blocks delegation. |
-| T-090 | Swarm LOD and elite visibility at strategic zoom | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-090-swarm-lod.md). D-135 blocks delegation. |
-| T-091 | Readable ring integrity and power instrument | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-091-integrity-instrument.md). D-135 blocks delegation. |
-| T-092 | Mechanic-led elite and Assembler art | Luna | ⚪ Not started | Stream F; [contract](docs/contracts/T-092-elite-art.md). D-135 blocks delegation. |
-| T-093 | Integrated acceptance, full-run QA and candidate decision | Sol; Astra reviews | ⚪ Not started | Stream ALL; [contract](docs/contracts/T-093-integrated-gates.md). D-135 blocks delegation. |
+| T-081 | Renderer, lighting and cache performance proof | Sol | ⚪ Not started | Stream A; [contract](docs/contracts/T-081-renderer-lighting.md). D-135 approved; dependency gates apply. |
+| T-082 | Distinct weapon, hit and death performance | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-082-combat-feedback.md). D-135 approved; dependency gates apply. |
+| T-083 | Ring collapse vertical slice and catastrophe gate | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-083-ring-collapse.md). D-135 approved; dependency gates apply. |
+| T-084 | Camera impulse and purposeful interface motion | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-084-motion-language.md). D-135 approved; dependency gates apply. |
+| T-085 | Free online AI audio, score and event mix | Luna | ⚪ Not started | Stream C; [contract](docs/contracts/T-085-audio-design.md). D-135 approved; dependency gates apply. |
+| T-086 | CheckButton quick win and complete instrument theme | Luna | 🔵 Assigned — early slice | Stream D; [contract](docs/contracts/T-086-theme-toggles.md). Toggle/arrow lease only; full theme waits for T-081 and early T-083. |
+| T-087 | Responsive native composition and correct map framing | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-087-responsive-layout.md). D-135 approved; dependency gates apply. |
+| T-088 | Start, HUD, pause, settings, controls and outcome composition | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-088-screen-presentation.md). D-135 approved; dependency gates apply. |
+| T-089 | Fortress state, structural depth and remaining T-079 asset failures | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-089-fortress-readability.md). D-135 approved; dependency gates apply. |
+| T-090 | Swarm LOD and elite visibility at strategic zoom | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-090-swarm-lod.md). D-135 approved; dependency gates apply. |
+| T-091 | Readable ring integrity and power instrument | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-091-integrity-instrument.md). D-135 approved; dependency gates apply. |
+| T-092 | Mechanic-led elite and Assembler art | Luna | ⚪ Not started | Stream F; [contract](docs/contracts/T-092-elite-art.md). D-135 approved; dependency gates apply. |
+| T-093 | Integrated acceptance, full-run QA and candidate decision | Sol; Astra reviews | ⚪ Not started | Stream ALL; [contract](docs/contracts/T-093-integrated-gates.md). D-135 approved; dependency gates apply. |
 
 ### T-081 — Done condition
 
@@ -105,6 +105,10 @@ Astra signs the per-task acceptance matrix from independent reproduction; all 42
 ### Session record — 2026-09-09
 
 Plan and contracts prepared after full critique verification. No delegation/implementation performed. D-129 keeps 15-minute Containment for v1 only; post-v1 endless/survival has no implementation task here. D-130 now selects free online AI audio generation with $0 spend. D-131 grants silhouette-first elite/Assembler exceptions; wider D-120 stands. D-132 blocks RC promotion through failed acceptance; D-133 requires a formal decision before a spec departure; D-134 extends provisional numeric authority. T-079 remains failed until T-089/T-092's mapped asset checks and T-093's final review close it. The T-086 quick slice precedes T-081; the early T-083 visual gate precedes the broad layout rewrite. No task is called Done for a partial delivery.
+
+### Execution record — 2026-09-09
+
+Kevin approved D-135. The T-086 narrow quick slice is the first authorized implementation; T-081 and all broader view work wait for its review. Full task completion remains separate from this early milestone.
 
 ## Historical task records
 

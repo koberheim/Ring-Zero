@@ -1,6 +1,6 @@
 # Free online AI audio production plan
 
-**Date:** 2026-09-09. **Owner:** Workstream C / Luna. **Status:** Proposed execution plan under resolved D-130; no generation or account changes performed. D-135 sign-off remains required.
+**Date:** 2026-09-09. **Owner:** Workstream C / Luna. **Status:** Approved execution plan under D-130/D-135. Generation follows T-085 assignment and source-admission checks; no paid spending is authorized.
 
 Kevin chose free AI audio generation through online tools. Budget is **$0**: no paid subscription, credit purchase, commission, paid API usage or automatic top-up. Generators produce source material; selection, editing, layering, loop preparation and game mixing provide the sound design.
 

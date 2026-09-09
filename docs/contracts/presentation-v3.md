@@ -1,6 +1,6 @@
 # Phase 14 — shared delegation and evidence contract
 
-**Date:** 2026-09-09. **Status:** Proposed; D-135 plan approval required before delegation or implementation.
+**Date:** 2026-09-09. **Status:** Approved by Kevin under D-135 on 2026-09-09; execute in dependency order.
 **Authority:** Kevin's critique response; D-129–D-134; fixed spec; CLAUDE.md. All task contracts below inherit this file.
 
 ## Scope and roles
@@ -9,7 +9,7 @@ Astra plans, assigns one agent per workstream, reviews every delivery and integr
 
 D-129 preserves bounded 15-minute Containment. Do not change deterministic simulation timing, damage, targeting, progression, machine capacity, wall rules, north-up orientation or the fixed spec. D-131 relaxes only elite/Assembler art constraints. D-134 permits provisional numerical presentation tuning, recorded with units/rationale in versioned tokens and the task delivery. D-130 requires free online AI audio source generation; no paid purchase/subscription.
 
-Proposed visual/sonic choices described in task contracts are part of D-135's single plan review, not already approved creative decisions. A new creative/rule departure beyond them goes to Kevin. Optional damage numbers, gameplay slow motion, a new voiceover/narrative, a different world palette, a new minimap aggregation mechanic and a higher shipping crowd cap are excluded from this plan.
+The bounded visual/sonic choices described in these contracts were approved in D-135's single plan review. A new creative/rule departure beyond them goes to Kevin. Optional damage numbers, gameplay slow motion, a new voiceover/narrative, a different world palette, a new minimap aggregation mechanic and a higher shipping crowd cap are excluded from this plan.
 
 ## Collision and integration protocol
 

@@ -1,10 +1,12 @@
 # T-086 — CheckButton quick win and complete instrument theme
 
-**Date:** 2026-09-09. **Status:** Proposed; not delegated. **Workstream:** D. **Owner:** Luna. **Reviewer:** Astra, with Kevin/designated reviewer for named human gates.
+**Date:** 2026-09-09. **Status:** Approved under D-135; assignment follows dependency gates. **Workstream:** D. **Owner:** Luna. **Reviewer:** Astra, with Kevin/designated reviewer for named human gates.
 
-This task inherits [the shared Phase 14 contract](presentation-v3.md), including authority, exclusive file leases, the 42-suite floor, matched performance limits, before/after evidence and failed-gate handling. Read the full critique and [verification](../reviews/critique-2026-09-09-verification.md) before work. The task is not authorized until D-135 is resolved.
+This task inherits [the shared Phase 14 contract](presentation-v3.md), including authority, exclusive file leases, the 42-suite floor, matched performance limits, before/after evidence and failed-gate handling. Read the full critique and [verification](../reviews/critique-2026-09-09-verification.md) before work. Kevin approved D-135 on 2026-09-09. This contract is authorized subject to its dependency gates and Astra's explicit file lease.
 
 ## Dependencies
+
+**Active lease — 2026-09-09:** Stream D / Luna may implement only the first CheckButton/OptionButton quick slice from source `1f9a710` plus the D-135 approval record. Editable: `src/presentation/industrial_theme.gd`, `assets/ui/controls/`, narrowly named T-086 capture/check fixtures, and `docs/reviews/presentation-v3/T-086/` plus its parent `.gdignore`. No application/live/release layout or renderer edits, no full-theme rewrite yet. Capture the current real start/settings states before editing. Exclusive Godot import/capture/test lease is granted for this slice; coordinate release to Astra for independent review. The later full-theme lease is not active.
 
 D-135 for the isolated first slice; remainder after T-081 and T-083 visual adapter freeze. No overlapping A lease.
 

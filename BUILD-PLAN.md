@@ -1,10 +1,10 @@
-> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
+> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Build plan
 
 ## Phase 14 — Presentation performance and acceptance recovery
 
-**Updated:** 2026-09-09. **Status:** Plan ready for Kevin's review, not authorized for implementation. This is the active planning phase requested by Kevin, so T-081–T-093 are explicitly requested planning entries under D-002; they are not assignments or an unapproved future-mode backlog.
+**Updated:** 2026-09-09. **Status:** Approved by Kevin (D-135); execution authorized in the sequence below. This is the active planning phase requested by Kevin, so T-081–T-093 are explicitly requested planning entries under D-002; they are not assignments or an unapproved future-mode backlog.
 
 The [verified critique](docs/reviews/critique-2026-09-09-verification.md) corrects the mandatory-renderer-switch and zero-animation premises while confirming the CheckButton gap and failed T-079 crowd gate. D-129 keeps the 15-minute v1 mode, D-130 selects free online AI audio, D-131 grants the elite exception, D-132 blocks candidate promotion through failed gates, D-133 requires formal spec departures, and D-134 delegates provisional presentation numbers. D-135 is the single pre-build sign-off.
 
@@ -35,7 +35,7 @@ T-093 is the final cross-stream verification task, owned by Sol for QA tooling/e
 
 This order keeps the requested cheap visible fix first, the GPU/cache risk second and the spec's catastrophe-comprehension gate early. Audio and art production overlap with implementation where files are disjoint. Broad layout precedes detailed UI motion. It favors inspectable milestones over six agents editing presentation code at once.
 
-### Visual proposal for sign-off
+### Approved visual proposal — D-135
 
 Keep D-120's lit industrial hardware over near-black void, D-123's 20-degree ground projection and the existing Barlow family. The hero is the player's constructed place illuminated by its star. Interface housings describe function: a thin telemetry instrument, a recessed build dock, tactile controls and a grounded message strip. Remove ornamental orphan rules, repeated full-panel shadows and redundant result totals. The main design emphasis is the fortress; text stays quiet, aligned and useful.
 
@@ -79,7 +79,11 @@ Human comprehension/readability/listening gates are specified in contracts. Astr
 
 ### Session record — 2026-09-09
 
-Astra read the complete supplied critique first, checked cited code and original evidence, corrected its renderer/zero-animation/current-size premises, confirmed the CheckButton and historical art failures, and identified separate-World2D cache interaction as an additional risk. Current retained baseline is 42/42. D-129/D-131 were recorded from Kevin's supplied resolutions; D-130 was subsequently resolved to free online AI generation. Two standing process corrections and numeric authority are recorded in D-132–D-134. Task contracts are written before delegation. No feature code, assets, runtime settings or package was changed. **STOP: present this plan and await D-135 sign-off.**
+Astra read the complete supplied critique first, checked cited code and original evidence, corrected its renderer/zero-animation/current-size premises, confirmed the CheckButton and historical art failures, and identified separate-World2D cache interaction as an additional risk. Current retained baseline is 42/42. D-129/D-131 were recorded from Kevin's supplied resolutions; D-130 was subsequently resolved to free online AI generation. Two standing process corrections and numeric authority are recorded in D-132–D-134. Task contracts are written before delegation. No feature code, assets, runtime settings or package was changed. **Planning checkpoint completed.** Kevin subsequently approved D-135; see the execution record below.
+
+### Execution record — 2026-09-09
+
+Kevin approved the plan. T-086 receives the first narrow theme/icon/capture lease; no layout or renderer edits are authorized in that slice. T-081 follows independent acceptance of the quick fix. No other view writer or GPU benchmark runs concurrently.
 
 ## Historical plan and session records
 

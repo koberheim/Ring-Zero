@@ -1,18 +1,18 @@
-> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
+> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Decisions
 
 ## Current authority and later review
 
-**Updated:** 2026-09-09. **Current review:** D-135, Phase 14 plan sign-off; implementation and delegation have not started. D-129/D-131 are resolved; D-132/D-133 record the two process corrections; D-134 extends numeric authority. The retained RC2 aggregate is 42/42, not 39. T-079 remains a failed acceptance gate.
+**Updated:** 2026-09-09. **Current review:** D-135 approved by Kevin; T-086 quick slice is the first delivery, followed by T-081 performance proof. D-129/D-131 are resolved; D-132/D-133 record the two process corrections; D-134 extends numeric authority. The retained RC2 aggregate is 42/42, not 39. T-079 remains a failed acceptance gate.
 
 ## NEEDS YOUR DECISION — current pass
 
-This pass has **one pending approval**, D-135. D-130 was resolved by Kevin during planning: use free AI audio generation through online tools. Older dated briefings below are historical; D-127's unscheduled wall rule and D-034 branding review are not silently resolved.
+This pass has **zero pending plan approvals**. Kevin approved D-135 on 2026-09-09. D-130 was resolved by Kevin during planning: use free AI audio generation through online tools. Older dated briefings below are historical; D-127's unscheduled wall rule and D-034 branding review are not silently resolved.
 
 | Decision | Needed resolution | Blocks |
 |---|---|---|
-| D-135 | Sign off Phase 14, T-081–T-093 and their written contracts | All implementation/delegation in this pass |
+| None | D-135 approved; task exit gates remain mandatory | No blanket gate waiver |
 
 ## Presentation performance pass — 2026-09-09
 
@@ -201,8 +201,8 @@ Kevin permits Astra and its contracted agents to set light radii/falloff, bloom 
 ### D-135 — Approve the six-workstream presentation performance pass
 **Date:** 2026-09-09
 **Tier:** 2
-**Decided by:** PENDING — needs Kevin
-**Status:** 🟡 Awaiting plan sign-off
+**Decided by:** Kevin
+**Status:** 🟢 Approved — Option A
 **Source:** Spec §§2–4, 8, 10–12, 15, 17–18; critique §6; BUILD-PLAN.md Phase 14
 
 **What this is about**
@@ -223,7 +223,12 @@ Failed gates stop advancement and return to Kevin; new creative/rule questions r
 **My recommendation**
 Option A. First toggle styling, then backend/cache proof, then an early collapse slice. Approve the proposed instrument composition, weapon signatures, elite mechanic silhouettes and result memorial described in the contracts. Keep UI scale; retain north-up gameplay and deterministic timing.
 
-**Blocking:** All implementation and delegation in Phase 14. No approval inferred from this written recommendation.
+**Blocking:** Cleared for contracted implementation/delegation. Dependency, performance, source and human acceptance gates remain mandatory.
+
+**Resolution - 2026-09-09**
+Kevin answered “Approved” to the presented Phase 14 / D-135 plan. This approves T-081–T-093 and their contracts, six workstreams, proposed presentation choices and free online AI audio plan. Execute the toggle-only slice first, then renderer/cache proof. Astra delegates and reviews; agents implement. This grants no acceptance waiver, paid audio budget, new gameplay rule, spec edit or public release authority.
+
+
 
 ### Historical authority summary — superseded for this pass
 
