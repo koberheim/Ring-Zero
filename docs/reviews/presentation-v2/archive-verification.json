@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "archive": "E:\\AI Projects\\Games\\Ring Zero\\exports\\RingZero-1.0.0-rc2-windows.zip",
+  "bytes": 56624478,
+  "sha256": "b7dea95b230d13fdb602d5b70d678c5327c510feac5d454db88ab19c7680856b",
+  "build_id": "40cc70a1bb11f5edcb689168bc45a9014c5c02b39c401ecb1b5a1c763510bf7f",
+  "entries": [
+    "README.txt",
+    "RingZero.exe",
+    "RingZero.pck",
+    "build_info.json",
+    "licenses/barlow/OFL.txt",
+    "licenses/barlow/PROVENANCE.md",
+    "licenses/godot/LICENSE.txt",
+    "licenses/godot/THIRD-PARTY.txt"
+  ]
+}

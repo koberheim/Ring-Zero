@@ -458,3 +458,11 @@ Kevin also raised, and Astra is working through separately (not yet implemented)
 | T-070 | Local run diagnostics and reproduction trace | Sol with Luna hooks | Done | 59 helper checks plus application recorder checks pass. Frozen core/UI hooks; final packaged identity and aggregate in T-068. No resume/replay UI. |
 
 | T-071 | Strategic-zoom placement and label legibility | Luna | Done | 539 focused checks pass; root accepts final strategic PNG. Final rendered samples retain1000 actors and remain over budget. docs/reviews/T-071.md. |
+
+## Presentation replacement — 2026-09-08
+
+Kevin rejected the first candidate's visual quality and requested a complete themed UI, WASD map movement, stronger fortress/star art and native 1080p–1440p output. He explicitly authorized parallel agents and optional Blender use. The active delivery contract is [docs/contracts/presentation-v2.md](docs/contracts/presentation-v2.md). Earlier automated passes remain historical evidence, not visual acceptance. UI, world-art and input lanes are in progress; Astra owns integration and independent capture/package QA.
+
+
+Presentation replacement completed - 2026-09-08: version 1.0.0-rc2 now renders at native 2560 x 1440, opens a 1920 x 1080 window, provides WASD map movement with migrated H/C/V/B tool defaults, and replaces the UI, fortress surfaces, stellar shader and integrity instrument. Three agent lanes were integrated and independently reviewed. All 42 regression suites passed; final cache received rendered and independent invalidation checks. Native 12-ring/128-machine sample: median16.668ms, p9516.760ms on RTX4080. Exported application lifecycle/reload and exact archive checks passed. Final decisions, scope and evidence: [docs/PRESENTATION-OVERHAUL.md](docs/PRESENTATION-OVERHAUL.md). Package: exports/RingZero-1.0.0-rc2-windows.zip. This supersedes first-candidate visual claims; Steam activation and commercial/human acceptance remain as documented.
+

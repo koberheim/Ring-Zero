@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+{"board_redraws":0,"draw_calls":1258.0,"median_ms":16.662,"mode":"all","p95_ms":16.773}
+{"board_redraws":0,"draw_calls":1223.0,"median_ms":16.662,"mode":"pan","p95_ms":16.917}
+{"board_redraws":0,"draw_calls":1222.0,"median_ms":16.666,"mode":"tactical","p95_ms":16.916}
+{"board_redraws":0,"draw_calls":1222.0,"median_ms":16.661,"mode":"pan_tactical","p95_ms":16.874}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.667,"mode":"no_board","p95_ms":16.984}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.665,"mode":"no_space","p95_ms":16.738}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.665,"mode":"no_sun","p95_ms":16.793}
+{"board_redraws":0,"draw_calls":479.0,"median_ms":16.67,"mode":"no_hud","p95_ms":16.951}
+{"board_redraws":0,"draw_calls":1219.0,"median_ms":16.665,"mode":"no_world","p95_ms":16.75}

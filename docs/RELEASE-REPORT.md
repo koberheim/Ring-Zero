@@ -1,5 +1,10 @@
 # RING ZERO — autonomous release-candidate report
 
+> Superseded presentation: Kevin rejected this first candidate's visual quality.
+> The current `1.0.0-rc2` overhaul, screenshots and verification are documented in
+> [PRESENTATION-OVERHAUL.md](PRESENTATION-OVERHAUL.md). This report preserves the
+> earlier gameplay, architecture and release-scope history.
+
 September 8, 2026. Branch: `release/v1.0-candidate`. Application version: `1.0.0-rc1`.
 
 ## Executive decision

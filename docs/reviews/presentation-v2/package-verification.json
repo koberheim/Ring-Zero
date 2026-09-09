@@ -1,0 +1,106 @@
+﻿{
+    "ok":  true,
+    "input_method":  "owned_hwnd_messages",
+    "launches":  [
+                     {
+                         "label":  "first",
+                         "pid":  26264,
+                         "exit_code":  0
+                     },
+                     {
+                         "label":  "reload",
+                         "pid":  48280,
+                         "exit_code":  0
+                     }
+                 ],
+    "inputs":  [
+                   {
+                       "pid":  26264,
+                       "type":  "click",
+                       "x":  1878,
+                       "y":  1264,
+                       "right":  false,
+                       "utc":  "2026-09-09T00:42:24.0528841Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "key",
+                       "virtual_key":  49,
+                       "utc":  "2026-09-09T00:42:25.0811273Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "click",
+                       "x":  1638.7,
+                       "y":  675.6,
+                       "right":  false,
+                       "utc":  "2026-09-09T00:42:25.3355885Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "click",
+                       "x":  1638.7,
+                       "y":  675.6,
+                       "right":  true,
+                       "utc":  "2026-09-09T00:42:25.6004133Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-09T00:42:26.3632471Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-09T00:42:26.6279731Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "key",
+                       "virtual_key":  27,
+                       "utc":  "2026-09-09T00:42:26.8920725Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "click",
+                       "x":  1280,
+                       "y":  920,
+                       "right":  false,
+                       "utc":  "2026-09-09T00:42:27.1565854Z"
+                   },
+                   {
+                       "pid":  26264,
+                       "type":  "click",
+                       "x":  1166,
+                       "y":  1385,
+                       "right":  false,
+                       "utc":  "2026-09-09T00:42:27.4185570Z"
+                   },
+                   {
+                       "pid":  48280,
+                       "type":  "click",
+                       "x":  1166,
+                       "y":  1385,
+                       "right":  false,
+                       "utc":  "2026-09-09T00:42:29.4794636Z"
+                   }
+               ],
+    "build":  {
+                  "build_id":  "40cc70a1bb11f5edcb689168bc45a9014c5c02b39c401ecb1b5a1c763510bf7f",
+                  "engine":  "4.7.2.stable",
+                  "format":  1.0,
+                  "frozen":  true,
+                  "generated_utc":  "2026-09-09T00:41:56.8040228Z",
+                  "source_files":  399.0
+              },
+    "engine":  "4.7.2-stable (official)",
+    "run_id":  "1",
+    "ticks":  153,
+    "commands":  1,
+    "markers":  3,
+    "currency":  0,
+    "profile":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\package-targeted\\run-20260909-004221-857-48156\\appdata\\Godot\\app_userdata\\RING ZERO\\profile.json",
+    "trace":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\package-targeted\\run-20260909-004221-857-48156\\appdata\\Godot\\app_userdata\\RING ZERO\\runs\\run-1-26264-2133548.jsonl"
+}

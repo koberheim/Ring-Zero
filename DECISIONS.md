@@ -3449,3 +3449,11 @@ Rather than (or in addition to) reworking the three confused silhouettes, each o
 **Follow-up not yet resolved:** using colour as the sole differentiator between silhouette-identical elites (Tunneler/Transfer/Breacher specifically) sits in tension with D-115's existing "non-colour-only status cues" accessibility commitment — a colour-blind player would lose the ability to tell those three apart if their silhouettes stay identical. Not blocking this decision, but worth a real answer before this ships, likely by still pursuing some silhouette differentiation for those three rather than treating colour as a full substitute.
 
 **Blocking:** the elite/Assembler prompt templates (§21-26 in v1-templates.md) need the accent-colour rule rewritten before any further elite generation; each of the 5 new hues also needs the same yellow/white/red-giant star-skin legibility check the single cyan accent already passed in the mockup review.
+
+## Presentation replacement — 2026-09-08
+
+Kevin rejected the first candidate's visual quality and requested a complete themed UI, WASD map movement, stronger fortress/star art and native 1080p–1440p output. He explicitly authorized parallel agents and optional Blender use. The active delivery contract is [docs/contracts/presentation-v2.md](docs/contracts/presentation-v2.md). Earlier automated passes remain historical evidence, not visual acceptance. UI, world-art and input lanes are in progress; Astra owns integration and independent capture/package QA.
+
+
+Presentation replacement completed - 2026-09-08: version 1.0.0-rc2 now renders at native 2560 x 1440, opens a 1920 x 1080 window, provides WASD map movement with migrated H/C/V/B tool defaults, and replaces the UI, fortress surfaces, stellar shader and integrity instrument. Three agent lanes were integrated and independently reviewed. All 42 regression suites passed; final cache received rendered and independent invalidation checks. Native 12-ring/128-machine sample: median16.668ms, p9516.760ms on RTX4080. Exported application lifecycle/reload and exact archive checks passed. Final decisions, scope and evidence: [docs/PRESENTATION-OVERHAUL.md](docs/PRESENTATION-OVERHAUL.md). Package: exports/RingZero-1.0.0-rc2-windows.zip. This supersedes first-candidate visual claims; Steam activation and commercial/human acceptance remain as documented.
+
