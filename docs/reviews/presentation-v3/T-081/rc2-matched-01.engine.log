@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+{"actors":128,"effects":true,"frames":180,"max_frame_ms":21.76,"max_simulation_callback_ms":4.523,"median_draw_ms":1.052,"median_frame_ms":16.664,"median_quote_ms":0.008,"median_sync_ms":2.465,"p95_frame_ms":16.751,"rings":12,"simulation_wall_ratio":1.00000333334444,"viewport":"(2560, 1440)"}

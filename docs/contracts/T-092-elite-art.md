@@ -6,7 +6,11 @@ This task inherits [the shared Phase 14 contract](presentation-v3.md), including
 
 ## Dependencies
 
+**Recovery lease — 2026-09-08 (machine date):** Stream F may prepare the approved brief and six monochrome silhouette candidates from `a42b7a8` plus recovered T-086 changes. Editable now: `docs/art-prompts/presentation-v3-elites.md`, `assets/art/source/presentation-v3-elites/`, `scripts/art/` files explicitly named for T-092, and `docs/reviews/presentation-v3/T-092/`. Exclusive live Blender lease is granted for isolated silhouette geometry in a dedicated collection; inspect first, preserve the current file, release afterward. No Godot process or shipping asset replacement. Suspend Blender rendering before A's performance freeze. Detailed assets and motion wait for the contracted human silhouette result.
+
 D-131 resolved; D-135 approval. Early brief/silhouettes are disjoint from A/D; final in-engine acceptance needs T-081/T-087 and E's integration slot.
+
+Named preparation tooling: `scripts/art/t092_silhouettes_blender.py` and `scripts/art/t092_silhouette_review.py`. A new isolated source `.blend` under `assets/art/source/presentation-v3-elites/` is part of the approved source-artifact delivery; never save over or replace the user's current file. No detailed asset production before the human gate.
 
 ## Editable scope
 

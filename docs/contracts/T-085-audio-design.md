@@ -6,7 +6,11 @@ This task inherits [the shared Phase 14 contract](presentation-v3.md), including
 
 ## Dependencies
 
+**Recovery preparation lease — 2026-09-08 (machine date):** Stream C may verify the approved free online sources and prepare a source-admission report from `a42b7a8`. Editable now: `docs/reviews/presentation-v3/T-085/` and factual source-status updates in `docs/audio-generation-plan.md`. No runtime/audio asset edits, paid service, account creation or external messages. Report exact source access, model/host license evidence and any unresolved eligibility before production assignment. No Godot or local GPU work.
+
 D-135; D-130 source strategy resolved. Generation source admission must pass before using outputs. B's event contract for final wiring; exclusive integration lease for application/view hooks.
+
+**ACE-Step pilot lease — recovery continuation:** Following the source preparation report, C may inspect the official ACE-Step live demo and attempt one short approved instrumental pilot using a verified free session, only after recording its actual model and applicable output terms. Editable: `docs/reviews/presentation-v3/T-085/`, `docs/audio-generation-plan.md`, and new `assets/audio/source/t085-pilot/` files. Preserve originals and metadata; no runtime wiring, account creation, paid credit use, automatic batches or local GPU processing. If login, free quota or actual loaded identity cannot be established, report the concrete access limit. Stable Audio remains unadmitted pending eligibility/host applicability.
 
 ## Editable scope
 

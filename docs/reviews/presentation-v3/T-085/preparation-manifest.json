@@ -1,0 +1,15 @@
+﻿{
+    "scope":  "T-085 recovery preparation documentation only",
+    "observed_utc":  "2026-09-09T02:35:42Z",
+    "baseline":  "a42b7a8",
+    "files":  [
+                  {
+                      "path":  ".gdignore",
+                      "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+                  },
+                  {
+                      "path":  "source-admission-preparation.md",
+                      "sha256":  "4c207446e93f238a9cc79176c4a76763250806364e4eb3e324dbd14d45c28502"
+                  }
+              ]
+}

@@ -1,0 +1,674 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (112 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   1% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   2% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   3% ] [90m[1mupdate_scripts_classes[22m | AchievementHooks[39m[0m
+[   4% ] [90m[1mupdate_scripts_classes[22m | EntityPool[39m[0m
+[   5% ] [90m[1mupdate_scripts_classes[22m | FixedStepClock[39m[0m
+[   6% ] [90m[1mupdate_scripts_classes[22m | PCSettings[39m[0m
+[   7% ] [90m[1mupdate_scripts_classes[22m | PolarGrid[39m[0m
+[   7% ] [90m[1mupdate_scripts_classes[22m | PolarMotion[39m[0m
+[   8% ] [90m[1mupdate_scripts_classes[22m | PolarPosition[39m[0m
+[   9% ] [90m[1mupdate_scripts_classes[22m | PolarRouteField[39m[0m
+[  10% ] [90m[1mupdate_scripts_classes[22m | ProfileStore[39m[0m
+[  11% ] [90m[1mupdate_scripts_classes[22m | RunRecorder[39m[0m
+[  12% ] [90m[1mupdate_scripts_classes[22m | AbilityRules[39m[0m
+[  13% ] [90m[1mupdate_scripts_classes[22m | AssemblerRules[39m[0m
+[  14% ] [90m[1mupdate_scripts_classes[22m | BalanceProfile[39m[0m
+[  15% ] [90m[1mupdate_scripts_classes[22m | BreacherRules[39m[0m
+[  15% ] [90m[1mupdate_scripts_classes[22m | BuildingRules[39m[0m
+[  16% ] [90m[1mupdate_scripts_classes[22m | FoundryRules[39m[0m
+[  17% ] [90m[1mupdate_scripts_classes[22m | LiveSimulation[39m[0m
+[  18% ] [90m[1mupdate_scripts_classes[22m | MachineSpawnRules[39m[0m
+[  19% ] [90m[1mupdate_scripts_classes[22m | PowerRules[39m[0m
+[  20% ] [90m[1mupdate_scripts_classes[22m | RingPurchaseRules[39m[0m
+[  21% ] [90m[1mupdate_scripts_classes[22m | RunRules[39m[0m
+[  22% ] [90m[1mupdate_scripts_classes[22m | SapperRules[39m[0m
+[  23% ] [90m[1mupdate_scripts_classes[22m | TerrainRules[39m[0m
+[  23% ] [90m[1mupdate_scripts_classes[22m | TransferRules[39m[0m
+[  24% ] [90m[1mupdate_scripts_classes[22m | TunnelerRules[39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | WallNavigation[39m[0m
+[  26% ] [90m[1mupdate_scripts_classes[22m | WallRules[39m[0m
+[  27% ] [90m[1mupdate_scripts_classes[22m | WeaponRules[39m[0m
+[  28% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  29% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  31% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  32% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  34% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  35% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  36% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  37% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  39% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  40% ] [90m[1mupdate_scripts_classes[22m | RingStatusHud[39m[0m
+[  41% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  42% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  43% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  44% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  45% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  46% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  46% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  47% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  48% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  49% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  51% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  52% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  53% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  53% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  54% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  55% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  56% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  57% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  58% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  59% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  60% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  62% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  63% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  64% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  65% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  66% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  67% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  68% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  70% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  71% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  72% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  73% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  74% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  75% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  77% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  78% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  79% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  80% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  81% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  82% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  83% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  85% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  86% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  87% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  88% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  89% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  90% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  91% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  92% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  92% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  93% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  94% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  95% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  96% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  97% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  98% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (177 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | anchor_approved.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | anchor_candidate_01.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | anchor_candidate_02.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | anchor_candidate_03.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | anchor_candidate_04.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | anchor_candidate_05.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | anchor_v2_01.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | anchor_v2_02.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | anchor_v2_03.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | band_cold_01.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | band_hot_01.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | band_working_01.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | head_armor_plating.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | head_emp_node.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | head_flak.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | head_lance_emitter.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | head_mass_driver.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | head_point_defense.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | head_relay.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | head_repair_node.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | mount_01.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | damage_sheet_01.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | decal_sheet_01.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | assembler.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | elite_breacher.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | elite_foundry.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | elite_sapper.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | elite_transfer.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | elite_tunneler.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | machine_standard.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | gritty_industrial_mockup.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | painterly_awe_mockup.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | schematic_readout_mockup.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | wide_establishing_legibility_mockup.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | terrain_debris_field_01.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | terrain_occlusion_screen_01.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | terrain_tractor_lane_01.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | wall_deflector_01.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | containment.svg[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | first_watch.svg[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | machine_breaker.svg[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | outer_frontier.svg[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | power_restored.svg[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | trial_by_fire.svg[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | Barlow-Regular.ttf[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | Barlow-SemiBold.ttf[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | BarlowSemiCondensed-SemiBold.ttf[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | ring_zero_icon.svg[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | shot1-strategic-top-down.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | shot1-strategic.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | shot2-close-thicker-bands.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | shot2-close-tilted.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | shot2-close-top-down.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | shot3-signature-red-giant.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | shot3-signature-white-star.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | shot3-signature.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | shot4-swarm-legibility.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | T-004-panned-selected.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | T-004-three-bands.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | T-004-twelve-bands.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | T-011-menu.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | T-011-placed-weapon.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | T-011-ring2-purchase.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | T-011-startup.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | T-018-core-loss.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | T-018-early-combat.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | T-018-inner-collapse.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | T-022-open-gap-funnel.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | T-022-sealed-wall-damage.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | T-022-wall-breach.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | T-022-wall-ring-collapse.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | T-028-inner-collapse.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | T-028-surfaced-overlap.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | T-028-surfaced-triangle.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | T-028-underground-warning.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | T-028-warning-zoom.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | T-029-mixed-status.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | T-029-twelve-ring-readability.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | T-038-structure-tab.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | T-045-structure-quote.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | T-045-weapon-catalogue.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | T-047-outer-ring-focus.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | T-047-twelve-rings.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | T-049-industrial-close.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | T-049-industrial-strategic.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | T-049-painterly-close.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | T-049-painterly-strategic.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | T-049-sun-red.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | T-049-sun-white.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | T-049-sun-yellow.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | T-051-art_preview-emp-aim.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | T-051-art_preview-flare-aim.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | T-051-art_preview-terrain.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | T-051-live_view-emp-aim.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | T-051-live_view-flare-aim.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | T-051-live_view-terrain.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-1024-art-drawer.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-1024-repair-quote.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-1024-structure-active.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-help.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-hidden.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | T-053-art_preview-startup.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | T-053-live_view-1024-repair-quote.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | T-053-live_view-1024-structure-active.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | T-053-live_view-help.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | T-053-live_view-hidden.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | T-053-live_view-startup.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | T-067-crowd-effects.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | T-067-crowd-no-effects.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | T-067-fullscreen-settings.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | T-067-hud-130-1280.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | T-067-hud-1280.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | T-067-letterbox-1600.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | T-067-reference-1920.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | T-067-relay-1280.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | T-067-results-130-1280.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | T-067-settings-130-1280.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | T-067-settings-1280.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | T-067-shop-130-1280.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | T-067-shop-upgrades-130-1280.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | T-067-start-130-1280.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | T-067-start-1280.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | T-067-start-1440.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | T-067-start-1920.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | T-067-structure-relay-1280.png[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | T-067-tutorial-1280.png[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | T-067-tutorial-1920.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | T-071-crowd-effects.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | T-071-crowd-no-effects.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | T-078-close.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | T-078-crowd.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | T-078-rotations.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | T-078-strategic.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | T-078-yellow.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | T-079-close-01.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | T-079-close-02.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | T-079-close-03.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | T-079-close-04.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | T-079-close-05.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | T-079-crowd-01.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | T-079-crowd-02.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | T-079-crowd-03.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | T-079-rotations-01.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | T-079-rotations-02.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | T-079-rotations-03.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | T-079-rotations-04.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | T-079-rotations-05.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | T-079-rotations-06.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | T-079-rotations-07.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | T-079-rotations-08.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | T-079-rotations-09.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | T-079-rotations-10.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | T-079-rotations-11.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | T-079-rotations-12.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | T-079-rotations-13.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | T-079-rotations-14.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | T-079-rotations-15.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | T-079-rotations-16.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | T-079-rotations-17.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | T-079-strategic-01.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | T-079-strategic-02.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | T-079-yellow-01.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | T-079-yellow-02.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | T-079-yellow-03.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | T-079-yellow-04.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | T-079-yellow-05.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | release-1080.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | release-controls.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | release-credits.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | release-fortress.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | release-minimum.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | release-opening.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | release-records.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | release-settings.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | release-start.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | release-tactical.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | release-victory.png[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (177 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | Barlow-SemiBold.ttf[39m[0m
+[   0% ] [90m[1mreimport[22m | Barlow-Regular.ttf[39m[0m
+[   1% ] [90m[1mreimport[22m | BarlowSemiCondensed-SemiBold.ttf[39m[0m
+[   1% ] [90m[1mreimport[22m | Barlow-SemiBold.ttf[39m[0m
+[   2% ] [90m[1mreimport[22m | Barlow-Regular.ttf[39m[0m
+[   2% ] [90m[1mreimport[22m | BarlowSemiCondensed-SemiBold.ttf[39m[0m
+[   3% ] [90m[1mreimport[22m | T-067-reference-1920.png[39m[0m
+[   3% ] [90m[1mreimport[22m | T-067-relay-1280.png[39m[0m
+[   4% ] [90m[1mreimport[22m | T-067-results-130-1280.png[39m[0m
+[   5% ] [90m[1mreimport[22m | T-067-settings-130-1280.png[39m[0m
+[   5% ] [90m[1mreimport[22m | T-067-settings-1280.png[39m[0m
+[   6% ] [90m[1mreimport[22m | T-067-shop-130-1280.png[39m[0m
+[   6% ] [90m[1mreimport[22m | T-067-shop-upgrades-130-1280.png[39m[0m
+[   7% ] [90m[1mreimport[22m | T-067-start-130-1280.png[39m[0m
+[   7% ] [90m[1mreimport[22m | T-067-start-1280.png[39m[0m
+[   8% ] [90m[1mreimport[22m | T-067-start-1440.png[39m[0m
+[   8% ] [90m[1mreimport[22m | T-067-start-1920.png[39m[0m
+[   9% ] [90m[1mreimport[22m | T-067-structure-relay-1280.png[39m[0m
+[  10% ] [90m[1mreimport[22m | T-067-tutorial-1280.png[39m[0m
+[  10% ] [90m[1mreimport[22m | T-067-tutorial-1920.png[39m[0m
+[  11% ] [90m[1mreimport[22m | T-071-crowd-effects.png[39m[0m
+[  11% ] [90m[1mreimport[22m | T-071-crowd-no-effects.png[39m[0m
+[  12% ] [90m[1mreimport[22m | T-078-close.png[39m[0m
+[  12% ] [90m[1mreimport[22m | T-078-crowd.png[39m[0m
+[  13% ] [90m[1mreimport[22m | T-078-rotations.png[39m[0m
+[  14% ] [90m[1mreimport[22m | T-078-strategic.png[39m[0m
+[  14% ] [90m[1mreimport[22m | T-051-art_preview-emp-aim.png[39m[0m
+[  15% ] [90m[1mreimport[22m | T-051-art_preview-flare-aim.png[39m[0m
+[  15% ] [90m[1mreimport[22m | T-051-art_preview-terrain.png[39m[0m
+[  16% ] [90m[1mreimport[22m | T-051-live_view-emp-aim.png[39m[0m
+[  16% ] [90m[1mreimport[22m | T-051-live_view-flare-aim.png[39m[0m
+[  17% ] [90m[1mreimport[22m | T-051-live_view-terrain.png[39m[0m
+[  17% ] [90m[1mreimport[22m | T-053-art_preview-1024-art-drawer.png[39m[0m
+[  18% ] [90m[1mreimport[22m | T-053-art_preview-1024-repair-quote.png[39m[0m
+[  19% ] [90m[1mreimport[22m | T-053-art_preview-1024-structure-active.png[39m[0m
+[  19% ] [90m[1mreimport[22m | T-053-art_preview-help.png[39m[0m
+[  20% ] [90m[1mreimport[22m | T-053-art_preview-hidden.png[39m[0m
+[  20% ] [90m[1mreimport[22m | T-053-art_preview-startup.png[39m[0m
+[  21% ] [90m[1mreimport[22m | T-053-live_view-1024-repair-quote.png[39m[0m
+[  21% ] [90m[1mreimport[22m | T-053-live_view-1024-structure-active.png[39m[0m
+[  22% ] [90m[1mreimport[22m | T-053-live_view-help.png[39m[0m
+[  23% ] [90m[1mreimport[22m | T-053-live_view-hidden.png[39m[0m
+[  23% ] [90m[1mreimport[22m | T-053-live_view-startup.png[39m[0m
+[  24% ] [90m[1mreimport[22m | T-067-crowd-effects.png[39m[0m
+[  24% ] [90m[1mreimport[22m | T-067-crowd-no-effects.png[39m[0m
+[  25% ] [90m[1mreimport[22m | T-067-fullscreen-settings.png[39m[0m
+[  25% ] [90m[1mreimport[22m | T-067-hud-130-1280.png[39m[0m
+[  26% ] [90m[1mreimport[22m | T-067-hud-1280.png[39m[0m
+[  26% ] [90m[1mreimport[22m | T-067-letterbox-1600.png[39m[0m
+[  27% ] [90m[1mreimport[22m | T-079-rotations-14.png[39m[0m
+[  28% ] [90m[1mreimport[22m | T-079-rotations-15.png[39m[0m
+[  28% ] [90m[1mreimport[22m | T-079-rotations-16.png[39m[0m
+[  29% ] [90m[1mreimport[22m | T-079-rotations-17.png[39m[0m
+[  29% ] [90m[1mreimport[22m | T-079-strategic-01.png[39m[0m
+[  30% ] [90m[1mreimport[22m | T-079-strategic-02.png[39m[0m
+[  30% ] [90m[1mreimport[22m | T-079-yellow-01.png[39m[0m
+[  31% ] [90m[1mreimport[22m | T-079-yellow-02.png[39m[0m
+[  32% ] [90m[1mreimport[22m | T-079-yellow-03.png[39m[0m
+[  32% ] [90m[1mreimport[22m | T-079-yellow-04.png[39m[0m
+[  33% ] [90m[1mreimport[22m | T-079-yellow-05.png[39m[0m
+[  33% ] [90m[1mreimport[22m | release-1080.png[39m[0m
+[  34% ] [90m[1mreimport[22m | release-controls.png[39m[0m
+[  34% ] [90m[1mreimport[22m | release-credits.png[39m[0m
+[  35% ] [90m[1mreimport[22m | release-fortress.png[39m[0m
+[  35% ] [90m[1mreimport[22m | release-minimum.png[39m[0m
+[  36% ] [90m[1mreimport[22m | release-opening.png[39m[0m
+[  37% ] [90m[1mreimport[22m | release-records.png[39m[0m
+[  37% ] [90m[1mreimport[22m | release-settings.png[39m[0m
+[  38% ] [90m[1mreimport[22m | release-start.png[39m[0m
+[  38% ] [90m[1mreimport[22m | release-tactical.png[39m[0m
+[  39% ] [90m[1mreimport[22m | release-victory.png[39m[0m
+[  39% ] [90m[1mreimport[22m | T-078-yellow.png[39m[0m
+[  40% ] [90m[1mreimport[22m | T-079-close-01.png[39m[0m
+[  41% ] [90m[1mreimport[22m | T-079-close-02.png[39m[0m
+[  41% ] [90m[1mreimport[22m | T-079-close-03.png[39m[0m
+[  42% ] [90m[1mreimport[22m | T-079-close-04.png[39m[0m
+[  42% ] [90m[1mreimport[22m | T-079-close-05.png[39m[0m
+[  43% ] [90m[1mreimport[22m | T-079-crowd-01.png[39m[0m
+[  43% ] [90m[1mreimport[22m | T-079-crowd-02.png[39m[0m
+[  44% ] [90m[1mreimport[22m | T-079-crowd-03.png[39m[0m
+[  44% ] [90m[1mreimport[22m | T-079-rotations-01.png[39m[0m
+[  45% ] [90m[1mreimport[22m | T-079-rotations-02.png[39m[0m
+[  46% ] [90m[1mreimport[22m | T-079-rotations-03.png[39m[0m
+[  46% ] [90m[1mreimport[22m | T-079-rotations-04.png[39m[0m
+[  47% ] [90m[1mreimport[22m | T-079-rotations-05.png[39m[0m
+[  47% ] [90m[1mreimport[22m | T-079-rotations-06.png[39m[0m
+[  48% ] [90m[1mreimport[22m | T-079-rotations-07.png[39m[0m
+[  48% ] [90m[1mreimport[22m | T-079-rotations-08.png[39m[0m
+[  49% ] [90m[1mreimport[22m | T-079-rotations-09.png[39m[0m
+[  50% ] [90m[1mreimport[22m | T-079-rotations-10.png[39m[0m
+[  50% ] [90m[1mreimport[22m | T-079-rotations-11.png[39m[0m
+[  51% ] [90m[1mreimport[22m | T-079-rotations-12.png[39m[0m
+[  51% ] [90m[1mreimport[22m | T-079-rotations-13.png[39m[0m
+[  52% ] [90m[1mreimport[22m | decal_sheet_01.png[39m[0m
+[  52% ] [90m[1mreimport[22m | assembler.png[39m[0m
+[  53% ] [90m[1mreimport[22m | elite_breacher.png[39m[0m
+[  53% ] [90m[1mreimport[22m | elite_foundry.png[39m[0m
+[  54% ] [90m[1mreimport[22m | elite_sapper.png[39m[0m
+[  55% ] [90m[1mreimport[22m | elite_transfer.png[39m[0m
+[  55% ] [90m[1mreimport[22m | elite_tunneler.png[39m[0m
+[  56% ] [90m[1mreimport[22m | machine_standard.png[39m[0m
+[  56% ] [90m[1mreimport[22m | gritty_industrial_mockup.png[39m[0m
+[  57% ] [90m[1mreimport[22m | painterly_awe_mockup.png[39m[0m
+[  57% ] [90m[1mreimport[22m | schematic_readout_mockup.png[39m[0m
+[  58% ] [90m[1mreimport[22m | wide_establishing_legibility_mockup.png[39m[0m
+[  58% ] [90m[1mreimport[22m | terrain_debris_field_01.png[39m[0m
+[  59% ] [90m[1mreimport[22m | terrain_occlusion_screen_01.png[39m[0m
+[  60% ] [90m[1mreimport[22m | terrain_tractor_lane_01.png[39m[0m
+[  60% ] [90m[1mreimport[22m | wall_deflector_01.png[39m[0m
+[  61% ] [90m[1mreimport[22m | containment.svg[39m[0m
+[  61% ] [90m[1mreimport[22m | first_watch.svg[39m[0m
+[  62% ] [90m[1mreimport[22m | machine_breaker.svg[39m[0m
+[  62% ] [90m[1mreimport[22m | outer_frontier.svg[39m[0m
+[  63% ] [90m[1mreimport[22m | power_restored.svg[39m[0m
+[  64% ] [90m[1mreimport[22m | anchor_approved.png[39m[0m
+[  64% ] [90m[1mreimport[22m | anchor_candidate_01.png[39m[0m
+[  65% ] [90m[1mreimport[22m | anchor_candidate_02.png[39m[0m
+[  65% ] [90m[1mreimport[22m | anchor_candidate_03.png[39m[0m
+[  66% ] [90m[1mreimport[22m | anchor_candidate_04.png[39m[0m
+[  66% ] [90m[1mreimport[22m | anchor_candidate_05.png[39m[0m
+[  67% ] [90m[1mreimport[22m | anchor_v2_01.png[39m[0m
+[  67% ] [90m[1mreimport[22m | anchor_v2_02.png[39m[0m
+[  68% ] [90m[1mreimport[22m | anchor_v2_03.png[39m[0m
+[  69% ] [90m[1mreimport[22m | band_cold_01.png[39m[0m
+[  69% ] [90m[1mreimport[22m | band_hot_01.png[39m[0m
+[  70% ] [90m[1mreimport[22m | band_working_01.png[39m[0m
+[  70% ] [90m[1mreimport[22m | head_armor_plating.png[39m[0m
+[  71% ] [90m[1mreimport[22m | head_emp_node.png[39m[0m
+[  71% ] [90m[1mreimport[22m | head_flak.png[39m[0m
+[  72% ] [90m[1mreimport[22m | head_lance_emitter.png[39m[0m
+[  73% ] [90m[1mreimport[22m | head_mass_driver.png[39m[0m
+[  73% ] [90m[1mreimport[22m | head_point_defense.png[39m[0m
+[  74% ] [90m[1mreimport[22m | head_relay.png[39m[0m
+[  74% ] [90m[1mreimport[22m | head_repair_node.png[39m[0m
+[  75% ] [90m[1mreimport[22m | mount_01.png[39m[0m
+[  75% ] [90m[1mreimport[22m | damage_sheet_01.png[39m[0m
+[  76% ] [90m[1mreimport[22m | T-022-sealed-wall-damage.png[39m[0m
+[  76% ] [90m[1mreimport[22m | T-022-wall-breach.png[39m[0m
+[  77% ] [90m[1mreimport[22m | T-022-wall-ring-collapse.png[39m[0m
+[  78% ] [90m[1mreimport[22m | T-028-inner-collapse.png[39m[0m
+[  78% ] [90m[1mreimport[22m | T-028-surfaced-overlap.png[39m[0m
+[  79% ] [90m[1mreimport[22m | T-028-surfaced-triangle.png[39m[0m
+[  79% ] [90m[1mreimport[22m | T-028-underground-warning.png[39m[0m
+[  80% ] [90m[1mreimport[22m | T-028-warning-zoom.png[39m[0m
+[  80% ] [90m[1mreimport[22m | T-029-mixed-status.png[39m[0m
+[  81% ] [90m[1mreimport[22m | T-029-twelve-ring-readability.png[39m[0m
+[  82% ] [90m[1mreimport[22m | T-038-structure-tab.png[39m[0m
+[  82% ] [90m[1mreimport[22m | T-045-structure-quote.png[39m[0m
+[  83% ] [90m[1mreimport[22m | T-045-weapon-catalogue.png[39m[0m
+[  83% ] [90m[1mreimport[22m | T-047-outer-ring-focus.png[39m[0m
+[  84% ] [90m[1mreimport[22m | T-047-twelve-rings.png[39m[0m
+[  84% ] [90m[1mreimport[22m | T-049-industrial-close.png[39m[0m
+[  85% ] [90m[1mreimport[22m | T-049-industrial-strategic.png[39m[0m
+[  85% ] [90m[1mreimport[22m | T-049-painterly-close.png[39m[0m
+[  86% ] [90m[1mreimport[22m | T-049-painterly-strategic.png[39m[0m
+[  87% ] [90m[1mreimport[22m | T-049-sun-red.png[39m[0m
+[  87% ] [90m[1mreimport[22m | T-049-sun-white.png[39m[0m
+[  88% ] [90m[1mreimport[22m | T-049-sun-yellow.png[39m[0m
+[  88% ] [90m[1mreimport[22m | trial_by_fire.svg[39m[0m
+[  89% ] [90m[1mreimport[22m | ring_zero_icon.svg[39m[0m
+[  89% ] [90m[1mreimport[22m | shot1-strategic-top-down.png[39m[0m
+[  90% ] [90m[1mreimport[22m | shot1-strategic.png[39m[0m
+[  91% ] [90m[1mreimport[22m | shot2-close-thicker-bands.png[39m[0m
+[  91% ] [90m[1mreimport[22m | shot2-close-tilted.png[39m[0m
+[  92% ] [90m[1mreimport[22m | shot2-close-top-down.png[39m[0m
+[  92% ] [90m[1mreimport[22m | shot3-signature-red-giant.png[39m[0m
+[  93% ] [90m[1mreimport[22m | shot3-signature-white-star.png[39m[0m
+[  93% ] [90m[1mreimport[22m | shot3-signature.png[39m[0m
+[  94% ] [90m[1mreimport[22m | shot4-swarm-legibility.png[39m[0m
+[  94% ] [90m[1mreimport[22m | T-004-panned-selected.png[39m[0m
+[  95% ] [90m[1mreimport[22m | T-004-three-bands.png[39m[0m
+[  96% ] [90m[1mreimport[22m | T-004-twelve-bands.png[39m[0m
+[  96% ] [90m[1mreimport[22m | T-011-menu.png[39m[0m
+[  97% ] [90m[1mreimport[22m | T-011-placed-weapon.png[39m[0m
+[  97% ] [90m[1mreimport[22m | T-011-ring2-purchase.png[39m[0m
+[  98% ] [90m[1mreimport[22m | T-011-startup.png[39m[0m
+[  98% ] [90m[1mreimport[22m | T-018-core-loss.png[39m[0m
+[  99% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (177 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

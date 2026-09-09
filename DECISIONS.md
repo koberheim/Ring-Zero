@@ -4,7 +4,7 @@
 
 ## Current authority and later review
 
-**Updated:** 2026-09-09. **Current review:** D-135 approved by Kevin; T-086 quick slice is the first delivery, followed by T-081 performance proof. D-129/D-131 are resolved; D-132/D-133 record the two process corrections; D-134 extends numeric authority. The retained RC2 aggregate is 42/42, not 39. T-079 remains a failed acceptance gate.
+**Updated:** crash recovery on 2026-09-08 local date; historical approval dates retained. **Current review:** D-135 continuation reaffirmed; T-086 early slice accepted at `7a85a88` (42/42 suites, independent 51/51 native checks). T-081 stopped on untouched RC2's first max-frame breach, 21.760 ms versus 20.3379 ms; no lighting edits or gate waiver. T-092 awaits the human silhouette trial; T-085's free pilot returned an API error with no audio. D-129/D-131 are resolved; D-132/D-133 remain standing corrections and D-134 numeric authority continues. T-079 remains a failed acceptance gate.
 
 ## NEEDS YOUR DECISION — current pass
 
@@ -13,6 +13,8 @@ This pass has **zero pending plan approvals**. Kevin approved D-135 on 2026-09-0
 | Decision | Needed resolution | Blocks |
 |---|---|---|
 | None | D-135 approved; task exit gates remain mandatory | No blanket gate waiver |
+
+Recovery execution checkpoint: T-086 early slice accepted at `7a85a88`, with 42/42 suites and independent native 51/51 checks. T-081 is assigned its renderer/performance proof; full theme and later runtime tasks retain their dependencies. No new creative decision or gate waiver was made.
 
 ## Presentation performance pass — 2026-09-09
 

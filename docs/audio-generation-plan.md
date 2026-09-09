@@ -6,6 +6,10 @@ Kevin chose free AI audio generation through online tools. Budget is **$0**: no 
 
 ## Verified shortlist and source gate
 
+**Recovery source check - 2026-09-08 local / 2026-09-09 UTC:** [T-085 preparation evidence](reviews/presentation-v3/T-085/source-admission-preparation.md) confirms the official demo pages still report Running on Zero. ACE-Step's source now defaults to XL turbo; its exact model card explicitly permits commercial music. The official Stable Audio SFX choice resolves to `stabilityai/stable-audio-3-small-sfx`, whose attached Community license and additional Gemma terms were inspected. Revenue eligibility, registration/hosted-use applicability, actual loaded revisions and a successful free pilot download remain pending. The Open Zero fallback's current source could not be retrieved, so it is not yet a verified substitute. No generation, asset admission or spending occurred in this preparation pass.
+
+**Live ACE-Step pilot follow-up:** [Attempt evidence](reviews/presentation-v3/T-085/ace-pilot-attempt.md) records one anonymous 20-second FLAC generation request. The live API confirmed initialized XL turbo and accepted an event, but returned `event: error` / `data: null` without audio or an explanation. No download or asset admission occurred; spending remained $0. Current model identity and full terms snapshots are retained; loaded weight revision and successful free download remain pending. Browser control exposed no connected browser. Stable Audio's source gate is unchanged.
+
 | Role | Online tool | Why it is shortlisted | Admission condition |
 |---|---|---|---|
 | Main music source | [Official ACE-Step v1.5 demo](https://huggingface.co/spaces/ACE-Step/Ace-Step-v1.5) | The page was reachable and reported Running on Zero. The [official model card](https://huggingface.co/ACE-Step/Ace-Step1.5) labels the model MIT and explicitly permits commercial generated music. | Capture the actual model/revision used, host terms, output download format and license at production time; successfully generate/download one pilot at no charge before scheduling the music batch. |

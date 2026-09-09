@@ -10,7 +10,7 @@ T-081 and T-087 frozen; D releases shared views. T-086 fonts/tokens; coordinate 
 
 ## Editable scope
 
-release_view.gd and new src/presentation/readability/ helpers under E lease; assets/art/bands/, assets/art/buildings/, assets/art/terrain/, assets/art/decals/, assets/art/materials/ only for mapped structural remediation; scripts/art/ task-specific tooling and tests. No gameplay source edits.
+release_view.gd and new src/presentation/readability/ helpers under E lease; assets/art/bands/, assets/art/buildings/, assets/art/walls/, assets/art/terrain/, assets/art/decals/, assets/art/materials/ only for mapped structural remediation; scripts/art/ task-specific tooling and tests. No gameplay source edits. The walls directory is explicitly included because the shipping wall texture is loaded from assets/art/walls/wall_deflector_01.png.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.
 

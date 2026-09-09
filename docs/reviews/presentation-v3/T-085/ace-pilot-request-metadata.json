@@ -1,0 +1,319 @@
+{
+  "recorded_utc": "2026-09-09T02:40:46.457383+00:00",
+  "host": "https://ace-step-ace-step-v1-5.hf.space",
+  "endpoint": "/gradio_api/call/generation_wrapper",
+  "mode": "anonymous; no Authorization header, account, cookies or prepaid credits",
+  "billing": "$0; host quota admission untested; stop if denied",
+  "model": "acestep-v15-xl-turbo",
+  "loaded_model_evidence": "ace-live-config.json component 53",
+  "loaded_model_weight_revision": "not exposed",
+  "space_revision": "7403460e9b34972f760317b56048f6cb9d4a3a11",
+  "output_terms": "ace-xl-model-card.md explicitly permits commercial generated music; ace-space-LICENSE.txt MIT; hf-terms.html",
+  "prompt": "Instrumental science-fiction maintenance station ambience, slow restrained harmonic movement, deep machinery resonance, sparse metallic pulse, tension without a dominant melody, no vocals, seamless passage.",
+  "lyrics": "[Instrumental]",
+  "requested_duration_seconds": 20,
+  "requested_format": "flac",
+  "batch_size": 1,
+  "seed": 85001,
+  "thinking": false,
+  "automatic_generation": false,
+  "source_audio": null,
+  "reference_audio": null,
+  "parameters": [
+    {
+      "position": 0,
+      "name": "selected_model",
+      "label": "models",
+      "value": "acestep-v15-xl-turbo"
+    },
+    {
+      "position": 1,
+      "name": "generation_mode",
+      "label": "",
+      "value": "custom"
+    },
+    {
+      "position": 2,
+      "name": "simple_query_input",
+      "label": "Song Description",
+      "value": ""
+    },
+    {
+      "position": 3,
+      "name": "simple_vocal_language",
+      "label": "Vocal Language (optional)",
+      "value": "unknown"
+    },
+    {
+      "position": 4,
+      "name": "param_4",
+      "label": "Prompt",
+      "value": "Instrumental science-fiction maintenance station ambience, slow restrained harmonic movement, deep machinery resonance, sparse metallic pulse, tension without a dominant melody, no vocals, seamless passage."
+    },
+    {
+      "position": 5,
+      "name": "param_5",
+      "label": "Lyrics",
+      "value": "[Instrumental]"
+    },
+    {
+      "position": 6,
+      "name": "param_6",
+      "label": "BPM (optional)",
+      "value": 60
+    },
+    {
+      "position": 7,
+      "name": "param_7",
+      "label": "Key Signature (optional)",
+      "value": "D minor"
+    },
+    {
+      "position": 8,
+      "name": "param_8",
+      "label": "Time Signature (optional)",
+      "value": "4"
+    },
+    {
+      "position": 9,
+      "name": "param_9",
+      "label": "Vocal Language",
+      "value": "unknown"
+    },
+    {
+      "position": 10,
+      "name": "param_10",
+      "label": "DiT Inference Steps",
+      "value": 8
+    },
+    {
+      "position": 11,
+      "name": "param_11",
+      "label": "parameter_156",
+      "value": 7.0
+    },
+    {
+      "position": 12,
+      "name": "param_12",
+      "label": "Random Seed",
+      "value": false
+    },
+    {
+      "position": 13,
+      "name": "param_13",
+      "label": "Seed",
+      "value": "85001"
+    },
+    {
+      "position": 14,
+      "name": "param_14",
+      "label": "Reference Audio (optional)",
+      "value": null
+    },
+    {
+      "position": 15,
+      "name": "param_15",
+      "label": "Audio Duration (seconds)",
+      "value": 20
+    },
+    {
+      "position": 16,
+      "name": "param_16",
+      "label": "batch size",
+      "value": 1
+    },
+    {
+      "position": 17,
+      "name": "param_17",
+      "label": "Source Audio",
+      "value": null
+    },
+    {
+      "position": 18,
+      "name": "param_18",
+      "label": "Audio Codes",
+      "value": ""
+    },
+    {
+      "position": 19,
+      "name": "param_19",
+      "label": "Start (seconds)",
+      "value": 0.0
+    },
+    {
+      "position": 20,
+      "name": "param_20",
+      "label": "End (seconds, -1 for end)",
+      "value": -1
+    },
+    {
+      "position": 21,
+      "name": "param_21",
+      "label": "parameter_153",
+      "value": "Fill the audio semantic mask based on the given conditions:"
+    },
+    {
+      "position": 22,
+      "name": "param_22",
+      "label": "parameter_138",
+      "value": 1.0
+    },
+    {
+      "position": 23,
+      "name": "param_23",
+      "label": "parameter_152",
+      "value": "text2music"
+    },
+    {
+      "position": 24,
+      "name": "param_24",
+      "label": "parameter_157",
+      "value": false
+    },
+    {
+      "position": 25,
+      "name": "param_25",
+      "label": "parameter_158",
+      "value": 0.0
+    },
+    {
+      "position": 26,
+      "name": "param_26",
+      "label": "parameter_159",
+      "value": 1.0
+    },
+    {
+      "position": 27,
+      "name": "param_27",
+      "label": "Shift",
+      "value": 3.0
+    },
+    {
+      "position": 28,
+      "name": "param_28",
+      "label": "Inference Method",
+      "value": "ode"
+    },
+    {
+      "position": 29,
+      "name": "param_29",
+      "label": "Custom Timesteps",
+      "value": ""
+    },
+    {
+      "position": 30,
+      "name": "param_30",
+      "label": "Audio Format",
+      "value": "flac"
+    },
+    {
+      "position": 31,
+      "name": "param_31",
+      "label": "LM Temperature",
+      "value": 0.85
+    },
+    {
+      "position": 32,
+      "name": "param_32",
+      "label": "Thinking",
+      "value": false
+    },
+    {
+      "position": 33,
+      "name": "param_33",
+      "label": "LM CFG Scale",
+      "value": 2.0
+    },
+    {
+      "position": 34,
+      "name": "param_34",
+      "label": "LM Top-K",
+      "value": 0
+    },
+    {
+      "position": 35,
+      "name": "param_35",
+      "label": "LM Top-P",
+      "value": 0.9
+    },
+    {
+      "position": 36,
+      "name": "param_36",
+      "label": "LM Negative Prompt",
+      "value": "NO USER INPUT"
+    },
+    {
+      "position": 37,
+      "name": "param_37",
+      "label": "parameter_160",
+      "value": false
+    },
+    {
+      "position": 38,
+      "name": "param_38",
+      "label": "parameter_161",
+      "value": false
+    },
+    {
+      "position": 39,
+      "name": "param_39",
+      "label": "parameter_162",
+      "value": false
+    },
+    {
+      "position": 40,
+      "name": "param_41",
+      "label": "parameter_163",
+      "value": false
+    },
+    {
+      "position": 41,
+      "name": "param_42",
+      "label": "parameter_164",
+      "value": false
+    },
+    {
+      "position": 42,
+      "name": "param_43",
+      "label": "Get Scores",
+      "value": false
+    },
+    {
+      "position": 43,
+      "name": "param_44",
+      "label": "Get LRC",
+      "value": false
+    },
+    {
+      "position": 44,
+      "name": "param_45",
+      "label": "parameter_166",
+      "value": 0.5
+    },
+    {
+      "position": 45,
+      "name": "param_46",
+      "label": "parameter_165",
+      "value": 8
+    },
+    {
+      "position": 46,
+      "name": "param_47",
+      "label": "parameter_154",
+      "value": null
+    },
+    {
+      "position": 47,
+      "name": "param_48",
+      "label": "parameter_155",
+      "value": []
+    },
+    {
+      "position": 48,
+      "name": "param_49",
+      "label": "parameter_167",
+      "value": false
+    }
+  ],
+  "asset_admission": "pending successful download and review"
+}

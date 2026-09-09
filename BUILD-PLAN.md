@@ -85,7 +85,17 @@ Astra read the complete supplied critique first, checked cited code and original
 
 Kevin approved the plan. T-086 receives the first narrow theme/icon/capture lease; no layout or renderer edits are authorized in that slice. T-081 follows independent acceptance of the quick fix. No other view writer or GPU benchmark runs concurrently.
 
+Recovery checkpoint: `7a85a88` accepts the T-086 early slice with 42/42 suites, 51/51 native checks independently reproduced by Astra, original before evidence and repaired corrupt SVG/cache files. Full T-086 remains pending its later lease. Kevin closed Godot for benchmarks; Blender silhouette rendering is finished and its lease released. T-081 now receives exclusive runtime access for its RC2 baseline and light/cache proof. Audio source verification is documented; no sound source is yet admitted.
+
+Recovery gate results: the first untouched RC2 matched control exceeded the maximum-frame limit (21.760 ms versus 20.3379 ms); median 16.664 ms, p95 16.751 ms and simulation/wall 1.0000033 passed. A stopped before lighting edits and reported the failure; no average, retry or baseline substitution passes it. Read-only environment investigation is separate from gate acceptance. F delivered a reviewed six-class Blender blockout/reference and twelve 16 px silhouette trials, preserving Kevin's active file; the required human result is pending. C's one anonymous free ACE-Step pilot reached the live initialized XL API but returned `event: error` / `data: null`, no audio and no spend. Exact source/terms/request/error evidence is retained; Stable Audio admission is also unresolved. Downstream runtime work remains gated, and no candidate promotion occurred.
+
 ## Historical plan and session records
+
+### Crash recovery — 2026-09-08 machine date
+
+Durable partial-art checkpoint: `f47f804` saves the six isolated Blender blockouts, source recipe and twelve-trial human review package. Artifact integrity and source preservation are verified; human recognition remains pending. This is a source/review checkpoint, not shipping art acceptance. After the T-081 stop, a read-only GPU context list showed They Are Billions, without proving active load or causation; Kevin was asked to save/close it before a controlled diagnostic retry. No process was closed automatically.
+
+Kevin requested continuation after the crash and reiterated use of the open Blender MCP for depth. The approved D-135 record and `a42b7a8` survived. T-086 before evidence and partial theme/icon/capture changes survived; two SVGs contained null-byte corruption and returned to Stream D for repair and validation. Existing unrelated editor/project changes are preserved. D resumes the exclusive Godot capture/test lease. F receives isolated silhouette preparation and Blender access; C receives read-only online source verification plus its report. These disjoint preparations do not advance runtime dependencies. Blender/GPU work must stop before the T-081 performance freeze. The prior 2026-09-09 approval dates are retained as history despite the current machine date.
 
 The earlier phase/status summaries below are historical. Phase 14 above is the current authority and review state.
 

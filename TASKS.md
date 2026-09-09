@@ -4,24 +4,24 @@
 
 ## Phase 14 — Presentation performance (approved execution)
 
-**Updated:** 2026-09-09. **Current review:** D-135 approved; T-086 quick slice authorized for assignment. Other tasks await their dependency gates. D-129/D-130/D-131 are resolved; D-132/D-133 are standing process corrections; D-134 covers provisional numeric presentation tuning. These task IDs were explicitly requested by Kevin for this planning phase. Earlier status summaries are historical; their RC label does not pass the open T-079 gate.
+**Updated:** crash recovery on 2026-09-08 local date; prior approval records retain their 2026-09-09 dates. **Current review:** D-135 execution resumed. T-086 early slice accepted at `7a85a88`. T-081 stopped on the first untouched RC2 maximum-frame breach; no lighting implementation began. T-092 Blender silhouettes await the human trial. T-085's one free ACE-Step pilot returned an API error with no audio. Runtime successors await their dependency gates. D-129/D-130/D-131 are resolved; D-132/D-133 are standing process corrections; D-134 covers provisional numeric presentation tuning. Earlier RC labels do not pass the open T-079 gate.
 
 All tasks inherit [the shared contract](docs/contracts/presentation-v3.md). Full dependencies, editable paths, output shape, evidence and failure handling are in each individual contract. The baseline is 42 suites, not the older 39. Astra reviews; agents implement.
 
 | ID | Task | Owner | Status | Notes |
 |---|---|---|---|---|
-| T-081 | Renderer, lighting and cache performance proof | Sol | ⚪ Not started | Stream A; [contract](docs/contracts/T-081-renderer-lighting.md). D-135 approved; dependency gates apply. |
+| T-081 | Renderer, lighting and cache performance proof | Sol | 🔴 Blocked — baseline performance gate | Stream A; [report](docs/reviews/presentation-v3/T-081/report.md). Untouched RC2 first sample: median 16.664 ms / p95 16.751 ms pass; max 21.760 ms exceeds 20.3379 ms. Simulation/wall 1.0000033 passes. No production edits; failure reported to Kevin; investigation remains separate from acceptance. |
 | T-082 | Distinct weapon, hit and death performance | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-082-combat-feedback.md). D-135 approved; dependency gates apply. |
 | T-083 | Ring collapse vertical slice and catastrophe gate | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-083-ring-collapse.md). D-135 approved; dependency gates apply. |
 | T-084 | Camera impulse and purposeful interface motion | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-084-motion-language.md). D-135 approved; dependency gates apply. |
-| T-085 | Free online AI audio, score and event mix | Luna | ⚪ Not started | Stream C; [contract](docs/contracts/T-085-audio-design.md). D-135 approved; dependency gates apply. |
-| T-086 | CheckButton quick win and complete instrument theme | Luna | 🔵 Assigned — early slice | Stream D; [contract](docs/contracts/T-086-theme-toggles.md). Toggle/arrow lease only; full theme waits for T-081 and early T-083. |
+| T-085 | Free online AI audio, score and event mix | Luna | 🔴 Blocked — source pilot/admission | Stream C; [pilot report](docs/reviews/presentation-v3/T-085/ace-pilot-attempt.md). One anonymous 20-second FLAC request accepted, then `error: null`; no output or spending. Model/terms/request evidence retained. Stable Audio commercial eligibility/host applicability remains unresolved. |
+| T-086 | CheckButton quick win and complete instrument theme | Luna | 🟡 In progress — early slice accepted | Stream D; [contract](docs/contracts/T-086-theme-toggles.md). `7a85a88`: repaired SVG/cache corruption, explicit switches/arrow, 42/42 suites and independent 51/51 native checks. Provisional 104×36 px switch, 16 px gap, 12/6 px inset, 3 px focus. Full theme waits for T-081 and early T-083. |
 | T-087 | Responsive native composition and correct map framing | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-087-responsive-layout.md). D-135 approved; dependency gates apply. |
 | T-088 | Start, HUD, pause, settings, controls and outcome composition | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-088-screen-presentation.md). D-135 approved; dependency gates apply. |
 | T-089 | Fortress state, structural depth and remaining T-079 asset failures | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-089-fortress-readability.md). D-135 approved; dependency gates apply. |
 | T-090 | Swarm LOD and elite visibility at strategic zoom | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-090-swarm-lod.md). D-135 approved; dependency gates apply. |
 | T-091 | Readable ring integrity and power instrument | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-091-integrity-instrument.md). D-135 approved; dependency gates apply. |
-| T-092 | Mechanic-led elite and Assembler art | Luna | ⚪ Not started | Stream F; [contract](docs/contracts/T-092-elite-art.md). D-135 approved; dependency gates apply. |
+| T-092 | Mechanic-led elite and Assembler art | Luna | 🟠 In review — human silhouette gate | Stream F; [review package](docs/reviews/presentation-v3/T-092/README.md). Six Blender depth blockouts and 12 monochrome 16 px trials prepared; 51 hashes independently verified. User's original scene preserved and MCP released. Human 11/12 result pending; no detailed/shipping assets yet. |
 | T-093 | Integrated acceptance, full-run QA and candidate decision | Sol; Astra reviews | ⚪ Not started | Stream ALL; [contract](docs/contracts/T-093-integrated-gates.md). D-135 approved; dependency gates apply. |
 
 ### T-081 — Done condition

@@ -1,0 +1,2 @@
+timestamp, name, driver_version, pstate, utilization.gpu [%], utilization.memory [%], power.draw [W], clocks.current.graphics [MHz], clocks.current.memory [MHz]
+2026/09/08 22:45:00.173, NVIDIA GeForce RTX 4080, 610.88, P8, 50 %, 19 %, 24.11 W, 225 MHz, 405 MHz

@@ -1,0 +1,22 @@
+﻿{
+    "label":  "rc2-matched-01",
+    "engine":  "E:/Godot/Godot_v4.7.2-stable_win64.exe",
+    "arguments":  [
+                      "--path",
+                      "E:\\AI Projects\\Games\\Ring Zero\\.godot\\release-qa\\t081-rc2",
+                      "--log-file",
+                      "E:\\AI Projects\\Games\\Ring Zero\\docs\\reviews\\presentation-v3\\T-081\\rc2-matched-01.engine.log",
+                      "--rendering-method",
+                      "gl_compatibility",
+                      "--script",
+                      "res://tests/performance/measure_release.gd"
+                  ],
+    "working_directory":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\release-qa\\t081-rc2",
+    "started_utc":  "2026-09-09T02:43:29.6239661Z",
+    "completed_utc":  "2026-09-09T02:43:35.8201050Z",
+    "pid":  19476,
+    "exit_code":  0,
+    "timed_out":  false,
+    "isolated_appdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\release-qa\\t081-rc2\\.godot\\t081-appdata",
+    "isolated_localappdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\release-qa\\t081-rc2\\.godot\\t081-localappdata"
+}

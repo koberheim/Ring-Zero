@@ -6,7 +6,11 @@ This task inherits [the shared Phase 14 contract](presentation-v3.md), including
 
 ## Dependencies
 
+**Active recovery lease:** T-086 early slice accepted and committed as `7a85a88` (42/42 suites, independent native 51/51). Stream A / Sol owns the editable scope below and `docs/reviews/presentation-v3/T-081/`, plus an isolated RC2 control checkout under `.godot/release-qa/t081-rc2/`. The existing `project.godot` diff only reorders `config/icon`; preserve it while recording the baseline identity. Godot editor was closed by Kevin; F has released Blender and finished rendering. A holds exclusive Godot import/capture/test/performance access. Before timed trials, explicitly coordinate a source/assets freeze with C/F through Astra. No B/D/E runtime lease is active. Stop and report the first breached performance sample before further production or downstream work.
+
 D-135; T-086's isolated toggle slice accepted. No D-layout lease active.
+
+**Recovery lease stopped:** First untouched RC2 sample breached the maximum-frame threshold, 21.760 ms versus 20.3379 ms. Failure reported to Kevin; production progression stopped before any lighting edits. Source/assets freeze and Godot process lease released. Report/evidence and read-only environment diagnosis remain allowed; no downstream gate is cleared.
 
 ## Editable scope
 

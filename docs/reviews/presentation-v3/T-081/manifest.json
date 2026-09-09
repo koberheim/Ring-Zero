@@ -1,0 +1,82 @@
+﻿[
+    {
+        "path":  ".gdignore",
+        "bytes":  0,
+        "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+        "path":  "gpu-after.txt",
+        "bytes":  263,
+        "sha256":  "60778e9c94f7b94ed5b3987fbbf0dcfddbbe923bf17665b806266ee82db80612"
+    },
+    {
+        "path":  "gpu-before.txt",
+        "bytes":  232,
+        "sha256":  "59d1344e966d8ae002cd2ea25463bda38cb6ccaf686875cd56e2c6be744b94bb"
+    },
+    {
+        "path":  "gpu-compute-processes-after.txt",
+        "bytes":  2282,
+        "sha256":  "bfed36253949506c260909f7c11fe5911382add31238e60792d1fdb691c2287c"
+    },
+    {
+        "path":  "gpu-engines-after-unavailable.txt",
+        "bytes":  16,
+        "sha256":  "bdfae3ac93561801bdde98069448b78f5144b2fa852ac946f7d8d0abfc8df702"
+    },
+    {
+        "path":  "rc2-import.command.json",
+        "bytes":  1035,
+        "sha256":  "a5d1a97f66f71fc5d57212f5cf3ea5ba1597e6385365fcb663b9f5c0c459b040"
+    },
+    {
+        "path":  "rc2-import.engine.log",
+        "bytes":  32228,
+        "sha256":  "e6fd998d1dcc66d29cd151f7064f6c9e4049c40480464a9e020c06273ade1fa4"
+    },
+    {
+        "path":  "rc2-import.stderr.log",
+        "bytes":  125,
+        "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+    },
+    {
+        "path":  "rc2-import.stdout.log",
+        "bytes":  48097,
+        "sha256":  "d7c8a0b9ad6ab0c050a8e45ae89e111adfa4eb3a9260f30920d655ef9aee391e"
+    },
+    {
+        "path":  "rc2-matched-01.command.json",
+        "bytes":  1129,
+        "sha256":  "6c2ba36b7368ee3dda4134f10f5463bff4ceabc820915c56833d63f24be8333d"
+    },
+    {
+        "path":  "rc2-matched-01.engine.log",
+        "bytes":  586,
+        "sha256":  "0418d0753f0d7256325c3746f9d0215d1405832fc7250013bc2f653985870fb8"
+    },
+    {
+        "path":  "rc2-matched-01.stderr.log",
+        "bytes":  125,
+        "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+    },
+    {
+        "path":  "rc2-matched-01.stdout.log",
+        "bytes":  467,
+        "sha256":  "b58ccec821f5371a59800c3d45a29b3dd2a2d640d46bfaa660becbae96a6c92c"
+    },
+    {
+        "path":  "report.md",
+        "bytes":  7059,
+        "sha256":  "2e9a08b7720944fee3514c9e423e05ea7b1700ce702fe169d5f440c09d9ca703"
+    },
+    {
+        "path":  "run-probe.ps1",
+        "bytes":  2988,
+        "sha256":  "6fc89c47cb1eab0c77c8fac04670da31c44efb5a2939d87e6f79f60fa5cd864e"
+    },
+    {
+        "path":  "source-input-hashes.txt",
+        "bytes":  1120,
+        "sha256":  "311244d0f94f01c8d4242eca7fbbbf7c5f0c25709734363439eb2eda4d5d396f"
+    }
+]
