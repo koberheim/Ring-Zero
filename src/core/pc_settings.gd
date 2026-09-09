@@ -59,6 +59,11 @@ static func rebind(action: String, key: int) -> Error:
 	for other in bindings:
 		if other != action and bindings[other] == key: bindings[other] = bindings[action]
 	bindings[action] = key
+	# A swap must obey the same rules as a direct assignment. In particular,
+	# moving Tactical off Alt cannot assign bare Alt to the displaced action.
+	if not _valid_keyboard_map(bindings, DEFAULT_KEYS):
+		bindings = previous
+		return ERR_INVALID_PARAMETER
 	var error := save_settings()
 	if error != OK: bindings = previous
 	return error
@@ -82,6 +87,7 @@ static func _validated_map(candidate: Variant, defaults: Dictionary, low: int, h
 	return candidate.duplicate()
 
 static func rebind_button(group: String, action: String, button: int) -> Error:
+	if group not in ["pad", "mouse"]: return ERR_INVALID_PARAMETER
 	var map: Dictionary = pad if group == "pad" else mouse
 	var defaults: Dictionary = DEFAULT_PAD if group == "pad" else DEFAULT_MOUSE
 	if not map.has(action) or button < (0 if group == "pad" else 1) or button > (127 if group == "pad" else 9): return ERR_INVALID_PARAMETER
