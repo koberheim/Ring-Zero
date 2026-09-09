@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "tractor_lane": {
+    "path_cost_multiplier": 0.5
+  },
+  "occlusion_screen": {
+    "shadow_rings": 3,
+    "speed_multiplier": 0.5
+  },
+  "focused_flare": {
+    "damage": 60.0,
+    "cooldown_seconds": 30.0,
+    "range_ring_widths": 8.0,
+    "arc_degrees": 60.0
+  },
+  "emp_burst": {
+    "damage": 2.0,
+    "cooldown_seconds": 10.0,
+    "radius_ring_widths": 1.5,
+    "stun_seconds": 2.0
+  },
+  "assimilation": {
+    "bonus_per_stack": 0.05,
+    "max_stacks": 10,
+    "stack_seconds": 15.0
+  },
+  "tunneler": {
+    "first_arrival_seconds": 60.0,
+    "arrival_interval_seconds": 30.0,
+    "burrow_seconds": 2.0
+  },
+  "foundry": {
+    "first_arrival_seconds": 90.0,
+    "arrival_interval_seconds": 45.0,
+    "hp_multiplier": 20.0,
+    "damage_multiplier": 3.0,
+    "speed_multiplier": 0.4
+  },
+  "transfer": {
+    "first_arrival_seconds": 75.0,
+    "arrival_interval_seconds": 40.0
+  },
+  "sapper": {
+    "first_arrival_seconds": 65.0,
+    "arrival_interval_seconds": 35.0
+  },
+  "breacher": {
+    "first_arrival_seconds": 55.0,
+    "arrival_interval_seconds": 30.0
+  },
+  "assembler": {
+    "first_arrival_seconds": 180.0,
+    "interval_seconds": 120.0,
+    "hp_multiplier": 40.0,
+    "damage_multiplier": 4.0,
+    "speed_multiplier": 0.3,
+    "growth_damage_per_stack": 0.1,
+    "growth_hp_per_stack": 20.0
+  },
+  "pressure": {
+    "max_active_machines": 1000,
+    "spawn_per_second": 2.0,
+    "spawn_delay_seconds": 10.0,
+    "speed_ring_widths_per_second": 1.0,
+    "spawn_offset_ring_widths": 2.0,
+    "stat_increase_per_minute": 0.1
+  },
+  "economy": {
+    "kill_energy": 2,
+    "ring_plate_base_cost": 10,
+    "wall_cost": 5,
+    "debris_field_cost": 30,
+    "tractor_lane_cost": 25,
+    "occlusion_screen_cost": 30,
+    "flak_cost": 20,
+    "mass_driver_cost": 40,
+    "reclaim_discount": 0.75,
+    "armor_plating_cost": 15,
+    "repair_node_cost": 40,
+    "emp_node_cost": 30,
+    "lance_emitter_cost": 60,
+    "point_defense_cost": 25,
+    "rebuild_relay_cost": 50,
+    "repair_discount": 1.0
+  },
+  "scaling": {
+    "slots_per_wedge_per_ring": 2,
+    "claim_cost_ring_exponent": 1.0,
+    "wedge_hp_ring_exponent": 1.0,
+    "power_ring_exponent": -1.0
+  },
+  "flak": {
+    "damage": 2.0,
+    "cycle_seconds": 0.25,
+    "range_ring_widths": 2.0,
+    "arc_degrees": 90.0,
+    "max_targets": 5,
+    "power_demand": 10.0
+  },
+  "mass_driver": {
+    "damage": 20.0,
+    "cycle_seconds": 2.0,
+    "range_ring_widths": 4.0,
+    "arc_degrees": 360.0,
+    "max_targets": 1,
+    "power_demand": 25.0
+  },
+  "emp_node": {
+    "damage": 1.0,
+    "cycle_seconds": 3.0,
+    "range_ring_widths": 2.0,
+    "arc_degrees": 360.0,
+    "max_targets": 8,
+    "power_demand": 10.0,
+    "stun_seconds": 1.5
+  },
+  "lance_emitter": {
+    "damage": 8.0,
+    "cycle_seconds": 4.0,
+    "range_ring_widths": 6.0,
+    "arc_degrees": 360.0,
+    "max_targets": 20,
+    "power_demand": 30.0
+  },
+  "point_defense": {
+    "damage": 3.0,
+    "cycle_seconds": 0.1,
+    "range_ring_widths": 0.5,
+    "arc_degrees": 360.0,
+    "max_targets": 1,
+    "power_demand": 8.0
+  },
+  "power": {
+    "base_output": 150.0,
+    "brownout_fraction": 0.1
+  },
+  "health": {
+    "wedge_base_hp": 100.0,
+    "core_hp": 200.0,
+    "wall_hp": 50.0,
+    "standard_machine_hp": 10.0,
+    "tunneler_hp": 20.0
+  },
+  "standard_machine": {
+    "damage_per_second": 5.0,
+    "wall_damage_multiplier": 0.25
+  },
+  "structure": {
+    "collapse_broken_wedges": 7,
+    "armor_plating_hp_bonus": 50.0,
+    "armor_plating_max_stacks": 2,
+    "repair_node_heal_fraction_per_second": 0.02,
+    "relay_max_hp": 100.0
+  },
+  "starting_test_setup": {
+    "owned_ring_count": 1,
+    "flak_count": 1,
+    "energy_in_flak_purchases": 10,
+    "flak_wedge": 12
+  }
+}

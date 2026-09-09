@@ -1,0 +1,112 @@
+extends "res://tests/presentation/test_application.gd"
+var output := ""
+var mode := "normal"
+var repetitions := 2
+
+func _initialize() -> void:
+	create_timer(100.0).timeout.connect(func(): push_error("T083 profiling deadline"); quit(1))
+	call_deferred("_run")
+
+func dense_fixture() -> LiveSimulation:
+	var base: BalanceProfile = BalanceProfile.load_json("res://data/balance/release.json").profile
+	var tuned: BalanceProfile = base.with_overrides({"pressure":{"spawn_per_second":0},"flak":{"damage":0},"power":{"base_output":1800.0}}).profile
+	var sim: LiveSimulation = LiveSimulation.create(tuned,12).simulation
+	sim.state.energy = 1e9
+	for ring in range(2,13): check(sim.purchase_ring().ok,"Public ring purchase")
+	for wedge in range(8,13):
+		check(sim.place_wall(12,wedge).ok,"Standing wall")
+		for slot in int(sim.state.rings[12].wedges[wedge].slot_count):
+			var placed: Dictionary = sim.place_weapon(12,wedge,slot,&"flak") if slot < 3 else (sim.place_armor(12,wedge,slot) if slot < 5 else sim.place_repair_node(12,wedge,slot))
+			check(placed.ok,"Public hardware placement: "+str(placed.get("errors",[])))
+	for wedge in range(1,7): sim.state.rings[12].wedges[wedge].hp = 0.0
+	sim.state.rings[12].wedges[7].hp = 6.7
+	for index in 128:
+		check(sim.pool.spawn({"position":PolarPosition.new(13,7 if index == 0 else index%12+1,0.0 if index == 0 else 0.4,0.5),"hp":1e9,"damage_per_second":1e7 if index == 0 else 0.0,"speed_ring_widths_per_second":1.0 if index == 0 else 0.00001,"stun_remaining":1.1 if index == 0 else 0.0}) >= 0,"Actual diagnostic actor")
+	check(RingPurchaseRules.validate_state(sim.state,tuned).is_empty(),"Preflight state validates")
+	var counts := {"flak":0,"armor_plating":0,"repair_node":0,"walls":0}
+	for plate in sim.state.rings[12].wedges.values():
+		if plate.has("wall"): counts.walls += 1
+		for occupant in plate.occupants.values(): counts[String(occupant.kind)] += 1
+	check(counts == {"flak":15,"armor_plating":10,"repair_node":95,"walls":5},"Exact dense04 initial occupancy")
+	return sim
+
+func counters(view, sim: LiveSimulation) -> Dictionary:
+	return {"hook_us":view.t083_hook_usec,"effect_draw_us":view.t083_effect_draw_usec,"cache_check_us":view.t083_cache_check_usec,"albedo_us":view.t083_albedo_usec,"material_us":view.t083_material_usec,"albedo_calls":view.t083_albedo_calls,"material_calls":view.t083_material_calls,"state_copy_us":sim.t083_state_copy_usec,"repair_us":sim.t083_repair_usec}
+
+func _run() -> void:
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--evidence-dir="): output = arg.trim_prefix("--evidence-dir=").trim_suffix("/")+"/"
+		if arg.begins_with("--profile-mode="): mode = arg.trim_prefix("--profile-mode=")
+	check(not output.is_empty() and mode in ["normal","draw-off","admission-off","cache-hold"],"Explicit output and valid mode")
+	if failures: quit(1); return
+	DirAccess.make_dir_recursive_absolute(output)
+	seed(83083)
+	root.size = Vector2i(2560,1440)
+	app = load("res://scenes/application.tscn").instantiate()
+	app.profile_path = "res://.godot/release-profiles/t083-profile-%d/profile.json" % Time.get_ticks_usec()
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(app.profile_path.get_base_dir()))
+	root.add_child(app)
+	await process_frame
+	app.set_process(false)
+	for repetition in repetitions:
+		app.begin_run(false)
+		await process_frame
+		app.live.set_process(false)
+		var sim := dense_fixture()
+		# Fail before any measured interval if the fixture is invalid.
+		if failures: break
+		var initial_hash := JSON.stringify(sim.state).sha256_text()
+		var numeric_targets := sim.targets_snapshot()
+		for target in numeric_targets:
+			var p: PolarPosition = target.position
+			target.position = {"ring":p.ring,"wedge":p.wedge,"radial_fraction":p.radial_fraction,"angular_fraction":p.angular_fraction}
+		var initial_targets_hash := JSON.stringify(numeric_targets).sha256_text()
+		app.live.simulation = sim
+		app.live.profile = sim.profile
+		app.live.sync_simulation()
+		app.live._set_zoom(0.41)
+		app.live.camera.force_update_scroll()
+		var committed := []
+		app.live.clock = FixedStepClock.new(60.0,func(dt):
+			app.live._simulation_tick(dt)
+			if not sim.last_events.collapsed_rings.is_empty():
+				committed.append({"tick":sim._ticks,"rings":sim.last_events.collapsed_rings.duplicate(),"piece_count":app.live.collapse_feedback.piece_count()}))
+		app.live.set_process(true)
+		for frame in 60: await process_frame
+		if mode == "cache-hold": app.live.t083_cache_hold = true
+		var timeline := []
+		var start := Time.get_ticks_usec()
+		var last := start
+		var sim_start := sim.elapsed_seconds
+		var previous := counters(app.live,sim)
+		for frame in 180:
+			await process_frame
+			var now := Time.get_ticks_usec()
+			var current := counters(app.live,sim)
+			var row := {"frame":frame,"wall_ms":float(now-last)/1000.0,"wall_from_start_ms":float(now-start)/1000.0,"tick":sim._ticks,"ticks_this_draw":app.live.simulation_ticks_per_frame,"simulation_us":app.live.simulation_cpu_usec,"sync_us":app.live.sync_cpu_usec,"draw_us":app.live.draw_cpu_usec,"quote_us":app.live.quote_cpu_usec,"retained_events":app.live.collapse_feedback.events.size(),"retained_pieces":app.live.collapse_feedback.piece_count(),"board_cache_full":app.live.board_cache_full}
+			for key in current: row[key] = int(current[key])-int(previous[key])
+			timeline.append(row)
+			previous = current
+			last = now
+			if not app.live.last_error.is_empty() or sim.pool.active_count()!=128:
+				check(false,"Measured simulation failed; this attempt invalid")
+				break
+		var elapsed := float(Time.get_ticks_usec()-start)/1e6
+		app.live.set_process(false)
+		var frames: Array[float] = []
+		for row in timeline: frames.append(row.wall_ms)
+		frames.sort()
+		check(not committed.is_empty() and committed[0].tick == 67 and committed[0].rings == [12],"Exact dense04 committed collapse")
+		check(timeline.size()==180,"Complete measured interval")
+		var result := {"diagnostic":"instrumented reconstructed dense04; not natural play and not canonical timing","mode":mode,"repetition":repetition,"repetition_note":"second trial in same process; not a cold-driver-cache claim","initial_state_sha256":initial_hash,"initial_targets_sha256":initial_targets_hash,"committed_events":committed,"frames":timeline.size(),"median_frame_ms":frames[frames.size()/2],"p95_frame_ms":frames[int(floor(frames.size()*0.95))],"max_frame_ms":frames[-1],"simulation_wall_ratio":(sim.elapsed_seconds-sim_start)/elapsed,"timeline":timeline,"engine":Engine.get_version_info(),"backend":RenderingServer.get_current_rendering_method(),"gpu":RenderingServer.get_video_adapter_name(),"resolution":[2560,1440],"zoom":0.41,"valid":failures==0}
+		FileAccess.open(output+"trial-%d.json" % repetition,FileAccess.WRITE).store_string(JSON.stringify(result,"\t"))
+		var summary := result.duplicate()
+		summary.erase("timeline")
+		print(JSON.stringify(summary))
+		app.show_start()
+		await process_frame
+	await app.audio.shutdown()
+	app.queue_free()
+	paused = false
+	await process_frame
+	quit(1 if failures else 0)

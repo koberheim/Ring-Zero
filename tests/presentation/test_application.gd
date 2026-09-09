@@ -215,7 +215,7 @@ func resize_config_checks() -> void:
 	check(app.live.state.energy < before,"1920 viewport-transformed world purchase")
 	root.size = Vector2i(1600,1000)
 	await process_frame
-	check(app.frame.position.y > 0 and app.stage.size == Vector2i(2560,1440),"Non-16:9 resize letterboxes native 1440p game viewport")
+	check(app.frame.position == Vector2.ZERO and app.stage.size == Vector2i(1600,1000),"Non-16:9 resize renders natively without letterboxing")
 	before = app.live.state.energy
 	world_slot(1,5)
 	check(app.live.state.energy < before,"Letterboxed viewport input still targets slot")
@@ -239,7 +239,7 @@ func _run() -> void:
 	await process_frame
 	check(app.state == "start" and app.progress.currency == 0,"Fresh isolated profile opens Start")
 	print("Driver Start=",find_button("Start run").get_global_rect().get_center()," Quit=",find_button("Quit").get_global_rect().get_center())
-	check(app.frame.scale.is_equal_approx(Vector2.ONE*0.5),"1280 window downsamples native 1440p canvas")
+	check(app.frame.scale.is_equal_approx(Vector2.ONE) and app.stage.size == Vector2i(1280,720),"1280 window renders natively, no fixed-buffer downsample")
 	await click_control(find_button("Start run"))
 	print("After Start: ",app.state," / ",app.feedback.text)
 	check(app.state == "playing" and app.live != null,"Actual Start button creates run")

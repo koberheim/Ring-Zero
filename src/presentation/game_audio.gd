@@ -69,7 +69,7 @@ func synth(frequency: float, duration: float, kind: String) -> AudioStreamWAV:
 
 func apply_levels() -> void:
 	if director != null:
-		director.set_levels({"Master":PCSettings.master,"Music":PCSettings.music,"SFX":PCSettings.effects,"UI":PCSettings.effects,"Ambience":PCSettings.music})
+		director.set_levels({"Master":PCSettings.master,"Music":PCSettings.music,"SFX":PCSettings.effects,"UI":PCSettings.ui,"Ambience":PCSettings.ambience})
 	if ambience != null: ambience.volume_db = linear_to_db(0.25)
 	for voice in voices: voice.volume_db = 0.0
 

@@ -1,0 +1,14 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+WARNING: Detected another project.godot at res://exports/source-20260908-095821-327. The folder will be ignored.
+   at: _should_skip_directory (editor/file_system/editor_file_system.cpp:3497)
+SCRIPT ERROR: Parse Error: Could not resolve class "res://src/presentation/live_view.gd".
+   at: GDScript::reload (res://src/presentation/art_preview.gd:1)
+ERROR: Failed to load script "res://src/presentation/art_preview.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "outer" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://src/presentation/live_view.gd:998)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "outer" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://src/presentation/live_view.gd:1002)
+ERROR: Failed to load script "res://src/presentation/live_view.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)

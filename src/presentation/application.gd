@@ -1,7 +1,17 @@
 extends Control
 ## Between-run controller: rules prepare choices; ProfileStore owns persistence.
 const ThemeKit = preload("res://src/presentation/industrial_theme.gd")
-const DESIGN_SIZE := Vector2(2560,1440)
+const DESIGN_SIZE := Vector2(2560,1440) # Historical fixture reference, never the render buffer.
+const Tokens = preload("res://src/presentation/ui_tokens.gd")
+var page_grid: GridContainer
+var page_scroll: ScrollContainer
+var page_heading: Label
+var hero_column: VBoxContainer
+var navigation_grid: GridContainer
+var settings_columns: GridContainer
+var controls_grids: Array[GridContainer] = []
+var page_is_start := false
+var audio_value_labels := {}
 var page_decoration: Control
 var menu_sun: ColorRect
 var menu_phase := 0.0
@@ -47,6 +57,7 @@ var rebinding_group := "keyboard"
 var controller: Node
 var achievement_hooks := AchievementHooks.new()
 var quitting := false
+var _layout_retries := 0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -125,18 +136,85 @@ func _pause_on_focus_loss() -> void:
 		live.set_menu_open(true)
 
 func _resize() -> void:
-	if frame == null:
-		return
-	var viewport_size := get_viewport_rect().size
-	var factor := minf(viewport_size.x/DESIGN_SIZE.x,viewport_size.y/DESIGN_SIZE.y)
-	# The world and text render at 2560 x 1440 before fitting the window.
+	if frame == null: return
+	var viewport_size := Vector2i(get_viewport_rect().size)
 	frame.stretch = false
-	stage.size = Vector2i(2560,1440)
-	frame.size = DESIGN_SIZE
-	frame.scale = Vector2.ONE*factor
-	frame.position = (viewport_size-DESIGN_SIZE*factor)*0.5
-	content_backdrop.position = frame.position
-	content_backdrop.size = DESIGN_SIZE*factor
+	frame.scale = Vector2.ONE
+	frame.position = Vector2.ZERO
+	# SubViewportContainer.size cannot go below its SubViewport's current
+	# size when stretch is false, so shrink the stage first or a resize to a
+	# smaller window gets silently clamped back to the previous larger size.
+	stage.size = viewport_size
+	frame.size = Vector2(viewport_size)
+	content_backdrop.position = Vector2.ZERO
+	content_backdrop.size = Vector2(viewport_size)
+	if shell != null: shell.size = Vector2(viewport_size)
+	if menu_backdrop != null: menu_backdrop.size = Vector2(viewport_size)
+	if controller != null: controller.clamp_to_viewport()
+	_layout_lock_notice()
+	_layout_page()
+	if live != null: live.apply_interface_settings(progress.settings)
+	_layout_tutorial()
+
+func _layout_tutorial() -> void:
+	if tutorial_card == null or live == null: return
+	var map: Rect2 = live.usable_map_rect()
+	tutorial_card.position = Vector2(map.position.x,map.end.y-160)
+	tutorial_card.size = Vector2(map.size.x,160)
+	tutorial_text.custom_minimum_size.x = maxf(100,map.size.x-48)
+
+func _layout_page() -> void:
+	if page_grid == null or not is_instance_valid(page_grid): return
+	var size := Vector2(stage.size)
+	var d := Tokens.density(size.y)
+	var margin := 24.0*d
+	var scale_value := float(progress.get("settings",{}).get("ui_scale",1.0))
+	var compact := size.x < 1600*d or (page_is_start and size.x < 1300*d*scale_value)
+	var target_size := size-Vector2(margin*2,margin*2+(96*d if page_is_start and compact else 60*d if page_is_start else 0))
+	page_grid.position = Vector2(margin,margin)
+	page_grid.size = target_size
+	page_grid.columns = 1 if compact or not page_is_start else 2
+	page_grid.add_theme_constant_override("h_separation",roundi(32*d))
+	page.custom_minimum_size = Vector2.ZERO
+	page.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	page.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	page.theme = ThemeKit.make(scale_value,size.y)
+	if hero_column != null and is_instance_valid(hero_column):
+		hero_column.custom_minimum_size = Vector2(0,150*d if compact else 0)
+		hero_column.size_flags_vertical = Control.SIZE_SHRINK_BEGIN if compact else Control.SIZE_EXPAND_FILL
+		hero_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		if menu_sun != null:
+			var diameter := minf(size.y*0.65,size.x*0.44)
+			menu_sun.visible = not compact
+			menu_sun.size = Vector2.ONE*diameter
+			menu_sun.position = Vector2(margin+(size.x*0.48-diameter)*0.5,size.y*0.28)
+	if navigation_grid != null and is_instance_valid(navigation_grid):
+		navigation_grid.columns = 3 if compact else 6
+		navigation_grid.position = Vector2(margin,size.y-(96*d if compact else 56*d)-margin)
+		navigation_grid.size = Vector2(minf(size.x-margin*2,1200*d),96*d if compact else 56*d)
+	if settings_columns != null and is_instance_valid(settings_columns):
+		settings_columns.columns = 1 if compact or size.x < 1700*d*scale_value else 2
+	for grid in controls_grids:
+		if is_instance_valid(grid): grid.columns = 1 if compact else 2
+	_style_page(page,scale_value,size.y)
+	if hero_column != null and is_instance_valid(hero_column): _style_page(hero_column,scale_value,size.y)
+	if navigation_grid != null and is_instance_valid(navigation_grid): _style_page(navigation_grid,scale_value,size.y)
+	# Autowrap labels report an inflated minimum height before their real
+	# width propagates through the container, which would otherwise clamp
+	# page_grid.size permanently oversized. Re-run once widths settle.
+	if not page_grid.size.is_equal_approx(target_size) and _layout_retries < 4:
+		_layout_retries += 1
+		call_deferred("_layout_page")
+	else:
+		_layout_retries = 0
+
+func _style_page(node: Node, scale_value: float, height: float) -> void:
+	if node is Label:
+		ThemeKit.role(node,str(node.get_meta("type_role","body")),scale_value,height)
+	if node is Button:
+		node.custom_minimum_size.y = maxf(44,Tokens.text("body",scale_value,height)+20*Tokens.density(height))
+		node.add_theme_font_size_override("font_size",Tokens.text("body",scale_value,height))
+	for child in node.get_children(): _style_page(child,scale_value,height)
 
 func _load_profile() -> void:
 	var loaded: Dictionary = store.load_profile(profile_path)
@@ -169,57 +247,48 @@ func _errors(result: Dictionary) -> String:
 
 func _new_page(title: String) -> void:
 	menu_backdrop.show()
-	if page != null:
-		page.queue_free()
-	if page_decoration != null:
-		page_decoration.queue_free()
+	if page_decoration != null: page_decoration.queue_free()
 	menu_sun = null
-	page_decoration = load("res://src/presentation/command_frame.gd").new()
-	page_decoration.home = title == "Ring Zero"
-	page_decoration.size = DESIGN_SIZE
-	page_decoration.theme = ThemeKit.make()
+	hero_column = null
+	navigation_grid = null
+	settings_columns = null
+	controls_grids.clear()
+	audio_value_labels.clear()
+	page_is_start = title == "Ring Zero"
+	page_decoration = Control.new()
+	page_decoration.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	page_decoration.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	shell.add_child(page_decoration)
-	if title != "Ring Zero":
-		var shade := ColorRect.new()
-		shade.color = Color(0.015,0.028,0.045,0.84)
-		shade.size = DESIGN_SIZE
-		shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		page_decoration.add_child(shade)
-		_page_label("RING ZERO",Vector2(142,32),30,ThemeKit.AMBER)
-		_page_label("Stellar containment division",Vector2(1830,32),26,ThemeKit.STEEL)
+	page_grid = GridContainer.new()
+	page_grid.columns = 2 if page_is_start else 1
+	page_decoration.add_child(page_grid)
+	if page_is_start:
+		hero_column = VBoxContainer.new()
+		page_grid.add_child(hero_column)
 	page = PanelContainer.new()
-	page.position = Vector2(1500,174) if title == "Ring Zero" else Vector2(170,162)
-	page.size = Vector2(910,1160) if title == "Ring Zero" else Vector2(2220,1120)
-	page.theme = ThemeKit.make(float(progress.get("settings",{}).get("ui_scale",1.0)))
-	if title != "Ring Zero":
-		page.add_theme_stylebox_override("panel",ThemeKit.box(Color("101b25ed"),Color("3e5664"),44))
-	shell.add_child(page)
+	page_grid.add_child(page)
+	page.theme = ThemeKit.make(float(progress.get("settings",{}).get("ui_scale",1.0)),stage.size.y)
 	var layout := VBoxContainer.new()
-	layout.add_theme_constant_override("separation",24)
 	page.add_child(layout)
-	var heading := Label.new()
-	heading.text = "Prepare an operation" if title == "Ring Zero" else title
-	ThemeKit.heading(heading,48 if title == "Ring Zero" else 72)
-	layout.add_child(heading)
-	var line := HSeparator.new()
-	line.add_theme_stylebox_override("separator",ThemeKit.box(ThemeKit.AMBER,ThemeKit.AMBER,0))
-	line.custom_minimum_size.y = 2
-	layout.add_child(line)
+	page_heading = Label.new()
+	page_heading.text = "Prepare an operation" if page_is_start else title
+	page_heading.set_meta("type_role","heading" if page_is_start else "title")
+	layout.add_child(page_heading)
 	feedback = Label.new()
 	feedback.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	feedback.hide()
 	feedback.add_theme_color_override("font_color",ThemeKit.CYAN)
 	layout.add_child(feedback)
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	layout.add_child(scroll)
+	page_scroll = ScrollContainer.new()
+	page_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	page_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	layout.add_child(page_scroll)
 	content = VBoxContainer.new()
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.add_child(content)
+	page_scroll.add_child(content)
 	footer = HBoxContainer.new()
-	footer.add_theme_constant_override("separation",20)
 	layout.add_child(footer)
+	call_deferred("_layout_page")
 
 func _page_label(value: String, at: Vector2, font_size: int, color: Color = ThemeKit.INK) -> Label:
 	var label := Label.new()
@@ -268,16 +337,16 @@ func show_start() -> void:
 	state = "start"
 	_new_page("Ring Zero")
 	content.add_theme_constant_override("separation",10)
-	_page_label("RING ZERO",Vector2(134,176),184)
-	_page_label("Hold the star.",Vector2(144,392),58,ThemeKit.AMBER)
-	_page_label("Build its cage. Survive the machine tide.",Vector2(148,470),32,ThemeKit.STEEL)
-	_page_label("15 minutes. One star. Everything you can build.",Vector2(144,1180),30)
-	_page_label("Stellar containment",Vector2(142,32),28,ThemeKit.STEEL)
-	_page_label("Service credits  /  %d" % int(progress.currency),Vector2(1920,32),28,ThemeKit.AMBER)
+	for item in [["RING ZERO","display"],["Hold the star.","heading"],["Build its cage. Survive the machine tide.","body"],["Service credits: %d" % int(progress.currency),"caption"]]:
+		var label := Label.new()
+		label.text = item[0]
+		label.set_meta("type_role",item[1])
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		hero_column.add_child(label)
 	if ResourceLoader.exists("res://src/presentation/solar_body.gdshader"):
 		menu_sun = ColorRect.new()
-		menu_sun.position = Vector2(240,300)
-		menu_sun.size = Vector2(1040,1040)
+		menu_sun.position = Vector2.ZERO
+		menu_sun.size = Vector2.ONE*600
 		menu_sun.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		var material := ShaderMaterial.new()
 		material.shader = load("res://src/presentation/solar_body.gdshader")
@@ -329,14 +398,13 @@ func show_start() -> void:
 	start_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	ThemeKit.primary(start_button)
 	_action("Tutorial",begin_run.bind(true),footer)
-	var navigation := HBoxContainer.new()
-	navigation.position = Vector2(144,1352)
-	navigation.add_theme_constant_override("separation",24)
-	page_decoration.add_child(navigation)
+	navigation_grid = GridContainer.new()
+	navigation_grid.columns = 6
+	page_decoration.add_child(navigation_grid)
 	for item in [["Shop",show_shop],["Settings",show_settings.bind("start")],["Reference",show_reference.bind("start")],["Records",show_records],["Credits",show_credits],["Quit",request_quit]]:
-		var button := _action(item[0],item[1],navigation)
-		button.flat = true
-		button.custom_minimum_size = Vector2(164,54)
+		var button := _action(item[0],item[1],navigation_grid)
+		button.flat = false
+		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.add_theme_font_size_override("font_size",28)
 
 func show_records() -> void:
@@ -445,18 +513,17 @@ func _offer_lock_recovery(kind: String) -> void:
 	if lock_notice != null: lock_notice.queue_free()
 	if lock_shield != null: lock_shield.queue_free()
 	lock_shield = ColorRect.new()
-	lock_shield.size = DESIGN_SIZE
+	lock_shield.size = Vector2(stage.size)
 	lock_shield.color = Color(0,0,0,0.45)
 	shell.add_child(lock_shield)
 	lock_notice = PanelContainer.new()
-	lock_notice.position = Vector2(680,440)
-	lock_notice.size = Vector2(1200,480)
 	lock_notice.theme = shell.theme
 	shell.add_child(lock_notice)
 	var column := VBoxContainer.new()
 	lock_notice.add_child(column)
 	var label := Label.new()
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.custom_minimum_size.x = minf(600.0,Vector2(stage.size).x*0.7)
 	label.text = "The previous save owner has exited. Release its stale lock, then retry the action." if kind == "stale" else "Lock ownership is unknown. Close all other Ring Zero instances before confirming release. Profile contents are preserved."
 	column.add_child(label)
 	_action("Release stale lock" if kind == "stale" else "Other instances closed: release unknown lock",func():
@@ -470,6 +537,14 @@ func _offer_lock_recovery(kind: String) -> void:
 		else: label.text = _errors(released)
 	,column)
 	_action("Cancel",_close_lock_notice,column)
+	call_deferred("_layout_lock_notice")
+
+func _layout_lock_notice() -> void:
+	if lock_notice == null or not is_instance_valid(lock_notice): return
+	if lock_shield != null and is_instance_valid(lock_shield): lock_shield.size = Vector2(stage.size)
+	var target := lock_notice.get_combined_minimum_size()
+	lock_notice.size = target
+	lock_notice.position = (Vector2(stage.size)-target)*0.5
 
 func _close_lock_notice() -> void:
 	if lock_notice != null: lock_notice.queue_free()
@@ -626,16 +701,19 @@ func show_settings(return_to: String = "start") -> void:
 	settings_return = return_to
 	_new_page("Settings")
 	var body := content
-	var columns := HBoxContainer.new()
-	columns.add_theme_constant_override("separation",90)
+	var columns := GridContainer.new()
+	settings_columns = columns
+	columns.columns = 2
+	columns.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	columns.add_theme_constant_override("h_separation",32)
 	content.add_child(columns)
 	var video := VBoxContainer.new()
-	video.custom_minimum_size.x = 910
+	video.custom_minimum_size.x = 0
 	video.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	columns.add_child(video)
 	content = video
 	_section("Display & comfort")
-	_text("Rendered at 2560 x 1440. The image fits your display while preserving the fortress proportions.")
+	_text("The world renders at your window resolution. Text size changes independently; the fortress keeps its proportions.")
 	for key in ["fullscreen","reduced_motion","effects"]:
 		var toggle := CheckButton.new()
 		toggle.text = {"fullscreen":"Fullscreen","reduced_motion":"Reduced motion","effects":"Weapon feedback"}[key]
@@ -654,29 +732,40 @@ func show_settings(return_to: String = "start") -> void:
 	var comfort := _text("Reduced motion disables camera shake and slows the presentation. Weapon feedback controls visual combat effects.")
 	comfort.add_theme_color_override("font_color",ThemeKit.STEEL)
 	var sound := VBoxContainer.new()
-	sound.custom_minimum_size.x = 910
+	sound.custom_minimum_size.x = 0
 	sound.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	columns.add_child(sound)
 	content = sound
 	_section("Sound")
 	_text("Set the balance of machinery, weapons and the ambient stellar drone.")
-	for bus in ["master","music","effects"]:
-		var label := _text(bus.capitalize() + " volume")
-		label.add_theme_color_override("font_color",ThemeKit.AMBER)
+	for bus in ["master","music","effects","ui","ambience"]:
+		var row := HBoxContainer.new()
+		content.add_child(row)
+		var label := Label.new()
+		label.text = {"master":"Master","music":"Music","effects":"Effects","ui":"Interface","ambience":"Ambience"}[bus]+" volume"
+		label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(label)
+		var value_label := Label.new()
+		row.add_child(value_label)
+		audio_value_labels[bus] = value_label
 		var slider := HSlider.new()
-		slider.custom_minimum_size.y = 54
+		slider.custom_minimum_size.y = 44
 		slider.min_value = 0
 		slider.max_value = 1
 		slider.step = 0.05
-		slider.value = PCSettings.master if bus == "master" else (PCSettings.music if bus == "music" else PCSettings.effects)
+		slider.value = PCSettings.audio_level(bus)
+		value_label.text = "Muted" if slider.value == 0 else "%d%%" % roundi(slider.value*100)
 		content.add_child(slider)
 		slider.value_changed.connect(func(value: float):
-			match bus:
-				"master": PCSettings.master = value
-				"music": PCSettings.music = value
-				"effects": PCSettings.effects = value
+			var previous := PCSettings.audio_level(bus)
+			PCSettings.set_audio_level(bus,value)
+			if PCSettings.save_settings() != OK:
+				PCSettings.set_audio_level(bus,previous)
+				slider.set_value_no_signal(previous)
+				feedback.text = "Could not save audio settings. The previous level was restored."
+				feedback.show()
+			value_label.text = "Muted" if slider.value == 0 else "%d%%" % roundi(slider.value*100)
 			audio.apply_levels()
-			if PCSettings.save_settings() != OK: feedback.text = "Could not save audio settings."
 		)
 	content = body
 	_action("Controls",show_controls,footer)
@@ -699,7 +788,8 @@ func show_controls() -> void:
 		guide.text = {"keyboard":"Default controls: WASD moves the map. Number keys choose weapons; H builds walls; C, V and B choose terrain. Hold Alt for the tactical view.","mouse":"Battlefield buttons can be remapped. Menus always use the primary button. Drag with Pan to move the map.","pad":"Left stick moves the pointer. Right stick moves the map. Triggers zoom. D-pad scrolls menus. Standard button positions: south 0, east 1, west 2, north 3."}[group]
 		column.add_child(guide)
 		var grid := GridContainer.new()
-		grid.columns = 3
+		grid.columns = 2
+		controls_grids.append(grid)
 		grid.add_theme_constant_override("v_separation",8)
 		grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		column.add_child(grid)
@@ -711,7 +801,7 @@ func show_controls() -> void:
 				rebinding_group = group
 				feedback.text = "Press the new " + ("key" if group == "keyboard" else "button") + " for " + action
 			,grid)
-			button.custom_minimum_size = Vector2(650,56)
+			button.custom_minimum_size = Vector2(0,44)
 			button.add_theme_stylebox_override("normal",ThemeKit.box(ThemeKit.RECESS,Color("405766"),10))
 			button.add_theme_stylebox_override("hover",ThemeKit.box(Color("263947"),ThemeKit.AMBER,10))
 			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -738,15 +828,22 @@ func _change_setting(key: String, value: Variant) -> void:
 	candidate.settings[key] = value
 	if _save_candidate(candidate):
 		_apply_settings()
-		show_settings(settings_return)
 	else:
-		var message := feedback.text
-		show_settings(settings_return)
-		feedback.text = message
+		_sync_setting_controls(page)
+		feedback.show()
+
+func _sync_setting_controls(node: Node) -> void:
+	if node is CheckButton:
+		var setting_key: String = {"Fullscreen":"fullscreen","Reduced motion":"reduced_motion","Weapon feedback":"effects"}.get(node.text,"")
+		if not setting_key.is_empty(): node.set_pressed_no_signal(progress.settings[setting_key])
+	elif node is OptionButton and state == "settings":
+		node.select([1.0,1.15,1.3].find(float(progress.settings.ui_scale)))
+	for child in node.get_children(): _sync_setting_controls(child)
 
 func _apply_settings() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if progress.settings.fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
-	shell.theme = ThemeKit.make(float(progress.settings.ui_scale))
+	shell.theme = ThemeKit.make(float(progress.settings.ui_scale),stage.size.y)
+	_layout_page()
 	_apply_live_settings()
 
 func _apply_live_settings() -> void:
@@ -820,8 +917,8 @@ func _start_tutorial() -> void:
 	live.simulation.state.energy = 10000
 	live.sync_simulation()
 	tutorial_card = PanelContainer.new()
-	tutorial_card.position = Vector2(700,1070)
-	tutorial_card.size = Vector2(1160,320)
+	tutorial_card.position = Vector2.ZERO
+	tutorial_card.size = Vector2(600,160)
 	tutorial_card.theme = shell.theme
 	shell.add_child(tutorial_card)
 	var column := VBoxContainer.new()
@@ -835,6 +932,7 @@ func _start_tutorial() -> void:
 	_action("Replay tutorial",request_restart,row)
 	_action("Exit practice",abandon_run,row)
 	_prepare_tutorial_step()
+	call_deferred("_layout_tutorial")
 
 func _practice_actor(ring: int, wedge: int, hp: float = 1, damage: float = 0) -> void:
 	live.simulation.pool.spawn({"position":PolarPosition.new(ring,wedge,0,0.5),"hp":hp,"damage_per_second":damage,"speed_ring_widths_per_second":1.0})

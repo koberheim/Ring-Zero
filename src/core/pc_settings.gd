@@ -14,6 +14,8 @@ static var mouse: Dictionary = DEFAULT_MOUSE.duplicate()
 static var master := 0.8
 static var music := 0.45
 static var effects := 0.75
+static var ui := 0.75
+static var ambience := 0.45
 static var path := "user://pc_settings.cfg"
 
 static func load_settings(location: String) -> void:
@@ -24,6 +26,8 @@ static func load_settings(location: String) -> void:
 	master = 0.8
 	music = 0.45
 	effects = 0.75
+	ui = 0.75
+	ambience = 0.45
 	var config := ConfigFile.new()
 	if config.load(path) != OK: return
 	pad = _validated_map(config.get_value("input","pad",pad),DEFAULT_PAD,0,127)
@@ -41,6 +45,31 @@ static func load_settings(location: String) -> void:
 				"music": music = value
 				"effects": effects = value
 
+	# Missing new keys inherit the loaded legacy mix, not an unrelated default.
+	ui = effects
+	ambience = music
+	for bus in ["ui","ambience"]:
+		var value: Variant = config.get_value("audio",bus,audio_level(bus))
+		if (value is float or value is int) and is_finite(value) and value >= 0 and value <= 1: set_audio_level(bus,float(value))
+
+static func audio_level(bus: String) -> float:
+	match bus:
+		"master": return master
+		"music": return music
+		"effects": return effects
+		"ui": return ui
+		"ambience": return ambience
+	return 0.0
+
+static func set_audio_level(bus: String, value: float) -> void:
+	if not is_finite(value) or value < 0 or value > 1: return
+	match bus:
+		"master": master = value
+		"music": music = value
+		"effects": effects = value
+		"ui": ui = value
+		"ambience": ambience = value
+
 static func save_settings() -> Error:
 	var config := ConfigFile.new()
 	config.set_value("input", "schema", INPUT_SCHEMA)
@@ -50,6 +79,8 @@ static func save_settings() -> Error:
 	config.set_value("audio", "master", master)
 	config.set_value("audio", "music", music)
 	config.set_value("audio", "effects", effects)
+	config.set_value("audio", "ui", ui)
+	config.set_value("audio", "ambience", ambience)
 	return config.save(path)
 
 static func rebind(action: String, key: int) -> Error:

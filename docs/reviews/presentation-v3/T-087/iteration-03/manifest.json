@@ -1,0 +1,362 @@
+{
+	"adapter": "NVIDIA GeForce RTX 4080",
+	"captures": [
+		{
+			"actors": 0,
+			"camera": null,
+			"diagnostic": true,
+			"file": "start-1920x1080-100.png",
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": null
+		},
+		{
+			"actors": 0,
+			"camera": null,
+			"diagnostic": true,
+			"file": "settings-1920x1080-100.png",
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": null
+		},
+		{
+			"actors": 0,
+			"camera": null,
+			"diagnostic": true,
+			"file": "controls-1920x1080-100.png",
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": null
+		},
+		{
+			"actors": 0,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "opening-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				1.50750005245209,
+				1.41658663749695
+			]
+		},
+		{
+			"actors": 0,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "opening-palette-0-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				1.50750005245209,
+				1.41658663749695
+			]
+		},
+		{
+			"actors": 0,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "opening-palette-2-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				1.50750005245209,
+				1.41658663749695
+			]
+		},
+		{
+			"actors": 0,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "pause-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				1.50750005245209,
+				1.41658663749695
+			]
+		},
+		{
+			"actors": 120,
+			"albedo": [
+				2432,
+				1592
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "six-ring-1920x1080-100.png",
+			"material": [
+				2432,
+				1592
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				0.850000023841858,
+				0.798738718032837
+			]
+		},
+		{
+			"actors": 120,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "twelve-ring-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				0.409999996423721,
+				0.385273963212967
+			]
+		},
+		{
+			"actors": 120,
+			"albedo": [
+				2432,
+				1592
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "tactical-1920x1080-100.png",
+			"material": [
+				2432,
+				1592
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				0.409999996423721,
+				0.385273963212967
+			]
+		},
+		{
+			"actors": 120,
+			"albedo": [
+				2432,
+				1592
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "victory-diagnostic-1920x1080-100.png",
+			"material": [
+				2432,
+				1592
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				0.409999996423721,
+				0.385273963212967
+			]
+		},
+		{
+			"actors": 0,
+			"albedo": [
+				1920,
+				1080
+			],
+			"camera": [
+				-52.736328125,
+				-0.705902099609375
+			],
+			"diagnostic": true,
+			"file": "defeat-diagnostic-1920x1080-100.png",
+			"material": [
+				1920,
+				1080
+			],
+			"palette": 1,
+			"root": [
+				1920,
+				1080
+			],
+			"stage": [
+				1920,
+				1080
+			],
+			"tick": 0,
+			"ui_scale": 1.0,
+			"zoom": [
+				1.50750005245209,
+				1.41658663749695
+			]
+		}
+	],
+	"checks": 12,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"failures": 0,
+	"phase": "after",
+	"renderer": "mobile"
+}

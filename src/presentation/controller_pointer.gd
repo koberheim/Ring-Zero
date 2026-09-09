@@ -80,11 +80,16 @@ func _input(event: InputEvent) -> void:
 				if event.pressed: _key("Catalogue")
 		get_viewport().set_input_as_handled()
 
+func clamp_to_viewport() -> void:
+	point = point.clamp(Vector2(2,2),Vector2(host.stage.size)-Vector2(2,2))
+	if pointer != null: pointer.position = point-Vector2(8,18)
+
 func _process(delta: float) -> void:
+	clamp_to_viewport()
 	if not pointer.visible: return
 	if not zoom_axes.is_zero_approx(): _zoom(pow(2.0,(zoom_axes.y-zoom_axes.x)*minf(delta,0.05)))
-	var viewport_scale: float = float(host.stage.size.x) / 1440.0
-	var movement := Vector2(axes.x,axes.y).limit_length()*650.0*viewport_scale*minf(delta,0.05)
+	var viewport_scale: float = 1.0 # Native physical pixels, independent of aspect ratio.
+	var movement := Vector2(axes.x,axes.y).limit_length()*900.0*viewport_scale*minf(delta,0.05)
 	point = (point+movement).clamp(Vector2(2,2),Vector2(host.stage.size)-Vector2(2,2))
 	pointer.position = point-Vector2(8,18)
 	if movement.length_squared() > 0:

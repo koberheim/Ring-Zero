@@ -1,0 +1,2029 @@
+{
+  "schema": "ring-zero-fortress-art/1",
+  "status": "PROVISIONAL SOURCE ART; native all-bearing/state/palette and human gates pending",
+  "source_blend": "res://assets/art/source/presentation-v3-fortress/v1/t089_fortress_v1.blend",
+  "camera": {
+    "tilt_from_vertical": 20,
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward": "+Y model = outward at north",
+    "bearing_frames": 12,
+    "bearing_formula": "round(clockwise_turns*12)%12",
+    "important": "Each frame rotates actual 3D geometry under fixed camera. Select frame and draw screen-aligned; do not rotate baked height again. Cancel parent ground Y squash for already-projected artwork."
+  },
+  "channels": {
+    "albedo": "unlit material color, sRGB straight RGBA",
+    "normal": "modeled or explicit analytic geometry, camera-right/image-down/viewer RGB; linear data. T081 static material-cache convention; NO additional green inversion",
+    "emission": "linear data; source lamp colors only; runtime must gate by actual power/health",
+    "alpha": "all map channels share coverage; no baked lights in albedo"
+  },
+  "classes": {
+    "flak": {
+      "albedo": "res://assets/art/materials/presentation_v3/flak_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/flak_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/flak_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/flak_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ],
+        [
+          38,
+          25,
+          90,
+          87
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "existing shared mount"
+    },
+    "emp_node": {
+      "albedo": "res://assets/art/materials/presentation_v3/emp_node_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/emp_node_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/emp_node_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/emp_node_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ],
+        [
+          39,
+          36,
+          89,
+          85
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "existing shared mount"
+    },
+    "lance_emitter": {
+      "albedo": "res://assets/art/materials/presentation_v3/lance_emitter_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/lance_emitter_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/lance_emitter_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/lance_emitter_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ],
+        [
+          46,
+          16,
+          82,
+          91
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "existing shared mount"
+    },
+    "point_defense": {
+      "albedo": "res://assets/art/materials/presentation_v3/point_defense_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/point_defense_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/point_defense_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/point_defense_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ],
+        [
+          51,
+          34,
+          78,
+          76
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "existing shared mount"
+    },
+    "relay": {
+      "albedo": "res://assets/art/materials/presentation_v3/relay_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/relay_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/relay_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/relay_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          49,
+          33,
+          86,
+          82
+        ],
+        [
+          43,
+          34,
+          85,
+          78
+        ],
+        [
+          41,
+          34,
+          79,
+          83
+        ],
+        [
+          44,
+          33,
+          84,
+          84
+        ],
+        [
+          49,
+          34,
+          87,
+          83
+        ],
+        [
+          43,
+          37,
+          85,
+          78
+        ],
+        [
+          43,
+          38,
+          79,
+          82
+        ],
+        [
+          43,
+          37,
+          85,
+          85
+        ],
+        [
+          49,
+          34,
+          87,
+          83
+        ],
+        [
+          44,
+          33,
+          84,
+          76
+        ],
+        [
+          41,
+          34,
+          79,
+          83
+        ],
+        [
+          43,
+          34,
+          85,
+          85
+        ]
+      ],
+      "world_canvas_size": 44,
+      "mount": "ground pivot / no raised shared mount"
+    },
+    "repair_node": {
+      "albedo": "res://assets/art/materials/presentation_v3/repair_node_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/repair_node_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/repair_node_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/repair_node_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ],
+        [
+          46,
+          23,
+          82,
+          81
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "existing shared mount"
+    },
+    "armor_plating": {
+      "albedo": "res://assets/art/materials/presentation_v3/armor_plating_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/armor_plating_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/armor_plating_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/armor_plating_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          40,
+          40,
+          88,
+          86
+        ],
+        [
+          32,
+          33,
+          96,
+          93
+        ],
+        [
+          32,
+          32,
+          96,
+          94
+        ],
+        [
+          40,
+          40,
+          88,
+          86
+        ],
+        [
+          32,
+          32,
+          96,
+          93
+        ],
+        [
+          32,
+          32,
+          96,
+          94
+        ],
+        [
+          40,
+          40,
+          88,
+          86
+        ],
+        [
+          32,
+          33,
+          96,
+          93
+        ],
+        [
+          32,
+          32,
+          96,
+          94
+        ],
+        [
+          40,
+          40,
+          88,
+          86
+        ],
+        [
+          32,
+          32,
+          96,
+          93
+        ],
+        [
+          32,
+          32,
+          96,
+          94
+        ]
+      ],
+      "world_canvas_size": 62,
+      "mount": "ground pivot / no raised shared mount"
+    },
+    "wall": {
+      "albedo": "res://assets/art/materials/presentation_v3/wall_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/wall_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/wall_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/wall_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          15,
+          46,
+          113,
+          77
+        ],
+        [
+          16,
+          25,
+          112,
+          97
+        ],
+        [
+          29,
+          11,
+          100,
+          109
+        ],
+        [
+          50,
+          7,
+          78,
+          109
+        ],
+        [
+          29,
+          11,
+          99,
+          109
+        ],
+        [
+          16,
+          26,
+          112,
+          97
+        ],
+        [
+          15,
+          46,
+          113,
+          77
+        ],
+        [
+          16,
+          25,
+          112,
+          97
+        ],
+        [
+          29,
+          11,
+          100,
+          109
+        ],
+        [
+          50,
+          7,
+          78,
+          109
+        ],
+        [
+          29,
+          11,
+          99,
+          109
+        ],
+        [
+          16,
+          26,
+          112,
+          97
+        ]
+      ],
+      "world_canvas_size": 48,
+      "mount": "ground pivot / no raised shared mount"
+    },
+    "debris_field": {
+      "albedo": "res://assets/art/materials/presentation_v3/debris_field_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/debris_field_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/debris_field_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/debris_field_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          34,
+          43,
+          90,
+          86
+        ],
+        [
+          35,
+          40,
+          91,
+          85
+        ],
+        [
+          39,
+          36,
+          90,
+          81
+        ],
+        [
+          41,
+          35,
+          86,
+          88
+        ],
+        [
+          42,
+          36,
+          89,
+          89
+        ],
+        [
+          45,
+          39,
+          94,
+          88
+        ],
+        [
+          38,
+          41,
+          94,
+          84
+        ],
+        [
+          37,
+          42,
+          93,
+          87
+        ],
+        [
+          38,
+          45,
+          89,
+          92
+        ],
+        [
+          42,
+          38,
+          87,
+          92
+        ],
+        [
+          39,
+          37,
+          86,
+          91
+        ],
+        [
+          34,
+          39,
+          83,
+          87
+        ]
+      ],
+      "world_canvas_size": 58,
+      "mount": "ground pivot / no raised shared mount"
+    },
+    "tractor_lane": {
+      "albedo": "res://assets/art/materials/presentation_v3/tractor_lane_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/tractor_lane_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/tractor_lane_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/tractor_lane_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          37,
+          45,
+          91,
+          82
+        ],
+        [
+          32,
+          36,
+          95,
+          91
+        ],
+        [
+          35,
+          34,
+          93,
+          94
+        ],
+        [
+          44,
+          38,
+          84,
+          90
+        ],
+        [
+          35,
+          34,
+          93,
+          94
+        ],
+        [
+          32,
+          36,
+          95,
+          91
+        ],
+        [
+          37,
+          45,
+          91,
+          82
+        ],
+        [
+          32,
+          36,
+          95,
+          91
+        ],
+        [
+          35,
+          34,
+          93,
+          94
+        ],
+        [
+          44,
+          38,
+          84,
+          89
+        ],
+        [
+          35,
+          34,
+          93,
+          94
+        ],
+        [
+          32,
+          36,
+          95,
+          91
+        ]
+      ],
+      "world_canvas_size": 58,
+      "mount": "ground pivot / no raised shared mount"
+    },
+    "occlusion_screen": {
+      "albedo": "res://assets/art/materials/presentation_v3/occlusion_screen_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/occlusion_screen_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/occlusion_screen_emission.png",
+      "alpha": "res://assets/art/materials/presentation_v3/occlusion_screen_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        384
+      ],
+      "frame_count": 12,
+      "layout": [
+        4,
+        3
+      ],
+      "pivot_pixels": [
+        64,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ],
+        [
+          0,
+          256,
+          128,
+          128
+        ],
+        [
+          128,
+          256,
+          128,
+          128
+        ],
+        [
+          256,
+          256,
+          128,
+          128
+        ],
+        [
+          384,
+          256,
+          128,
+          128
+        ]
+      ],
+      "alpha_bounds": [
+        [
+          27,
+          43,
+          101,
+          74
+        ],
+        [
+          27,
+          29,
+          101,
+          90
+        ],
+        [
+          36,
+          18,
+          92,
+          99
+        ],
+        [
+          52,
+          14,
+          76,
+          99
+        ],
+        [
+          36,
+          18,
+          92,
+          99
+        ],
+        [
+          26,
+          29,
+          101,
+          90
+        ],
+        [
+          27,
+          43,
+          101,
+          74
+        ],
+        [
+          27,
+          29,
+          101,
+          90
+        ],
+        [
+          36,
+          18,
+          92,
+          99
+        ],
+        [
+          52,
+          14,
+          76,
+          99
+        ],
+        [
+          36,
+          18,
+          92,
+          99
+        ],
+        [
+          26,
+          29,
+          101,
+          90
+        ]
+      ],
+      "world_canvas_size": 58,
+      "mount": "ground pivot / no raised shared mount"
+    }
+  },
+  "bands": {
+    "hot": {
+      "albedo": "res://assets/art/materials/presentation_v3/band_hot_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/band_hot_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/band_hot_emission.png",
+      "size": [
+        512,
+        128
+      ],
+      "repeat_x": true,
+      "edge_rgba_max_error": 0,
+      "normal_source": "explicit analytic deck height; periodic recesses and raised edge rails"
+    },
+    "working": {
+      "albedo": "res://assets/art/materials/presentation_v3/band_working_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/band_working_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/band_working_emission.png",
+      "size": [
+        512,
+        128
+      ],
+      "repeat_x": true,
+      "edge_rgba_max_error": 0,
+      "normal_source": "explicit analytic deck height; periodic recesses and raised edge rails"
+    },
+    "cold": {
+      "albedo": "res://assets/art/materials/presentation_v3/band_cold_albedo.png",
+      "normal": "res://assets/art/materials/presentation_v3/band_cold_normal.png",
+      "emission": "res://assets/art/materials/presentation_v3/band_cold_emission.png",
+      "size": [
+        512,
+        128
+      ],
+      "repeat_x": true,
+      "edge_rgba_max_error": 0,
+      "normal_source": "explicit analytic deck height; periodic recesses and raised edge rails"
+    }
+  },
+  "damage": {
+    "frames": [
+      {
+        "name": "scorch",
+        "rect": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "name": "pits",
+        "rect": [
+          128,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "name": "crack",
+        "rect": [
+          256,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "name": "weld",
+        "rect": [
+          0,
+          128,
+          128,
+          128
+        ]
+      },
+      {
+        "name": "scrape",
+        "rect": [
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      {
+        "name": "edge_spall",
+        "rect": [
+          256,
+          128,
+          128,
+          128
+        ]
+      }
+    ],
+    "albedo": "res://assets/art/materials/presentation_v3/damage_albedo.png",
+    "normal": "res://assets/art/materials/presentation_v3/damage_normal.png",
+    "emission": "res://assets/art/materials/presentation_v3/damage_emission.png",
+    "substrate": "none; transparent marks only",
+    "normal_source": "explicit analytic pit/crack/weld relief"
+  }
+}

@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 		return
 	var movement := direction()
 	if movement.is_zero_approx(): return
-	var viewport_scale: float = float(host.stage.size.x) / 2560.0
+	var viewport_scale: float = 1.0 # Native physical-pixel movement.
 	host.live.camera.position += movement * SCREEN_SPEED * viewport_scale * minf(delta, 0.05) / host.live.camera.zoom
 	host.live.camera.force_update_scroll()
 	host.live.queue_redraw()

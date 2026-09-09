@@ -1,5 +1,6 @@
 extends "res://tests/presentation/test_application.gd"
 func _run() -> void:
+	root.size = Vector2i(1920,1080)
 	app = load("res://scenes/application.tscn").instantiate()
 	app.profile_path = "res://.godot/t067-profiles/feedback-%d/profile.json" % Time.get_ticks_usec()
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(app.profile_path.get_base_dir()))

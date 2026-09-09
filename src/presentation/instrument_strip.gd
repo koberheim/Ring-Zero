@@ -9,8 +9,8 @@ func _draw() -> void:
 	draw_colored_polygon(outline,Color("0b151eeb"))
 	draw_polyline(outline,Color("45606d"),1.5,true)
 	draw_line(Vector2(18,3),Vector2(size.x-18,3),Color("6a7880"),1,true)
-	draw_line(Vector2(20,size.y-3),Vector2(396,size.y-3),Color("d5ac6e"),3,true)
-	for x in [422.0,832.0,1192.0,1602.0]:
+	draw_line(Vector2(20,size.y-3),Vector2(size.x*0.20,size.y-3),Color("d5ac6e"),3,true)
+	for x in [size.x*0.22,size.x*0.44,size.x*0.63,size.x*0.80]:
 		draw_line(Vector2(x,20),Vector2(x,size.y-20),Color("2d4452"),2,true)
 	for x in [14.0,size.x-14]:
 		draw_circle(Vector2(x,15),3,Color("84949c"))

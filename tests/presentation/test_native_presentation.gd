@@ -15,11 +15,11 @@ func _run() -> void:
 	for window_size in [Vector2i(1280,720),Vector2i(1920,1080),Vector2i(2560,1440),Vector2i(3440,1440),Vector2i(1600,1000)]:
 		root.size = window_size
 		await process_frame
-		check(app.stage.size == Vector2i(2560,1440),"Native render resolution survives window resize")
+		await process_frame
+		check(app.stage.size == window_size,"Native render resolution matches the window, not a fixed downsampled buffer")
 		check(is_equal_approx(app.frame.scale.x,app.frame.scale.y),"Window resizing never distorts the game")
-		var visible := Rect2(app.frame.position,Vector2(app.stage.size)*app.frame.scale)
-		check(Rect2(Vector2.ZERO,Vector2(window_size)).grow(1).encloses(visible),"Game frame stays inside each display shape")
-		check(visible.has_point(app.frame.position+find_button("Start run").get_global_rect().get_center()*app.frame.scale),"Launch control remains reachable after resize")
+		check(app.frame.size == Vector2(window_size) and app.frame.position == Vector2.ZERO,"Game frame fills the window exactly at native resolution")
+		check(Rect2(Vector2.ZERO,Vector2(window_size)).grow(1).has_point(find_button("Start run").get_global_rect().get_center()),"Launch control remains reachable after resize")
 	await click_control(find_button("Start run"))
 	check(app.live != null,"Transformed launch click starts the actual game")
 	if app.live == null: quit(1); return

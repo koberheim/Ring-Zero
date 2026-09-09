@@ -1,0 +1,784 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (133 steps)
+[   0% ] update_scripts_classes | 
+[   0% ] update_scripts_classes | 
+[   1% ] update_scripts_classes | 
+[   2% ] update_scripts_classes | 
+[   2% ] update_scripts_classes | 
+[   3% ] update_scripts_classes | 
+[   4% ] update_scripts_classes | AchievementHooks
+[   5% ] update_scripts_classes | EntityPool
+[   5% ] update_scripts_classes | FixedStepClock
+[   6% ] update_scripts_classes | PCSettings
+[   7% ] update_scripts_classes | PolarGrid
+[   8% ] update_scripts_classes | PolarMotion
+[   8% ] update_scripts_classes | PolarPosition
+[   9% ] update_scripts_classes | PolarRouteField
+[  10% ] update_scripts_classes | ProfileStore
+[  11% ] update_scripts_classes | RunRecorder
+[  11% ] update_scripts_classes | AbilityRules
+[  12% ] update_scripts_classes | AssemblerRules
+[  13% ] update_scripts_classes | BalanceProfile
+[  14% ] update_scripts_classes | BreacherRules
+[  14% ] update_scripts_classes | BuildingRules
+[  15% ] update_scripts_classes | FoundryRules
+[  16% ] update_scripts_classes | LiveSimulation
+[  17% ] update_scripts_classes | MachineSpawnRules
+[  17% ] update_scripts_classes | PowerRules
+[  18% ] update_scripts_classes | RingPurchaseRules
+[  19% ] update_scripts_classes | RunRules
+[  20% ] update_scripts_classes | SapperRules
+[  20% ] update_scripts_classes | TerrainRules
+[  21% ] update_scripts_classes | TransferRules
+[  22% ] update_scripts_classes | TunnelerRules
+[  23% ] update_scripts_classes | WallNavigation
+[  23% ] update_scripts_classes | WallRules
+[  24% ] update_scripts_classes | WeaponRules
+[  25% ] update_scripts_classes | 
+[  26% ] update_scripts_classes | 
+[  26% ] update_scripts_classes | 
+[  27% ] update_scripts_classes | 
+[  28% ] update_scripts_classes | FortressStatus
+[  29% ] update_scripts_classes | IntegrityLayout
+[  29% ] update_scripts_classes | SwarmLod
+[  30% ] update_scripts_classes | 
+[  31% ] update_scripts_classes | 
+[  32% ] update_scripts_classes | 
+[  32% ] update_scripts_classes | 
+[  33% ] update_scripts_classes | 
+[  34% ] update_scripts_classes | 
+[  35% ] update_scripts_classes | 
+[  35% ] update_scripts_classes | 
+[  36% ] update_scripts_classes | 
+[  37% ] update_scripts_classes | 
+[  38% ] update_scripts_classes | 
+[  38% ] update_scripts_classes | 
+[  39% ] update_scripts_classes | 
+[  40% ] update_scripts_classes | RingStatusHud
+[  41% ] update_scripts_classes | 
+[  41% ] update_scripts_classes | 
+[  42% ] update_scripts_classes | 
+[  43% ] update_scripts_classes | 
+[  44% ] update_scripts_classes | 
+[  44% ] update_scripts_classes | 
+[  45% ] update_scripts_classes | 
+[  46% ] update_scripts_classes | 
+[  47% ] update_scripts_classes | 
+[  47% ] update_scripts_classes | 
+[  48% ] update_scripts_classes | 
+[  49% ] update_scripts_classes | 
+[  50% ] update_scripts_classes | 
+[  50% ] update_scripts_classes | 
+[  51% ] update_scripts_classes | 
+[  52% ] update_scripts_classes | 
+[  52% ] update_scripts_classes | 
+[  53% ] update_scripts_classes | 
+[  54% ] update_scripts_classes | 
+[  55% ] update_scripts_classes | 
+[  55% ] update_scripts_classes | 
+[  56% ] update_scripts_classes | 
+[  57% ] update_scripts_classes | 
+[  58% ] update_scripts_classes | 
+[  58% ] update_scripts_classes | 
+[  59% ] update_scripts_classes | 
+[  60% ] update_scripts_classes | 
+[  61% ] update_scripts_classes | 
+[  61% ] update_scripts_classes | 
+[  62% ] update_scripts_classes | 
+[  63% ] update_scripts_classes | 
+[  64% ] update_scripts_classes | 
+[  64% ] update_scripts_classes | 
+[  65% ] update_scripts_classes | 
+[  66% ] update_scripts_classes | 
+[  67% ] update_scripts_classes | 
+[  67% ] update_scripts_classes | 
+[  68% ] update_scripts_classes | 
+[  69% ] update_scripts_classes | 
+[  70% ] update_scripts_classes | 
+[  70% ] update_scripts_classes | 
+[  71% ] update_scripts_classes | 
+[  72% ] update_scripts_classes | 
+[  73% ] update_scripts_classes | 
+[  73% ] update_scripts_classes | 
+[  74% ] update_scripts_classes | 
+[  75% ] update_scripts_classes | 
+[  76% ] update_scripts_classes | 
+[  76% ] update_scripts_classes | 
+[  77% ] update_scripts_classes | 
+[  78% ] update_scripts_classes | 
+[  79% ] update_scripts_classes | 
+[  79% ] update_scripts_classes | 
+[  80% ] update_scripts_classes | 
+[  81% ] update_scripts_classes | 
+[  82% ] update_scripts_classes | 
+[  82% ] update_scripts_classes | 
+[  83% ] update_scripts_classes | 
+[  84% ] update_scripts_classes | 
+[  85% ] update_scripts_classes | 
+[  85% ] update_scripts_classes | 
+[  86% ] update_scripts_classes | 
+[  87% ] update_scripts_classes | 
+[  88% ] update_scripts_classes | 
+[  88% ] update_scripts_classes | 
+[  89% ] update_scripts_classes | 
+[  90% ] update_scripts_classes | 
+[  91% ] update_scripts_classes | 
+[  91% ] update_scripts_classes | 
+[  92% ] update_scripts_classes | 
+[  93% ] update_scripts_classes | 
+[  94% ] update_scripts_classes | 
+[  94% ] update_scripts_classes | 
+[  95% ] update_scripts_classes | 
+[  96% ] update_scripts_classes | 
+[  97% ] update_scripts_classes | 
+[  97% ] update_scripts_classes | 
+[  98% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started Scanning actions... (206 steps)
+[   0% ] _update_scan_actions | anchor_approved.png
+[   0% ] _update_scan_actions | anchor_candidate_01.png
+[   0% ] _update_scan_actions | anchor_candidate_02.png
+[   1% ] _update_scan_actions | anchor_candidate_03.png
+[   1% ] _update_scan_actions | anchor_candidate_04.png
+[   2% ] _update_scan_actions | anchor_candidate_05.png
+[   2% ] _update_scan_actions | anchor_v2_01.png
+[   3% ] _update_scan_actions | anchor_v2_02.png
+[   3% ] _update_scan_actions | anchor_v2_03.png
+[   4% ] _update_scan_actions | band_cold_01.png
+[   4% ] _update_scan_actions | band_hot_01.png
+[   5% ] _update_scan_actions | band_working_01.png
+[   5% ] _update_scan_actions | head_armor_plating.png
+[   6% ] _update_scan_actions | head_emp_node.png
+[   6% ] _update_scan_actions | head_flak.png
+[   7% ] _update_scan_actions | head_lance_emitter.png
+[   7% ] _update_scan_actions | head_mass_driver.png
+[   8% ] _update_scan_actions | head_point_defense.png
+[   8% ] _update_scan_actions | head_relay.png
+[   9% ] _update_scan_actions | head_repair_node.png
+[   9% ] _update_scan_actions | mount_01.png
+[  10% ] _update_scan_actions | damage_sheet_01.png
+[  10% ] _update_scan_actions | decal_sheet_01.png
+[  11% ] _update_scan_actions | assembler_albedo.png
+[  11% ] _update_scan_actions | assembler_alpha.png
+[  12% ] _update_scan_actions | assembler_emission.png
+[  12% ] _update_scan_actions | assembler_normal.png
+[  13% ] _update_scan_actions | breacher_albedo.png
+[  13% ] _update_scan_actions | breacher_alpha.png
+[  14% ] _update_scan_actions | breacher_emission.png
+[  14% ] _update_scan_actions | breacher_normal.png
+[  14% ] _update_scan_actions | foundry_albedo.png
+[  15% ] _update_scan_actions | foundry_alpha.png
+[  15% ] _update_scan_actions | foundry_emission.png
+[  16% ] _update_scan_actions | foundry_normal.png
+[  16% ] _update_scan_actions | sapper_albedo.png
+[  17% ] _update_scan_actions | sapper_alpha.png
+[  17% ] _update_scan_actions | sapper_emission.png
+[  18% ] _update_scan_actions | sapper_normal.png
+[  18% ] _update_scan_actions | transfer_albedo.png
+[  19% ] _update_scan_actions | transfer_alpha.png
+[  19% ] _update_scan_actions | transfer_emission.png
+[  20% ] _update_scan_actions | transfer_normal.png
+[  20% ] _update_scan_actions | tunneler_albedo.png
+[  21% ] _update_scan_actions | tunneler_alpha.png
+[  21% ] _update_scan_actions | tunneler_emission.png
+[  22% ] _update_scan_actions | tunneler_normal.png
+[  22% ] _update_scan_actions | assembler.png
+[  23% ] _update_scan_actions | elite_breacher.png
+[  23% ] _update_scan_actions | elite_foundry.png
+[  24% ] _update_scan_actions | elite_sapper.png
+[  24% ] _update_scan_actions | elite_transfer.png
+[  25% ] _update_scan_actions | elite_tunneler.png
+[  25% ] _update_scan_actions | machine_standard.png
+[  26% ] _update_scan_actions | gritty_industrial_mockup.png
+[  26% ] _update_scan_actions | painterly_awe_mockup.png
+[  27% ] _update_scan_actions | schematic_readout_mockup.png
+[  27% ] _update_scan_actions | wide_establishing_legibility_mockup.png
+[  28% ] _update_scan_actions | terrain_debris_field_01.png
+[  28% ] _update_scan_actions | terrain_occlusion_screen_01.png
+[  28% ] _update_scan_actions | terrain_tractor_lane_01.png
+[  29% ] _update_scan_actions | wall_deflector_01.png
+[  29% ] _update_scan_actions | containment.svg
+[  30% ] _update_scan_actions | first_watch.svg
+[  30% ] _update_scan_actions | machine_breaker.svg
+[  31% ] _update_scan_actions | outer_frontier.svg
+[  31% ] _update_scan_actions | power_restored.svg
+[  32% ] _update_scan_actions | trial_by_fire.svg
+[  32% ] _update_scan_actions | select_arrow.svg
+[  33% ] _update_scan_actions | switch_checked.svg
+[  33% ] _update_scan_actions | switch_checked_disabled.svg
+[  34% ] _update_scan_actions | switch_unchecked.svg
+[  34% ] _update_scan_actions | switch_unchecked_disabled.svg
+[  35% ] _update_scan_actions | Barlow-Regular.ttf
+[  35% ] _update_scan_actions | Barlow-SemiBold.ttf
+[  36% ] _update_scan_actions | BarlowSemiCondensed-SemiBold.ttf
+[  36% ] _update_scan_actions | ring_zero_icon.svg
+[  37% ] _update_scan_actions | shot1-strategic-top-down.png
+[  37% ] _update_scan_actions | shot1-strategic.png
+[  38% ] _update_scan_actions | shot2-close-thicker-bands.png
+[  38% ] _update_scan_actions | shot2-close-tilted.png
+[  39% ] _update_scan_actions | shot2-close-top-down.png
+[  39% ] _update_scan_actions | shot3-signature-red-giant.png
+[  40% ] _update_scan_actions | shot3-signature-white-star.png
+[  40% ] _update_scan_actions | shot3-signature.png
+[  41% ] _update_scan_actions | shot4-swarm-legibility.png
+[  41% ] _update_scan_actions | T-004-panned-selected.png
+[  42% ] _update_scan_actions | T-004-three-bands.png
+[  42% ] _update_scan_actions | T-004-twelve-bands.png
+[  42% ] _update_scan_actions | T-011-menu.png
+[  43% ] _update_scan_actions | T-011-placed-weapon.png
+[  43% ] _update_scan_actions | T-011-ring2-purchase.png
+[  44% ] _update_scan_actions | T-011-startup.png
+[  44% ] _update_scan_actions | T-018-core-loss.png
+[  45% ] _update_scan_actions | T-018-early-combat.png
+[  45% ] _update_scan_actions | T-018-inner-collapse.png
+[  46% ] _update_scan_actions | T-022-open-gap-funnel.png
+[  46% ] _update_scan_actions | T-022-sealed-wall-damage.png
+[  47% ] _update_scan_actions | T-022-wall-breach.png
+[  47% ] _update_scan_actions | T-022-wall-ring-collapse.png
+[  48% ] _update_scan_actions | T-028-inner-collapse.png
+[  48% ] _update_scan_actions | T-028-surfaced-overlap.png
+[  49% ] _update_scan_actions | T-028-surfaced-triangle.png
+[  49% ] _update_scan_actions | T-028-underground-warning.png
+[  50% ] _update_scan_actions | T-028-warning-zoom.png
+[  50% ] _update_scan_actions | T-029-mixed-status.png
+[  51% ] _update_scan_actions | T-029-twelve-ring-readability.png
+[  51% ] _update_scan_actions | T-038-structure-tab.png
+[  52% ] _update_scan_actions | T-045-structure-quote.png
+[  52% ] _update_scan_actions | T-045-weapon-catalogue.png
+[  53% ] _update_scan_actions | T-047-outer-ring-focus.png
+[  53% ] _update_scan_actions | T-047-twelve-rings.png
+[  54% ] _update_scan_actions | T-049-industrial-close.png
+[  54% ] _update_scan_actions | T-049-industrial-strategic.png
+[  55% ] _update_scan_actions | T-049-painterly-close.png
+[  55% ] _update_scan_actions | T-049-painterly-strategic.png
+[  56% ] _update_scan_actions | T-049-sun-red.png
+[  56% ] _update_scan_actions | T-049-sun-white.png
+[  57% ] _update_scan_actions | T-049-sun-yellow.png
+[  57% ] _update_scan_actions | T-051-art_preview-emp-aim.png
+[  57% ] _update_scan_actions | T-051-art_preview-flare-aim.png
+[  58% ] _update_scan_actions | T-051-art_preview-terrain.png
+[  58% ] _update_scan_actions | T-051-live_view-emp-aim.png
+[  59% ] _update_scan_actions | T-051-live_view-flare-aim.png
+[  59% ] _update_scan_actions | T-051-live_view-terrain.png
+[  60% ] _update_scan_actions | T-053-art_preview-1024-art-drawer.png
+[  60% ] _update_scan_actions | T-053-art_preview-1024-repair-quote.png
+[  61% ] _update_scan_actions | T-053-art_preview-1024-structure-active.png
+[  61% ] _update_scan_actions | T-053-art_preview-help.png
+[  62% ] _update_scan_actions | T-053-art_preview-hidden.png
+[  62% ] _update_scan_actions | T-053-art_preview-startup.png
+[  63% ] _update_scan_actions | T-053-live_view-1024-repair-quote.png
+[  63% ] _update_scan_actions | T-053-live_view-1024-structure-active.png
+[  64% ] _update_scan_actions | T-053-live_view-help.png
+[  64% ] _update_scan_actions | T-053-live_view-hidden.png
+[  65% ] _update_scan_actions | T-053-live_view-startup.png
+[  65% ] _update_scan_actions | T-067-crowd-effects.png
+[  66% ] _update_scan_actions | T-067-crowd-no-effects.png
+[  66% ] _update_scan_actions | T-067-fullscreen-settings.png
+[  67% ] _update_scan_actions | T-067-hud-130-1280.png
+[  67% ] _update_scan_actions | T-067-hud-1280.png
+[  68% ] _update_scan_actions | T-067-letterbox-1600.png
+[  68% ] _update_scan_actions | T-067-reference-1920.png
+[  69% ] _update_scan_actions | T-067-relay-1280.png
+[  69% ] _update_scan_actions | T-067-results-130-1280.png
+[  70% ] _update_scan_actions | T-067-settings-130-1280.png
+[  70% ] _update_scan_actions | T-067-settings-1280.png
+[  71% ] _update_scan_actions | T-067-shop-130-1280.png
+[  71% ] _update_scan_actions | T-067-shop-upgrades-130-1280.png
+[  71% ] _update_scan_actions | T-067-start-130-1280.png
+[  72% ] _update_scan_actions | T-067-start-1280.png
+[  72% ] _update_scan_actions | T-067-start-1440.png
+[  73% ] _update_scan_actions | T-067-start-1920.png
+[  73% ] _update_scan_actions | T-067-structure-relay-1280.png
+[  74% ] _update_scan_actions | T-067-tutorial-1280.png
+[  74% ] _update_scan_actions | T-067-tutorial-1920.png
+[  75% ] _update_scan_actions | T-071-crowd-effects.png
+[  75% ] _update_scan_actions | T-071-crowd-no-effects.png
+[  76% ] _update_scan_actions | T-078-close.png
+[  76% ] _update_scan_actions | T-078-crowd.png
+[  77% ] _update_scan_actions | T-078-rotations.png
+[  77% ] _update_scan_actions | T-078-strategic.png
+[  78% ] _update_scan_actions | T-078-yellow.png
+[  78% ] _update_scan_actions | T-079-close-01.png
+[  79% ] _update_scan_actions | T-079-close-02.png
+[  79% ] _update_scan_actions | T-079-close-03.png
+[  80% ] _update_scan_actions | T-079-close-04.png
+[  80% ] _update_scan_actions | T-079-close-05.png
+[  81% ] _update_scan_actions | T-079-crowd-01.png
+[  81% ] _update_scan_actions | T-079-crowd-02.png
+[  82% ] _update_scan_actions | T-079-crowd-03.png
+[  82% ] _update_scan_actions | T-079-rotations-01.png
+[  83% ] _update_scan_actions | T-079-rotations-02.png
+[  83% ] _update_scan_actions | T-079-rotations-03.png
+[  84% ] _update_scan_actions | T-079-rotations-04.png
+[  84% ] _update_scan_actions | T-079-rotations-05.png
+[  85% ] _update_scan_actions | T-079-rotations-06.png
+[  85% ] _update_scan_actions | T-079-rotations-07.png
+[  85% ] _update_scan_actions | T-079-rotations-08.png
+[  86% ] _update_scan_actions | T-079-rotations-09.png
+[  86% ] _update_scan_actions | T-079-rotations-10.png
+[  87% ] _update_scan_actions | T-079-rotations-11.png
+[  87% ] _update_scan_actions | T-079-rotations-12.png
+[  88% ] _update_scan_actions | T-079-rotations-13.png
+[  88% ] _update_scan_actions | T-079-rotations-14.png
+[  89% ] _update_scan_actions | T-079-rotations-15.png
+[  89% ] _update_scan_actions | T-079-rotations-16.png
+[  90% ] _update_scan_actions | T-079-rotations-17.png
+[  90% ] _update_scan_actions | T-079-strategic-01.png
+[  91% ] _update_scan_actions | T-079-strategic-02.png
+[  91% ] _update_scan_actions | T-079-yellow-01.png
+[  92% ] _update_scan_actions | T-079-yellow-02.png
+[  92% ] _update_scan_actions | T-079-yellow-03.png
+[  93% ] _update_scan_actions | T-079-yellow-04.png
+[  93% ] _update_scan_actions | T-079-yellow-05.png
+[  94% ] _update_scan_actions | release-1080.png
+[  94% ] _update_scan_actions | release-controls.png
+[  95% ] _update_scan_actions | release-credits.png
+[  95% ] _update_scan_actions | release-fortress.png
+[  96% ] _update_scan_actions | release-minimum.png
+[  96% ] _update_scan_actions | release-opening.png
+[  97% ] _update_scan_actions | release-records.png
+[  97% ] _update_scan_actions | release-settings.png
+[  98% ] _update_scan_actions | release-start.png
+[  98% ] _update_scan_actions | release-tactical.png
+[  99% ] _update_scan_actions | release-victory.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importing Assets (206 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Preparing files to reimport...
+[   1% ] reimport | Preparing files to reimport...
+[   1% ] reimport | Preparing files to reimport...
+[   2% ] reimport | Preparing files to reimport...
+[   2% ] reimport | Preparing files to reimport...
+[   3% ] reimport | Preparing files to reimport...
+[   3% ] reimport | Preparing files to reimport...
+[   4% ] reimport | Preparing files to reimport...
+[   4% ] reimport | Preparing files to reimport...
+[   5% ] reimport | Preparing files to reimport...
+[   5% ] reimport | Preparing files to reimport...
+[   6% ] reimport | Preparing files to reimport...
+[   6% ] reimport | Preparing files to reimport...
+[   7% ] reimport | Preparing files to reimport...
+[   7% ] reimport | Preparing files to reimport...
+[   8% ] reimport | Preparing files to reimport...
+[   8% ] reimport | Preparing files to reimport...
+[   9% ] reimport | Preparing files to reimport...
+[   9% ] reimport | Preparing files to reimport...
+[  10% ] reimport | Preparing files to reimport...
+[  10% ] reimport | Preparing files to reimport...
+[  11% ] reimport | Preparing files to reimport...
+[  11% ] reimport | Preparing files to reimport...
+[  12% ] reimport | Preparing files to reimport...
+[  12% ] reimport | Preparing files to reimport...
+[  13% ] reimport | Preparing files to reimport...
+[  13% ] reimport | Preparing files to reimport...
+[  14% ] reimport | Preparing files to reimport...
+[  14% ] reimport | Preparing files to reimport...
+[  14% ] reimport | Preparing files to reimport...
+[  15% ] reimport | Preparing files to reimport...
+[  15% ] reimport | Preparing files to reimport...
+[  16% ] reimport | Preparing files to reimport...
+[  16% ] reimport | Preparing files to reimport...
+[  17% ] reimport | Preparing files to reimport...
+[  17% ] reimport | Preparing files to reimport...
+[  18% ] reimport | Preparing files to reimport...
+[  18% ] reimport | Preparing files to reimport...
+[  19% ] reimport | Preparing files to reimport...
+[  19% ] reimport | Preparing files to reimport...
+[  20% ] reimport | Preparing files to reimport...
+[  20% ] reimport | Preparing files to reimport...
+[  21% ] reimport | Preparing files to reimport...
+[  21% ] reimport | Preparing files to reimport...
+[  22% ] reimport | Preparing files to reimport...
+[  22% ] reimport | Preparing files to reimport...
+[  23% ] reimport | Preparing files to reimport...
+[  23% ] reimport | Preparing files to reimport...
+[  24% ] reimport | Preparing files to reimport...
+[  24% ] reimport | Preparing files to reimport...
+[  25% ] reimport | Preparing files to reimport...
+[  25% ] reimport | Preparing files to reimport...
+[  26% ] reimport | Preparing files to reimport...
+[  26% ] reimport | Preparing files to reimport...
+[  27% ] reimport | Preparing files to reimport...
+[  27% ] reimport | Preparing files to reimport...
+[  28% ] reimport | Preparing files to reimport...
+[  28% ] reimport | Preparing files to reimport...
+[  28% ] reimport | Preparing files to reimport...
+[  29% ] reimport | Preparing files to reimport...
+[  29% ] reimport | Preparing files to reimport...
+[  30% ] reimport | Preparing files to reimport...
+[  30% ] reimport | Preparing files to reimport...
+[  31% ] reimport | Preparing files to reimport...
+[  31% ] reimport | Preparing files to reimport...
+[  32% ] reimport | Preparing files to reimport...
+[  32% ] reimport | Preparing files to reimport...
+[  33% ] reimport | Preparing files to reimport...
+[  33% ] reimport | Preparing files to reimport...
+[  34% ] reimport | Preparing files to reimport...
+[  34% ] reimport | Preparing files to reimport...
+[  35% ] reimport | Preparing files to reimport...
+[  35% ] reimport | Preparing files to reimport...
+[  36% ] reimport | Preparing files to reimport...
+[  36% ] reimport | Preparing files to reimport...
+[  37% ] reimport | Preparing files to reimport...
+[  37% ] reimport | Preparing files to reimport...
+[  38% ] reimport | Preparing files to reimport...
+[  38% ] reimport | Preparing files to reimport...
+[  39% ] reimport | Preparing files to reimport...
+[  39% ] reimport | Preparing files to reimport...
+[  40% ] reimport | Preparing files to reimport...
+[  40% ] reimport | Preparing files to reimport...
+[  41% ] reimport | Preparing files to reimport...
+[  41% ] reimport | Preparing files to reimport...
+[  42% ] reimport | Preparing files to reimport...
+[  42% ] reimport | Preparing files to reimport...
+[  42% ] reimport | Preparing files to reimport...
+[  43% ] reimport | Preparing files to reimport...
+[  43% ] reimport | Preparing files to reimport...
+[  44% ] reimport | Preparing files to reimport...
+[  44% ] reimport | Preparing files to reimport...
+[  45% ] reimport | Preparing files to reimport...
+[  45% ] reimport | Preparing files to reimport...
+[  46% ] reimport | Preparing files to reimport...
+[  46% ] reimport | Preparing files to reimport...
+[  47% ] reimport | Preparing files to reimport...
+[  47% ] reimport | Preparing files to reimport...
+[  48% ] reimport | Preparing files to reimport...
+[  48% ] reimport | Preparing files to reimport...
+[  49% ] reimport | Preparing files to reimport...
+[  49% ] reimport | Preparing files to reimport...
+[  50% ] reimport | Preparing files to reimport...
+[  50% ] reimport | Preparing files to reimport...
+[  51% ] reimport | Preparing files to reimport...
+[  51% ] reimport | Preparing files to reimport...
+[  52% ] reimport | Preparing files to reimport...
+[  52% ] reimport | Preparing files to reimport...
+[  53% ] reimport | Preparing files to reimport...
+[  53% ] reimport | Preparing files to reimport...
+[  54% ] reimport | Preparing files to reimport...
+[  54% ] reimport | Preparing files to reimport...
+[  55% ] reimport | Preparing files to reimport...
+[  55% ] reimport | Preparing files to reimport...
+[  56% ] reimport | Preparing files to reimport...
+[  56% ] reimport | Preparing files to reimport...
+[  57% ] reimport | Preparing files to reimport...
+[  57% ] reimport | Preparing files to reimport...
+[  57% ] reimport | Preparing files to reimport...
+[  58% ] reimport | Preparing files to reimport...
+[  58% ] reimport | Preparing files to reimport...
+[  59% ] reimport | Preparing files to reimport...
+[  59% ] reimport | Preparing files to reimport...
+[  60% ] reimport | Preparing files to reimport...
+[  60% ] reimport | Preparing files to reimport...
+[  61% ] reimport | Preparing files to reimport...
+[  61% ] reimport | Preparing files to reimport...
+[  62% ] reimport | Preparing files to reimport...
+[  62% ] reimport | Preparing files to reimport...
+[  63% ] reimport | Preparing files to reimport...
+[  63% ] reimport | Preparing files to reimport...
+[  64% ] reimport | Preparing files to reimport...
+[  64% ] reimport | Preparing files to reimport...
+[  65% ] reimport | Preparing files to reimport...
+[  65% ] reimport | Preparing files to reimport...
+[  66% ] reimport | Preparing files to reimport...
+[  66% ] reimport | Preparing files to reimport...
+[  67% ] reimport | Preparing files to reimport...
+[  67% ] reimport | Preparing files to reimport...
+[  68% ] reimport | Preparing files to reimport...
+[  68% ] reimport | Preparing files to reimport...
+[  69% ] reimport | Preparing files to reimport...
+[  69% ] reimport | Preparing files to reimport...
+[  70% ] reimport | Preparing files to reimport...
+[  70% ] reimport | Preparing files to reimport...
+[  71% ] reimport | Preparing files to reimport...
+[  71% ] reimport | Preparing files to reimport...
+[  71% ] reimport | Preparing files to reimport...
+[  72% ] reimport | Preparing files to reimport...
+[  72% ] reimport | Preparing files to reimport...
+[  73% ] reimport | Preparing files to reimport...
+[  73% ] reimport | Preparing files to reimport...
+[  74% ] reimport | Preparing files to reimport...
+[  74% ] reimport | Preparing files to reimport...
+[  75% ] reimport | Preparing files to reimport...
+[  75% ] reimport | Preparing files to reimport...
+[  76% ] reimport | Preparing files to reimport...
+[  76% ] reimport | Preparing files to reimport...
+[  77% ] reimport | Preparing files to reimport...
+[  77% ] reimport | Preparing files to reimport...
+[  78% ] reimport | Preparing files to reimport...
+[  78% ] reimport | Preparing files to reimport...
+[  79% ] reimport | Preparing files to reimport...
+[  79% ] reimport | Preparing files to reimport...
+[  80% ] reimport | Preparing files to reimport...
+[  80% ] reimport | Preparing files to reimport...
+[  81% ] reimport | Preparing files to reimport...
+[  81% ] reimport | Preparing files to reimport...
+[  82% ] reimport | Preparing files to reimport...
+[  82% ] reimport | Preparing files to reimport...
+[  83% ] reimport | Preparing files to reimport...
+[  83% ] reimport | Preparing files to reimport...
+[  84% ] reimport | Preparing files to reimport...
+[  84% ] reimport | Preparing files to reimport...
+[  85% ] reimport | Preparing files to reimport...
+[  85% ] reimport | Preparing files to reimport...
+[  85% ] reimport | Preparing files to reimport...
+[  86% ] reimport | Preparing files to reimport...
+[  86% ] reimport | Preparing files to reimport...
+[  87% ] reimport | Preparing files to reimport...
+[  87% ] reimport | Preparing files to reimport...
+[  88% ] reimport | Preparing files to reimport...
+[  88% ] reimport | Preparing files to reimport...
+[  89% ] reimport | Preparing files to reimport...
+[  89% ] reimport | Preparing files to reimport...
+[  90% ] reimport | Preparing files to reimport...
+[  90% ] reimport | Preparing files to reimport...
+[  91% ] reimport | Preparing files to reimport...
+[  91% ] reimport | Preparing files to reimport...
+[  92% ] reimport | Preparing files to reimport...
+[  92% ] reimport | Preparing files to reimport...
+[  93% ] reimport | Preparing files to reimport...
+[  93% ] reimport | Preparing files to reimport...
+[  94% ] reimport | Preparing files to reimport...
+[  94% ] reimport | Preparing files to reimport...
+[  95% ] reimport | Preparing files to reimport...
+[  95% ] reimport | Preparing files to reimport...
+[  96% ] reimport | Preparing files to reimport...
+[  96% ] reimport | Preparing files to reimport...
+[  97% ] reimport | Preparing files to reimport...
+[  97% ] reimport | Preparing files to reimport...
+[  98% ] reimport | Preparing files to reimport...
+[  98% ] reimport | Preparing files to reimport...
+[  99% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | BarlowSemiCondensed-SemiBold.ttf
+[   0% ] reimport | Barlow-SemiBold.ttf
+[   0% ] reimport | Barlow-Regular.ttf
+[   1% ] reimport | BarlowSemiCondensed-SemiBold.ttf
+[   1% ] reimport | Barlow-SemiBold.ttf
+[   2% ] reimport | Barlow-Regular.ttf
+[   2% ] reimport | T-053-live_view-1024-repair-quote.png
+[   3% ] reimport | T-053-live_view-1024-structure-active.png
+[   3% ] reimport | T-053-live_view-help.png
+[   4% ] reimport | T-053-live_view-hidden.png
+[   4% ] reimport | T-053-live_view-startup.png
+[   5% ] reimport | T-067-crowd-effects.png
+[   5% ] reimport | T-067-crowd-no-effects.png
+[   6% ] reimport | T-067-fullscreen-settings.png
+[   6% ] reimport | T-067-hud-130-1280.png
+[   7% ] reimport | T-067-hud-1280.png
+[   7% ] reimport | T-067-letterbox-1600.png
+[   8% ] reimport | T-067-reference-1920.png
+[   8% ] reimport | T-067-relay-1280.png
+[   9% ] reimport | T-067-results-130-1280.png
+[   9% ] reimport | T-067-settings-130-1280.png
+[  10% ] reimport | T-067-settings-1280.png
+[  10% ] reimport | T-067-shop-130-1280.png
+[  11% ] reimport | T-067-shop-upgrades-130-1280.png
+[  11% ] reimport | T-067-start-130-1280.png
+[  12% ] reimport | T-067-start-1280.png
+[  12% ] reimport | T-067-start-1440.png
+[  13% ] reimport | T-067-start-1920.png
+[  13% ] reimport | T-067-structure-relay-1280.png
+[  14% ] reimport | T-029-mixed-status.png
+[  14% ] reimport | T-029-twelve-ring-readability.png
+[  14% ] reimport | T-038-structure-tab.png
+[  15% ] reimport | T-045-structure-quote.png
+[  15% ] reimport | T-045-weapon-catalogue.png
+[  16% ] reimport | T-047-outer-ring-focus.png
+[  16% ] reimport | T-047-twelve-rings.png
+[  17% ] reimport | T-049-industrial-close.png
+[  17% ] reimport | T-049-industrial-strategic.png
+[  18% ] reimport | T-049-painterly-close.png
+[  18% ] reimport | T-049-painterly-strategic.png
+[  19% ] reimport | T-049-sun-red.png
+[  19% ] reimport | T-049-sun-white.png
+[  20% ] reimport | T-049-sun-yellow.png
+[  20% ] reimport | T-051-art_preview-emp-aim.png
+[  21% ] reimport | T-051-art_preview-flare-aim.png
+[  21% ] reimport | T-051-art_preview-terrain.png
+[  22% ] reimport | T-051-live_view-emp-aim.png
+[  22% ] reimport | T-051-live_view-flare-aim.png
+[  23% ] reimport | T-051-live_view-terrain.png
+[  23% ] reimport | T-053-art_preview-1024-art-drawer.png
+[  24% ] reimport | T-053-art_preview-1024-repair-quote.png
+[  24% ] reimport | T-053-art_preview-1024-structure-active.png
+[  25% ] reimport | T-053-art_preview-help.png
+[  25% ] reimport | T-053-art_preview-hidden.png
+[  26% ] reimport | T-053-art_preview-startup.png
+[  26% ] reimport | T-079-rotations-10.png
+[  27% ] reimport | T-079-rotations-11.png
+[  27% ] reimport | T-079-rotations-12.png
+[  28% ] reimport | T-079-rotations-13.png
+[  28% ] reimport | T-079-rotations-14.png
+[  28% ] reimport | T-079-rotations-15.png
+[  29% ] reimport | T-079-rotations-16.png
+[  29% ] reimport | T-079-rotations-17.png
+[  30% ] reimport | T-079-strategic-01.png
+[  30% ] reimport | T-079-strategic-02.png
+[  31% ] reimport | T-079-yellow-01.png
+[  31% ] reimport | T-079-yellow-02.png
+[  32% ] reimport | T-079-yellow-03.png
+[  32% ] reimport | T-079-yellow-04.png
+[  33% ] reimport | T-079-yellow-05.png
+[  33% ] reimport | release-1080.png
+[  34% ] reimport | release-controls.png
+[  34% ] reimport | release-credits.png
+[  35% ] reimport | release-fortress.png
+[  35% ] reimport | release-minimum.png
+[  36% ] reimport | release-opening.png
+[  36% ] reimport | release-records.png
+[  37% ] reimport | release-settings.png
+[  37% ] reimport | release-start.png
+[  38% ] reimport | release-tactical.png
+[  38% ] reimport | release-victory.png
+[  39% ] reimport | T-067-tutorial-1280.png
+[  39% ] reimport | T-067-tutorial-1920.png
+[  40% ] reimport | T-071-crowd-effects.png
+[  40% ] reimport | T-071-crowd-no-effects.png
+[  41% ] reimport | T-078-close.png
+[  41% ] reimport | T-078-crowd.png
+[  42% ] reimport | T-078-rotations.png
+[  42% ] reimport | T-078-strategic.png
+[  42% ] reimport | T-078-yellow.png
+[  43% ] reimport | T-079-close-01.png
+[  43% ] reimport | T-079-close-02.png
+[  44% ] reimport | T-079-close-03.png
+[  44% ] reimport | T-079-close-04.png
+[  45% ] reimport | T-079-close-05.png
+[  45% ] reimport | T-079-crowd-01.png
+[  46% ] reimport | T-079-crowd-02.png
+[  46% ] reimport | T-079-crowd-03.png
+[  47% ] reimport | T-079-rotations-01.png
+[  47% ] reimport | T-079-rotations-02.png
+[  48% ] reimport | T-079-rotations-03.png
+[  48% ] reimport | T-079-rotations-04.png
+[  49% ] reimport | T-079-rotations-05.png
+[  49% ] reimport | T-079-rotations-06.png
+[  50% ] reimport | T-079-rotations-07.png
+[  50% ] reimport | T-079-rotations-08.png
+[  51% ] reimport | T-079-rotations-09.png
+[  51% ] reimport | assembler_normal.png
+[  52% ] reimport | breacher_albedo.png
+[  52% ] reimport | breacher_alpha.png
+[  53% ] reimport | breacher_emission.png
+[  53% ] reimport | breacher_normal.png
+[  54% ] reimport | foundry_albedo.png
+[  54% ] reimport | foundry_alpha.png
+[  55% ] reimport | foundry_emission.png
+[  55% ] reimport | foundry_normal.png
+[  56% ] reimport | sapper_albedo.png
+[  56% ] reimport | sapper_alpha.png
+[  57% ] reimport | sapper_emission.png
+[  57% ] reimport | sapper_normal.png
+[  57% ] reimport | transfer_albedo.png
+[  58% ] reimport | transfer_alpha.png
+[  58% ] reimport | transfer_emission.png
+[  59% ] reimport | transfer_normal.png
+[  59% ] reimport | tunneler_albedo.png
+[  60% ] reimport | tunneler_alpha.png
+[  60% ] reimport | tunneler_emission.png
+[  61% ] reimport | tunneler_normal.png
+[  61% ] reimport | assembler.png
+[  62% ] reimport | elite_breacher.png
+[  62% ] reimport | elite_foundry.png
+[  63% ] reimport | elite_sapper.png
+[  63% ] reimport | anchor_approved.png
+[  64% ] reimport | anchor_candidate_01.png
+[  64% ] reimport | anchor_candidate_02.png
+[  65% ] reimport | anchor_candidate_03.png
+[  65% ] reimport | anchor_candidate_04.png
+[  66% ] reimport | anchor_candidate_05.png
+[  66% ] reimport | anchor_v2_01.png
+[  67% ] reimport | anchor_v2_02.png
+[  67% ] reimport | anchor_v2_03.png
+[  68% ] reimport | band_cold_01.png
+[  68% ] reimport | band_hot_01.png
+[  69% ] reimport | band_working_01.png
+[  69% ] reimport | head_armor_plating.png
+[  70% ] reimport | head_emp_node.png
+[  70% ] reimport | head_flak.png
+[  71% ] reimport | head_lance_emitter.png
+[  71% ] reimport | head_mass_driver.png
+[  71% ] reimport | head_point_defense.png
+[  72% ] reimport | head_relay.png
+[  72% ] reimport | head_repair_node.png
+[  73% ] reimport | mount_01.png
+[  73% ] reimport | damage_sheet_01.png
+[  74% ] reimport | decal_sheet_01.png
+[  74% ] reimport | assembler_albedo.png
+[  75% ] reimport | assembler_alpha.png
+[  75% ] reimport | assembler_emission.png
+[  76% ] reimport | shot2-close-tilted.png
+[  76% ] reimport | shot2-close-top-down.png
+[  77% ] reimport | shot3-signature-red-giant.png
+[  77% ] reimport | shot3-signature-white-star.png
+[  78% ] reimport | shot3-signature.png
+[  78% ] reimport | shot4-swarm-legibility.png
+[  79% ] reimport | T-004-panned-selected.png
+[  79% ] reimport | T-004-three-bands.png
+[  80% ] reimport | T-004-twelve-bands.png
+[  80% ] reimport | T-011-menu.png
+[  81% ] reimport | T-011-placed-weapon.png
+[  81% ] reimport | T-011-ring2-purchase.png
+[  82% ] reimport | T-011-startup.png
+[  82% ] reimport | T-018-core-loss.png
+[  83% ] reimport | T-018-early-combat.png
+[  83% ] reimport | T-018-inner-collapse.png
+[  84% ] reimport | T-022-open-gap-funnel.png
+[  84% ] reimport | T-022-sealed-wall-damage.png
+[  85% ] reimport | T-022-wall-breach.png
+[  85% ] reimport | T-022-wall-ring-collapse.png
+[  85% ] reimport | T-028-inner-collapse.png
+[  86% ] reimport | T-028-surfaced-overlap.png
+[  86% ] reimport | T-028-surfaced-triangle.png
+[  87% ] reimport | T-028-underground-warning.png
+[  87% ] reimport | T-028-warning-zoom.png
+[  88% ] reimport | elite_transfer.png
+[  88% ] reimport | elite_tunneler.png
+[  89% ] reimport | machine_standard.png
+[  89% ] reimport | gritty_industrial_mockup.png
+[  90% ] reimport | painterly_awe_mockup.png
+[  90% ] reimport | schematic_readout_mockup.png
+[  91% ] reimport | wide_establishing_legibility_mockup.png
+[  91% ] reimport | terrain_debris_field_01.png
+[  92% ] reimport | terrain_occlusion_screen_01.png
+[  92% ] reimport | terrain_tractor_lane_01.png
+[  93% ] reimport | wall_deflector_01.png
+[  93% ] reimport | containment.svg
+[  94% ] reimport | first_watch.svg
+[  94% ] reimport | machine_breaker.svg
+[  95% ] reimport | outer_frontier.svg
+[  95% ] reimport | power_restored.svg
+[  96% ] reimport | trial_by_fire.svg
+[  96% ] reimport | select_arrow.svg
+[  97% ] reimport | switch_checked.svg
+[  97% ] reimport | switch_checked_disabled.svg
+[  98% ] reimport | switch_unchecked.svg
+[  98% ] reimport | switch_unchecked_disabled.svg
+[  99% ] reimport | ring_zero_icon.svg
+[  99% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (206 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[ DONE ] loading_editor_layout
+

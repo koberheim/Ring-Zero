@@ -1,0 +1,22 @@
+﻿{
+    "label":  "import-01",
+    "mode":  "import",
+    "engine":  "E:/Godot/Godot_v4.7.2-stable_win64.exe",
+    "arguments":  [
+                      "--path",
+                      "E:\\AI Projects\\Games\\Ring Zero\\.godot\\release-qa\\t083-profile-base",
+                      "--log-file",
+                      "E:\\AI Projects\\Games\\Ring Zero\\docs\\reviews\\presentation-v3\\T-083\\profiling\\import-01\\engine.log",
+                      "--headless",
+                      "--editor",
+                      "--import"
+                  ],
+    "started_utc":  "2026-09-09T04:46:56.6290891Z",
+    "completed_utc":  "2026-09-09T04:47:05.1531856Z",
+    "pid":  32316,
+    "exit_code":  0,
+    "timed_out":  false,
+    "fixture":  "reconstructed dense04",
+    "base_commit":  "67a49cb",
+    "source_snapshot_before_launch":  true
+}

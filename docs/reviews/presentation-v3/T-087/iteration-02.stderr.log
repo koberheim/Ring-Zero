@@ -1,0 +1,6 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "slider" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://src/presentation/industrial_theme.gd:120)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tests/presentation/capture_t087_layout.gd:43)

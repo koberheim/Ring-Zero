@@ -1,0 +1,82 @@
+{
+  "status": "source integrity only",
+  "classes": {
+    "flak": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 1,
+      "normal_max_length_error": 0.005907491519452579,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "emp_node": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 1,
+      "normal_max_length_error": 0.005969373805238876,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "lance_emitter": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 1,
+      "normal_max_length_error": 0.005783738502963209,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "point_defense": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 1,
+      "normal_max_length_error": 0.005536278670188022,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "relay": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 12,
+      "normal_max_length_error": 0.006093149935492259,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "repair_node": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 1,
+      "normal_max_length_error": 0.0052888803993734745,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "armor_plating": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 6,
+      "normal_max_length_error": 0.006086819413139377,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "wall": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 12,
+      "normal_max_length_error": 0.006031259943679035,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "debris_field": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 12,
+      "normal_max_length_error": 0.006331360245143802,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "tractor_lane": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 12,
+      "normal_max_length_error": 0.0048020036369751384,
+      "aligned_coverage": true,
+      "border_clear": true
+    },
+    "occlusion_screen": {
+      "frames": 12,
+      "unique_decoded_albedo_frames": 11,
+      "normal_max_length_error": 0.006086819413139599,
+      "aligned_coverage": true,
+      "border_clear": true
+    }
+  }
+}

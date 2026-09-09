@@ -123,16 +123,18 @@ func _ready() -> void:
 	add_child(sun)
 	objective = Label.new()
 	objective.text = "Containment  15:00  /  Ignition"
-	objective.position = Vector2(get_viewport_rect().size.x*0.5-220,get_viewport_rect().size.y-56)
+	objective.position = Vector2.ZERO
 	objective.add_theme_color_override("font_color",WARM)
-	objective.add_theme_font_size_override("font_size",24)
+	objective.add_theme_font_size_override("font_size",UITokens.text("caption",ui_font_scale,get_viewport_rect().size.y))
 	objective.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	status_label.get_parent().add_child(objective)
+	instrument_panel.get_parent().add_child(objective) if instrument_panel != null else status_label.get_parent().add_child(objective)
 	# Frame the actual owned fortress once. The inspection scene's spare grid
 	# rings must not make the first playable structure a distant thumbnail.
 	var owned_radius := grid.ring_bounds(maxi(1,state.rings.size())).y
-	var opening_size := get_viewport_rect().size
-	_set_zoom(minf(opening_size.y*0.67,maxf(480,opening_size.x-660)*0.78)/(owned_radius*2.0))
+	_industrial_layout()
+	var opening_size := usable_map_rect().size
+	_set_zoom(minf(opening_size.y*0.72,opening_size.x*0.78)/(owned_radius*2.0))
+	frame_map(Vector2.ZERO)
 	camera.force_update_scroll()
 	queue_redraw()
 
@@ -167,7 +169,9 @@ func _process(delta: float) -> void:
 		sun.modulate = Color(brightness,health*brightness,health*brightness,1.0)
 		update_core_lighting(int(sun.material.get_shader_parameter("palette")),health*brightness)
 	if objective != null and simulation != null:
-		objective.position = Vector2(get_viewport_rect().size.x*0.5-220,get_viewport_rect().size.y-56)
+		objective.position = Vector2(usable_map_rect().position.x,usable_map_rect().end.y-32)
+		objective.size.x = usable_map_rect().size.x
+		objective.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		var left := maxi(0,ceili(RunRules.OPERATION_SECONDS-simulation.elapsed_seconds))
 		objective.text = "PRACTICE / No rewards" if simulation.run_is_practice else "CONTAINMENT  %02d:%02d  /  %s" % [left/60,left%60,"IGNITION" if left>600 else ("FORTRESS" if left>300 else "LAST WATCH")]
 	if space != null:
@@ -190,8 +194,7 @@ func _presentation_committed_tick(before: Dictionary, events: Dictionary, tick: 
 	if application_host == null: return
 	if not events.hits.is_empty(): application_host.audio.play("shot") # T-082 replaces weapon compatibility.
 	for cue in cues:
-		var screen_point: Vector2 = get_viewport().get_canvas_transform()*cue.point
-		var pan := clampf(screen_point.x/get_viewport_rect().size.x*2.0-1.0,-1,1)
+		var pan := map_audio_pan(cue.point)
 		application_host.audio.emit_cue(cue.id,pan,1.0)
 
 func apply_interface_settings(settings: Dictionary) -> void:
@@ -522,7 +525,7 @@ func _render_board() -> void:
 		board_canvas.draw_set_transform(Vector2.ZERO)
 		if tactical:
 			board_canvas.draw_set_transform(point+Vector2(0,24)/zoom,0,Vector2(1,1/TILT)/zoom)
-			board_canvas.draw_string(ThemeDB.fallback_font,Vector2.ZERO,BUILDING_NAMES.get(StringName(kind),kind),HORIZONTAL_ALIGNMENT_LEFT,-1,12,WARM)
+			board_canvas.draw_string(UITokens.STRONG,Vector2.ZERO,BUILDING_NAMES.get(StringName(kind),kind),HORIZONTAL_ALIGNMENT_LEFT,-1,12,WARM)
 			board_canvas.draw_set_transform(Vector2.ZERO)
 
 func _terrain_hardware(kind: String, direction: int) -> void:

@@ -1,0 +1,10 @@
+{
+  "base_commit": "67a49cb",
+  "instrumentation_only": true,
+  "root_source_edited": false,
+  "files": {
+    "src\\presentation\\release_view.gd": "f4e0712549c935727e38b530eb530268432ce5de5c4fb116090b62b21d7cc452",
+    "src\\gameplay\\live_simulation.gd": "2a0f735f6854ad4a9eb9a28e4abe7d10a5020ccc95beb17467dcaac08b83684f",
+    "tests\\performance\\profile_t083_dense.gd": "18a776f039060086fa27e966de6acd9418cd8a70681ed169d25678deb3cc67cb"
+  }
+}

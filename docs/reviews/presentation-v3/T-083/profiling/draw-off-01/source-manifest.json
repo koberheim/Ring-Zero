@@ -1,0 +1,42 @@
+﻿[
+    {
+        "source":  "project.godot",
+        "snapshot":  "project.godot.txt",
+        "sha256":  "EC44450E41C0809E3EFC184C2901A42A379AEEE2B3E86B9ACBCCC63BB2AC4457"
+    },
+    {
+        "source":  "src/presentation/release_view.gd",
+        "snapshot":  "src__presentation__release_view.gd.txt",
+        "sha256":  "F4E0712549C935727E38B530EB530268432CE5DE5C4FB116090B62B21D7CC452"
+    },
+    {
+        "source":  "src/presentation/live_view.gd",
+        "snapshot":  "src__presentation__live_view.gd.txt",
+        "sha256":  "0B6C01D95EED7B9A30BEE5CA40A3689B0388F7BE0339C5B66A4ED8B070869ABB"
+    },
+    {
+        "source":  "src/presentation/effects/collapse_feedback.gd",
+        "snapshot":  "src__presentation__effects__collapse_feedback.gd.txt",
+        "sha256":  "DE76086915A8E935F3C140E77FE965ECFC2DEEF6DCBCE4C59E7568C53E502863"
+    },
+    {
+        "source":  "src/gameplay/live_simulation.gd",
+        "snapshot":  "src__gameplay__live_simulation.gd.txt",
+        "sha256":  "2A0F735F6854AD4A9EB9A28E4ABE7D10A5020CCC95BEB17467DCAAC08B83684F"
+    },
+    {
+        "source":  "tests/performance/profile_t083_dense.gd",
+        "snapshot":  "tests__performance__profile_t083_dense.gd.txt",
+        "sha256":  "18A776F039060086FA27E966DE6ACD9418CD8A70681ED169D25678DEB3CC67CB"
+    },
+    {
+        "source":  "data/balance/release.json",
+        "snapshot":  "data__balance__release.json.txt",
+        "sha256":  "F1221AD18490ECFCE9FD1FDBD8D51375EAFD42ACCCDE691062BE3E91B62AC0A0"
+    },
+    {
+        "source":  "data/balance/testing.json",
+        "snapshot":  "data__balance__testing.json.txt",
+        "sha256":  "5594846FE7F2E97B89FE5B8ECE9B8E5CC9DB0AF8934AA6A4FDE0FE03D770A8BF"
+    }
+]
