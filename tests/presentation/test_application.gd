@@ -73,7 +73,7 @@ func tutorial_checks() -> void:
 					if not app.tutorial_next.disabled: break
 			2: key(KEY_Q)
 			3:
-				key(KEY_W)
+				key(PCSettings.bindings["Wall"])
 				world_slot(2,3)
 			4:
 				for tick in 180:
@@ -112,13 +112,13 @@ func settings_failure_checks() -> void:
 	check(app.progress.settings.reduced_motion,"Actual settings toggle saved")
 	await click_control(find_button("Weapon feedback"))
 	check(not app.progress.settings.effects,"Weapon feedback setting saved")
-	var chooser: OptionButton
-	for child in app.content.get_children():
-		if child is OptionButton: chooser = child
+	var chooser: OptionButton = options_in(app.page)[0]
 	await click_control(chooser)
 	await create_timer(0.4).timeout
 	var popup := chooser.get_popup()
-	mouse(Vector2(popup.position)+Vector2(popup.size.x*0.5,popup.size.y-15))
+	var bottom_margin := popup.get_theme_stylebox("panel").get_content_margin(SIDE_BOTTOM)
+	var row_half_height := popup.get_theme_font("font").get_height(popup.get_theme_font_size("font_size"))*0.5
+	mouse(Vector2(popup.position)+Vector2(popup.size.x*0.5,popup.size.y-bottom_margin-row_half_height-9))
 	await process_frame
 	print("Scale selected: ",app.progress.settings.ui_scale," popup ",popup.size if is_instance_valid(popup) else Vector2.ZERO)
 	check(is_equal_approx(app.progress.settings.ui_scale,1.3),"Actual scale popup selects 130 percent")
@@ -127,7 +127,7 @@ func settings_failure_checks() -> void:
 	check(app.state == "start","Escape closes settings")
 	await click_control(find_button("Start run"))
 	app.live.set_process(false)
-	check(app.live.flak_button.get_theme_font_size("font_size") == 21,"Essential HUD labels scale at 130 percent")
+	check(app.live.flak_button.get_theme_font_size("font_size") >= 30,"Essential HUD labels remain readable at native 1440p and 130 percent")
 	app.live.set_menu_open(true)
 	await click_control(find_button("Settings",app.live))
 	var before: Dictionary = app.live.state.duplicate(true)
@@ -200,7 +200,9 @@ func resize_config_checks() -> void:
 	await click_control(options[0])
 	await create_timer(0.4).timeout
 	var popup := options[0].get_popup()
-	mouse(Vector2(popup.position)+Vector2(popup.size.x*0.5,popup.size.y-15))
+	var bottom_margin := popup.get_theme_stylebox("panel").get_content_margin(SIDE_BOTTOM)
+	var row_half_height := popup.get_theme_font("font").get_height(popup.get_theme_font_size("font_size"))*0.5
+	mouse(Vector2(popup.position)+Vector2(popup.size.x*0.5,popup.size.y-bottom_margin-row_half_height-9))
 	await process_frame
 	await click_control(find_button("Dense Swarm"))
 	var chosen: Dictionary = app.choices.duplicate(true)
@@ -213,7 +215,7 @@ func resize_config_checks() -> void:
 	check(app.live.state.energy < before,"1920 viewport-transformed world purchase")
 	root.size = Vector2i(1600,1000)
 	await process_frame
-	check(app.frame.position.y > 0 and app.stage.size == Vector2i(1440,810),"Non-16:9 resize letterboxes fixed game viewport")
+	check(app.frame.position.y > 0 and app.stage.size == Vector2i(2560,1440),"Non-16:9 resize letterboxes native 1440p game viewport")
 	before = app.live.state.energy
 	world_slot(1,5)
 	check(app.live.state.energy < before,"Letterboxed viewport input still targets slot")
@@ -237,7 +239,7 @@ func _run() -> void:
 	await process_frame
 	check(app.state == "start" and app.progress.currency == 0,"Fresh isolated profile opens Start")
 	print("Driver Start=",find_button("Start run").get_global_rect().get_center()," Quit=",find_button("Quit").get_global_rect().get_center())
-	check(app.frame.scale.is_equal_approx(Vector2.ONE*8.0/9.0),"1280 aspect scale")
+	check(app.frame.scale.is_equal_approx(Vector2.ONE*0.5),"1280 window downsamples native 1440p canvas")
 	await click_control(find_button("Start run"))
 	print("After Start: ",app.state," / ",app.feedback.text)
 	check(app.state == "playing" and app.live != null,"Actual Start button creates run")

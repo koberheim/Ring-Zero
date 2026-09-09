@@ -64,7 +64,7 @@ func _run() -> void:
 	var target := first_tunneler()
 	check(not target.is_empty() and target.phase == &"burrowing" and not target.targetable, "Real scheduled underground admission")
 	check(view.marker_instances.instance_count == 0 and view.triangle_instances.instance_count == 0 and view.tunneler_warnings.size() == 1, "Underground actor only has destination warning")
-	check(view.combat_label.text.contains("Active machines: 1"), "Underground actor included in active count")
+	check(view.combat_label.text.contains("Machines  1"), "Underground actor included in active count")
 	var warning_point: Vector2 = view.tunneler_warnings[0].point
 	check(warning_point.is_equal_approx(view.target_grid.polar_to_world(target.destination)), "Warning is at locked destination")
 	var initial_position: Vector2 = view.target_grid.polar_to_world(target.position)

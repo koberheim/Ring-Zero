@@ -55,7 +55,18 @@ func apply_levels() -> void:
 	for voice in voices: voice.volume_db = linear_to_db(maxf(0.00001,PCSettings.master*PCSettings.effects))
 
 func _exit_tree() -> void:
-	# Release active playback before the audio server shuts down or a test reloads.
+	_stop_all()
+
+func shutdown() -> void:
+	# AudioServer retires stopped playback on its mixing thread. Begin teardown
+	# while the tree is still running, then allow those queued removals to drain.
+	# This is asynchronous and continues even if the operation is paused.
+	_stop_all()
+	if DisplayServer.get_name() != "headless" and is_inside_tree():
+		await get_tree().create_timer(0.12, true, false, true).timeout
+
+func _stop_all() -> void:
+	playback_enabled = false
 	for voice in voices:
 		voice.stop()
 		voice.stream = null

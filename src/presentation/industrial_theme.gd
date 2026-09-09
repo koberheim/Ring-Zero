@@ -1,48 +1,73 @@
-extends RefCounted
-## Local, redistributable interface resources. No world-art dependency.
-const HOUSING := Color("15191d")
-const RECESS := Color("242c32")
-const STEEL := Color("8f9da6")
-const INK := Color("edf1ef")
-const AMBER := Color("f2b85b")
-const FAULT := Color("ff8173")
+﻿extends RefCounted
+## Native 1440p instrument typography and anodised metal control surfaces.
+const HOUSING := Color("111b25")
+const RECESS := Color("172631")
+const STEEL := Color("839ba8")
+const INK := Color("f2e6cc")
+const AMBER := Color("d5ac6e")
+const FAULT := Color("f58b72")
+const CYAN := Color("91cfdf")
 
-static func box(color: Color, border: Color = STEEL, inset: int = 12) -> StyleBoxFlat:
+static func box(color: Color, border: Color = STEEL, inset: int = 20) -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
 	style.bg_color = color
 	style.border_color = border
 	style.set_border_width_all(1)
+	style.border_width_top = 2
 	style.set_content_margin_all(inset)
-	style.corner_radius_top_left = 2
-	style.corner_radius_bottom_right = 2
+	style.corner_radius_top_left = 8
+	style.corner_radius_bottom_right = 8
+	style.shadow_color = Color(0,0,0,0.38)
+	style.shadow_size = 8
+	style.shadow_offset = Vector2(0,5)
 	return style
 
 static func make(ui_scale: float = 1.0) -> Theme:
 	var result := Theme.new()
 	result.default_font = load("res://assets/ui/fonts/barlow/Barlow-Regular.ttf")
-	result.default_font_size = roundi(18 * ui_scale)
+	result.default_font_size = roundi(30 * ui_scale)
 	var strong: Font = load("res://assets/ui/fonts/barlow/Barlow-SemiBold.ttf")
-	for type in ["Label", "Button", "CheckButton", "OptionButton", "TabContainer", "LineEdit", "RichTextLabel"]:
+	for type in ["Label", "Button", "CheckButton", "CheckBox", "OptionButton", "TabContainer", "LineEdit", "RichTextLabel", "PopupMenu"]:
 		result.set_color("font_color", type, INK)
 	result.set_font("font", "Button", strong)
-	result.set_stylebox("panel", "PanelContainer", box(HOUSING, STEEL.darkened(0.5), 12))
-	result.set_stylebox("normal", "Button", box(RECESS, STEEL.darkened(0.45), 8))
-	result.set_stylebox("hover", "Button", box(RECESS.lightened(0.1), AMBER, 8))
-	result.set_stylebox("pressed", "Button", box(HOUSING, AMBER, 8))
-	result.set_stylebox("disabled", "Button", box(HOUSING, STEEL.darkened(0.6), 8))
-	var focus := box(Color.TRANSPARENT, AMBER, 8)
-	focus.set_border_width_all(2)
-	result.set_stylebox("focus", "Button", focus)
-	result.set_color("font_disabled_color", "Button", STEEL)
-	result.set_stylebox("panel", "TabContainer", box(HOUSING, STEEL.darkened(0.5), 4))
+	result.set_color("font_color", "Label", INK)
+	result.set_color("font_hover_color", "Button", Color.WHITE)
+	result.set_color("font_pressed_color", "Button", AMBER)
+	result.set_stylebox("panel", "PanelContainer", box(Color("101b25f5"), Color("49606c"), 32))
+	for type in ["Button","OptionButton"]:
+		result.set_stylebox("normal", type, box(RECESS, Color("405766"), 16))
+		result.set_stylebox("hover", type, box(Color("263947"), AMBER, 16))
+		result.set_stylebox("pressed", type, box(Color("0a131c"), AMBER, 16))
+		result.set_stylebox("disabled", type, box(Color("111922"), Color("293b45"), 16))
+		var focus := box(Color.TRANSPARENT, AMBER, 16)
+		focus.set_border_width_all(3)
+		result.set_stylebox("focus", type, focus)
+		result.set_color("font_disabled_color", type, Color("73858e"))
+	result.set_stylebox("panel", "PopupMenu", box(HOUSING, AMBER, 16))
+	result.set_stylebox("hover", "PopupMenu", box(RECESS, AMBER, 10))
+	result.set_constant("v_separation", "PopupMenu", 18)
+	result.set_stylebox("panel", "TabContainer", box(Color("0c151dd9"), Color("314b58"), 18))
 	for state in ["tab_selected", "tab_unselected", "tab_hovered", "tab_disabled"]:
-		result.set_stylebox(state, "TabContainer", box(RECESS if state == "tab_selected" else HOUSING, AMBER if state == "tab_selected" else STEEL.darkened(0.6), 6))
+		result.set_stylebox(state, "TabContainer", box(RECESS if state == "tab_selected" else HOUSING, AMBER if state == "tab_selected" else Color("314b58"), 16))
 	result.set_stylebox("normal", "LineEdit", box(RECESS))
-	result.set_stylebox("focus", "LineEdit", focus)
-	result.set_constant("separation", "VBoxContainer", 8)
-	result.set_constant("separation", "HBoxContainer", 12)
+	result.set_stylebox("slider", "HSlider", box(Color("263b48"),Color("3d5561"),4))
+	result.set_stylebox("grabber_area", "HSlider", box(AMBER,AMBER,4))
+	result.set_stylebox("grabber_area_highlight", "HSlider", box(INK,AMBER,4))
+	result.set_constant("separation", "VBoxContainer", 20)
+	result.set_constant("separation", "HBoxContainer", 24)
+	result.set_constant("h_separation", "GridContainer", 24)
+	result.set_constant("v_separation", "GridContainer", 16)
 	return result
 
-static func heading(label: Label, size: int = 32) -> void:
+static func heading(label: Label, size: int = 52) -> void:
 	label.add_theme_font_override("font", load("res://assets/ui/fonts/barlow/BarlowSemiCondensed-SemiBold.ttf"))
 	label.add_theme_font_size_override("font_size", size)
+
+static func primary(button: Button) -> void:
+	button.add_theme_stylebox_override("normal",box(AMBER,Color("f2d09a"),20))
+	button.add_theme_stylebox_override("hover",box(INK,Color.WHITE,20))
+	button.add_theme_stylebox_override("pressed",box(Color("b18b51"),INK,20))
+	button.add_theme_color_override("font_color",Color("111923"))
+	button.add_theme_color_override("font_hover_color",Color("111923"))
+	button.add_theme_color_override("font_pressed_color",Color("111923"))
+

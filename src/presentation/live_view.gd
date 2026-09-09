@@ -5,7 +5,9 @@ const REPRESENTATIONAL_RING_LIMIT: int = 9223372036854775807
 var prepared_run: Dictionary = {}
 var application_host: Node
 var interface_settings := {"effects":false,"reduced_motion":false,"ui_scale":1.0}
-var instrument_panel: PanelContainer
+var instrument_panel: Control
+var hud_metrics := {}
+var core_meter: ProgressBar
 var relay_button: Button
 var hit_effects: Array[Dictionary] = []
 var effect_positions: Dictionary = {}
@@ -46,6 +48,8 @@ var quote_preview_slot := -1
 var ability_mode: StringName = &""
 var ability_aim_world := Vector2.ZERO
 var ability_aim_valid := false
+var pause_shade: ColorRect
+var hud_wordmark: Label
 var solar_panel: VBoxContainer
 var focused_flare_button: Button
 var emp_burst_button: Button
@@ -348,9 +352,9 @@ func refresh_view() -> void:
 	if simulation == null:
 		combat_label.text = "Live test unavailable"
 		return
-	combat_label.text = "Core HP: %s   |   Active machines: %d" % [str(snappedf(simulation.core_hp, 0.01)), rendered_targets.size()]
+	combat_label.text = "Core integrity  %s    /    Machines  %d" % [str(snappedf(simulation.core_hp, 0.01)), rendered_targets.size()]
 	if industrial_ui:
-		combat_label.text += "   |   Ring %d   |   %.0fs" % [state.rings.size(),simulation.elapsed_seconds]
+		combat_label.text += "    /    Rings  %d    /    %.0fs" % [state.rings.size(),simulation.elapsed_seconds]
 	if simulation.ended:
 		feedback_label.text = "Core lost. Survived %.1fs, %d kills." % [simulation.elapsed_seconds, run_kill_count]
 	elif not last_error.is_empty():
@@ -363,6 +367,14 @@ func refresh_view() -> void:
 		else:
 			expand_button.tooltip_text = "[Q] Ring Plate. Purchase the next whole ring immediately."
 
+func _compact_buttons() -> void:
+	super._compact_buttons()
+	if not industrial_ui: return
+	for category in tabs.get_children():
+		for button in category.get_children():
+			if button is Button:
+				button.add_theme_font_size_override("font_size",roundi(28*ui_font_scale))
+
 func _compact_live_buttons() -> void:
 	for entry in [[wall_button,&"wall"],[armor_button,&"armor"],[repair_node_button,&"repair_node"],[debris_field_button,&"debris_field"],[tractor_lane_button,&"tractor_lane"],[occlusion_screen_button,&"occlusion_screen"]]:
 		if entry[0] != null:
@@ -373,11 +385,13 @@ func _compact_live_buttons() -> void:
 		reclaim_button.text = "[Y] Reclaim Ring - inspect cost"
 		repair_button.tooltip_text = _mode_prompt(&"repair")
 		reclaim_button.tooltip_text = _mode_prompt(&"reclaim")
-	for entry in [[focused_flare_button,"Z"],[emp_burst_button,"X"]]:
+	for entry in [[focused_flare_button,PCSettings.label("Flare")],[emp_burst_button,PCSettings.label("EMP Burst")]]:
 		if entry[0] != null:
 			entry[0].text = "[%s] %s" % [entry[1],entry[0].text]
-			entry[0].add_theme_font_size_override("font_size",roundi(16*ui_font_scale) if industrial_ui else 14)
+			entry[0].add_theme_font_size_override("font_size",roundi(28*ui_font_scale) if industrial_ui else 14)
 			entry[0].tooltip_text = "Select targeting, then click the world to cast once. Right click cancels."
+	if tractor_direction_button != null:
+		tractor_direction_button.text = "[%s] Tractor: %s" % [PCSettings.label("Reverse tractor"),"Clockwise" if tractor_direction == 1 else "Counterclockwise"]
 	ui_panel.reset_size()
 
 func _layout_ui() -> void:
@@ -389,6 +403,7 @@ func _layout_ui() -> void:
 		combat_label.position = Vector2(220,10)
 	if solar_panel != null:
 		solar_panel.position = Vector2(12, viewport_size.y-72)
+	if industrial_ui: call_deferred("_industrial_layout")
 
 func _tool_context(kind: StringName) -> String:
 	if kind == &"rebuild_relay": return "Rebuild Relay active. Click the ring; Esc cancels."
@@ -558,6 +573,7 @@ func set_menu_open(open: bool) -> void:
 		ability_mode = &""
 		ability_aim_valid = false
 	super.set_menu_open(open)
+	if industrial_ui: call_deferred("_industrial_layout")
 
 func _input(event: InputEvent) -> void:
 	event = PCSettings.world_event(event)
@@ -796,45 +812,156 @@ func apply_interface_settings(settings: Dictionary) -> void:
 	if not industrial_ui or status_label == null: return
 	var kit = load("res://src/presentation/industrial_theme.gd")
 	var theme: Theme = kit.make(float(settings.get("ui_scale",1.0)))
+	var overlay := status_label.get_parent()
 	if instrument_panel == null:
-		instrument_panel = PanelContainer.new()
+		instrument_panel = load("res://src/presentation/instrument_strip.gd").new()
 		instrument_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		status_label.get_parent().add_child(instrument_panel)
-		status_label.get_parent().move_child(instrument_panel,0)
-	instrument_panel.position = Vector2(10,6)
-	instrument_panel.size = Vector2(get_viewport_rect().size.x-20,110)
-	for control in status_label.get_parent().get_children():
+		overlay.add_child(instrument_panel)
+		overlay.move_child(instrument_panel,0)
+		hud_wordmark = Label.new()
+		hud_wordmark.text = "Stored energy"
+		hud_wordmark.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		kit.heading(hud_wordmark,24)
+		hud_wordmark.add_theme_color_override("font_color",kit.STEEL)
+		overlay.add_child(hud_wordmark)
+		pause_shade = ColorRect.new()
+		pause_shade.color = Color(0.015,0.023,0.038,0.8)
+		pause_shade.mouse_filter = Control.MOUSE_FILTER_STOP
+		pause_shade.z_index = 20
+		pause_shade.hide()
+		overlay.add_child(pause_shade)
+		# GUI hit testing follows sibling order, independently of canvas z-index.
+		overlay.move_child(menu_panel,overlay.get_child_count()-1)
+		overlay.move_child(help_panel,overlay.get_child_count()-1)
+		menu_panel.z_index = 21
+		help_panel.z_index = 22
+	if hud_metrics.is_empty():
+		for metric in ["Core integrity","Machines","Time held"]:
+			var caption := Label.new()
+			caption.text = metric
+			kit.heading(caption,24)
+			caption.add_theme_color_override("font_color",kit.STEEL)
+			caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			overlay.add_child(caption)
+			var value := Label.new()
+			kit.heading(value,44)
+			value.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			overlay.add_child(value)
+			hud_metrics[metric] = [caption,value]
+		core_meter = ProgressBar.new()
+		core_meter.show_percentage = false
+		core_meter.max_value = 100
+		core_meter.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		core_meter.add_theme_stylebox_override("background",kit.box(Color("233d4b"),Color("233d4b"),0))
+		core_meter.add_theme_stylebox_override("fill",kit.box(kit.CYAN,kit.CYAN,0))
+		overlay.add_child(core_meter)
+	for control in overlay.get_children():
 		if control is Control: control.theme = theme
-	tabs.add_theme_font_size_override("font_size",roundi(16*ui_font_scale))
-	ui_panel.custom_minimum_size.x = 288
-	ui_panel.reset_size()
-	status_label.position = Vector2(18,48)
-	status_label.size = Vector2(1080,48)
-	feedback_label.position = Vector2(324,124)
-	feedback_label.size = Vector2(900,72)
-	ui_panel.position = Vector2(18,156)
-	catalogue_toggle.position = Vector2(18,124)
+	energy_label.add_theme_color_override("font_color",kit.AMBER)
+	kit.heading(energy_label,roundi(44*ui_font_scale))
+	combat_label.add_theme_font_size_override("font_size",roundi(30*ui_font_scale))
+	combat_label.add_theme_color_override("font_color",kit.INK)
+	status_label.add_theme_font_size_override("font_size",roundi(27*ui_font_scale))
+	status_label.add_theme_color_override("font_color",kit.STEEL)
+	feedback_label.add_theme_font_size_override("font_size",roundi(30*ui_font_scale))
+	feedback_label.add_theme_color_override("font_color",kit.AMBER)
+	tabs.add_theme_font_size_override("font_size",roundi(28*ui_font_scale))
+	ui_panel.custom_minimum_size.x = 540
+	ui_panel.add_theme_stylebox_override("panel",kit.box(Color("0d1822f0"),Color("526979"),18))
+	catalogue_toggle.add_theme_font_size_override("font_size",roundi(28*ui_font_scale))
 	for category in tabs.get_children():
 		for button in category.get_children():
-			if button is Button: button.add_theme_font_size_override("font_size",roundi(16*ui_font_scale))
+			if button is Button:
+				button.add_theme_font_size_override("font_size",roundi(28*ui_font_scale))
+				button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+				button.custom_minimum_size.y = 72
+	for entry in [[flak_button,"flak"],[mass_driver_button,"mass_driver"],[emp_node_button,"emp_node"],[lance_emitter_button,"lance_emitter"],[point_defense_button,"point_defense"],[armor_button,"armor_plating"],[repair_node_button,"repair_node"],[relay_button,"relay"]]:
+		entry[0].icon = load("res://assets/art/buildings/head_"+entry[1]+".png")
+		entry[0].expand_icon = true
+		entry[0].add_theme_constant_override("icon_max_width",52)
+		entry[0].add_theme_constant_override("h_separation",16)
+	solar_panel.custom_minimum_size.x = 540
+	for button in solar_panel.get_children():
+		button.custom_minimum_size.y = 74
+		button.add_theme_font_size_override("font_size",roundi(28*ui_font_scale))
+		button.add_theme_color_override("font_color",kit.AMBER)
+	menu_panel.custom_minimum_size = Vector2(740,0)
+	menu_panel.add_theme_stylebox_override("panel",kit.box(Color("111e29"),kit.AMBER,48))
+	var menu_column := menu_panel.get_child(0)
+	var pause_title: Label = menu_column.get_child(0)
+	kit.heading(pause_title,76)
+	pause_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	for button in menu_column.get_children():
+		if button is Button: button.custom_minimum_size.y = 76
+	kit.primary(resume_button)
+	help_panel.custom_minimum_size = Vector2(1400,0)
+	var help_column := help_panel.get_child(0).get_child(0)
+	for node in help_column.get_children():
+		if node is ScrollContainer:
+			node.custom_minimum_size = Vector2(1280,840)
+			var text: Label = node.get_child(0)
+			text.text = "Control your fortress\n\nWASD moves the map. Mouse wheel zooms. Middle drag pans.\n1-5 choose weapons. Q purchases the next complete ring.\nH Wall / E Armor / R Repair Node / T Repair Wedge\nY Reclaim Ring / G Rebuild Relay\nC Debris / V Tractor Lane / B Occlusion Screen\nF reverses the Tractor. Z Focused Flare / X EMP Burst\nHold Alt for tactical ranges and integrity.\n\nChoose a tool, then click its wedge or slot. Build tools stay selected; every click spends separately. Solar tools cast once. Right click or Esc cancels.\n\n" + (application_host.reference_text() if application_host != null else "")
 	call_deferred("_industrial_layout")
 	queue_redraw()
 
 func _industrial_layout() -> void:
-	if not industrial_ui: return
+	if not industrial_ui or instrument_panel == null: return
 	var viewport_size := get_viewport_rect().size
+	instrument_panel.position = Vector2(28,20)
+	instrument_panel.size = Vector2(viewport_size.x-56,136)
+	hud_wordmark.position = Vector2(56,32)
+	energy_label.position = Vector2(56,62)
+	energy_label.text = _instrument_number(float(state.energy))
+	combat_label.hide()
+	for index in hud_metrics.size():
+		var metric: String = hud_metrics.keys()[index]
+		var x: float = [492.0,902.0,1262.0][index]
+		hud_metrics[metric][0].position = Vector2(x,32)
+		hud_metrics[metric][1].position = Vector2(x,62)
+	if simulation != null:
+		var core_fraction := clampf(simulation.core_hp/maxf(1.0,float(profile.value("health.core_hp"))),0,1)
+		hud_metrics["Core integrity"][1].text = "%d%%" % roundi(core_fraction*100)
+		core_meter.value = core_fraction*100
+		hud_metrics["Machines"][1].text = str(rendered_targets.size())
+		var elapsed := int(simulation.elapsed_seconds)
+		hud_metrics["Time held"][1].text = "%02d:%02d" % [elapsed/60,elapsed%60]
+	core_meter.position = Vector2(492,125)
+	core_meter.size = Vector2(290,5)
+	status_label.position = Vector2(640,218)
+	status_label.size = Vector2(viewport_size.x-1030,106)
 	menu_button.reset_size()
 	help_button.reset_size()
-	menu_button.position = Vector2(viewport_size.x-18-menu_button.size.x,8)
-	help_button.position = Vector2(menu_button.position.x-12-help_button.size.x,8)
-	solar_panel.reset_size()
-	solar_panel.position = Vector2(18,viewport_size.y-18-solar_panel.get_combined_minimum_size().y)
+	menu_button.position = Vector2(viewport_size.x-52-menu_button.size.x,50)
+	help_button.position = Vector2(menu_button.position.x-20-help_button.size.x,50)
+	catalogue_toggle.position = Vector2(36,184)
+	catalogue_toggle.reset_size()
+	for category in tabs.get_children():
+		for button in category.get_children():
+			if button is Button and button.icon != null:
+				var text_width: float = button.get_theme_font("font").get_string_size(button.text,HORIZONTAL_ALIGNMENT_LEFT,-1,button.get_theme_font_size("font_size")).x
+				button.custom_minimum_size.x = text_width+112
 	ui_panel.reset_size()
 	ui_panel.size = ui_panel.get_combined_minimum_size()
-	ui_panel.position.y = catalogue_toggle.position.y+catalogue_toggle.size.y+8
-	feedback_label.position.x = maxf(324,ui_panel.position.x+ui_panel.size.x+18)
-	feedback_label.size.x = maxf(240,viewport_size.x-feedback_label.position.x-210)
-	ring_status_hud.tooltip_text = "Click to focus. Dot: critical; X: broken; slashed arc: brownout; circle: active Relay."
+	ui_panel.position = Vector2(36,catalogue_toggle.position.y+catalogue_toggle.size.y+16)
+	solar_panel.reset_size()
+	solar_panel.position = Vector2(36,viewport_size.y-36-solar_panel.get_combined_minimum_size().y)
+	feedback_label.position = Vector2(maxf(640,ui_panel.position.x+ui_panel.size.x+34),172)
+	feedback_label.size = Vector2(maxf(400,viewport_size.x-feedback_label.position.x-350),68)
+	ring_status_hud.size = Vector2(264,264)
+	ring_status_hud.position = Vector2(viewport_size.x-302,186)
+	ring_status_hud.tooltip_text = "Click to focus. Diamond: critical; X: broken; lightning: brownout; circle: active Relay."
+	menu_panel.reset_size()
+	menu_panel.position = (viewport_size-menu_panel.get_combined_minimum_size())*0.5
+	help_panel.reset_size()
+	help_panel.position = (viewport_size-help_panel.get_combined_minimum_size())*0.5
+	pause_shade.size = viewport_size
+	pause_shade.visible = menu_open
+
+func _instrument_number(value: float) -> String:
+	if value >= 1000000000: return "%.1fB" % (value/1000000000)
+	if value >= 1000000: return "%.1fM" % (value/1000000)
+	if value >= 100000: return "%.1fk" % (value/1000)
+	return str(int(value))
 
 func _capture_hits(events: Dictionary) -> void:
 	if not interface_settings.effects: return

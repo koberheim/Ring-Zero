@@ -1,6 +1,10 @@
 extends Control
 ## Between-run controller: rules prepare choices; ProfileStore owns persistence.
 const ThemeKit = preload("res://src/presentation/industrial_theme.gd")
+const DESIGN_SIZE := Vector2(2560,1440)
+var page_decoration: Control
+var menu_sun: ColorRect
+var menu_phase := 0.0
 @export var profile_path := "user://profile.json"
 var recorder: RefCounted
 var recorder_error := ""
@@ -42,9 +46,11 @@ var rebinding := ""
 var rebinding_group := "keyboard"
 var controller: Node
 var achievement_hooks := AchievementHooks.new()
+var quitting := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().auto_accept_quit = false
 	PCSettings.load_settings(profile_path.get_base_dir().path_join("pc_settings.cfg"))
 	audio = load("res://src/presentation/game_audio.gd").new()
 	add_child(audio)
@@ -63,14 +69,14 @@ func _ready() -> void:
 	frame.stretch = true
 	add_child(frame)
 	stage = SubViewport.new()
-	stage.size = Vector2i(1440,810)
+	stage.size = Vector2i(2560,1440)
 	stage.transparent_bg = true
 	stage.handle_input_locally = true
 	stage.gui_embed_subwindows = true
 	stage.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	frame.add_child(stage)
 	shell = Control.new()
-	shell.size = Vector2(1440,810)
+	shell.size = DESIGN_SIZE
 	shell.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var layer := CanvasLayer.new()
 	layer.layer = 100
@@ -80,8 +86,9 @@ func _ready() -> void:
 	menu_backdrop.color = Color("10161b")
 	var menu_material := ShaderMaterial.new()
 	menu_material.shader = load("res://src/presentation/menu_background.gdshader")
+	menu_material.set_shader_parameter("band_texture",load("res://assets/art/bands/band_working_01.png"))
 	menu_backdrop.material = menu_material
-	menu_backdrop.size = Vector2(1440,810)
+	menu_backdrop.size = DESIGN_SIZE
 	menu_backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	shell.add_child(menu_backdrop)
 	get_viewport().size_changed.connect(_resize)
@@ -90,10 +97,25 @@ func _ready() -> void:
 	controller = load("res://src/presentation/controller_pointer.gd").new()
 	controller.host = self
 	add_child(controller)
+	var navigation = load("res://src/presentation/camera_navigation.gd").new()
+	navigation.name = "CameraNavigation"
+	navigation.host = self
+	add_child(navigation)
 	get_window().focus_exited.connect(_pause_on_focus_loss)
 	Input.joy_connection_changed.connect(func(_device: int, connected: bool):
 		if not connected: _pause_on_focus_loss()
 	)
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		request_quit()
+
+func request_quit() -> void:
+	if quitting: return
+	quitting = true
+	_pause_on_focus_loss()
+	if audio != null: await audio.shutdown()
+	get_tree().quit()
 
 func _pause_on_focus_loss() -> void:
 	if live != null and state in ["playing","tutorial"] and not live.menu_open:
@@ -103,15 +125,15 @@ func _resize() -> void:
 	if frame == null:
 		return
 	var viewport_size := get_viewport_rect().size
-	var factor := minf(viewport_size.x/1440.0,viewport_size.y/810.0)
-	# A fixed design viewport plus container scale preserves world and UI aspect.
+	var factor := minf(viewport_size.x/DESIGN_SIZE.x,viewport_size.y/DESIGN_SIZE.y)
+	# The world and text render at 2560 x 1440 before fitting the window.
 	frame.stretch = false
-	stage.size = Vector2i(1440,810)
-	frame.size = Vector2(1440,810)
+	stage.size = Vector2i(2560,1440)
+	frame.size = DESIGN_SIZE
 	frame.scale = Vector2.ONE*factor
-	frame.position = (viewport_size-Vector2(1440,810)*factor)*0.5
+	frame.position = (viewport_size-DESIGN_SIZE*factor)*0.5
 	content_backdrop.position = frame.position
-	content_backdrop.size = Vector2(1440,810)*factor
+	content_backdrop.size = DESIGN_SIZE*factor
 
 func _load_profile() -> void:
 	var loaded: Dictionary = store.load_profile(profile_path)
@@ -146,29 +168,71 @@ func _new_page(title: String) -> void:
 	menu_backdrop.show()
 	if page != null:
 		page.queue_free()
+	if page_decoration != null:
+		page_decoration.queue_free()
+	menu_sun = null
+	page_decoration = load("res://src/presentation/command_frame.gd").new()
+	page_decoration.home = title == "Ring Zero"
+	page_decoration.size = DESIGN_SIZE
+	page_decoration.theme = ThemeKit.make()
+	shell.add_child(page_decoration)
+	if title != "Ring Zero":
+		var shade := ColorRect.new()
+		shade.color = Color(0.015,0.028,0.045,0.84)
+		shade.size = DESIGN_SIZE
+		shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		page_decoration.add_child(shade)
+		_page_label("RING ZERO",Vector2(142,32),30,ThemeKit.AMBER)
+		_page_label("Stellar containment division",Vector2(1830,32),26,ThemeKit.STEEL)
 	page = PanelContainer.new()
-	page.position = Vector2(252,54)
-	page.size = Vector2(936,610 if title == "Ring Zero" else 702)
-	if title == "Ring Zero": page.position.y = 100
+	page.position = Vector2(1500,174) if title == "Ring Zero" else Vector2(170,162)
+	page.size = Vector2(910,1160) if title == "Ring Zero" else Vector2(2220,1120)
 	page.theme = ThemeKit.make(float(progress.get("settings",{}).get("ui_scale",1.0)))
+	if title != "Ring Zero":
+		page.add_theme_stylebox_override("panel",ThemeKit.box(Color("101b25ed"),Color("3e5664"),44))
 	shell.add_child(page)
 	var layout := VBoxContainer.new()
+	layout.add_theme_constant_override("separation",24)
 	page.add_child(layout)
 	var heading := Label.new()
-	heading.text = title
-	ThemeKit.heading(heading,36)
+	heading.text = "Prepare an operation" if title == "Ring Zero" else title
+	ThemeKit.heading(heading,48 if title == "Ring Zero" else 72)
 	layout.add_child(heading)
+	var line := HSeparator.new()
+	line.add_theme_stylebox_override("separator",ThemeKit.box(ThemeKit.AMBER,ThemeKit.AMBER,0))
+	line.custom_minimum_size.y = 2
+	layout.add_child(line)
 	feedback = Label.new()
 	feedback.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	feedback.hide()
+	feedback.add_theme_color_override("font_color",ThemeKit.CYAN)
 	layout.add_child(feedback)
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	layout.add_child(scroll)
 	content = VBoxContainer.new()
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(content)
 	footer = HBoxContainer.new()
+	footer.add_theme_constant_override("separation",20)
 	layout.add_child(footer)
+
+func _page_label(value: String, at: Vector2, font_size: int, color: Color = ThemeKit.INK) -> Label:
+	var label := Label.new()
+	label.text = value
+	label.position = at
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ThemeKit.heading(label,font_size)
+	label.add_theme_color_override("font_color",color)
+	page_decoration.add_child(label)
+	return label
+
+func _section(value: String) -> Label:
+	var label := _text(value)
+	ThemeKit.heading(label,40)
+	label.add_theme_color_override("font_color",ThemeKit.AMBER)
+	return label
 
 func _text(value: String) -> Label:
 	var label := Label.new()
@@ -180,7 +244,7 @@ func _text(value: String) -> Label:
 func _action(title: String, callback: Callable, parent: Node = null) -> Button:
 	var button := Button.new()
 	button.text = title
-	button.custom_minimum_size.y = 36
+	button.custom_minimum_size.y = 66
 	(parent if parent != null else content).add_child(button)
 	button.pressed.connect(callback)
 	button.pressed.connect(func(): audio.play("ui"))
@@ -200,26 +264,34 @@ func show_start() -> void:
 	_clear_game()
 	state = "start"
 	_new_page("Ring Zero")
-	_text("CONTAINMENT / Hold the star for 15 minutes. Expand, adapt, survive.")
-	_text("Credits: %d" % int(progress.currency))
-	_text("Service records: %d / %d" % [progress.get("achievements",[]).size(),AchievementHooks.IDS.size()])
-	var body := content
-	var columns := HBoxContainer.new()
-	body.add_child(columns)
-	var left := VBoxContainer.new()
-	left.custom_minimum_size.x = 410
-	left.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	columns.add_child(left)
-	var right := VBoxContainer.new()
-	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	columns.add_child(right)
-	content = left
+	content.add_theme_constant_override("separation",10)
+	_page_label("RING ZERO",Vector2(134,176),184)
+	_page_label("Hold the star.",Vector2(144,392),58,ThemeKit.AMBER)
+	_page_label("Build its cage. Survive the machine tide.",Vector2(148,470),32,ThemeKit.STEEL)
+	_page_label("15 minutes. One star. Everything you can build.",Vector2(144,1180),30)
+	_page_label("Stellar containment",Vector2(142,32),28,ThemeKit.STEEL)
+	_page_label("Service credits  /  %d" % int(progress.currency),Vector2(1920,32),28,ThemeKit.AMBER)
+	if ResourceLoader.exists("res://src/presentation/solar_body.gdshader"):
+		menu_sun = ColorRect.new()
+		menu_sun.position = Vector2(240,300)
+		menu_sun.size = Vector2(1040,1040)
+		menu_sun.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var material := ShaderMaterial.new()
+		material.shader = load("res://src/presentation/solar_body.gdshader")
+		material.set_shader_parameter("palette",1)
+		material.set_shader_parameter("activity",0.7)
+		menu_sun.material = material
+		page_decoration.add_child(menu_sun)
+		page_decoration.move_child(menu_sun,0)
+	_text("Hold containment for 15 minutes.")
 	for category in ["doctrines","loadouts"]:
 		var field := "doctrine" if category == "doctrines" else "loadout"
-		_text("Doctrine" if category == "doctrines" else "Starting loadout")
+		_section("Doctrine" if category == "doctrines" else "Starting loadout")
 		var select := OptionButton.new()
+		select.custom_minimum_size.y = 70
 		content.add_child(select)
 		var details := _text("")
+		details.add_theme_color_override("font_color",ThemeKit.STEEL)
 		var entries: Dictionary = catalogue.get(category,{})
 		for id in entries:
 			var locked: bool = field == "loadout" and id in catalogue.unlocks and id not in progress.unlocks
@@ -234,31 +306,35 @@ func show_start() -> void:
 			choices[field] = id
 			details.text = str(entries[id].get("description",""))
 		)
-	content = right
-	_text("Optional challenges")
+	_section("Optional challenges")
 	for id in catalogue.get("mutators",{}):
 		var entry: Dictionary = catalogue.mutators[id]
 		var toggle := CheckButton.new()
 		toggle.text = str(entry.get("label",id))
 		toggle.tooltip_text = str(entry.get("description",""))
 		toggle.button_pressed = id in choices.mutators
+		toggle.custom_minimum_size.y = 48
 		content.add_child(toggle)
 		toggle.toggled.connect(func(enabled: bool):
 			if enabled and id not in choices.mutators: choices.mutators.append(id)
 			elif not enabled: choices.mutators.erase(id)
 		)
-		_text(str(entry.get("description","")))
-	content = body
+		var description := _text(str(entry.get("description","")))
+		description.add_theme_font_size_override("font_size",24)
+		description.add_theme_color_override("font_color",ThemeKit.STEEL)
 	var start_button := _action("Start run",begin_run.bind(false),footer)
-	start_button.add_theme_stylebox_override("normal",ThemeKit.box(ThemeKit.AMBER,ThemeKit.AMBER,8))
-	start_button.add_theme_color_override("font_color",ThemeKit.HOUSING)
-	_action("Shop",show_shop,footer)
+	start_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	ThemeKit.primary(start_button)
 	_action("Tutorial",begin_run.bind(true),footer)
-	_action("Settings",show_settings.bind("start"),footer)
-	_action("Reference",show_reference.bind("start"),footer)
-	_action("Records",show_records,footer)
-	_action("Credits",show_credits,footer)
-	_action("Quit",func(): get_tree().quit(),footer)
+	var navigation := HBoxContainer.new()
+	navigation.position = Vector2(144,1352)
+	navigation.add_theme_constant_override("separation",24)
+	page_decoration.add_child(navigation)
+	for item in [["Shop",show_shop],["Settings",show_settings.bind("start")],["Reference",show_reference.bind("start")],["Records",show_records],["Credits",show_credits],["Quit",request_quit]]:
+		var button := _action(item[0],item[1],navigation)
+		button.flat = true
+		button.custom_minimum_size = Vector2(164,54)
+		button.add_theme_font_size_override("font_size",28)
 
 func show_records() -> void:
 	_new_page("Service records")
@@ -271,7 +347,7 @@ func show_records() -> void:
 		content.add_child(row)
 		var icon := TextureRect.new()
 		icon.texture = load("res://assets/ui/achievements/"+id.to_lower()+".svg")
-		icon.custom_minimum_size = Vector2(48,48)
+		icon.custom_minimum_size = Vector2(96,96)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.modulate = Color.WHITE if earned else Color(0.4,0.4,0.4)
@@ -286,7 +362,7 @@ func show_records() -> void:
 func show_credits() -> void:
 	_new_page("Credits")
 	state = "credits"
-	_text("RING ZERO\nCreated by Kevin with AI-assisted design and development.\nRelease candidate 1.0.0-rc1")
+	_text("RING ZERO\nCreated by Kevin with AI-assisted design and development.\nRelease candidate " + str(ProjectSettings.get_setting("application/config/version","")))
 	_text("Built with Godot Engine, distributed under the MIT license. Godot copyright and third-party notices accompany the build in licenses/godot.")
 	_text("Typography: Barlow and Barlow Semi Condensed. Copyright The Barlow Project Authors. SIL Open Font License 1.1; full license in licenses/barlow.")
 	_text("World hardware: generated source art from the RING ZERO asset pipeline. Fortress geometry, lighting shaders, interface symbols, service-record emblems and sound synthesis are authored for this project. No third-party music recordings are used.")
@@ -320,6 +396,7 @@ func begin_run(practice: bool = false) -> void:
 	_trace_result(recorder.start(trace_path,recorder_script.make_metadata(run_id,base.profile.snapshot(),prepared.profile.snapshot(),choices,progress,practice)))
 	state = "tutorial" if practice else "playing"
 	page.hide()
+	page_decoration.hide()
 	menu_backdrop.hide()
 	live = load("res://scenes/release_view.tscn").instantiate()
 	live.prepared_run = prepared
@@ -365,12 +442,12 @@ func _offer_lock_recovery(kind: String) -> void:
 	if lock_notice != null: lock_notice.queue_free()
 	if lock_shield != null: lock_shield.queue_free()
 	lock_shield = ColorRect.new()
-	lock_shield.size = Vector2(1440,810)
+	lock_shield.size = DESIGN_SIZE
 	lock_shield.color = Color(0,0,0,0.45)
 	shell.add_child(lock_shield)
 	lock_notice = PanelContainer.new()
-	lock_notice.position = Vector2(380,260)
-	lock_notice.size = Vector2(680,220)
+	lock_notice.position = Vector2(680,440)
+	lock_notice.size = Vector2(1200,480)
 	lock_notice.theme = shell.theme
 	shell.add_child(lock_notice)
 	var column := VBoxContainer.new()
@@ -398,6 +475,10 @@ func _close_lock_notice() -> void:
 	lock_shield = null
 
 func _process(_delta: float) -> void:
+	if feedback != null and is_instance_valid(feedback): feedback.visible = not feedback.text.is_empty()
+	if menu_sun != null and is_instance_valid(menu_sun) and menu_backdrop.visible:
+		if not progress.get("settings",{}).get("reduced_motion",false): menu_phase += _delta
+		menu_sun.material.set_shader_parameter("phase",menu_phase)
 	if tutorial_card != null:
 		tutorial_card.visible = state == "tutorial" and live != null and not live.menu_open and lock_notice == null
 	if live == null:
@@ -422,19 +503,48 @@ func finish_run(outcome: String) -> void:
 	if outcome == "victory": _text("The star is secure. Your fortress held against the machine tide.")
 	if not recorder_error.is_empty(): _text(recorder_error)
 	if not live.last_error.is_empty(): _text(live.last_error)
-	_text("Survived %.1f seconds\nKills: %d\nHighest ring: %d\nRelays rebuilt: %d" % [summary.elapsed_seconds,summary.kills,summary.highest_ring,summary.relay_rebuilds])
+	var statistics := HBoxContainer.new()
+	statistics.add_theme_constant_override("separation",64)
+	content.add_child(statistics)
+	for item in [["Time held","%02d:%02d" % [int(summary.elapsed_seconds)/60,int(summary.elapsed_seconds)%60]],["Machines destroyed",str(summary.kills)],["Highest ring",str(summary.highest_ring)],["Relays restored",str(summary.relay_rebuilds)]]:
+		var stat := VBoxContainer.new()
+		stat.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		statistics.add_child(stat)
+		var number := Label.new()
+		number.text = item[1]
+		ThemeKit.heading(number,92)
+		number.add_theme_color_override("font_color",ThemeKit.AMBER)
+		stat.add_child(number)
+		var caption := Label.new()
+		caption.text = item[0]
+		caption.add_theme_color_override("font_color",ThemeKit.STEEL)
+		stat.add_child(caption)
 	if not reward.ok:
 		feedback.text = _errors(reward)
 		return
 	settlement = {"summary":summary,"reward":reward}
 	result_reward = _text("Pending reward: %d credits" % reward.amount)
+	ThemeKit.heading(result_reward,44)
 	var reward_labels := {"survival":"Survival credits","kills":"Kill credits","rings":"Expansion credits","survive_300":"Challenge: survive five minutes","kills_250":"Challenge: destroy 250 machines","rebuild_relay":"Challenge: rebuild a Relay","subtotal":"Base reward","multiplier":"Run reward multiplier"}
+	var reward_grid := GridContainer.new()
+	reward_grid.columns = 4
+	reward_grid.add_theme_constant_override("h_separation",56)
+	content.add_child(reward_grid)
 	for item in reward.breakdown:
-		if reward_labels.has(item): _text("%s: %s" % [reward_labels[item],str(reward.breakdown[item])])
+		if reward_labels.has(item):
+			var caption := Label.new()
+			caption.text = reward_labels[item]
+			caption.add_theme_color_override("font_color",ThemeKit.STEEL)
+			reward_grid.add_child(caption)
+			var amount := Label.new()
+			amount.text = "%.2fx" % float(reward.breakdown[item]) if item == "multiplier" else str(int(reward.breakdown[item]))
+			amount.add_theme_color_override("font_color",ThemeKit.AMBER)
+			reward_grid.add_child(amount)
 	if not reward.breakdown.get("eligible",false): _text("No campaign rewards for practice, abandonment or interrupted runs.")
 	result_save = _action("Save result",save_result,footer)
 	result_retry = _action("Retry run",begin_run.bind(false),footer)
 	result_back = _action("Return to start",show_start,footer)
+	ThemeKit.primary(result_retry)
 	result_retry.disabled = true
 	result_back.disabled = true
 	save_result()
@@ -451,6 +561,7 @@ func save_result() -> void:
 		feedback.text = "Result saved. Credits: %d" % progress.currency
 		result_reward.text = "Earned reward: %d credits (saved)" % settlement.reward.amount
 		result_save.disabled = true
+		result_save.hide()
 		result_retry.disabled = false
 		result_back.disabled = false
 
@@ -504,30 +615,53 @@ func show_reference(return_to: String = "start") -> void:
 	settings_return = return_to
 	_new_page("Field reference")
 	_text(reference_text())
-	_text("Controls: 1-5 weapons; Q whole ring purchase; W Wall; E Armor; R Repair Node; T Repair Wedge; Y Reclaim; G Rebuild Relay. A/S/D terrain, F direction, Z/X solar. Build tools repeat on distinct clicks; solar casts once. Right/Esc cancel. Tab catalogue. Middle drag pan, wheel zoom, minimap focus.")
+	_text("Controls: 1-5 weapons; Q whole ring purchase; H Wall; E Armor; R Repair Node; T Repair Wedge; Y Reclaim; G Rebuild Relay. C/V/B terrain, F direction, Z/X solar. Build tools repeat on distinct clicks; solar casts once. Right/Esc cancel. Tab catalogue. WASD or middle drag pan, wheel zoom, minimap focus.")
 	_action("Back",close_settings,footer)
 	state = "reference"
 
 func show_settings(return_to: String = "start") -> void:
 	settings_return = return_to
 	_new_page("Settings")
+	var body := content
+	var columns := HBoxContainer.new()
+	columns.add_theme_constant_override("separation",90)
+	content.add_child(columns)
+	var video := VBoxContainer.new()
+	video.custom_minimum_size.x = 910
+	video.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	columns.add_child(video)
+	content = video
+	_section("Display & comfort")
+	_text("Rendered at 2560 x 1440. The image fits your display while preserving the fortress proportions.")
 	for key in ["fullscreen","reduced_motion","effects"]:
 		var toggle := CheckButton.new()
 		toggle.text = {"fullscreen":"Fullscreen","reduced_motion":"Reduced motion","effects":"Weapon feedback"}[key]
 		toggle.button_pressed = progress.settings[key]
+		toggle.custom_minimum_size.y = 66
 		content.add_child(toggle)
 		toggle.toggled.connect(func(value: bool): _change_setting(key,value))
 	_text("Interface scale")
 	var scale_choice := OptionButton.new()
+	scale_choice.custom_minimum_size.y = 70
 	content.add_child(scale_choice)
 	for value in [1.0,1.15,1.3]:
 		scale_choice.add_item("%d%%" % roundi(value*100))
 		if is_equal_approx(progress.settings.ui_scale,value): scale_choice.select(scale_choice.item_count-1)
 	scale_choice.item_selected.connect(func(index: int): _change_setting("ui_scale",[1.0,1.15,1.3][index]))
-	_text("Fonts: Barlow / Barlow Semi Condensed. Copyright The Barlow Project Authors. SIL Open Font License 1.1; bundled license in assets/ui/fonts/barlow/OFL.txt.")
+	var comfort := _text("Reduced motion disables camera shake and slows the presentation. Weapon feedback controls visual combat effects.")
+	comfort.add_theme_color_override("font_color",ThemeKit.STEEL)
+	var sound := VBoxContainer.new()
+	sound.custom_minimum_size.x = 910
+	sound.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	columns.add_child(sound)
+	content = sound
+	_section("Sound")
+	_text("Set the balance of machinery, weapons and the ambient stellar drone.")
 	for bus in ["master","music","effects"]:
-		_text(bus.capitalize() + " volume")
+		var label := _text(bus.capitalize() + " volume")
+		label.add_theme_color_override("font_color",ThemeKit.AMBER)
 		var slider := HSlider.new()
+		slider.custom_minimum_size.y = 54
 		slider.min_value = 0
 		slider.max_value = 1
 		slider.step = 0.05
@@ -541,6 +675,7 @@ func show_settings(return_to: String = "start") -> void:
 			audio.apply_levels()
 			if PCSettings.save_settings() != OK: feedback.text = "Could not save audio settings."
 		)
+	content = body
 	_action("Controls",show_controls,footer)
 	_action("Back",close_settings,footer)
 	state = "settings"
@@ -548,27 +683,37 @@ func show_settings(return_to: String = "start") -> void:
 func show_controls() -> void:
 	_new_page("Controls")
 	state = "controls"
-	_text("Select a binding, then press a key. Duplicate bindings swap. Mouse: left place, right cancel, middle drag pan, wheel zoom. Gamepad: left stick pointer, A click, B cancel/back, Start pause, right stick pan, triggers zoom, shoulders cycle tools, X/Y solar abilities, D-pad scroll menus. Remapping changes keyboard shortcuts; this list is authoritative.")
-	for action in PCSettings.DEFAULT_KEYS:
-		_action("%s: %s" % [action, PCSettings.label(action)],func():
-			rebinding = action
-			rebinding_group = "keyboard"
-			feedback.text = "Press the new key for " + action
-		)
-	_text("Mouse (battlefield only; menus retain the primary button)")
-	for action in PCSettings.DEFAULT_MOUSE:
-		_action("%s: Mouse %d" % [action,PCSettings.mouse[action]],func():
-			rebinding = action
-			rebinding_group = "mouse"
-			feedback.text = "Press the new mouse button for " + action
-		)
-	_text("Controller buttons (standard south=0, east=1, west=2, north=3)")
-	for action in PCSettings.DEFAULT_PAD:
-		_action("%s: Pad %d" % [action,PCSettings.pad[action]],func():
-			rebinding = action
-			rebinding_group = "pad"
-			feedback.text = "Press the new controller button for " + action
-		)
+	_text("Select a binding, then press its new key or button. Assignments already in use swap automatically.")
+	var controls_tabs := TabContainer.new()
+	controls_tabs.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	content.add_child(controls_tabs)
+	for group in ["keyboard","mouse","pad"]:
+		var column := VBoxContainer.new()
+		column.name = {"keyboard":"Keyboard","mouse":"Mouse","pad":"Controller"}[group]
+		controls_tabs.add_child(column)
+		var guide := Label.new()
+		guide.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		guide.text = {"keyboard":"Default controls: WASD moves the map. Number keys choose weapons; H builds walls; C, V and B choose terrain. Hold Alt for the tactical view.","mouse":"Battlefield buttons can be remapped. Menus always use the primary button. Drag with Pan to move the map.","pad":"Left stick moves the pointer. Right stick moves the map. Triggers zoom. D-pad scrolls menus. Standard button positions: south 0, east 1, west 2, north 3."}[group]
+		column.add_child(guide)
+		var grid := GridContainer.new()
+		grid.columns = 3
+		grid.add_theme_constant_override("v_separation",8)
+		grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		column.add_child(grid)
+		var entries: Dictionary = PCSettings.DEFAULT_KEYS if group == "keyboard" else (PCSettings.DEFAULT_MOUSE if group == "mouse" else PCSettings.DEFAULT_PAD)
+		for action in entries:
+			var caption: String = PCSettings.label(action) if group == "keyboard" else ("Mouse %d" % PCSettings.mouse[action] if group == "mouse" else "Pad %d" % PCSettings.pad[action])
+			var button := _action("%s: %s" % [action,caption],func():
+				rebinding = action
+				rebinding_group = group
+				feedback.text = "Press the new " + ("key" if group == "keyboard" else "button") + " for " + action
+			,grid)
+			button.custom_minimum_size = Vector2(650,56)
+			button.add_theme_stylebox_override("normal",ThemeKit.box(ThemeKit.RECESS,Color("405766"),10))
+			button.add_theme_stylebox_override("hover",ThemeKit.box(Color("263947"),ThemeKit.AMBER,10))
+			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			button.add_theme_font_size_override("font_size",roundi(26*float(progress.settings.ui_scale)))
 	_action("Reset",func():
 		var previous := PCSettings.bindings.duplicate()
 		var previous_pad := PCSettings.pad.duplicate()
@@ -608,6 +753,7 @@ func _apply_live_settings() -> void:
 func close_settings() -> void:
 	if settings_return == "game" and live != null:
 		page.hide()
+		page_decoration.hide()
 		menu_backdrop.hide()
 		state = "tutorial" if current_run.get("practice",false) else "playing"
 	else: show_start()
@@ -646,13 +792,13 @@ const TUTORIAL_STEPS := [
 	"Build a Flak with [1], then click an empty owned slot. This practice uses 10000 training energy and quiet pressure; campaign funds are unchanged.",
 	"Destroy the approaching practice machine. Weapon kills grant energy; solar ability kills do not.",
 	"Purchase the next whole ring with [Q]. The Relay is automatic and uses no building slot.",
-	"Build one Wall with [W] on ring 2. Walls redirect ordinary machines toward an opening; do not seal the full perimeter.",
+	"Build one Wall with [H] on ring 2. Walls redirect ordinary machines toward an opening; do not seal the full perimeter.",
 	"Observe seven broken wedges collapsing ring 1. This step opens a training breach in ring 2, damages six inner wedges and sends an attacker to the seventh.",
 	"Reclaim collapsed ring 1: [Y], then click that ring. The outer ring survives.",
 	"Repair the damaged ring 1 wedge 3: [T], then click it. The training fixture sets its HP to 40.",
 	"Relay brownout: select ring 1, then [G] and click it to rebuild. This fixture explicitly destroys its Relay. An inward interruption reduces outer power too.",
 	"Use EMP Burst [X], aim at the practice machine and click. Casting is one-shot and starts a cooldown without awarding energy.",
-	"Click ring 2 in the minimap to focus it. Middle drag pans and the wheel zooms; hidden UI leaves the world clickable.",
+	"Click ring 2 in the minimap to focus it. WASD or middle drag pans and the wheel zooms; hidden UI leaves the world clickable.",
 	"Enemy reference: Standard follows openings; Foundry is durable; Transfer hops one ring; Sapper camps the Relay; Breacher seeks walls; Assembler ignores walls and grows; Tunneler warns at its destination. Kill Sappers before rebuilding. Use terrain, focused fire and solar tools together."
 ]
 
@@ -671,8 +817,8 @@ func _start_tutorial() -> void:
 	live.simulation.state.energy = 10000
 	live.sync_simulation()
 	tutorial_card = PanelContainer.new()
-	tutorial_card.position = Vector2(338,596)
-	tutorial_card.size = Vector2(772,186)
+	tutorial_card.position = Vector2(700,1070)
+	tutorial_card.size = Vector2(1160,320)
 	tutorial_card.theme = shell.theme
 	shell.add_child(tutorial_card)
 	var column := VBoxContainer.new()

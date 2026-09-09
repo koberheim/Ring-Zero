@@ -97,7 +97,7 @@ func _run() -> void:
 	await process_frame
 	check(view.setup_ok and view.simulation != null and view.last_error.is_empty(), "Default live startup")
 	check(view.state.energy == 200 and view.state.rings.keys() == [1], "Default state matches build startup")
-	check(view.combat_label.text.contains("Core HP") and view.combat_label.text.contains("Active machines: 0"), "Live status visible")
+	check(view.combat_label.text.contains("Core integrity") and view.combat_label.text.contains("Machines  0"), "Live status visible")
 	# D-033 testing tuning added a 10-second pressure.spawn_delay_seconds
 	# preliminary-build window (2026-09-07); the default live profile's first
 	# arrival isn't due until 10.5s in, so this needs to run well past that.
