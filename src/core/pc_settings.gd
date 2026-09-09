@@ -1,7 +1,11 @@
 class_name PCSettings
 extends RefCounted
 ## Machine-local settings are deliberately separate from cloud-synced progress.
-const DEFAULT_KEYS := {"Flak":KEY_1,"Mass Driver":KEY_2,"EMP Node":KEY_3,"Lance Emitter":KEY_4,"Point Defense":KEY_5,"Expand":KEY_Q,"Wall":KEY_W,"Armor":KEY_E,"Repair Node":KEY_R,"Repair":KEY_T,"Reclaim":KEY_Y,"Relay":KEY_G,"Debris":KEY_A,"Tractor":KEY_S,"Occlusion":KEY_D,"Flare":KEY_Z,"EMP Burst":KEY_X,"Reverse tractor":KEY_F,"Catalogue":KEY_TAB,"Reference":KEY_F1,"Pause / cancel":KEY_ESCAPE,"Tactical overlay":KEY_ALT}
+## Logical keys are a stable command protocol used by the existing world handlers.
+## Physical defaults can change without changing that command protocol.
+const LOGICAL_KEYS := {"Flak":KEY_1,"Mass Driver":KEY_2,"EMP Node":KEY_3,"Lance Emitter":KEY_4,"Point Defense":KEY_5,"Expand":KEY_Q,"Wall":KEY_W,"Armor":KEY_E,"Repair Node":KEY_R,"Repair":KEY_T,"Reclaim":KEY_Y,"Relay":KEY_G,"Debris":KEY_A,"Tractor":KEY_S,"Occlusion":KEY_D,"Flare":KEY_Z,"EMP Burst":KEY_X,"Reverse tractor":KEY_F,"Catalogue":KEY_TAB,"Reference":KEY_F1,"Pause / cancel":KEY_ESCAPE,"Tactical overlay":KEY_ALT}
+const DEFAULT_KEYS := {"Map up":KEY_W,"Map left":KEY_A,"Map down":KEY_S,"Map right":KEY_D,"Flak":KEY_1,"Mass Driver":KEY_2,"EMP Node":KEY_3,"Lance Emitter":KEY_4,"Point Defense":KEY_5,"Expand":KEY_Q,"Wall":KEY_H,"Armor":KEY_E,"Repair Node":KEY_R,"Repair":KEY_T,"Reclaim":KEY_Y,"Relay":KEY_G,"Debris":KEY_C,"Tractor":KEY_V,"Occlusion":KEY_B,"Flare":KEY_Z,"EMP Burst":KEY_X,"Reverse tractor":KEY_F,"Catalogue":KEY_TAB,"Reference":KEY_F1,"Pause / cancel":KEY_ESCAPE,"Tactical overlay":KEY_ALT}
+const INPUT_SCHEMA := 2
 static var bindings: Dictionary = DEFAULT_KEYS.duplicate()
 const DEFAULT_PAD := {"Confirm":JOY_BUTTON_A,"Back":JOY_BUTTON_B,"EMP":JOY_BUTTON_X,"Flare":JOY_BUTTON_Y,"Pause":JOY_BUTTON_START,"Previous tool":JOY_BUTTON_LEFT_SHOULDER,"Next tool":JOY_BUTTON_RIGHT_SHOULDER,"Scroll up":JOY_BUTTON_DPAD_UP,"Scroll down":JOY_BUTTON_DPAD_DOWN,"Catalogue":JOY_BUTTON_BACK}
 const DEFAULT_MOUSE := {"Place / select":MOUSE_BUTTON_LEFT,"Cancel tool":MOUSE_BUTTON_RIGHT,"Pan":MOUSE_BUTTON_MIDDLE,"Zoom in":MOUSE_BUTTON_WHEEL_UP,"Zoom out":MOUSE_BUTTON_WHEEL_DOWN}
@@ -25,16 +29,10 @@ static func load_settings(location: String) -> void:
 	pad = _validated_map(config.get_value("input","pad",pad),DEFAULT_PAD,0,127)
 	mouse = _validated_map(config.get_value("input","mouse",mouse),DEFAULT_MOUSE,1,9)
 	var candidate: Variant = config.get_value("input", "bindings", bindings)
-	if candidate is Dictionary and candidate.size() == DEFAULT_KEYS.size():
-		var used := {}
-		var valid := true
-		for action in DEFAULT_KEYS:
-			var key: Variant = candidate.get(action)
-			if not key is int or key <= 0 or key > 0x01ffffff or used.has(key):
-				valid = false
-				break
-			used[key] = true
-		if valid: bindings = candidate.duplicate()
+	if config.get_value("input", "schema", 1) == 1 and _valid_keyboard_map(candidate, LOGICAL_KEYS):
+		bindings = _migrate_legacy_bindings(candidate)
+	elif _valid_keyboard_map(candidate, DEFAULT_KEYS):
+		bindings = candidate.duplicate()
 	for bus in ["master", "music", "effects"]:
 		var value: Variant = config.get_value("audio", bus, 0.5)
 		if (value is float or value is int) and is_finite(value) and value >= 0 and value <= 1:
@@ -45,6 +43,7 @@ static func load_settings(location: String) -> void:
 
 static func save_settings() -> Error:
 	var config := ConfigFile.new()
+	config.set_value("input", "schema", INPUT_SCHEMA)
 	config.set_value("input", "bindings", bindings)
 	config.set_value("input", "pad", pad)
 	config.set_value("input", "mouse", mouse)
@@ -66,9 +65,9 @@ static func rebind(action: String, key: int) -> Error:
 
 static func logical_key(physical: int) -> int:
 	for action in bindings:
-		if bindings[action] == physical: return DEFAULT_KEYS[action]
+		if bindings[action] == physical: return LOGICAL_KEYS.get(action, 0)
 	# An unbound old default must not keep activating its former action.
-	return 0 if physical in DEFAULT_KEYS.values() else physical
+	return 0 if physical in DEFAULT_KEYS.values() or physical in LOGICAL_KEYS.values() else physical
 
 static func label(action: String) -> String:
 	return OS.get_keycode_string(bindings.get(action, 0))
@@ -112,3 +111,34 @@ static func world_event(event: InputEvent) -> InputEvent:
 			return result
 	result.button_index = MOUSE_BUTTON_NONE
 	return result
+
+static func _valid_keyboard_map(candidate: Variant, defaults: Dictionary) -> bool:
+	if not candidate is Dictionary or candidate.size() != defaults.size(): return false
+	var used := {}
+	for action in defaults:
+		var key: Variant = candidate.get(action)
+		if not key is int or key <= 0 or key > 0x01ffffff or used.has(key): return false
+		if key in [KEY_CTRL, KEY_META, KEY_SHIFT] or (key == KEY_ALT and action != "Tactical overlay"): return false
+		used[key] = true
+	return true
+
+static func _migrate_legacy_bindings(candidate: Dictionary) -> Dictionary:
+	# Reserve WASD for navigation, retain custom non-conflicting bindings, then
+	# relocate the four former WASD tools and any conflicts deterministically.
+	var migrated := {"Map up":KEY_W,"Map left":KEY_A,"Map down":KEY_S,"Map right":KEY_D}
+	var pending: Array[String] = []
+	for action in LOGICAL_KEYS:
+		var key: int = candidate[action]
+		if key != LOGICAL_KEYS[action] and key not in migrated.values():
+			migrated[action] = key
+		else:
+			pending.append(action)
+	for action in pending:
+		var preferred: int = DEFAULT_KEYS[action]
+		if preferred in migrated.values():
+			for fallback in [KEY_6, KEY_7, KEY_8, KEY_9, KEY_0, KEY_U, KEY_I, KEY_O, KEY_P, KEY_J, KEY_K, KEY_L, KEY_N, KEY_M, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6, KEY_F7, KEY_F8, KEY_F9, KEY_F10, KEY_F11, KEY_F12]:
+				if fallback not in migrated.values():
+					preferred = fallback
+					break
+		migrated[action] = preferred
+	return migrated

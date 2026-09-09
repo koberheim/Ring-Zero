@@ -1,7 +1,7 @@
 extends Node
 ## Virtual pointer shares the real GUI/world event path, including letterboxing.
 var host: Control
-var point := Vector2(720,405)
+var point := Vector2.ZERO
 var axes := Vector4.ZERO
 var pointer: Label
 var device := -1
@@ -13,6 +13,7 @@ const TOOLS := ["Flak","Mass Driver","EMP Node","Lance Emitter","Point Defense",
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	point = Vector2(host.stage.size) * 0.5
 	pointer = Label.new()
 	pointer.text = "+"
 	pointer.add_theme_font_size_override("font_size",28)
@@ -21,13 +22,17 @@ func _ready() -> void:
 	pointer.z_index = 200
 	host.shell.add_child(pointer)
 	pointer.hide()
+	get_window().focus_exited.connect(_reset_motion)
 	Input.joy_connection_changed.connect(func(id: int, connected: bool):
 		if id == device and not connected:
-			axes = Vector4.ZERO
-			zoom_axes = Vector2.ZERO
-			scroll_direction = 0
-			pointer.hide()
+			_reset_motion()
 	)
+
+func _reset_motion() -> void:
+	axes = Vector4.ZERO
+	zoom_axes = Vector2.ZERO
+	scroll_direction = 0
+	pointer.hide()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and event.device != -8:
@@ -78,18 +83,19 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if not pointer.visible: return
 	if not zoom_axes.is_zero_approx(): _zoom(pow(2.0,(zoom_axes.y-zoom_axes.x)*minf(delta,0.05)))
-	var movement := Vector2(axes.x,axes.y).limit_length()*650.0*minf(delta,0.05)
-	point = (point+movement).clamp(Vector2(2,2),Vector2(1438,808))
+	var viewport_scale: float = float(host.stage.size.x) / 1440.0
+	var movement := Vector2(axes.x,axes.y).limit_length()*650.0*viewport_scale*minf(delta,0.05)
+	point = (point+movement).clamp(Vector2(2,2),Vector2(host.stage.size)-Vector2(2,2))
 	pointer.position = point-Vector2(8,18)
 	if movement.length_squared() > 0:
 		var event := InputEventMouseMotion.new()
 		event.device = -8
 		event.position = host.frame.position+point*host.frame.scale
 		event.global_position = event.position
-		event.relative = movement
+		event.relative = movement * host.frame.scale
 		get_viewport().push_input(event)
 	if host.live != null and host.state in ["playing","tutorial"] and not host.live.menu_open and not get_tree().paused:
-		host.live.camera.position += Vector2(axes.z,axes.w)*450.0*minf(delta,0.05)/host.live.camera.zoom
+		host.live.camera.position += Vector2(axes.z,axes.w).limit_length()*450.0*viewport_scale*minf(delta,0.05)/host.live.camera.zoom
 		host.live.camera.force_update_scroll()
 		host.live.queue_redraw()
 	scroll_clock -= delta
@@ -117,6 +123,6 @@ func _key(action: String) -> void:
 	get_viewport().push_input(event)
 
 func _zoom(factor: float) -> void:
-	if host.live != null and host.state in ["playing","tutorial"] and not host.live.menu_open:
+	if host.live != null and host.state in ["playing","tutorial"] and not host.live.menu_open and not get_tree().paused:
 		host.live._set_zoom(clampf(host.live.camera.zoom.x*factor,0.05,4.0))
 		host.live.queue_redraw()

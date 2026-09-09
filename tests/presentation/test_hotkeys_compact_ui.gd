@@ -18,7 +18,7 @@ func reset_fixture() -> void:
 	view.camera.force_update_scroll()
 
 func purchase_checks() -> void:
-	for entry in [[KEY_1,&"flak"],[KEY_2,&"mass_driver"],[KEY_3,&"emp_node"],[KEY_4,&"lance_emitter"],[KEY_5,&"point_defense"],[KEY_W,&"wall"],[KEY_E,&"armor"],[KEY_R,&"repair_node"],[KEY_A,&"debris_field"],[KEY_S,&"tractor_lane"],[KEY_D,&"occlusion_screen"]]:
+	for entry in [[KEY_1,&"flak"],[KEY_2,&"mass_driver"],[KEY_3,&"emp_node"],[KEY_4,&"lance_emitter"],[KEY_5,&"point_defense"],[KEY_H,&"wall"],[KEY_E,&"armor"],[KEY_R,&"repair_node"],[KEY_C,&"debris_field"],[KEY_V,&"tractor_lane"],[KEY_B,&"occlusion_screen"]]:
 		reset_fixture()
 		var before_state: Dictionary = view.state.duplicate(true)
 		key(entry[0])
@@ -75,7 +75,7 @@ func purchase_checks() -> void:
 		slot_click(ring,3,0)
 		check(not view.state.rings[ring].get("collapsed",false) and view.build_mode == &"reclaim", "Y persists across reclaim clicks")
 	reset_fixture()
-	key(KEY_S)
+	key(KEY_V)
 	var direction: int = view.tractor_direction
 	key(KEY_F)
 	slot_click(1,3,0)
@@ -86,7 +86,7 @@ func purchase_checks() -> void:
 	for wedge in range(1,12):
 		check(view.simulation.place_terrain(2,wedge,1 if wedge == 6 else 0,&"debris_field").ok, "Unsafe fixture frontier")
 	view.sync_simulation()
-	key(KEY_A)
+	key(KEY_C)
 	var before_state: Dictionary = view.state.duplicate(true)
 	slot_click(2,12,0)
 	check(view.state == before_state and view.build_mode == &"debris_field" and view.feedback_label.text.contains("seal"), "Hotkey unsafe terrain rejected atomically")
@@ -114,7 +114,7 @@ func input_checks() -> void:
 	key(KEY_1)
 	check(view.ability_mode == &"emp_burst", "External pause protects ability from selection key")
 	paused = false
-	key(KEY_A)
+	key(KEY_C)
 	check(view.tabs.current_tab == 2 and view.build_mode == &"debris_field" and view.ability_mode == &"", "Category switch leaves chosen tool active")
 	key(KEY_Z)
 	check(view.ability_mode == &"focused_flare" and view.build_mode == &"", "Z selects Flare")
@@ -202,7 +202,7 @@ func layout_checks(is_art: bool) -> void:
 		var old_panel: Rect2 = view.ui_panel.get_global_rect()
 		key(KEY_TAB)
 		check(not view.ui_panel.visible and view.build_mode == &"flak" and view.solar_panel.visible, "Tab hides entire blocking catalogue and retains tool/solar")
-		key(KEY_D)
+		key(KEY_B)
 		check(not view.ui_panel.visible and view.build_mode == &"occlusion_screen", "Hidden hotkey category stays hidden")
 		key(KEY_ESCAPE)
 		view.selected_cell = Vector2i(-9,-9)
