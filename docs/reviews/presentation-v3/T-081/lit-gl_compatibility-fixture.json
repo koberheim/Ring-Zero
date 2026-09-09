@@ -1,0 +1,99 @@
+{
+	"actors": 120,
+	"backend": "gl_compatibility",
+	"camera": "(0, 0)",
+	"glow_ui_halo_difference": 0.0,
+	"glow_world_halo_sum": 28.9725499339402,
+	"light_adapter": true,
+	"lighting": {
+		"albedo_redraws": 3,
+		"color": "(1.0, 0.69, 0.34, 1.0)",
+		"enabled": true,
+		"height": 170.0,
+		"material_redraws": 3,
+		"palette": 1,
+		"radius": 420.0,
+		"world_layer_max": 0
+	},
+	"normal_trials": [
+		{
+			"alpha": 1.0,
+			"bearing": 1,
+			"inward_dot": 0.992869853973389,
+			"normal": "(-0.07451, 0.396078)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 2,
+			"inward_dot": 0.991513609886169,
+			"normal": "(-0.247059, 0.294118)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 3,
+			"inward_dot": 0.988446354866028,
+			"normal": "(-0.333333, 0.129412)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 4,
+			"inward_dot": 0.994658172130585,
+			"normal": "(-0.32549, -0.066667)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 5,
+			"inward_dot": 0.999979972839355,
+			"normal": "(-0.223529, -0.247059)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 6,
+			"inward_dot": 0.997796237468719,
+			"normal": "(-0.05098, -0.333333)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 7,
+			"inward_dot": 0.993519246578217,
+			"normal": "(0.145098, -0.32549)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 8,
+			"inward_dot": 0.991747856140137,
+			"normal": "(0.317647, -0.223529)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 9,
+			"inward_dot": 0.997499704360962,
+			"normal": "(0.396078, -0.058824)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 10,
+			"inward_dot": 0.999408721923828,
+			"normal": "(0.388235, 0.137255)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 11,
+			"inward_dot": 0.999986529350281,
+			"normal": "(0.294118, 0.317647)"
+		},
+		{
+			"alpha": 1.0,
+			"bearing": 12,
+			"inward_dot": 0.995781183242798,
+			"normal": "(0.129412, 0.403922)"
+		}
+	],
+	"phase": 0,
+	"rings": 6,
+	"root": "2560x1440",
+	"seed": 81081,
+	"simulation_seconds": 0.0,
+	"ui_scale": 1.0,
+	"zoom": 0.85
+}

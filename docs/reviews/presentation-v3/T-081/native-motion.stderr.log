@@ -1,0 +1,8 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+WARNING: T-085 source admission pending: development audio placeholders are active.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/game_audio.gd:27)
+       [1] _ready (res://src/presentation/application.gd:56)
+       [2] _run (res://tests/presentation/capture_t081_motion.gd:10)

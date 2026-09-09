@@ -1,0 +1,27 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.341 - Forward Mobile - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4080
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "pitch" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://src/audio/audio_director.gd:118)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://src/presentation/game_audio.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+ERROR: Failed to load script "res://src/presentation/game_audio.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _ready (res://src/presentation/game_audio.gd:19)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/game_audio.gd:19)
+       [1] _ready (res://src/presentation/application.gd:56)
+       [2] _run (res://tests/performance/measure_release.gd:8)
+{"actors":128,"effects":true,"frames":180,"max_frame_ms":19.539,"max_simulation_callback_ms":7.892,"median_draw_ms":1.375,"median_frame_ms":16.674,"median_quote_ms":0.008,"median_sync_ms":2.497,"p95_frame_ms":17.628,"rings":12,"simulation_wall_ratio":1.00421860585163,"viewport":"(2560, 1440)"}

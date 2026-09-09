@@ -1,0 +1,74 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: Inward head bevel agrees with core at bearing 1
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 2
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 3
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 4
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 5
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 6
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 7
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 8
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 9
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 10
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 11
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)
+ERROR: Inward head bevel agrees with core at bearing 12
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/presentation/test_application.gd:14)
+       [1] _run (res://tests/presentation/capture_t081_lighting.gd:81)
+       [2] settle (res://tests/presentation/capture_t081_lighting.gd:6)

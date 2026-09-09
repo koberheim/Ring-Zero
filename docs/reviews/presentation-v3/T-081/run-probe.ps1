@@ -3,7 +3,8 @@ param(
     [Parameter(Mandatory=$true)][string]$Label,
     [string]$Script = '',
     [switch]$Import,
-    [string]$Backend = 'gl_compatibility'
+    [string]$Backend = '',
+    [string]$EvidenceDirectory = ''
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -16,7 +17,11 @@ New-Item -ItemType Directory -Path $env:APPDATA,$env:LOCALAPPDATA -Force | Out-N
 if (@(Get-Process | Where-Object { $_.ProcessName -match '^Godot' }).Count) { throw 'Competing Godot process; refusing run.' }
 $arguments = @('--path',$project,'--log-file',(Join-Path $evidence ($Label+'.engine.log')))
 if ($Import) { $arguments += @('--headless','--editor','--import') }
-else { $arguments += @('--rendering-method',$Backend,'--script',$Script) }
+else {
+    if ($Backend) { $arguments += @('--rendering-method',$Backend) }
+    $arguments += @('--script',$Script)
+    if ($EvidenceDirectory) { $arguments += @('--',('--evidence-dir='+$EvidenceDirectory)) }
+}
 $line = ($arguments | ForEach-Object { if ($_.Contains('"')) { throw 'Unsupported quote in argument' }; '"'+($_ -replace '(\\+)$','$1$1')+'"' }) -join ' '
 $out = Join-Path $evidence ($Label+'.stdout.log')
 $err = Join-Path $evidence ($Label+'.stderr.log')
@@ -38,8 +43,12 @@ if (-not $Import) {
     $sampleText = @(Get-Content -LiteralPath $out | Where-Object { $_.StartsWith('{') -and $_.Contains('median_frame_ms') })
     if ($sampleText.Count -eq 1) {
         $sample = $sampleText[0] | ConvertFrom-Json
-        $breached = $sample.median_frame_ms -gt 18.3348 -or $sample.p95_frame_ms -gt 18.4360 -or $sample.max_frame_ms -gt 20.3379 -or $sample.simulation_wall_ratio -lt 0.99
-        if ($breached) { throw 'PERFORMANCE GATE BREACHED: STOP and report; no automatic retry.' }
-        Write-Output 'Matched historical envelope PASS for this individual sample.'
+        if ($sample.PSObject.Properties.Name -contains 'diagnostic') {
+            Write-Output 'Uncapped diagnostic retained; not a matched acceptance sample.'
+        } else {
+            $breached = $sample.median_frame_ms -gt 18.3348 -or $sample.p95_frame_ms -gt 18.4360 -or $sample.max_frame_ms -gt 20.3379 -or $sample.simulation_wall_ratio -lt 0.99
+            if ($breached) { throw 'PERFORMANCE ENVELOPE BREACHED: retain/report; further diagnosis requires owner orchestration.' }
+            Write-Output 'Matched historical envelope PASS for this individual sample.'
+        }
     }
 }

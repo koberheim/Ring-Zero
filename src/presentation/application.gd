@@ -70,7 +70,10 @@ func _ready() -> void:
 	add_child(frame)
 	stage = SubViewport.new()
 	stage.size = Vector2i(2560,1440)
-	stage.transparent_bg = true
+	# The stage owns its post-process environment; sharing the root World3D
+	# would also process the already-composited UI a second time.
+	stage.world_3d = World3D.new()
+	stage.transparent_bg = false
 	stage.handle_input_locally = true
 	stage.gui_embed_subwindows = true
 	stage.render_target_update_mode = SubViewport.UPDATE_ALWAYS

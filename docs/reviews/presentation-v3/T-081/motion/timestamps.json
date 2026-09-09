@@ -1,0 +1,242 @@
+[
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(12.0, 0.0)",
+		"file": "frame-000.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 0.321745
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(24.0, 0.0)",
+		"file": "frame-001.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 0.468171
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(36.0, 0.0)",
+		"file": "frame-002.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 0.613374
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(48.0, 0.0)",
+		"file": "frame-003.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 0.758556
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(60.0, 0.0)",
+		"file": "frame-004.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 0.903726
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(72.0, 0.0)",
+		"file": "frame-005.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.048871
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(84.0, 0.0)",
+		"file": "frame-006.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.194318
+	},
+	{
+		"actors": 120,
+		"board_redraws": 1,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-007.png",
+		"material_redraws": 1,
+		"mode": "pan",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.34045
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-008.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.540443
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-009.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.690741
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-010.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.83962
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-011.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 1.990138
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-012.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.141155
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-013.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.290924
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-014.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.441629
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(96.0, 0.0)",
+		"file": "frame-015.png",
+		"material_redraws": 2,
+		"mode": "alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.5927
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(108.0, 0.0)",
+		"file": "frame-016.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.745195
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(120.0, 0.0)",
+		"file": "frame-017.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 2.897872
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(132.0, 0.0)",
+		"file": "frame-018.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.052624
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(144.0, 0.0)",
+		"file": "frame-019.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.204527
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(156.0, 0.0)",
+		"file": "frame-020.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.355024
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(168.0, 0.0)",
+		"file": "frame-021.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.509246
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(180.0, 0.0)",
+		"file": "frame-022.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.666724
+	},
+	{
+		"actors": 120,
+		"board_redraws": 2,
+		"camera": "(192.0, 0.0)",
+		"file": "frame-023.png",
+		"material_redraws": 2,
+		"mode": "pan-alt",
+		"simulation_seconds": 0.0,
+		"time_seconds": 3.821693
+	}
+]

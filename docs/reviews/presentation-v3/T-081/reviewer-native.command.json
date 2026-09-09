@@ -1,0 +1,22 @@
+﻿{
+    "label":  "reviewer-native",
+    "engine":  "E:/Godot/Godot_v4.7.2-stable_win64.exe",
+    "arguments":  [
+                      "--path",
+                      "E:\\AI Projects\\Games\\Ring Zero",
+                      "--log-file",
+                      "E:\\AI Projects\\Games\\Ring Zero\\docs\\reviews\\presentation-v3\\T-081\\reviewer-native.engine.log",
+                      "--script",
+                      "res://tests/presentation/capture_t081_lighting.gd",
+                      "--",
+                      "--evidence-dir=res://.godot/release-qa/t081-reviewer"
+                  ],
+    "working_directory":  "E:\\AI Projects\\Games\\Ring Zero",
+    "started_utc":  "2026-09-09T04:09:42.1109176Z",
+    "completed_utc":  "2026-09-09T04:09:46.8627778Z",
+    "pid":  1692,
+    "exit_code":  0,
+    "timed_out":  false,
+    "isolated_appdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\t081-appdata",
+    "isolated_localappdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\t081-localappdata"
+}

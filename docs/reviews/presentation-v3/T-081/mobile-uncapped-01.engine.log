@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.341 - Forward Mobile - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4080
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+WARNING: T-085 source admission pending: development audio placeholders are active.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/game_audio.gd:27)
+       [1] _ready (res://src/presentation/application.gd:56)
+       [2] _run (res://tests/performance/measure_t081_uncapped.gd:11)
+{"actors":128,"diagnostic":"uncapped","effects":true,"frames":180,"max_frame_ms":15.674,"max_simulation_callback_ms":4.23,"median_draw_ms":1.438,"median_frame_ms":12.922,"median_quote_ms":0.006,"median_sync_ms":2.369,"p95_frame_ms":14.488,"palette":1,"raw_frame_ms":[3.007,13.746,2.912,13.903,3.219,13.885,3.087,14.2,3.011,13.989,3.03,14.141,3.064,13.973,13.53,3.153,14.017,3.039,14.206,3.014,14.023,2.999,13.967,2.862,13.537,2.896,13.492,3.14,13.801,2.958,13.84,3.052,13.95,2.916,14.017,3.059,14.42,14.146,3.141,14.05,3.169,13.86,3.202,14.636,3.457,15.228,3.391,14.708,14.721,3.296,14.533,3.21,15.275,3.465,14.141,3.055,14.414,3.713,15.089,15.674,3.997,13.724,13.76,3.409,13.649,3.198,13.496,13.797,2.94,14.121,2.92,13.725,2.927,13.826,13.95,3.06,13.806,2.863,13.779,2.907,14.035,13.606,2.944,13.838,3.021,13.786,3.026,13.972,14.065,3.165,14.21,3.113,13.954,3.06,14.1,13.67,3.055,13.27,3.053,13.784,3.045,13.511,3.18,13.579,13.862,3.196,14.059,3.298,13.536,3.157,13.57,13.547,3.08,13.753,3.03,13.268,3.369,14.049,3.309,13.526,3.176,13.465,3.092,13.32,3.03,13.669,3.324,13.548,3.311,13.575,2.956,13.232,3.203,13.274,3.178,13.893,3.067,13.429,3.407,12.926,2.83,13.37,2.795,12.905,2.676,2.731,12.884,3.055,13.025,2.963,13.059,2.868,2.675,13.194,2.791,12.81,2.713,13.211,2.761,2.816,13.557,2.959,12.922,3.022,12.936,2.878,2.494,13.27,2.892,14.488,3.207,13.777,3.23,2.645,13.798,2.901,14.025,3.053,13.377,2.887],"rings":12,"seed":81081,"simulation_wall_ratio":0.999539566934973,"viewport":"(2560, 1440)","vsync":0}

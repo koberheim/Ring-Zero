@@ -1,0 +1,22 @@
+﻿{
+    "label":  "compatibility-matched-03",
+    "engine":  "E:/Godot/Godot_v4.7.2-stable_win64.exe",
+    "arguments":  [
+                      "--path",
+                      "E:\\AI Projects\\Games\\Ring Zero",
+                      "--log-file",
+                      "E:\\AI Projects\\Games\\Ring Zero\\docs\\reviews\\presentation-v3\\T-081\\compatibility-matched-03.engine.log",
+                      "--rendering-method",
+                      "gl_compatibility",
+                      "--script",
+                      "res://tests/performance/measure_release.gd"
+                  ],
+    "working_directory":  "E:\\AI Projects\\Games\\Ring Zero",
+    "started_utc":  "2026-09-09T04:01:36.7390738Z",
+    "completed_utc":  "2026-09-09T04:01:42.4684749Z",
+    "pid":  3956,
+    "exit_code":  0,
+    "timed_out":  false,
+    "isolated_appdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\t081-appdata",
+    "isolated_localappdata":  "E:\\AI Projects\\Games\\Ring Zero\\.godot\\t081-localappdata"
+}

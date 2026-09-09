@@ -1,0 +1,89 @@
+{
+  "base_commit": "7ac07505e4e4b4ff36fa59ef48f258c165db9bb8",
+  "files": [
+    {
+      "path": "project.godot",
+      "sha256": "ec44450e41c0809e3efc184c2901a42a379aeee2b3e86b9acbccc63bb2ac4457"
+    },
+    {
+      "path": "src/presentation/application.gd",
+      "sha256": "dba86f82b11b18355150dfef81bc912953d95392ae92a4bb3c530c0903ca8a71"
+    },
+    {
+      "path": "src/presentation/release_view.gd",
+      "sha256": "3ac92e4efab76a45a2e645193efedaf1964c8e7dc9ff9f6b52e66c8761238e7b"
+    },
+    {
+      "path": "src/presentation/lighting/core_response.gdshader",
+      "sha256": "c6e3807155b1671ddeb7edddf9bcab8cef671c9cef29d55faf638c8194a29253"
+    },
+    {
+      "path": "src/presentation/lighting/core_response.gdshader.uid",
+      "sha256": "6183ececef72a3c157cc5f3fa75e251e2e9f70b707d7b45dc79261a2fe0a7452"
+    },
+    {
+      "path": "src/presentation/lighting/fortress_lighting.gd",
+      "sha256": "5296b89ce0ffd6ad83b3728db14ee53831113a1a52a212d8da36bf1fe8a9ab1c"
+    },
+    {
+      "path": "src/presentation/lighting/fortress_lighting.gd.uid",
+      "sha256": "c5ade1e05b65b5205a2000628b758bbe528a8934866dfb180788bf67220d611a"
+    },
+    {
+      "path": "src/presentation/lighting/material_cache.gdshader",
+      "sha256": "38de29649ffb2dc3095eb4ffcfef81f985cdc9a28df67db6ac1c5a851701fea4"
+    },
+    {
+      "path": "src/presentation/lighting/material_cache.gdshader.uid",
+      "sha256": "ef816228d9541db9282c6ebba38735164f2f6d97ab9ceac6436a8e0c6933930b"
+    },
+    {
+      "path": "src/presentation/lighting/moving_hardware.gdshader",
+      "sha256": "18804eae62a2ecfe8a38148a8a41eb1a8d7f85adf287cae6b581eabab8c97211"
+    },
+    {
+      "path": "src/presentation/lighting/moving_hardware.gdshader.uid",
+      "sha256": "9979f971a22135607f510147d79612725fa08fb7e9524a4e0551956a27c51630"
+    },
+    {
+      "path": "tests/presentation/capture_t081_lighting.gd",
+      "sha256": "0d5815003369696ea49c9fd0d15943e98be9d77164b0f8b512bbdae33b3866fa"
+    },
+    {
+      "path": "tests/presentation/capture_t081_lighting.gd.uid",
+      "sha256": "5d27a34042668fd275a8ff909e0bf44ecb7a9905a01f979521d6f62826eb2de9"
+    },
+    {
+      "path": "tests/presentation/capture_t081_motion.gd",
+      "sha256": "eb14fb05ab8f4bafae995537b4f511850379200887ddebc3ba2dd2f990e58536"
+    },
+    {
+      "path": "tests/presentation/capture_t081_motion.gd.uid",
+      "sha256": "ea6867bf30ee07bf2b79f4456ac98be6a039a2ecfd964859ec526ba229686c7c"
+    },
+    {
+      "path": "tests/presentation/probe_t081_glow.gd",
+      "sha256": "20bef13cc9fa71e7501254aca9b4888363cc00a0607c4664248cdf5f38b275cc"
+    },
+    {
+      "path": "tests/presentation/probe_t081_glow.gd.uid",
+      "sha256": "ab306127cf9bc032f7c71a6beb80d168cd6cb4fe531e2bdc59731a31649fac54"
+    },
+    {
+      "path": "tests/presentation/test_t081_lighting.gd",
+      "sha256": "da3f28ed62a2911e3f1865c0b3e0860da38fc02fff63b6c1e9a9a00fcd676860"
+    },
+    {
+      "path": "tests/presentation/test_t081_lighting.gd.uid",
+      "sha256": "81ffd2a5d3e1fdf5ce1b452432010979b241609d92c25f16f846da4b59db71d2"
+    },
+    {
+      "path": "tests/performance/measure_t081_uncapped.gd",
+      "sha256": "ffdc25895e83061206d65c3195e485659dbade391d7cdb8f597ee0c254585b22"
+    },
+    {
+      "path": "tests/performance/measure_t081_uncapped.gd.uid",
+      "sha256": "4930eb704908fed068424fd5df894680119b0f69a04bf8022c5a0c2e9d6407ee"
+    }
+  ]
+}

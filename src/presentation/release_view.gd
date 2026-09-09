@@ -25,6 +25,13 @@ var terrain_textures := {}
 var space: ColorRect
 var wall_texture: Texture2D
 var world_font: Font
+const FortressLighting = preload("res://src/presentation/lighting/fortress_lighting.gd")
+var material_viewport: SubViewport
+var material_canvas: Node2D
+var core_response: ShaderMaterial
+var world_environment: WorldEnvironment
+var lighting_enabled := true
+var material_redraw_count := 0
 
 func _ready() -> void:
 	super._ready()
@@ -33,6 +40,7 @@ func _ready() -> void:
 	# camera, damage, selection and build changes invalidate it immediately.
 	board_viewport = SubViewport.new()
 	board_viewport.disable_3d = true
+	board_viewport.use_hdr_2d = RenderingServer.get_current_rendering_method() != "gl_compatibility"
 	board_viewport.transparent_bg = true
 	board_viewport.world_2d = World2D.new()
 	board_viewport.size = Vector2i(get_viewport_rect().size)
@@ -49,15 +57,41 @@ func _ready() -> void:
 	board_sprite.z_index = -1
 	board_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	add_child(board_sprite)
+	material_viewport = SubViewport.new()
+	material_viewport.disable_3d = true
+	material_viewport.use_hdr_2d = board_viewport.use_hdr_2d
+	material_viewport.transparent_bg = true
+	material_viewport.world_2d = World2D.new()
+	material_viewport.size = board_viewport.size
+	material_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+	add_child(material_viewport)
+	material_canvas = Node2D.new()
+	material_canvas.texture_filter = board_canvas.texture_filter
+	material_canvas.texture_repeat = board_canvas.texture_repeat
+	var attributes := ShaderMaterial.new()
+	attributes.shader = preload("res://src/presentation/lighting/material_cache.gdshader")
+	material_canvas.material = attributes
+	material_canvas.draw.connect(_render_material_cache)
+	material_viewport.add_child(material_canvas)
+	core_response = ShaderMaterial.new()
+	core_response.shader = preload("res://src/presentation/lighting/core_response.gdshader")
+	core_response.set_shader_parameter("attributes",material_viewport.get_texture())
+	core_response.set_shader_parameter("albedo_is_linear",board_viewport.use_hdr_2d)
+	core_response.set_shader_parameter("light_radius",FortressLighting.LIGHT_RADIUS)
+	core_response.set_shader_parameter("light_height",FortressLighting.LIGHT_HEIGHT)
+	board_sprite.material = core_response
+	world_environment = WorldEnvironment.new()
+	world_environment.environment = FortressLighting.environment()
+	add_child(world_environment)
 	for tier in ["hot", "working", "cold"]:
-		band_textures.append(load("res://assets/art/bands/band_%s_01.png" % tier))
-	mount = load("res://assets/art/buildings/mount_01.png")
-	wall_texture = load("res://assets/art/walls/wall_deflector_01.png")
+		band_textures.append(FortressLighting.material_texture(load("res://assets/art/bands/band_%s_01.png" % tier),"band"))
+	mount = FortressLighting.material_texture(load("res://assets/art/buildings/mount_01.png"),"mount")
+	wall_texture = FortressLighting.material_texture(load("res://assets/art/walls/wall_deflector_01.png"),"wall")
 	world_font = load("res://assets/ui/fonts/barlow/Barlow-SemiBold.ttf")
 	for kind in ["debris_field", "tractor_lane", "occlusion_screen"]:
-		terrain_textures[kind] = load("res://assets/art/terrain/terrain_%s_01.png" % kind)
+		terrain_textures[kind] = FortressLighting.material_texture(load("res://assets/art/terrain/terrain_%s_01.png" % kind),"terrain")
 	for kind in ["flak","mass_driver","emp_node","lance_emitter","point_defense","relay","repair_node","armor_plating"]:
-		heads[kind] = load("res://assets/art/buildings/head_%s.png" % kind)
+		heads[kind] = FortressLighting.material_texture(load("res://assets/art/buildings/head_%s.png" % kind),"head")
 	for kind in ["normal","tunneler","transfer","foundry","sapper","breacher","assembler"]:
 		var file: String = "machine_standard" if kind == "normal" else ("assembler" if kind == "assembler" else "elite_"+kind)
 		machines[kind] = load("res://assets/art/machines/%s.png" % file)
@@ -130,6 +164,7 @@ func _process(delta: float) -> void:
 		var brownout: bool = PowerRules.chain_boundary(state) < state.rings.size()
 		var brightness: float = (0.67+0.08*sin(sun_phase*4.0)) if brownout and not interface_settings.reduced_motion else (0.7 if brownout else 1.0)
 		sun.modulate = Color(brightness,health*brightness,health*brightness,1.0)
+		update_core_lighting(int(sun.material.get_shader_parameter("palette")),health*brightness)
 	if objective != null and simulation != null:
 		objective.position = Vector2(get_viewport_rect().size.x*0.5-220,get_viewport_rect().size.y-56)
 		var left := maxi(0,ceili(RunRules.OPERATION_SECONDS-simulation.elapsed_seconds))
@@ -242,6 +277,35 @@ func _refresh_board_cache() -> void:
 		board_sprite.transform = raster.affine_inverse()
 		board_canvas.queue_redraw()
 		board_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+		if material_viewport != null:
+			material_viewport.size = board_viewport.size
+			material_viewport.canvas_transform = raster
+			material_canvas.material.set_shader_parameter("raster_scale",Vector2(raster.x.x,raster.y.y))
+			material_canvas.queue_redraw()
+			material_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+			core_response.set_shader_parameter("raster_origin",raster.origin)
+			core_response.set_shader_parameter("raster_scale",Vector2(raster.x.x,raster.y.y))
+			core_response.set_shader_parameter("raster_size",Vector2(board_viewport.size))
+
+## Frozen T-081 adapter: dynamic palette/health updates never invalidate geometry.
+func update_core_lighting(palette: int, energy: float) -> void:
+	if core_response == null: return
+	core_response.set_shader_parameter("core_color",FortressLighting.CORE_COLORS[clampi(palette,0,2)])
+	core_response.set_shader_parameter("core_energy",clampf(energy,0.0,1.0))
+	core_response.set_shader_parameter("lighting_enabled",lighting_enabled)
+	world_environment.environment.glow_enabled = lighting_enabled and interface_settings.effects
+
+func lighting_state() -> Dictionary:
+	return {"palette":int(sun.material.get_shader_parameter("palette")),"color":core_response.get_shader_parameter("core_color"),"radius":FortressLighting.LIGHT_RADIUS,"height":FortressLighting.LIGHT_HEIGHT,"enabled":lighting_enabled,"world_layer_max":0,"albedo_redraws":board_redraw_count,"material_redraws":material_redraw_count}
+
+func _render_material_cache() -> void:
+	var albedo_canvas := board_canvas
+	var albedo_count := board_redraw_count
+	board_canvas = material_canvas
+	_render_board()
+	board_canvas = albedo_canvas
+	board_redraw_count = albedo_count
+	material_redraw_count += 1
 
 func _board_extent() -> float:
 	var outer_ring := maxi(state.rings.size(),maxi(selected_cell.x,detail_hover_cell.x))

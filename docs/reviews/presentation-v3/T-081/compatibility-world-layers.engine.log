@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4080
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+WARNING: T-085 source admission pending: development audio placeholders are active.
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/game_audio.gd:27)
+       [1] _ready (res://src/presentation/application.gd:56)
+       [2] _run (res://tests/performance/measure_world_layers.gd:8)
+{"board_redraws":0,"draw_calls":1258.0,"median_ms":16.666,"mode":"all","p95_ms":16.739}
+{"board_redraws":0,"draw_calls":1223.0,"median_ms":16.662,"mode":"pan","p95_ms":16.819}
+{"board_redraws":0,"draw_calls":1222.0,"median_ms":16.667,"mode":"tactical","p95_ms":16.854}
+{"board_redraws":0,"draw_calls":1222.0,"median_ms":16.667,"mode":"pan_tactical","p95_ms":16.763}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.664,"mode":"no_board","p95_ms":16.778}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.67,"mode":"no_space","p95_ms":16.772}
+{"board_redraws":0,"draw_calls":1221.0,"median_ms":16.669,"mode":"no_sun","p95_ms":16.778}
+{"board_redraws":0,"draw_calls":479.0,"median_ms":16.666,"mode":"no_hud","p95_ms":16.92}
+{"board_redraws":0,"draw_calls":1219.0,"median_ms":16.663,"mode":"no_world","p95_ms":16.778}

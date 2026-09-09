@@ -1,0 +1,23 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "pitch" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://src/audio/audio_director.gd:118)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://src/presentation/game_audio.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+ERROR: Failed to load script "res://src/presentation/game_audio.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/application.gd:55)
+       [1] _run (res://tests/performance/measure_release.gd:8)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _ready (res://src/presentation/game_audio.gd:19)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://src/presentation/game_audio.gd:19)
+       [1] _ready (res://src/presentation/application.gd:56)
+       [2] _run (res://tests/performance/measure_release.gd:8)

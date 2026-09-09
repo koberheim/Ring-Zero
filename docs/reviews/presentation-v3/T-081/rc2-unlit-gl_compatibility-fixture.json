@@ -1,0 +1,13 @@
+{
+	"actors": 120,
+	"backend": "gl_compatibility",
+	"camera": "(0, 0)",
+	"light_adapter": false,
+	"phase": 0,
+	"rings": 6,
+	"root": "2560x1440",
+	"seed": 81081,
+	"simulation_seconds": 0.0,
+	"ui_scale": 1.0,
+	"zoom": 0.85
+}
