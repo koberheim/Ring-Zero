@@ -10,6 +10,8 @@ Pure new helper can be prepared after T-081 while D owns views; final integratio
 
 ## Editable scope
 
+**Preparation lease — Astra, 2026-09-09, base `c76a45c`:** E may implement isolated new `src/presentation/readability/` helpers and their task-specific tests/data; audit T-089 original twenty-subject dispositions into T-089 evidence and prepare T-091 status projection/interface. No existing runtime/view/art edits yet; B owns live/release, D follows B. Godot runs require explicit runtime handoff from B/root. Integration and structural asset repairs receive the later lease after D. Read F v2 HANDOFF and A adapter; neither human recognition nor native crowd acceptance is inferred.
+
 new src/presentation/readability/swarm_lod.gd and its tests; release_view.gd only during E integration lease; per-task LOD data. F owns enemy textures and shapes.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.
@@ -27,6 +29,8 @@ At strategic zoom draw standard machines as a readable directional mass using bo
 Shipping/stress/historical crowd before/after, physical-size measurements, zoom/pan threshold clips, density projection tests and timed trials. Save under `docs/reviews/presentation-v3/T-090/`, including a pass/fail table, actual commands, source identity and the shared fixture metadata. Preserve before evidence.
 
 ## Handoff and review
+
+Continuation preparation: F's v2 import family is `assets/art/machines/presentation_v3_v2/<kind>_<albedo|normal|emission|alpha>.png` with adjacent `metadata.json`, eight poses in a 4×2 atlas (128 px elite cells, 256 px boss cells). Use F's final occupied-fraction measurements over poses and twelve bearings to enforce physical occupied-silhouette floors, rather than assuming an atlas canvas size equals visible form. A supplies `FortressLighting.moving_material()` / `set_core_state()` for a shared moving hardware canvas; confirm its final normal convention and CanvasTexture region semantics in the reviewed handoff before integration. World footprints remain rule-owned; these are presentation floors only.
 
 LOD API, batch capacity/lifetime policy, physical-size conversion, class metadata and provisional thresholds/hysteresis.
 

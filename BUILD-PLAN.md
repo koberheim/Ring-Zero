@@ -2,6 +2,8 @@
 
 # RING ZERO — Build plan
 
+**2026-09-09 continuation integration:** Astra accepted the T-081 technical interface with Mobile selected: 44/44 suites, independent41/41 native checks, third clean matched sample16.679/17.120/19.014 ms and simulation/wall1.003447313. Earlier GL/control failures and overlap caveat remain retained. T-085 adapter84/84 is accepted as partial, with zero admitted sources and concrete free-service quota exhaustion; source/listening gates remain open. B receives the exclusive early collapse lease on live/release views; A is frozen. F corrected animated Blender atlases enter review. No human result, T-079 closure or release promotion is inferred.
+
 ## Phase 14 — Presentation performance and acceptance recovery
 
 **Updated:** 2026-09-09. **Status:** Approved by Kevin (D-135); execution authorized in the sequence below. This is the active planning phase requested by Kevin, so T-081–T-093 are explicitly requested planning entries under D-002; they are not assignments or an unapproved future-mode backlog.
@@ -320,3 +322,5 @@ Kevin rejected the first candidate's visual quality and requested a complete the
 
 Presentation replacement completed - 2026-09-08: version 1.0.0-rc2 now renders at native 2560 x 1440, opens a 1920 x 1080 window, provides WASD map movement with migrated H/C/V/B tool defaults, and replaces the UI, fortress surfaces, stellar shader and integrity instrument. Three agent lanes were integrated and independently reviewed. All 42 regression suites passed; final cache received rendered and independent invalidation checks. Native 12-ring/128-machine sample: median16.668ms, p9516.760ms on RTX4080. Exported application lifecycle/reload and exact archive checks passed. Final decisions, scope and evidence: [docs/PRESENTATION-OVERHAUL.md](docs/PRESENTATION-OVERHAUL.md). Package: exports/RingZero-1.0.0-rc2-windows.zip. This supersedes first-candidate visual claims; Steam activation and commercial/human acceptance remain as documented.
 
+
+**2026-09-09 art/preparation checkpoint:** F delivered six detailed Blender mechanisms with eight poses each and24 aligned atlases; Astra inspected form/material sheets and independently verified281 hashes. Asset interface accepted provisionally for E; human and native crowd gates remain pending. E receives isolated readability-helper/audit preparation only; D receives read-only theme/layout preparation using the frontend-design skill. B alone owns shared views/runtime until early collapse handoff.

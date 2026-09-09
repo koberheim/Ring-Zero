@@ -10,6 +10,8 @@ T-081 lighting/cache contract, T-083 early adapter and full T-086 tokens accepte
 
 ## Editable scope
 
+**Reviewed later D scope extension — Astra, 2026-09-09:** Once the full D lease activates, include `src/presentation/controller_pointer.gd` for native physical-pixel speed and resize clamping. Include `src/core/pc_settings.gd` only for backward-compatible independent `[audio]` UI/Ambience keys, with absent-key defaults inherited from loaded Effects/Music; no profile/cloud/input-schema change. Include `src/presentation/game_audio.gd` only for saved bus mapping and approved C integration. C's runtime is frozen; preserve director/source admission behavior. This is scope preparation, not authority to edit while B holds views.
+
 src/presentation/application.gd; src/presentation/live_view.gd; src/presentation/release_view.gd; src/presentation/camera_navigation.gd; src/presentation/instrument_strip.gd; scenes/application.tscn/project.godot only for approved layout/stretch settings. Task-specific layout/input tests. Preserve A's renderer choice.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.

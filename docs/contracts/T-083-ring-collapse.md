@@ -10,6 +10,8 @@ T-081 accepted; starts before T-087's rewrite. Final audible acceptance also dep
 
 ## Editable scope
 
+**Active early B lease — Astra, 2026-09-09:** Start from reviewed T-081/T-085 delivery over `7ac0750` (integration commit follows). A's source is frozen and independent native41/full44/three clean Mobile timing samples pass. B exclusively owns `src/presentation/live_view.gd`, `src/presentation/release_view.gd`, new `src/presentation/effects/`, `assets/vfx/collapse/`, task-specific fixtures and T-083 evidence. `application.gd` is read-only. Godot runtime ownership is granted to B after root's completed independent proof. Read the frozen A/C adapters. Deliver the early collapse interface before broader B combat/motion work. Pending human/audio gates remain pending under latest steering; no stop at those gates is required for provisional implementation.
+
 new src/presentation/effects/ collapse/event adapter; assets/vfx/collapse/; release_view.gd and live_view.gd under B's exclusive early lease; focused capture/test fixtures. No gameplay/rule edits.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.
@@ -27,6 +29,8 @@ Retain a native real-time video OR timestamped lossless frame sequence spanning 
 Matched RC2 and new collapse videos/frame sequences, reduced-motion and effects-off versions, event/tick logs, muted comprehension result and final audio version. Save under `docs/reviews/presentation-v3/T-083/`, including a pass/fail table, actual commands, source identity and the shared fixture metadata. Preserve before evidence.
 
 ## Handoff and review
+
+Continuation preparation notes (Astra inspection): `LiveSimulation.step` commits by replacing `simulation.state` with `staged_state`; a pre-step reference to `simulation.state` can retain lost-ring presentation input without deep-copying every ring every tick. Use the actual committed event and tick to admit effects only after a successful step. Verify this against failed ticks and multiple fixed ticks per draw; never infer a collapse solely from HP or a presentation snapshot. C's agreed audio entry point is `emit_cue(event_id: StringName, screen_pan: float = 0.0, strength: float = 1.0) -> bool`, with separate `wedge.fracture` and `ring.collapse`; screen_pan is current-view horizontal [-1,1]. A's world-glow layer is main canvas <=0, HUD above0. Final reviewed A adapter precedes the shared-view lease.
 
 Stable event adapter and saved-geometry shape, draw-layer contract, collapse envelope/priority, trigger deduplication and reduced-motion behavior.
 
