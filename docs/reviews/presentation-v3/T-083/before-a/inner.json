@@ -1,0 +1,621 @@
+{
+	"actor_count": 1,
+	"backend": "mobile",
+	"core_hp": 150.440000000005,
+	"ended": false,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"event_wall_seconds": -1.0,
+	"events": [],
+	"final_state": {
+		"energy": 9400.0,
+		"rings": {
+			"1": {
+				"collapsed": true,
+				"relay": {},
+				"wedges": {
+					"1": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"2": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"3": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"4": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"5": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"6": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"8": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"9": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"10": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"11": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"12": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					}
+				}
+			},
+			"2": {
+				"relay": {
+					"active": true
+				},
+				"relay_hp": 100.0,
+				"relay_max_hp": 100.0,
+				"wedges": {
+					"1": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"2": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"3": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"4": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"5": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"6": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"8": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"9": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"10": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"11": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"12": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					}
+				}
+			},
+			"3": {
+				"relay": {
+					"active": true
+				},
+				"relay_hp": 100.0,
+				"relay_max_hp": 100.0,
+				"wedges": {
+					"1": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"2": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"3": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"4": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"5": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"6": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"8": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"9": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"10": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"11": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"12": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					}
+				}
+			}
+		}
+	},
+	"fixture": "diagnostic initial state; actual unaccelerated fixed-step events",
+	"frames": [
+		{
+			"file": "inner-000.png",
+			"simulation_seconds": 0.0,
+			"tick": 0,
+			"wall_seconds": 0.004589
+		},
+		{
+			"file": "inner-001.png",
+			"simulation_seconds": 0.166666666666667,
+			"tick": 10,
+			"wall_seconds": 0.184966
+		},
+		{
+			"file": "inner-002.png",
+			"simulation_seconds": 0.333333333333333,
+			"tick": 20,
+			"wall_seconds": 0.351998
+		},
+		{
+			"file": "inner-003.png",
+			"simulation_seconds": 0.516666666666667,
+			"tick": 31,
+			"wall_seconds": 0.534878
+		},
+		{
+			"file": "inner-004.png",
+			"simulation_seconds": 0.683333333333333,
+			"tick": 41,
+			"wall_seconds": 0.702056
+		},
+		{
+			"file": "inner-005.png",
+			"simulation_seconds": 0.866666666666667,
+			"tick": 52,
+			"wall_seconds": 0.883897
+		},
+		{
+			"file": "inner-006.png",
+			"simulation_seconds": 1.03333333333333,
+			"tick": 62,
+			"wall_seconds": 1.051983
+		},
+		{
+			"file": "inner-007.png",
+			"simulation_seconds": 1.21666666666667,
+			"tick": 73,
+			"wall_seconds": 1.221445
+		},
+		{
+			"file": "inner-008.png",
+			"simulation_seconds": 1.38333333333333,
+			"tick": 83,
+			"wall_seconds": 1.401418
+		},
+		{
+			"file": "inner-009.png",
+			"simulation_seconds": 1.56666666666667,
+			"tick": 94,
+			"wall_seconds": 1.584923
+		},
+		{
+			"file": "inner-010.png",
+			"simulation_seconds": 1.73333333333333,
+			"tick": 104,
+			"wall_seconds": 1.75199
+		},
+		{
+			"file": "inner-011.png",
+			"simulation_seconds": 1.91666666666667,
+			"tick": 115,
+			"wall_seconds": 1.935072
+		},
+		{
+			"file": "inner-012.png",
+			"simulation_seconds": 2.1,
+			"tick": 126,
+			"wall_seconds": 2.119393
+		},
+		{
+			"file": "inner-013.png",
+			"simulation_seconds": 2.28333333333333,
+			"tick": 137,
+			"wall_seconds": 2.301602
+		},
+		{
+			"file": "inner-014.png",
+			"simulation_seconds": 2.45,
+			"tick": 147,
+			"wall_seconds": 2.468397
+		},
+		{
+			"file": "inner-015.png",
+			"simulation_seconds": 2.63333333333333,
+			"tick": 158,
+			"wall_seconds": 2.651647
+		},
+		{
+			"file": "inner-016.png",
+			"simulation_seconds": 2.8,
+			"tick": 168,
+			"wall_seconds": 2.819208
+		},
+		{
+			"file": "inner-017.png",
+			"simulation_seconds": 2.98333333333333,
+			"tick": 179,
+			"wall_seconds": 3.001785
+		},
+		{
+			"file": "inner-018.png",
+			"simulation_seconds": 3.16666666666667,
+			"tick": 190,
+			"wall_seconds": 3.184936
+		},
+		{
+			"file": "inner-019.png",
+			"simulation_seconds": 3.33333333333333,
+			"tick": 200,
+			"wall_seconds": 3.35167
+		},
+		{
+			"file": "inner-020.png",
+			"simulation_seconds": 3.5,
+			"tick": 210,
+			"wall_seconds": 3.518352
+		},
+		{
+			"file": "inner-021.png",
+			"simulation_seconds": 3.68333333333333,
+			"tick": 221,
+			"wall_seconds": 3.685234
+		},
+		{
+			"file": "inner-022.png",
+			"simulation_seconds": 3.85,
+			"tick": 231,
+			"wall_seconds": 3.868299
+		},
+		{
+			"file": "inner-023.png",
+			"simulation_seconds": 4.03333333333333,
+			"tick": 242,
+			"wall_seconds": 4.051306
+		},
+		{
+			"file": "inner-024.png",
+			"simulation_seconds": 4.2,
+			"tick": 252,
+			"wall_seconds": 4.218012
+		},
+		{
+			"file": "inner-025.png",
+			"simulation_seconds": 4.36666666666667,
+			"tick": 262,
+			"wall_seconds": 4.385216
+		},
+		{
+			"file": "inner-026.png",
+			"simulation_seconds": 4.53333333333333,
+			"tick": 272,
+			"wall_seconds": 4.552264
+		},
+		{
+			"file": "inner-027.png",
+			"simulation_seconds": 4.71666666666667,
+			"tick": 283,
+			"wall_seconds": 4.734584
+		},
+		{
+			"file": "inner-028.png",
+			"simulation_seconds": 4.88333333333333,
+			"tick": 293,
+			"wall_seconds": 4.901309
+		},
+		{
+			"file": "inner-029.png",
+			"simulation_seconds": 5.05,
+			"tick": 303,
+			"wall_seconds": 5.069126
+		},
+		{
+			"file": "inner-030.png",
+			"simulation_seconds": 5.23333333333333,
+			"tick": 314,
+			"wall_seconds": 5.251212
+		},
+		{
+			"file": "inner-031.png",
+			"simulation_seconds": 5.4,
+			"tick": 324,
+			"wall_seconds": 5.418281
+		},
+		{
+			"file": "inner-032.png",
+			"simulation_seconds": 5.58333333333333,
+			"tick": 335,
+			"wall_seconds": 5.601521
+		},
+		{
+			"file": "inner-033.png",
+			"simulation_seconds": 5.76666666666667,
+			"tick": 346,
+			"wall_seconds": 5.784852
+		},
+		{
+			"file": "inner-034.png",
+			"simulation_seconds": 5.93333333333333,
+			"tick": 356,
+			"wall_seconds": 5.95155
+		},
+		{
+			"file": "inner-035.png",
+			"simulation_seconds": 6.1,
+			"tick": 366,
+			"wall_seconds": 6.118277
+		},
+		{
+			"file": "inner-036.png",
+			"simulation_seconds": 6.28333333333333,
+			"tick": 377,
+			"wall_seconds": 6.301502
+		},
+		{
+			"file": "inner-037.png",
+			"simulation_seconds": 6.46666666666667,
+			"tick": 388,
+			"wall_seconds": 6.484916
+		},
+		{
+			"file": "inner-038.png",
+			"simulation_seconds": 6.65,
+			"tick": 399,
+			"wall_seconds": 6.668144
+		},
+		{
+			"file": "inner-039.png",
+			"simulation_seconds": 6.83333333333333,
+			"tick": 410,
+			"wall_seconds": 6.852912
+		},
+		{
+			"file": "inner-040.png",
+			"simulation_seconds": 7.01666666666667,
+			"tick": 421,
+			"wall_seconds": 7.035385
+		},
+		{
+			"file": "inner-041.png",
+			"simulation_seconds": 7.2,
+			"tick": 432,
+			"wall_seconds": 7.218002
+		},
+		{
+			"file": "inner-042.png",
+			"simulation_seconds": 7.38333333333333,
+			"tick": 443,
+			"wall_seconds": 7.401434
+		},
+		{
+			"file": "inner-043.png",
+			"simulation_seconds": 7.56666666666667,
+			"tick": 454,
+			"wall_seconds": 7.584654
+		},
+		{
+			"file": "inner-044.png",
+			"simulation_seconds": 7.75,
+			"tick": 465,
+			"wall_seconds": 7.76813
+		},
+		{
+			"file": "inner-045.png",
+			"simulation_seconds": 7.91666666666667,
+			"tick": 475,
+			"wall_seconds": 7.934937
+		},
+		{
+			"file": "inner-046.png",
+			"simulation_seconds": 8.1,
+			"tick": 486,
+			"wall_seconds": 8.118328
+		},
+		{
+			"file": "inner-047.png",
+			"simulation_seconds": 8.28333333333333,
+			"tick": 497,
+			"wall_seconds": 8.301141
+		},
+		{
+			"file": "inner-048.png",
+			"simulation_seconds": 8.46666666666667,
+			"tick": 508,
+			"wall_seconds": 8.484665
+		},
+		{
+			"file": "inner-049.png",
+			"simulation_seconds": 8.63333333333333,
+			"tick": 518,
+			"wall_seconds": 8.65154
+		},
+		{
+			"file": "inner-050.png",
+			"simulation_seconds": 8.81666666666667,
+			"tick": 529,
+			"wall_seconds": 8.837963
+		},
+		{
+			"file": "inner-051.png",
+			"simulation_seconds": 9.0,
+			"tick": 540,
+			"wall_seconds": 9.018308
+		},
+		{
+			"file": "inner-052.png",
+			"simulation_seconds": 9.18333333333333,
+			"tick": 551,
+			"wall_seconds": 9.201417
+		},
+		{
+			"file": "inner-053.png",
+			"simulation_seconds": 9.35,
+			"tick": 561,
+			"wall_seconds": 9.368525
+		},
+		{
+			"file": "inner-054.png",
+			"simulation_seconds": 9.51666666666667,
+			"tick": 571,
+			"wall_seconds": 9.537019
+		},
+		{
+			"file": "inner-055.png",
+			"simulation_seconds": 9.7,
+			"tick": 582,
+			"wall_seconds": 9.717889
+		},
+		{
+			"file": "inner-056.png",
+			"simulation_seconds": 9.86666666666667,
+			"tick": 592,
+			"wall_seconds": 9.885098
+		}
+	],
+	"gpu": "NVIDIA GeForce RTX 4080",
+	"kind": "inner",
+	"mode": "normal",
+	"palette": 1,
+	"resolution": [
+		2560,
+		1440
+	],
+	"results_transition": "disabled only for aftermath world diagnostic",
+	"seed": 83083,
+	"ui_scale": 1.0,
+	"zoom": 1.3
+}

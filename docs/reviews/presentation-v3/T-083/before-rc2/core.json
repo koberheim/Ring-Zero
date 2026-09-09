@@ -1,0 +1,291 @@
+{
+	"actor_count": 1,
+	"backend": "gl_compatibility",
+	"core_hp": 0.0,
+	"ended": true,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"event_wall_seconds": 1.158276,
+	"events": [
+		{
+			"core_hp": 0.0,
+			"energy": 10000.0,
+			"events": {
+				"broken_wedges": [],
+				"collapsed_rings": [],
+				"core_lost": true,
+				"energy_awarded": 0.0,
+				"hits": [],
+				"kill_ids": [],
+				"relays_lost": [],
+				"spawned_ids": [],
+				"walls_broken": []
+			},
+			"tick": 68,
+			"wall_seconds": 1.158276
+		}
+	],
+	"final_state": {
+		"energy": 10000.0,
+		"rings": {
+			"1": {
+				"collapsed": true,
+				"relay": {},
+				"wedges": {
+					"1": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"2": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"3": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"4": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"5": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"6": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"8": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"9": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"10": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"11": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"12": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					}
+				}
+			}
+		}
+	},
+	"fixture": "diagnostic initial state; actual unaccelerated fixed-step events",
+	"frames": [
+		{
+			"file": "core-000.png",
+			"simulation_seconds": 0.0166666666666667,
+			"tick": 1,
+			"wall_seconds": 0.016701
+		},
+		{
+			"file": "core-001.png",
+			"simulation_seconds": 0.166666666666667,
+			"tick": 10,
+			"wall_seconds": 0.183492
+		},
+		{
+			"file": "core-002.png",
+			"simulation_seconds": 0.35,
+			"tick": 21,
+			"wall_seconds": 0.366547
+		},
+		{
+			"file": "core-003.png",
+			"simulation_seconds": 0.516666666666667,
+			"tick": 31,
+			"wall_seconds": 0.53355
+		},
+		{
+			"file": "core-004.png",
+			"simulation_seconds": 0.7,
+			"tick": 42,
+			"wall_seconds": 0.716611
+		},
+		{
+			"file": "core-005.png",
+			"simulation_seconds": 0.866666666666667,
+			"tick": 52,
+			"wall_seconds": 0.883529
+		},
+		{
+			"file": "core-006.png",
+			"simulation_seconds": 1.05,
+			"tick": 63,
+			"wall_seconds": 1.066856
+		},
+		{
+			"file": "core-007.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 1.250219
+		},
+		{
+			"file": "core-008.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 1.43352
+		},
+		{
+			"file": "core-009.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 1.616592
+		},
+		{
+			"file": "core-010.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 1.783483
+		},
+		{
+			"file": "core-011.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 1.950181
+		},
+		{
+			"file": "core-012.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 2.133502
+		},
+		{
+			"file": "core-013.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 2.316595
+		},
+		{
+			"file": "core-014.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 2.483535
+		},
+		{
+			"file": "core-015.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 2.666809
+		},
+		{
+			"file": "core-016.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 2.833521
+		},
+		{
+			"file": "core-017.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.016793
+		},
+		{
+			"file": "core-018.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.183488
+		},
+		{
+			"file": "core-019.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.366803
+		},
+		{
+			"file": "core-020.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.53347
+		},
+		{
+			"file": "core-021.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.716817
+		},
+		{
+			"file": "core-022.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 3.883519
+		},
+		{
+			"file": "core-023.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 4.066811
+		},
+		{
+			"file": "core-024.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 4.249843
+		},
+		{
+			"file": "core-025.png",
+			"simulation_seconds": 1.13333333333333,
+			"tick": 68,
+			"wall_seconds": 4.416583
+		}
+	],
+	"gpu": "NVIDIA GeForce RTX 4080",
+	"kind": "core",
+	"mode": "normal",
+	"palette": 1,
+	"resolution": [
+		2560,
+		1440
+	],
+	"results_transition": "disabled only for aftermath world diagnostic",
+	"seed": 83083,
+	"ui_scale": 1.0,
+	"zoom": 1.3
+}

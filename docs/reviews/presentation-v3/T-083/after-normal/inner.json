@@ -1,0 +1,457 @@
+{
+	"actor_count": 1,
+	"backend": "mobile",
+	"core_hp": 186.140000000001,
+	"ended": false,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"event_wall_seconds": 1.180147,
+	"events": [
+		{
+			"core_hp": 200.0,
+			"energy": 9400.0,
+			"events": {
+				"broken_wedges": [
+					"(1, 7)"
+				],
+				"collapsed_rings": [
+					1
+				],
+				"core_lost": false,
+				"energy_awarded": 0.0,
+				"hits": [],
+				"kill_ids": [],
+				"relays_lost": [],
+				"spawned_ids": [],
+				"walls_broken": []
+			},
+			"tick": 68,
+			"wall_seconds": 1.180147
+		}
+	],
+	"final_state": {
+		"energy": 9400.0,
+		"rings": {
+			"1": {
+				"collapsed": true,
+				"relay": {},
+				"wedges": {
+					"1": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"2": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"3": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"4": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"5": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"6": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"8": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"9": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"10": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"11": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"12": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					}
+				}
+			},
+			"2": {
+				"relay": {
+					"active": true
+				},
+				"relay_hp": 100.0,
+				"relay_max_hp": 100.0,
+				"wedges": {
+					"1": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"2": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"3": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"4": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"5": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"6": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"8": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"9": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"10": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"11": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					},
+					"12": {
+						"hp": 200.0,
+						"max_hp": 200.0,
+						"occupants": {},
+						"slot_count": 4
+					}
+				}
+			},
+			"3": {
+				"relay": {
+					"active": true
+				},
+				"relay_hp": 100.0,
+				"relay_max_hp": 100.0,
+				"wedges": {
+					"1": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"2": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"3": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"4": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"5": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"6": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"7": {
+						"hp": 0.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"8": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"9": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"10": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"11": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					},
+					"12": {
+						"hp": 300.0,
+						"max_hp": 300.0,
+						"occupants": {},
+						"slot_count": 6
+					}
+				}
+			}
+		}
+	},
+	"fixture": "diagnostic initial state; actual unaccelerated fixed-step events",
+	"frames": [
+		{
+			"file": "inner-000.png",
+			"simulation_seconds": 0.0,
+			"tick": 0,
+			"wall_seconds": 0.004698
+		},
+		{
+			"file": "inner-001.png",
+			"simulation_seconds": 0.166666666666667,
+			"tick": 10,
+			"wall_seconds": 0.178496
+		},
+		{
+			"file": "inner-002.png",
+			"simulation_seconds": 0.333333333333333,
+			"tick": 20,
+			"wall_seconds": 0.346058
+		},
+		{
+			"file": "inner-003.png",
+			"simulation_seconds": 0.5,
+			"tick": 30,
+			"wall_seconds": 0.515938
+		},
+		{
+			"file": "inner-004.png",
+			"simulation_seconds": 0.683333333333333,
+			"tick": 41,
+			"wall_seconds": 0.69598
+		},
+		{
+			"file": "inner-005.png",
+			"simulation_seconds": 0.85,
+			"tick": 51,
+			"wall_seconds": 0.863251
+		},
+		{
+			"file": "inner-006.png",
+			"simulation_seconds": 1.03333333333333,
+			"tick": 62,
+			"wall_seconds": 1.046169
+		},
+		{
+			"file": "inner-007.png",
+			"simulation_seconds": 1.2,
+			"tick": 72,
+			"wall_seconds": 1.212878
+		},
+		{
+			"file": "inner-008.png",
+			"simulation_seconds": 1.36666666666667,
+			"tick": 82,
+			"wall_seconds": 1.396313
+		},
+		{
+			"file": "inner-009.png",
+			"simulation_seconds": 1.53333333333333,
+			"tick": 92,
+			"wall_seconds": 1.580492
+		},
+		{
+			"file": "inner-010.png",
+			"simulation_seconds": 1.71666666666667,
+			"tick": 103,
+			"wall_seconds": 1.763271
+		},
+		{
+			"file": "inner-011.png",
+			"simulation_seconds": 1.9,
+			"tick": 114,
+			"wall_seconds": 1.93039
+		},
+		{
+			"file": "inner-012.png",
+			"simulation_seconds": 2.06666666666667,
+			"tick": 124,
+			"wall_seconds": 2.113003
+		},
+		{
+			"file": "inner-013.png",
+			"simulation_seconds": 2.25,
+			"tick": 135,
+			"wall_seconds": 2.296118
+		},
+		{
+			"file": "inner-014.png",
+			"simulation_seconds": 2.43333333333333,
+			"tick": 146,
+			"wall_seconds": 2.462895
+		},
+		{
+			"file": "inner-015.png",
+			"simulation_seconds": 2.6,
+			"tick": 156,
+			"wall_seconds": 2.629784
+		},
+		{
+			"file": "inner-016.png",
+			"simulation_seconds": 2.76666666666667,
+			"tick": 166,
+			"wall_seconds": 2.796819
+		},
+		{
+			"file": "inner-017.png",
+			"simulation_seconds": 2.93333333333333,
+			"tick": 176,
+			"wall_seconds": 2.979698
+		},
+		{
+			"file": "inner-018.png",
+			"simulation_seconds": 3.11666666666667,
+			"tick": 187,
+			"wall_seconds": 3.146894
+		},
+		{
+			"file": "inner-019.png",
+			"simulation_seconds": 3.28333333333333,
+			"tick": 197,
+			"wall_seconds": 3.329889
+		},
+		{
+			"file": "inner-020.png",
+			"simulation_seconds": 3.48333333333333,
+			"tick": 209,
+			"wall_seconds": 3.513212
+		},
+		{
+			"file": "inner-021.png",
+			"simulation_seconds": 3.65,
+			"tick": 219,
+			"wall_seconds": 3.68
+		},
+		{
+			"file": "inner-022.png",
+			"simulation_seconds": 3.81666666666667,
+			"tick": 229,
+			"wall_seconds": 3.862785
+		},
+		{
+			"file": "inner-023.png",
+			"simulation_seconds": 4.0,
+			"tick": 240,
+			"wall_seconds": 4.030021
+		},
+		{
+			"file": "inner-024.png",
+			"simulation_seconds": 4.16666666666667,
+			"tick": 250,
+			"wall_seconds": 4.199117
+		},
+		{
+			"file": "inner-025.png",
+			"simulation_seconds": 4.33333333333333,
+			"tick": 260,
+			"wall_seconds": 4.379617
+		}
+	],
+	"gpu": "NVIDIA GeForce RTX 4080",
+	"kind": "inner",
+	"mode": "normal",
+	"palette": 1,
+	"resolution": [
+		2560,
+		1440
+	],
+	"results_transition": "disabled only for aftermath world diagnostic",
+	"seed": 83083,
+	"ui_scale": 1.0,
+	"zoom": 1.3
+}

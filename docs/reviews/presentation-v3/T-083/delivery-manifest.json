@@ -1,0 +1,3554 @@
+{
+  "scope": "T083 early delivery snapshot; downstream review additions are separate",
+  "head_at_manifest": "4704c1dd7179c8f566b49e010e4afdd35ef1480c",
+  "source_files": [
+    {
+      "path": "src/presentation/live_view.gd",
+      "bytes": 49992,
+      "sha256": "597db68f65fa53daa0f2b1134baa214c4475a2034735bfdd752146172118bc51"
+    },
+    {
+      "path": "src/presentation/release_view.gd",
+      "bytes": 31693,
+      "sha256": "09be47e95e499a85356f68bf2a341ba9c0212432dba7ba2d88a56b795420dc86"
+    },
+    {
+      "path": "src/presentation/effects/collapse_feedback.gd",
+      "bytes": 8411,
+      "sha256": "1f2e00ed6cf685450ebbf3680c2bfac981c1a506601257db438e4451257a5785"
+    },
+    {
+      "path": "src/presentation/effects/collapse_feedback.gd.uid",
+      "bytes": 19,
+      "sha256": "d2d40a6896fb9c38c3d870d932df3ae8985422485e63544f88d54390a8289543"
+    },
+    {
+      "path": "tests/presentation/capture_t083_collapse.gd",
+      "bytes": 5868,
+      "sha256": "fbdfa5c676a367f7fbb5b74dae7f3dc45ecdbaacd6fd111dab00416a615ad824"
+    },
+    {
+      "path": "tests/presentation/capture_t083_collapse.gd.uid",
+      "bytes": 20,
+      "sha256": "28f09cb10f9921515a16a70823941f65dba65a22e5b0bf088bbfa95c83c997f3"
+    },
+    {
+      "path": "tests/presentation/test_t083_collapse.gd",
+      "bytes": 6245,
+      "sha256": "75ad1722c808ab561413476072bd89b08dec875f6ace0baab807603ce2369b66"
+    },
+    {
+      "path": "tests/presentation/test_t083_collapse.gd.uid",
+      "bytes": 20,
+      "sha256": "a61b33267ebe004bc41538cd4bed8208b6395f0dc6ab498d172e0efe12c79e30"
+    },
+    {
+      "path": "tests/performance/measure_t083_collapse.gd",
+      "bytes": 4457,
+      "sha256": "18670f94c941bb59ad8e45756712b6de8ceb0bb25b6e0017bc16f51a5c92cd59"
+    },
+    {
+      "path": "tests/performance/measure_t083_collapse.gd.uid",
+      "bytes": 19,
+      "sha256": "8582223f75165af6aab9786fbfa41d93f379ba29c37082ac51bbc5ae48c48360"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/reviews/presentation-v3/T-083/.gdignore",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/adapter.md",
+      "bytes": 4763,
+      "sha256": "92152cad31906649355c117fb51f420be85a8ca878affb015f6f82e00c1e742a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-000.png",
+      "bytes": 319491,
+      "sha256": "4e542568e0ebd3d55eda11f95616023c90deb157f855a6bc4e43a82cfb29e17a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-001.png",
+      "bytes": 319461,
+      "sha256": "3fccb578296c99770574c3d280b24cd3fef8ae8c088e134dee8cc20b817803ce"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-002.png",
+      "bytes": 319192,
+      "sha256": "890e9b7194a6664d9f7aed570cab31b6cde1ece45e608d151c00a0873c1220dc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-003.png",
+      "bytes": 319058,
+      "sha256": "0d5f1bd0e88693592c9015af596ab0f784d60be13630d9a8630bb3e90767aac1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-004.png",
+      "bytes": 318849,
+      "sha256": "ae611b38e8ca2e98649e131b6ea5436af34591b204fa26896bd5b9ba5c7ee81c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-005.png",
+      "bytes": 318946,
+      "sha256": "d9b68f9a93cb650fd099827500c909fed4ef50daa21718bf77c3c215857debb7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-006.png",
+      "bytes": 319347,
+      "sha256": "062e2c27f1d754a0f33c3e1d7bac6592678d5a7d6c39382d5750fb47a75f57fc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-007.png",
+      "bytes": 321267,
+      "sha256": "41108e758fe78d0ab2dd1326e409c591162826d41e98b1b2bfd6f2000e515b82"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-008.png",
+      "bytes": 321373,
+      "sha256": "8abd3e1c77e46ee57f25ea32fa569e518cdb1122fde69521fcfab1a180765dc3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-009.png",
+      "bytes": 314378,
+      "sha256": "11d9d718f5ed3dc02f1ecea0aac3ceac6d8f77be2a56833c20c7c507009e1903"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-010.png",
+      "bytes": 315077,
+      "sha256": "f1cda421a6a076b2c482df033377fd54a0a08eb240e8cf3aa13793f2f2caf546"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-011.png",
+      "bytes": 315146,
+      "sha256": "2585c6a173ebe80d26ba0bfd44bd0a4e0f53e7177916ecae34074daa35d2fcee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-012.png",
+      "bytes": 315005,
+      "sha256": "7b7a643369d360e78d6b5e64f88b5a5f11451089e59832633666a6999bcc5b9c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-013.png",
+      "bytes": 315066,
+      "sha256": "a3f14183b4f669d44374c49789022133075fec1619a5b467cb75b03be0c679dc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-014.png",
+      "bytes": 314891,
+      "sha256": "178d60bc1c9891f48c187886563231c5770399c94d64049e7d42f436086aa1a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-015.png",
+      "bytes": 315165,
+      "sha256": "30e690ca6086479160398495c67cefdaf09bad802e7e2036e723dbfe30a25c51"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-016.png",
+      "bytes": 315191,
+      "sha256": "c69ca36a85ea25d3e7128d9d305e38dd7707a129e4138172e49bb0c429cf977e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-017.png",
+      "bytes": 315163,
+      "sha256": "af89a31548ed47b48a2b0b76313f3cc93eb3696f3bce6073eaccd0a3ba99d07a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-018.png",
+      "bytes": 315296,
+      "sha256": "eeadda6afb882ecabd0076d72dd0c2a8c27d26cb43f7f40aa81863b4d89f8f1a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-019.png",
+      "bytes": 314962,
+      "sha256": "6798d7769ddaf61285c4c2586e46bc11c6126ed32175dfb2afb7f37a4243b55f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-020.png",
+      "bytes": 315104,
+      "sha256": "0ff67b74cb9036df8f24b977e551a54aeb12b01889a13e28548f7c4be45fb31c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-021.png",
+      "bytes": 315061,
+      "sha256": "84d44cef8cc19f8d47a905c12b0e86b3668aea79cc4b3d5418bdad8c9f975157"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-022.png",
+      "bytes": 315474,
+      "sha256": "41e2826c74c75666b1bd5b7c37c4e99cbf6168015e47891ce810ae27831d0ce7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-023.png",
+      "bytes": 314966,
+      "sha256": "e786c3f9a47259bdbcb48c006069b242df549bf47e1d91ddcedf5db45ba813f5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-024.png",
+      "bytes": 315259,
+      "sha256": "c0feb64811914025812391f0849ea6070ac4c625bf195dc8c909e0d3d9bb27a2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core-025.png",
+      "bytes": 315514,
+      "sha256": "4df97881f7f207ea0e5a65d79cc14ca287ba66c16cd1e818ba7894f87ae467d7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/core.json",
+      "bytes": 5533,
+      "sha256": "a4c1515d7968f962ef77040dd3d4444c5748553fd2c859dc4f54605b99a2560a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-000.png",
+      "bytes": 1091891,
+      "sha256": "fb598878751b955c0716216976f7d05b34640c762024b0ddcfbb7df80e11df86"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-001.png",
+      "bytes": 1091962,
+      "sha256": "08c33ab4c98e7eae75a5e9c59b8ddba6656df81350e682f38580833170dc28e3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-002.png",
+      "bytes": 1091871,
+      "sha256": "9d476dcb93279db2832cd5a36a9e25ec309f117dd2530b717ea98613ce5126cf"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-003.png",
+      "bytes": 1091830,
+      "sha256": "109b74a521af9e5f2facf8460f45499d627fef8666fd953ae25b1e8dbc859838"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-004.png",
+      "bytes": 1091842,
+      "sha256": "0d24d110eb4717558d20ac1916104446a923a4a57e64b339927c5df79f8c79a6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-005.png",
+      "bytes": 1091773,
+      "sha256": "a50cfc064705c4bfa5fc6c7bfebaa3e42490ff3d3ffe219ed434c70bad2d13b0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-006.png",
+      "bytes": 1092097,
+      "sha256": "f943a0762218c740b9d3d10035b3037cfcdec5c9e760a378bb2988a728c87077"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-007.png",
+      "bytes": 1022539,
+      "sha256": "6d4fdad78a1d7bd584b9ee613eca109115a91ccf2701792ad5e658273baba2a4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-008.png",
+      "bytes": 1036071,
+      "sha256": "6d295814d894ade9a8b7435bc2039d2f6e9adf46f349665d3d5c8a8fdc4f9b9d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-009.png",
+      "bytes": 1014397,
+      "sha256": "b63966b13a1a21174abb040855d308c70c9bd13635d901a6da453dfdcde1b7ff"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-010.png",
+      "bytes": 1007910,
+      "sha256": "01346311057ea3cc4d4ebf40e4e285aaf6945659c670397f4df574ea254e49e4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-011.png",
+      "bytes": 1008865,
+      "sha256": "6f3b1764ae17eaf70b3c87d766ebcf1c841c4c4c21d7c9d7b90a96a98dc99a7c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-012.png",
+      "bytes": 995900,
+      "sha256": "6746faf4fafa61e5cb4f00139e03811824f922837d85f272cba785a4fb794e49"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-013.png",
+      "bytes": 979685,
+      "sha256": "215dc5d4ab3c90d4a342d6ddc07ebdd6871c6713f60a7f0708a719146a306846"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-014.png",
+      "bytes": 962774,
+      "sha256": "43cac3d00d3b3042856303ead0864812cfdff874abc768fd2e1852f8afea5925"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-015.png",
+      "bytes": 945427,
+      "sha256": "5375342151014a8e8dbe42ccad0e751dcd6bbf2de0fb2b683050259f93f884c5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-016.png",
+      "bytes": 938623,
+      "sha256": "f865e8d5e8e9b30a823c701c1cdcbb0f062a1b6138f422491ed8fe5d62704502"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-017.png",
+      "bytes": 938905,
+      "sha256": "21848cd0684c769b7832564e80504128ec1d80a85685ab6decb55335f20080b0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-018.png",
+      "bytes": 938868,
+      "sha256": "14c88b815d35dfc46e38218a8a3e6fb9d3a1a671ede12f995810fea06fd39c2a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-019.png",
+      "bytes": 939914,
+      "sha256": "20cef0f94396714f157f63b160df662717f60e726cb8f6fa06744dc627b8bcf2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-020.png",
+      "bytes": 940103,
+      "sha256": "98dc0ea619c50562791e6ce64c0bd77dd7ce87fbca069c5d9cc2c7b551e738cf"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-021.png",
+      "bytes": 936664,
+      "sha256": "a77761ffd57ac299e63238e67393b1404eb9a9e1f0b9891cdbe4bd0cf2c57e1b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-022.png",
+      "bytes": 929950,
+      "sha256": "12b10f2acdc04bdaaf28ace6dbb19d0535c3644e619d498d878b062c37e91bdd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-023.png",
+      "bytes": 926950,
+      "sha256": "303f5dba602ced9fb60ed439ead387d13248b15f1cc800adcf176aafee0051d1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-024.png",
+      "bytes": 926310,
+      "sha256": "74a3ea5570e98cd955effb200734c2b2bd3431ec40d352ebb1c02034c2f78c95"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner-025.png",
+      "bytes": 925584,
+      "sha256": "9ae9f53a3e39dbb2e61a347e11e62139cf6ac3e7a3750a57e00154e53aa3bd70"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/inner.json",
+      "bytes": 8400,
+      "sha256": "944b527942bc6dd392c4fa522a7dd0cc6375f73ac3118cc8abf63bdcaf336252"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-000.png",
+      "bytes": 567310,
+      "sha256": "dfa80b65aeb0545427a9e53842a07e673f99637c0aa06ded16c5e69f3fd5c61e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-001.png",
+      "bytes": 567345,
+      "sha256": "c1f72385aa87c946e5bcb14c75ec1dabf402b09491851fc6d91d457bbfa1bf7f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-002.png",
+      "bytes": 567120,
+      "sha256": "bf879acf6ec6eb12716619754576e6ded04dfc364a49b47cee407b56679d24f9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-003.png",
+      "bytes": 567214,
+      "sha256": "59d5ac3a849440107b275a65657d9a3bbe7f059e062cabb8a12accdbab394ea4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-004.png",
+      "bytes": 567132,
+      "sha256": "f7aaa43f77ac29f6eaad58d8c4d638aba431bd03a0a3f8ea5b6d99f039eb66c8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-005.png",
+      "bytes": 567149,
+      "sha256": "0e611f56a2b2f2d443fa56b3a668896d79f0de2a0f83a88a8748b5099492eb53"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-006.png",
+      "bytes": 568074,
+      "sha256": "c7bd1e6215d54531cd1c9044430126cbe8a87d587d15541f4454557a7e8beaec"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-007.png",
+      "bytes": 561543,
+      "sha256": "3816fd110580ea7869fe799530aa8972bf492d427b190e3142e31bb9491d8d50"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-008.png",
+      "bytes": 564052,
+      "sha256": "8dbdf3755aa23a2cae3901b89289e5e50445afb37ec40c5d2d3a28bf6f0854e6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-009.png",
+      "bytes": 563932,
+      "sha256": "0bcfd76500d7b762fafc191c76f9e0ec0c0903be469dbe99f37f6a125efc4312"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-010.png",
+      "bytes": 569035,
+      "sha256": "654ca218cb6718b82847fd658a1bf970ba9534483064467ead49418bcded58c3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-011.png",
+      "bytes": 568187,
+      "sha256": "639e178855c1d11c6167853097143db08835a719d3040861b181c72500696085"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-012.png",
+      "bytes": 564178,
+      "sha256": "516e9f6fa0f08d37c3f60a6985a041943c3a932b8b00785f86d0094898e15bdc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-013.png",
+      "bytes": 559785,
+      "sha256": "a9cd134e91c8c7bd466b06411581771640cc1b5f5bc1452ccb83c68f12e1cb8a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-014.png",
+      "bytes": 556660,
+      "sha256": "fa62f5207d1a83a3487c68c6becf61a7bb6907eb2f69a5afa202cf40d4dededd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-015.png",
+      "bytes": 549569,
+      "sha256": "1516307483a853f2da90c84023d9f94626ee5f7230b59a990ff74f9755026799"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-016.png",
+      "bytes": 546264,
+      "sha256": "0a11f2f79f7bc9b854671bbe36481d10c7f8788b556b7478fd9ad062854b4fe1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-017.png",
+      "bytes": 545311,
+      "sha256": "8d70fda056eaa3c1f597e3d6239bcd3f7c5f1afc3721ff18674bc186be15006a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-018.png",
+      "bytes": 544919,
+      "sha256": "dbe9cb406a559998f5aeb281ede6f238cdab2f39e7170598347a020ecaaa6a08"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-019.png",
+      "bytes": 543773,
+      "sha256": "bd65f5932fc6fce288969a783e156ff9f169a37baecebf8579fa4af593b08fdf"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-020.png",
+      "bytes": 541883,
+      "sha256": "c904e59a47b937ad6c9b7b61c08e5cde05cc8f0724fa4c956dbf7abb5b86f6ea"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-021.png",
+      "bytes": 540118,
+      "sha256": "aa9a6d11956b1f9c677661d627237fedfc5c1340a2184676b5e115065e461e8a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-022.png",
+      "bytes": 535349,
+      "sha256": "82114a0c198e0602e6d83bf694d07206ac882cc7837da7981e63e4a33bc1f248"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-023.png",
+      "bytes": 534468,
+      "sha256": "5652c867ca258357ae9b268e1066e451b130f31903e8be89b0b88920b7b32813"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-024.png",
+      "bytes": 533232,
+      "sha256": "08016ee58422aad989a5470417c2ed33d3b961e2b354c10f5cedb38b2a75ae6f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges-025.png",
+      "bytes": 533173,
+      "sha256": "38c4f6e3868d3c58d82460cbd29f88cafe7501cd04c8abdc032f76bc8ef94ab9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected/wedges.json",
+      "bytes": 5730,
+      "sha256": "7ff3ee9dbc004d0ca2277ad26b25cbdd19e168178d98a8ef12f5021503a26c3b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected-01.command.json",
+      "bytes": 1063,
+      "sha256": "deaca3ceb2707a9fd0712cdfdbd8f0929ba1b1ca63f100bfe4013a8e5f808365"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected-01.engine.log",
+      "bytes": 707,
+      "sha256": "bbd8d2e03f9a83076b40b8cec927e1814ac60a0c618823c3b7fa40df723f6597"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected-01.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-corrected-01.stdout.log",
+      "bytes": 204,
+      "sha256": "54c3eca3fb998685d39a166bc6a9f5923d01af5031677dd43caccebebc44a72d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-000.png",
+      "bytes": 319505,
+      "sha256": "4d7671a02563344c3c3d204bc3a94a71efde47b40c2b1c2e785b0ad69ce78eb2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-001.png",
+      "bytes": 319452,
+      "sha256": "afe749e39fe67cda6f389c2ed00e5ee00ef5841598df99b65adc83e54444e663"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-002.png",
+      "bytes": 319221,
+      "sha256": "8e6d4bf2fc3e0f60d2fb9dd80c1cfe9f6b39e894b5fe6ce547554539f04e0fa1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-003.png",
+      "bytes": 319285,
+      "sha256": "ac44bd4a7668be2af015c047c60871be36cbdb860b74d8072f7fb064e35a9310"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-004.png",
+      "bytes": 318832,
+      "sha256": "4f85346feff7ff6ed50b9a35e93fe2d4fabcfc9f4bcf20508dbc1c884f5a7bce"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-005.png",
+      "bytes": 318801,
+      "sha256": "349d94bd3dab04c958a00241b89537e3c78ed0789ebe7acc963ee3c809a92117"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-006.png",
+      "bytes": 319452,
+      "sha256": "f916f449dc67c55d858dbbf8831d24852c158e75a84fef9e82a6bfbf99e26abd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-007.png",
+      "bytes": 321700,
+      "sha256": "58e3b59e11ab9cb32f49917ef333ff647cd41226b1418bbc4ecd32100e6c37c3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-008.png",
+      "bytes": 321086,
+      "sha256": "e709c406668f7a60757f153c996c5e3e865406d6246e183ebdeb128b5f3dfaad"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-009.png",
+      "bytes": 315325,
+      "sha256": "ae8aaf4da447c1b53bfb3c98e7a1e937b4f6593222ead129e29971107c6a9f9e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-010.png",
+      "bytes": 315117,
+      "sha256": "2f2b8b545112b06416a31228c37c41f9b539d346863d610b24c44ab70a263a88"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-011.png",
+      "bytes": 315195,
+      "sha256": "43cb0d8d474d2552c13a4bad7c715f7375ed8393f0dcde4bf9903a10a1d87f69"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-012.png",
+      "bytes": 315143,
+      "sha256": "a0d6744cb4cea0c16b66ad2e1789bf5a46b7281c30d03f7198fd1451aa1a4290"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-013.png",
+      "bytes": 314996,
+      "sha256": "aeabd5fc754e426bb32d02e39e610f3fbeb4df315fe10a65b28122246485c32b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-014.png",
+      "bytes": 315199,
+      "sha256": "c9032a65ad648d05d2cc65a2f54a3c2465fbb4eac050e171cb5197f4a8bbb244"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-015.png",
+      "bytes": 315258,
+      "sha256": "5fe5fc91d153386117ee916144b6299a67a2d3be20d6acb1f4990fe32839a130"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-016.png",
+      "bytes": 315101,
+      "sha256": "8f93c12d9df2b861aae32f25b1d34a43576074edff12d2d0459cbebfdecf39e5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-017.png",
+      "bytes": 314954,
+      "sha256": "3b86b96d137160bf1e5cdae31d009fe2ba1521c624981a26815c802fbbcfeb5a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-018.png",
+      "bytes": 315194,
+      "sha256": "78a3d0b51456e7055e17f1285b13680ef007ba836682546aace5d2d221779c62"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-019.png",
+      "bytes": 315076,
+      "sha256": "5b578e1b10940be99e6dc13f01e82141894b8407f27f9d6d96f4db5c0b2b94df"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-020.png",
+      "bytes": 315304,
+      "sha256": "3d2412e0a4eefa387d519b3f4acb4de9a6714144266cf06fd0d53b81d3b09295"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-021.png",
+      "bytes": 315098,
+      "sha256": "688df91294020b43b6432174574bc3b7d445985970b1ea9b49a3c0279676a350"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-022.png",
+      "bytes": 315365,
+      "sha256": "26af6380540ab999540b9fe0eb30ca5fe83a568514a27ee85a708ac0efadf55c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-023.png",
+      "bytes": 314900,
+      "sha256": "a2a8dc1c090fc957b05d5b76305eba7425de4aabe2a1481968ab3460598bfb81"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-024.png",
+      "bytes": 315130,
+      "sha256": "1004f249d762d17437e0d027a8b98464af95c0f0d4c9e618135e028f208e23c9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core-025.png",
+      "bytes": 315366,
+      "sha256": "e77ca369a4a134ec6a957b3a74c4f9610c88529e459c5222acbafdecb6720078"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/core.json",
+      "bytes": 5544,
+      "sha256": "42e632122e9ed593efa208f73518a553b72268b86b5db0155aecf65358f6aec9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-000.png",
+      "bytes": 1091989,
+      "sha256": "7fde34c874d4b72131f7b404e07a5fad963f20152caa5a81ec933523ce1a1459"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-001.png",
+      "bytes": 1091965,
+      "sha256": "3d020f715e7ec48dd07a153b77c55fcf478438a41a1e6da61c36729f3eda9f2c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-002.png",
+      "bytes": 1091755,
+      "sha256": "c6edd826f8b7b97ebb340cf0c0b1449b1846ab4e5e650fd33b54f29adc8ce7c3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-003.png",
+      "bytes": 1091823,
+      "sha256": "90279cdacfce791d9dbf12c4905f8bb1d364b735324e670e14fe40ff6242a817"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-004.png",
+      "bytes": 1091850,
+      "sha256": "63be99c783a694ce0f1e3d8763d7595f05a93ea3e5faa47b66cf1dc5e15e180f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-005.png",
+      "bytes": 1091753,
+      "sha256": "fb360672fdfc3265fee4557e0697b6d082862a1a00311d23de28f46e1c3fde61"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-006.png",
+      "bytes": 1092091,
+      "sha256": "af95928180637ed045eea59e1326079bc863b28595e753a25abc4b3c037a4746"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-007.png",
+      "bytes": 939335,
+      "sha256": "b5d9eb8ebafad88780bbdb832720f480661d04b7f8bb4db00084c96e95eb72bc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-008.png",
+      "bytes": 940929,
+      "sha256": "2749cfcab565674ebd275c656a12a69d65093345654f467a000d1e4153ab5468"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-009.png",
+      "bytes": 950508,
+      "sha256": "0f97169a832d6fc4b95be80bd6bb219134e98625b16525f4dc8da5bb255db6a5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-010.png",
+      "bytes": 932415,
+      "sha256": "48a11cf0a77b80426a5b6f628aaf1516e735a55cef80e7052b82e1b84bb32c43"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-011.png",
+      "bytes": 937451,
+      "sha256": "0989cc9d3aaef1fe1b85efb93bcf04e759b95d7e2be5af82c18da5a66bbd8130"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-012.png",
+      "bytes": 933796,
+      "sha256": "fb24700667ea5eb650e0d4254bd8c52cbfedddb0d4bf9920cdec3761a7736ed3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-013.png",
+      "bytes": 929330,
+      "sha256": "bf4417c93e53024cb6662eaca82633aacfbc648901c141b555ccb226f1d84470"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-014.png",
+      "bytes": 925666,
+      "sha256": "dcc04f6cbb70faf9309e0d6113520d1f95591fa155a85a311351a077f8eeb89e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-015.png",
+      "bytes": 922282,
+      "sha256": "a07b3a87801af992ef8d0dfede1f6af4397c39b7eeafe2b22a16f9142bef77c1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-016.png",
+      "bytes": 922218,
+      "sha256": "617160873eec971a245cf3d3ef646ce9133e5dafabd4f7203b61f2a6c8e101ea"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-017.png",
+      "bytes": 923425,
+      "sha256": "5b2dfd35f1a2919f6466c95792dbb1fa55ecc20ba509956ece0784703de79cd7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-018.png",
+      "bytes": 924615,
+      "sha256": "f6ee5cf53193ebda40255a79e48e81e47be4feffc3c7cc14d6000d4f8f7205d5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-019.png",
+      "bytes": 928279,
+      "sha256": "0bff3d05b0097c47164a64f939ba37f07d847e73e45a1c9878c70c35400b52fe"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-020.png",
+      "bytes": 930406,
+      "sha256": "e41b4d852f2e4470e8cdb98124bc58f522d913c3d5d71a692fe2cbba428a558c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-021.png",
+      "bytes": 930837,
+      "sha256": "9791ca237cf7e24d54af20fba6e084aea987ad8237c3a653951802b6af0b45f7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-022.png",
+      "bytes": 927570,
+      "sha256": "8ee71f52b7350b701a062ee6ec407d83003a89dc2c14599570ddbb8dd7d74373"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-023.png",
+      "bytes": 926887,
+      "sha256": "f6cd059c8f9cdd5f5fe464594bc54f3aa00f3cccf34b220b7aae3672f22668d3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-024.png",
+      "bytes": 925427,
+      "sha256": "f66891f577a6f0545e09b215436a77bf183c3f837237c9e9abc282073c6feae6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner-025.png",
+      "bytes": 923288,
+      "sha256": "f2a2a04c5264045e426362d38ffaa11bb3c032022bfbfbc93e2342816e6be5a4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/inner.json",
+      "bytes": 8384,
+      "sha256": "5f8c910be0afa64891a96aa881310ae8be82eba5748e4d71cdbc026583865e76"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-000.png",
+      "bytes": 567269,
+      "sha256": "ed609d1d40aae8fcf1dce935195eb270a98dc2cb0239b05bb243c95984863962"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-001.png",
+      "bytes": 567182,
+      "sha256": "ef363819f7ede655fdca7097f74445549b1ed42972f8677bf41e46c744dde241"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-002.png",
+      "bytes": 567170,
+      "sha256": "8dda34e38f4d73778f4977c0b154be2d3d6eb52f83090ed7dc28c763a59bccfd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-003.png",
+      "bytes": 567372,
+      "sha256": "cb0fe929a37a7421d801e0cd4275f82e3fbc90accf79f9767d0cb0d46a476974"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-004.png",
+      "bytes": 566919,
+      "sha256": "9432f25a1ff737c12d1d9d106ec134a5e1c09776b543d31f86160e8d68903923"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-005.png",
+      "bytes": 567209,
+      "sha256": "90dcb111f9b334ff28aa2eb3644de427617a8ab6d921ee6c03ad138776a1764e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-006.png",
+      "bytes": 567948,
+      "sha256": "44d246c90555aa18141a62beb57104c7b6a15ee8b2b4e9200ec9f08428534989"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-007.png",
+      "bytes": 532192,
+      "sha256": "6f4d6cd75b20b6b08210cf66dfda6f73b36c7359636e822a6b7e9cb3adceb102"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-008.png",
+      "bytes": 536914,
+      "sha256": "f706e92b5293b1214213e568abe86d0e00b2978d9b8a8538b3b9e7ca12867db5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-009.png",
+      "bytes": 532215,
+      "sha256": "8a09698a085f59df4a84b249460e157e4dd415a08050ca5f1febd3ce3b29e791"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-010.png",
+      "bytes": 538341,
+      "sha256": "9884126d3e68201b0e211f0740080a5fc4244a1ac5399ee7be856c1a2dd0105a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-011.png",
+      "bytes": 539777,
+      "sha256": "ffc4a3757e490dacc8440b14f14381cad2133dc8b6cde245075ec615fc8d5d46"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-012.png",
+      "bytes": 539957,
+      "sha256": "c61f7ce95ae33a7cbbe22f932b37c7d7edfd9f68f317706968627d2e03cefb3a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-013.png",
+      "bytes": 540381,
+      "sha256": "2df643dfd66165bd1a1c8f9141debb47485bffe3aab934a811371e4233f5cea0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-014.png",
+      "bytes": 541063,
+      "sha256": "15e3ce5ad9ae3cbdc3d908fc1ae7f32c1484a9e681778887db277ede5c0d5a80"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-015.png",
+      "bytes": 540026,
+      "sha256": "8d02f0c714b536713cdbf76a0c190579f3697c45486e6012920de321f0bcf492"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-016.png",
+      "bytes": 540392,
+      "sha256": "fa00439a1a71ce83f0a35343c08f51dbcebd6d7d064c3a873d2b59649bab707c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-017.png",
+      "bytes": 539301,
+      "sha256": "bcc2fc4446412714445554a263416958b1da7062a8ecdc1329456becc42ac9ec"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-018.png",
+      "bytes": 539373,
+      "sha256": "91bf9e235ae4beda94cdaf3761a11903b7ea5dd38ad9015dc3f0441883d684cd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-019.png",
+      "bytes": 538703,
+      "sha256": "18faf0627d937e0ad4eec8accbf3609024dfecafd9c4bbd7fe9f53d106eb6a2c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-020.png",
+      "bytes": 537419,
+      "sha256": "5f0a5ccf7df8d624e105d76cdfca68587e4e2bc9f6d30a4a1e26e77a5cfc3318"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-021.png",
+      "bytes": 537174,
+      "sha256": "ec99d29f3078e7f40f25702d66cd6e240f9bec879052a7df46314eb5c3b729ac"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-022.png",
+      "bytes": 534797,
+      "sha256": "1e82a76b7df7386456a9edc5c291a37f09c828926e41c096d0a8b1c077a94720"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-023.png",
+      "bytes": 534484,
+      "sha256": "321fd77d854a6e498ca089d95bc55304a64dcd241f984a5735ab8553561d7e6b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-024.png",
+      "bytes": 533533,
+      "sha256": "d8e23595cbce70474f04e1a4e07f0ca95edfc1098a1a1fd29eb8dd43abc09704"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-025.png",
+      "bytes": 533193,
+      "sha256": "07f359919e87736e653dbd78addbfc5240032905049eaca883a5f92e7880f18d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges-026.png",
+      "bytes": 533275,
+      "sha256": "0b98850a4b19d31d8c16b66cd06cad646a3bc12c19862c635f451fb901eca869"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal/wedges.json",
+      "bytes": 5830,
+      "sha256": "df7028c88e54e658b5740f8ec2612fd22da32c41dbe0f196e2eff0f83070a320"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal-01.command.json",
+      "bytes": 1053,
+      "sha256": "6c6e1f4167beab682d7aabf33954fc52b2c8b45a505f1aee79c0c6f32a8bbbb4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal-01.engine.log",
+      "bytes": 707,
+      "sha256": "ccb1633e3f808e454e792288cfd06f2597a269562bb591707057ff00f107ade8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal-01.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-normal-01.stdout.log",
+      "bytes": 204,
+      "sha256": "e671a1a6d0ac38bc608135fc5b714924cb911ced719786804b3fc033488c6e9d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-000.png",
+      "bytes": 1034334,
+      "sha256": "d41e0367e7f90747884005ea3e77c6a7c609de8287a0c29ea06c254db4bab04b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-001.png",
+      "bytes": 1034276,
+      "sha256": "2fd1f17e608c255602d422907d0321131c30d6d2628a8c567a95a2a40ea81d6a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-002.png",
+      "bytes": 1034240,
+      "sha256": "ee5a6c98423df7ab4a0c0a7af1a09a56c8e9f4bf5e0b415057656224cbba7df7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-003.png",
+      "bytes": 1034294,
+      "sha256": "ce5dd8fcaa5f3409377684b115dc9ae751c08476d138eec7c77910b22b1843d1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-004.png",
+      "bytes": 1034205,
+      "sha256": "89a2124a15d55454272e8f7f1ea1b259ee5b201ff1dd0664124571d8ec7b68c6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-005.png",
+      "bytes": 1034226,
+      "sha256": "7b85938c2667dc8ef6cf3cbc906d673e66d4663c6e17f2482bc83da5f631ac64"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-006.png",
+      "bytes": 1034745,
+      "sha256": "5c1f2e8b6b67abae256a4e004ad9ddca83c890126190fa99e0e1b1e17b768b07"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-007.png",
+      "bytes": 893858,
+      "sha256": "8184ba6817d60d81e3e5bdc349fbae532d813644fd9489e118617655184cfedd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-008.png",
+      "bytes": 891205,
+      "sha256": "80e1bb2387a5102dfca37eacbd3d0cea7fc2c0a11ae61c3461cead24c90717d9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-009.png",
+      "bytes": 889585,
+      "sha256": "95e671c00e881262a8cc5437a6135f4932525ea6ca3c6814e163f7df0cc0b064"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-010.png",
+      "bytes": 887534,
+      "sha256": "db4ccc222be611ab358d6e31d215156f161d2cca681d7f0f1fe0d2cdce6bea0a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-011.png",
+      "bytes": 885467,
+      "sha256": "52a6f33bfc8f776dc17d0caaeb8d888b17ec98f9b827e7bdbc619af3343f1e34"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-012.png",
+      "bytes": 884988,
+      "sha256": "28e99acdd87c97ef979b7dc24ec8da4c30d40caa0f35d8f6cb03ce51dc85a1ca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-013.png",
+      "bytes": 884628,
+      "sha256": "b0e3238a31cd9e56944d047f04d3bf64c14d638286e422173e0e88c91150b969"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-014.png",
+      "bytes": 886074,
+      "sha256": "769ab76761838512069124306994a0259cb1f13e822aedec249694382737e013"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-015.png",
+      "bytes": 888115,
+      "sha256": "509aad0df1b6781129740fad17ae2a8794a5380c2644ecba40b95f679e2b5d67"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-016.png",
+      "bytes": 889753,
+      "sha256": "42f5570090bba36d92aeaaaf14aed1ebfb31e261d5302fc8d965c4fb6e0a901a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-017.png",
+      "bytes": 891003,
+      "sha256": "1570bf8372a18be0753d9501aaea19fb002b4576cf07d0a360ef6a65360c6ff5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-018.png",
+      "bytes": 892636,
+      "sha256": "fb8d6961993ded83243abc852286615d3f1e063c18f3ec069fbda8609a758e02"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-019.png",
+      "bytes": 894478,
+      "sha256": "7fc6c1530f15c7d8be09c0188bafc6bed5cd4000f31cef15e87744fc123254f8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-020.png",
+      "bytes": 895596,
+      "sha256": "ba7a8f2e6c2cf84b19bd02cf9489b5625cb9b5ba1f1ba1bfa1c5a03d111668c7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-021.png",
+      "bytes": 895335,
+      "sha256": "6eb9c9251ab253f70b86afc3bed481c24c476d49ab68275a535210537fa804fc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-022.png",
+      "bytes": 894814,
+      "sha256": "772081860d92bd5f6059b23f27a98e1b2ba3453ebfb1f660f9b00bf5ce3dcf39"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-023.png",
+      "bytes": 892731,
+      "sha256": "a350b1086ca86a8c589c4b54250c4744235234f04b1587376a3a9cf9830d1bc6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-024.png",
+      "bytes": 891191,
+      "sha256": "24dd60f993e3bea21cdcdecd070564af347daa1fd143d682742b4975c4a37293"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner-025.png",
+      "bytes": 888953,
+      "sha256": "bb88c06781f1f62057c6605e1d90db493d590c2749ecb2a1074107de4a793dbf"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off/inner.json",
+      "bytes": 8360,
+      "sha256": "b57a5954d1004e0044a2ac2dd3d50e0837f80a306af097dd24174dcc65b86404"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off-01.command.json",
+      "bytes": 1082,
+      "sha256": "32b11d3d11eee758ee7ed51a34b40d1fafdd4bc724eb32500bae8e314a83151c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off-01.engine.log",
+      "bytes": 707,
+      "sha256": "97685114ea523a0aec1b95b4958ff86c5c0771c203641c2680d51c3f82cb4719"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off-01.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-off-01.stdout.log",
+      "bytes": 204,
+      "sha256": "e025227505ab5af6623b815689e80fa1a9caf7188cd7688405ec22d0234b57e1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-000.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-001.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-002.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-003.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-004.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-005.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-006.png",
+      "bytes": 1091895,
+      "sha256": "db0f80283ea0a1b87fd01086a0e0d8ceb7e1a1901655737ea6da6acd87407338"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-007.png",
+      "bytes": 935099,
+      "sha256": "5bec32fa45025d2e43277833772826d16295ee096435329e733aeb19f5c0ea3e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-008.png",
+      "bytes": 932444,
+      "sha256": "c2893336dc2cbc034ffbcd8ef772d976350713a0758559ea039dc54b991959e2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-009.png",
+      "bytes": 924871,
+      "sha256": "03f86ff7fbfa33f6a8c541a5989cc06ce3ef224aeef527472f9cabf3a7a2df41"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-010.png",
+      "bytes": 924712,
+      "sha256": "45acbbda0d229c11756b504803c0fd18b39d3cd09bcbffe4417b19412e95c5bb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-011.png",
+      "bytes": 924707,
+      "sha256": "4a8834de0ecb23ee9944ccf6fd46991f0be6fd5c28aaf77a8c2fb5828179b493"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-012.png",
+      "bytes": 925009,
+      "sha256": "9da7958660b3a73ce7f88577018876c04cce2c5240df813709ad567e07c20c9b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-013.png",
+      "bytes": 924671,
+      "sha256": "1b653e97d112fcfd8f20ed58244f0a431062197f7ddc33a3324d68c967add7ba"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-014.png",
+      "bytes": 925286,
+      "sha256": "96c91cf51fca1db8aa772f528b7118de26ff7b57847c6a4fb9c2f971d9e4791c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-015.png",
+      "bytes": 924719,
+      "sha256": "1e84976d2b0d0cec5a95457949976c96e035fc6e393d09f42cc2803ac5f7caa4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-016.png",
+      "bytes": 925230,
+      "sha256": "17678bbe92a87df9f4e71b307b3d5f7758008aa7e71c8b982babe3b1a5fad514"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-017.png",
+      "bytes": 924643,
+      "sha256": "ef0b1443378eefc2844e5dc0189d35453960e5d0738b94494adcedcc4f2ee5ba"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-018.png",
+      "bytes": 923032,
+      "sha256": "23b176ef3451eaa1f9600657feb45c8d8d5010fc7cd0ec5b166ed28295502442"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-019.png",
+      "bytes": 922813,
+      "sha256": "c31f9e9fe2d367adc433d2767c98fbf6d921faa8eef0fb124daff065e91fbdc7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-020.png",
+      "bytes": 923033,
+      "sha256": "5e4c4d92056b6dbd0ca94511d03030901a3721e0933c52932efe2421ec684eb7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-021.png",
+      "bytes": 922175,
+      "sha256": "5fdac9eeea5ed41f7ae5b112d959b76d9f22e10629274bc869d2c23994f35c0c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-022.png",
+      "bytes": 921411,
+      "sha256": "5fb3ac63dadb8b2f35eb7eb6cdd5607510456eec4e893d4fdc2c8ec62b707276"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-023.png",
+      "bytes": 920740,
+      "sha256": "fbfb585c54d3952fbce3a9e50081e97362a2de783cc690511fa37b662bfc26ac"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-024.png",
+      "bytes": 919721,
+      "sha256": "a3fcd62df4d9ee3e70b47415a0d401f2e954553a0dc1dabb05f9cc57eec15abd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-025.png",
+      "bytes": 919599,
+      "sha256": "c39ba6b5487df6b9293023105bbf6562350a83c4db1fd8ceb5052d4ad256f2ff"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner-026.png",
+      "bytes": 918943,
+      "sha256": "4039336b72100bcfb2d22b7d0c2c92d2e08f1fc0db915bd65e35cede05e51754"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced/inner.json",
+      "bytes": 8477,
+      "sha256": "70fd0dec03c797ae833309428999962e46b320677393df17f96266c1995d0f51"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced-01.command.json",
+      "bytes": 1098,
+      "sha256": "307c878ee14e08a397fd29e2d0dbeac992fefa63c731ee18fe1d94372ff3ffaa"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced-01.engine.log",
+      "bytes": 707,
+      "sha256": "108d036c5c3c5eb3b983c8f5ffbc510e1de49f84a85996ae3c6c6b048b961fec"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced-01.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/after-reduced-01.stdout.log",
+      "bytes": 204,
+      "sha256": "9051f3a4432cad42aff9d4fd36c6c16988de6c6dcba454778f9a7e49dfcfda62"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-000.png",
+      "bytes": 319542,
+      "sha256": "7e864e9fb0d60872cdac69abcfb92d8e51837b2a9f181a54740b88985bb443f0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-001.png",
+      "bytes": 319418,
+      "sha256": "cc4b62f5a40bcb330a822ae80787dbd28cc1266a5450ce529936484b6acaf1eb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-002.png",
+      "bytes": 319203,
+      "sha256": "440cdbf52eea675c07cc745905df674a55d5df1496f3f2f3aa467b80bf1fb622"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-003.png",
+      "bytes": 319184,
+      "sha256": "de9aaf2cf9ceb285e31a553736f3adf457f033de12dda79c7c2bc036f426dc06"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-004.png",
+      "bytes": 318747,
+      "sha256": "52cd7491d2e18209ec2e52aad3ec98489171a82ccb291f9efece2c1445b79120"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-005.png",
+      "bytes": 318841,
+      "sha256": "5d9d1481f7d2c14517dab56907218be9a95fc99b01daf4b91dfb8279a359069c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-006.png",
+      "bytes": 319462,
+      "sha256": "007b7c9e6163491ce4b1e452151058992c02f71e633d72b8723e29835cc7fbb8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-007.png",
+      "bytes": 314741,
+      "sha256": "29d412413e557417e30a692062c2b7912fd9b5e9f392a5e42c36c03c8789bf48"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-008.png",
+      "bytes": 315232,
+      "sha256": "56fad62784c60ba95aecd453e0a17e4b5c914c2c7c1df29fdb38c0ef769c1830"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-009.png",
+      "bytes": 315224,
+      "sha256": "8ca87894e294a31f254f62c31afa51f4889abb889299df9eb1f3a3e686b6a641"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-010.png",
+      "bytes": 315130,
+      "sha256": "bc8a3a9da89f3e3b5e2841542ae219d585138191e6d8427a8ffb88488629ad4c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-011.png",
+      "bytes": 314914,
+      "sha256": "92922e4c0d5ff1f8adb659588cb1aab6529f5d91a4aa3d8954851149f8d694c6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-012.png",
+      "bytes": 315182,
+      "sha256": "8660aa05d9ba5999dd46b8b26542bba24f344c92a680bcc35e4897c6bf9c199f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-013.png",
+      "bytes": 314986,
+      "sha256": "94093487c5b922c6deeebfa67eecfd6ac2ae6ca781ccd90cfcb749e50f6cbc5b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-014.png",
+      "bytes": 315074,
+      "sha256": "84bf269537f1f8b9530f0f3f4d79ec5b8b690aa6486053eb3b5ec0fc2e4dec80"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-015.png",
+      "bytes": 314893,
+      "sha256": "d057cba3aee4d6b6e421af25b8c08ac693156db81e7912e17d2dfb0fd893e773"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-016.png",
+      "bytes": 315046,
+      "sha256": "430ad97c166a8244627058d48696e3552b91136b105654e19c8325994e12a045"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-017.png",
+      "bytes": 315122,
+      "sha256": "9ac5af4c784a36acee44fc696a14c6a3701c2b2c7e438c3fc3560e89944f4f3c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-018.png",
+      "bytes": 315093,
+      "sha256": "3f03d4883a86ad350a3c2f1d23af0dc586851fae306685d6bd256f3a9eb9462f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-019.png",
+      "bytes": 315297,
+      "sha256": "1dc858fc67ca720e2028dfd172ac6680ecdaef2fc100d7b048591c39c7d7c222"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-020.png",
+      "bytes": 315032,
+      "sha256": "3a649f585eeda93cf1b04daf3cf2595378b6ee1a393438fbe7b28e5c7db3661e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-021.png",
+      "bytes": 315048,
+      "sha256": "63a90b6b93c7327d24fb658abbf2e91f8e7aefaf5f9b9d683ab51560c425e549"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-022.png",
+      "bytes": 314872,
+      "sha256": "f7f71f9473cd4dc1d3fe11162c3dc342e512beb20d6ee8aeb009ed26fdda23e8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-023.png",
+      "bytes": 315195,
+      "sha256": "22facdfc85244ffdc2722c3e6b10f5c2a289502780802dc6bfa8839231e20c55"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core-024.png",
+      "bytes": 315330,
+      "sha256": "46bddbee46c14576fa8b387fe4152a555b88423818ba2f5486c51eb4d72e0e71"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/core.json",
+      "bytes": 5439,
+      "sha256": "6856f6bff4c8e55c59d5aaf8482460b6e775486e817a7ad107fefd48acbc3738"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-000.png",
+      "bytes": 1091936,
+      "sha256": "93be9253410aba9c1b62506e02e7bf66ca375e7e7ccfc4f3f4e2604be89026fd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-001.png",
+      "bytes": 1091993,
+      "sha256": "dfc0fac3e84e131973fd7cdeb14244716264e0808b1255020bf1d26815b401ee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-002.png",
+      "bytes": 1091774,
+      "sha256": "13e2c2cc4495635545b3bf9afb06d4ec4442ee1108b4679795f2886646127e83"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-003.png",
+      "bytes": 1091746,
+      "sha256": "a2e1a7f6779b85cbad34556993d09d6dd85e08bdaef20720cfbcef328d588cb3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-004.png",
+      "bytes": 1091761,
+      "sha256": "7659f95aff59ffeef4185d125f3247f4f009ea97fddd1d07889959eb044f0457"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-005.png",
+      "bytes": 1091721,
+      "sha256": "79349ee4a3e10f8bb007f2994b2b55ae7b6fb728e415a9bc0fb017c59f95cc75"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-006.png",
+      "bytes": 1092090,
+      "sha256": "c1a035ac6a5fbbd6c6c95008caafcb92850f13e9c5bcbd481d7017b1be81b119"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-007.png",
+      "bytes": 916928,
+      "sha256": "7c08ea1b1dc0acca3a104d86923aa3a9a05d43126e8d29e5635d011394c2da0c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-008.png",
+      "bytes": 899745,
+      "sha256": "8ed69f316d0ddaef669d0df10392c1ff5525600c94657d87fd48090c5eac56ae"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-009.png",
+      "bytes": 890079,
+      "sha256": "683f3e3c464a7f2d8b0ea9ad41f2b213fd6c1d299ac6c340a8b7312a146c8667"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-010.png",
+      "bytes": 896225,
+      "sha256": "c7b74c0cd8f742ed0044c27fb43775d4a7b3ce9f4721a6c412e7fd6b067f7a1f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-011.png",
+      "bytes": 899863,
+      "sha256": "870556bbaba5b9ce9cbec3aece0a9086a4662927f004695b74b3788ec9673c4c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-012.png",
+      "bytes": 896767,
+      "sha256": "f68b4ee0eb1a9348d30a65dd685d01c999f8cd86cc1538566a6ba8a6263aee3f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-013.png",
+      "bytes": 910820,
+      "sha256": "0023587a9047dd95e2a881bfbaf4eb73db9cedbaf1fc800e5c60e0f35bdf2dd5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-014.png",
+      "bytes": 911723,
+      "sha256": "3ca3b75bf2d8f345c79858eae82d2a30b681c75dc10c02b782ca09d1ec23993d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-015.png",
+      "bytes": 913900,
+      "sha256": "b77c4e85486bd27a22b66fd0d6c055fd3b0344db7246925bb68210f9e3685877"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-016.png",
+      "bytes": 915581,
+      "sha256": "be9bd37db3b46f90f9b07256d1f73b403c2e10908cfad02d2543c4abb41dd6a6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-017.png",
+      "bytes": 918343,
+      "sha256": "5d54b63342b395468818f5d75c8b89c6427cddf042c8e5632c25b4d5846ed81b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-018.png",
+      "bytes": 921843,
+      "sha256": "ba199914f4d2dc345e697dceba848b4119772e67a1658cf887b9c4d8c8979e69"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-019.png",
+      "bytes": 925048,
+      "sha256": "338b5192f504ac0cb4eba211a54d214ce5d2c63060cbe7b1f8593fa8d06e09c7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-020.png",
+      "bytes": 926589,
+      "sha256": "efec336c0fb06000dcc4d389e8445a2dd351ba0ef8352b040ca4ebfd25e80dbe"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-021.png",
+      "bytes": 928116,
+      "sha256": "a580cc64064c77b47f989971b68103489544796882480e7c2e1b3f5d178ea296"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-022.png",
+      "bytes": 928289,
+      "sha256": "18946bf6526e444fab8d933fc1beba87ced446ff4fa7420f7978d80d8c168209"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-023.png",
+      "bytes": 925578,
+      "sha256": "196557eb7cd54714f20f2e6973a2a7345ef9e9fc0646667b3267605e7402bf8b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-024.png",
+      "bytes": 923575,
+      "sha256": "f04fe7a7a47bfd3a5a79e5248f26758d68f442383e1e1408e5e5b4ed5e3c2b12"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-025.png",
+      "bytes": 920632,
+      "sha256": "4b71ee7ce234c1abf0fa9fbcf8967310b7de57a4267d1521341af01055438a9d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-026.png",
+      "bytes": 917181,
+      "sha256": "85059564e6e0b0ef846bc9431a40a0a67cd5e4a7c53218d686a5f73627e745f7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-027.png",
+      "bytes": 913431,
+      "sha256": "a7af4826362ac06fc8f735bb65cb7f20905ed7755d18e96fe01ee279db16339b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-028.png",
+      "bytes": 909679,
+      "sha256": "c016bfa274e9b54ef59678e98315a1a6037d6b0f62636b69636e941d1be2cd83"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-029.png",
+      "bytes": 906888,
+      "sha256": "417dd8c12a615913aa5dbadb5939562718bdf95851f58b4807b1ddec0577dc67"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-030.png",
+      "bytes": 903824,
+      "sha256": "6eabc6ab59f69ac338e23577b09f635a103d2e3eb30636944fd3d0b6d19baaf2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-031.png",
+      "bytes": 902845,
+      "sha256": "2fda1349a4bf12136b78311e4396964697576321b6d18c7a327379be00330b75"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-032.png",
+      "bytes": 904406,
+      "sha256": "af1662e4bcaccfe314c885941522e10604a2b4ded1092c5ef6a0c13b3da6d11b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-033.png",
+      "bytes": 906674,
+      "sha256": "e0cdb3946bc5d91b36e49caa5b181de10152f5088172b7ebb9ce3b08179a6ec3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-034.png",
+      "bytes": 908192,
+      "sha256": "e0720742f0655961b3974b1a881458ada8aa40bf069c7ab7ecfd320111757119"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-035.png",
+      "bytes": 910760,
+      "sha256": "06ff5197e2d51a0f9e34bf861aedb073ac6644aca1ad3600e2d644fe50c53aee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-036.png",
+      "bytes": 914127,
+      "sha256": "6595d808911b6e3b1bb89c7aa2de20ed484552e6b944d51e0aac1af436fee6fa"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-037.png",
+      "bytes": 915941,
+      "sha256": "d3b2e4e9d41bb4b1a31e9badb0f566f9f46cc1feb24b08b43cafc66112f066ca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-038.png",
+      "bytes": 917509,
+      "sha256": "d3fbb697904fd596328cf0af36597bd7b5f31e21200008b87aed25b898a5cf1f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-039.png",
+      "bytes": 917772,
+      "sha256": "14244202ec1ecaa63ec47e0668d2052baf1853264bd8e8693f1a67968e2722a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-040.png",
+      "bytes": 916831,
+      "sha256": "19bb189673293a74bfc44a3cf83ece65676103fd29647ac4570d97cbeb90958b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-041.png",
+      "bytes": 914417,
+      "sha256": "b299e415782e1a1108550896c56dd526f781cec95c0843426794c5436a23c555"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-042.png",
+      "bytes": 911802,
+      "sha256": "905c4e66dd44609446c2d108e0d3665ac0432932bf22f06f63544b8056278453"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-043.png",
+      "bytes": 908259,
+      "sha256": "edd56831b7a397e1ffa39dea583b8b464b748d3ae225e8a7fbc2c616e63e2774"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-044.png",
+      "bytes": 903002,
+      "sha256": "dc6f7bb7a42d3160012532f3e3aef35975951929ded6608a2646b4374b6f7138"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-045.png",
+      "bytes": 898651,
+      "sha256": "10cec298112d0e41b6d6eabb86225d5d43d9fa218825a5bd9b259f44a4e2199c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-046.png",
+      "bytes": 894697,
+      "sha256": "14b1f6b42c6436f4b89cb5c2921f2ed36f9af80064845b45d780a964e5e0cc8b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-047.png",
+      "bytes": 893572,
+      "sha256": "545b6dc39d27dec382a2c2b1fef28dd628f80299a84f2f25fd3c4679842168a7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-048.png",
+      "bytes": 893655,
+      "sha256": "b1ba5c767a1c57648257a9e397579257a5e0076a1c1f486049d95c60a5625537"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-049.png",
+      "bytes": 894381,
+      "sha256": "3ef6052388435ff2358f154b5f01afd3f647b8011b939811165f99968bcf0746"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-050.png",
+      "bytes": 898195,
+      "sha256": "b86a2f4cd041ab2bbccef9a228eb2c99fdb5b4907dd281ff311af875bd44febc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-051.png",
+      "bytes": 901259,
+      "sha256": "f1289199623246f4f07407b3494eb22cf34395e646e04930c7e64bfc45ee9257"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-052.png",
+      "bytes": 905347,
+      "sha256": "bae58256b11182ddca291bdfe6509ae7640ca5f9aa1899ab7e85ca0fab1a8412"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-053.png",
+      "bytes": 907171,
+      "sha256": "1159e21ff1c4b73ab52541f7ff1a97014d069e0a6b6c1c569c9146badfb32eeb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-054.png",
+      "bytes": 908383,
+      "sha256": "32456faba3695349a6b928738ff18dc042e8211410e5f7035c8064c8af6ef6c6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-055.png",
+      "bytes": 909547,
+      "sha256": "a2ea59b8ffe8fca4c25a40cdf54bedd1eb56c439297d173483382748f74ace18"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner-056.png",
+      "bytes": 909401,
+      "sha256": "99d979e46e21543bec310c3851f01cef01055959d49a1d50a2e1879d166ecc2f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/inner.json",
+      "bytes": 11771,
+      "sha256": "9ce64dc5d26d837e354f043a75ebb5e41b35602da56e95f331effb7fbe30a111"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-000.png",
+      "bytes": 567243,
+      "sha256": "d81fa13bfcf96962431792578231cd2e11da290e3daf4914224f39f2e33a4f8e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-001.png",
+      "bytes": 567061,
+      "sha256": "9016e8878e03e607585bf96e3f7a30eac0e058e6ac8d2aa45c6b9ddabcb80bf2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-002.png",
+      "bytes": 567166,
+      "sha256": "98b07ca4f423543edcc651be1716997d2ac1c6c99ebffbcc7e7ee6478b7bca8b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-003.png",
+      "bytes": 567202,
+      "sha256": "ac3a9011ecc0a5e23aabcf7c7c45dd4a38139c75140c2c69722095429ad48796"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-004.png",
+      "bytes": 567009,
+      "sha256": "5db27795cacf2dcc8bbfdb54c799a2ce10b5f05d522ee36846888d4b5f1bfa8f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-005.png",
+      "bytes": 567314,
+      "sha256": "63ae679dc971a5188cd2c78be2818787b70eb0ab9fb10eff3ea01e53ab48694d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-006.png",
+      "bytes": 567891,
+      "sha256": "62837c933d854c4c9dd0ab060ef6376fadf708d06953d4b229a7c4fdab268581"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-007.png",
+      "bytes": 535119,
+      "sha256": "f8ac0a9f8c51e52fd27b75bdae8228396e569b1fc84f002c8c70992924fb8423"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-008.png",
+      "bytes": 531672,
+      "sha256": "20ddee945190af403e55277f9f9bced00617de13fed9133f8416bc39e0516316"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-009.png",
+      "bytes": 532789,
+      "sha256": "77e12cc14d2ee77291c2f21157d0790051158c5025f4cb8ac7679c8b5597e278"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-010.png",
+      "bytes": 532257,
+      "sha256": "ff543ff1262e2651761395db8e3307994365af27159a9e86a6b731461c4d4eca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-011.png",
+      "bytes": 534613,
+      "sha256": "7a3aa32bab33837070cc3136ad10b9a8b690e4f121dbe4ae070934eaa3bc9754"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-012.png",
+      "bytes": 538633,
+      "sha256": "f229c17194705dbf7edcaa1e878f56a853563e1344c23967b0e1e39226a2dcb4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-013.png",
+      "bytes": 539495,
+      "sha256": "93d6add64df4f604b25a700abdca2fe8b589905e8ed648e4deaee21d07b555b3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-014.png",
+      "bytes": 539615,
+      "sha256": "2ee9427c27f189c8bb00786cd72b6a80e0dedc4b9e88901d0a4561fea7ab9bd1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-015.png",
+      "bytes": 538421,
+      "sha256": "74533fb91852aa0ff07739aa51c9e5d605b035a03c6ccb41365b7b9fb50bb853"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-016.png",
+      "bytes": 538071,
+      "sha256": "3c18c33ccbcbe243f2bf4b87ef66722b6319d0e77215fd3c16b407ab97ece432"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-017.png",
+      "bytes": 537465,
+      "sha256": "4f666ced7a582965b7e7a263d23231299e1b0278b6ea9a1b56179ea49a6bc15a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-018.png",
+      "bytes": 537258,
+      "sha256": "ac1e575fd2269a8552dafc8bfb3b4635e97f897510b6aa2f050d0c36c4292885"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-019.png",
+      "bytes": 536581,
+      "sha256": "1f727814dc71da0f4b2ba6260971fa5f6c4f15f533225964ccdeada811c1872c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-020.png",
+      "bytes": 535205,
+      "sha256": "4c792d6c4beead5fb9d511ef2db3ddf932f9c575b8618cf67d1a95a28f395136"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-021.png",
+      "bytes": 534879,
+      "sha256": "22fa8b7882a5aff91299513de9bd9a56925fffa6b4221f6cf6af115edc96bdb6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-022.png",
+      "bytes": 534435,
+      "sha256": "9defe3ebb6424af7d9ec9884e5334f335c17166852e35c0988b4f346718f1aa2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-023.png",
+      "bytes": 534588,
+      "sha256": "5ee3c4fad8a64a4f39a3648af8ed8b9a661535033f7c45b17d0ac081db6e0452"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-024.png",
+      "bytes": 533348,
+      "sha256": "e868a7e75456c0222aeba0db6d63bd4fcaa6a709fb05b52aa1a4a4fdc5f94650"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-025.png",
+      "bytes": 533031,
+      "sha256": "a5e2c1d1d5ce0f74d7f028647ff57865e0c22f4527656d9094a1b4f4d8786f64"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-026.png",
+      "bytes": 533214,
+      "sha256": "80745a3ca73d55084ac996c7eb3d21421c9b112b9b61386152dd4896089df4ea"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-027.png",
+      "bytes": 532453,
+      "sha256": "0f182afa760127eed48dbb97b7f807595858428f11b95fafc3dc8128416f5898"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-028.png",
+      "bytes": 530924,
+      "sha256": "11727c273fd677a182c2f32d6e1349baf98a423a3e046dd07d672460863872c0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-029.png",
+      "bytes": 530762,
+      "sha256": "d3658c7cf0484b7377c8e3b90c8da9d517a3bdf0a3fb445597ba0ac5d7857b2c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-030.png",
+      "bytes": 529426,
+      "sha256": "9327a930e4506f680a84ba61fd9761cae3a728394eec39a8f6c0e2a5819c56dc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-031.png",
+      "bytes": 528859,
+      "sha256": "082a37b830010b91621e142fe9c5fb42f285421ab51a8f1c676aed7c538357f1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-032.png",
+      "bytes": 528255,
+      "sha256": "0fc61d2c7530e6cc5fe3f1c770327c03827f1c3daeb7fe8645bcac6411bebf7e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-033.png",
+      "bytes": 528169,
+      "sha256": "43fdb4d7ef5f410d0d829bfa3e69f179c30268965d9c32f0130e5e1ca515e225"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-034.png",
+      "bytes": 527768,
+      "sha256": "faf17f659790896744109647f1d996959cbb97a31fc646c2d2de2053afc52a5c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-035.png",
+      "bytes": 525858,
+      "sha256": "6f19d091b24db3141e99ad6e2f51f397d534bc2d6287f4c628601d78b2677686"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-036.png",
+      "bytes": 525758,
+      "sha256": "595077c6bb635254c9ab504a245a71b449a445d1b539a090eecb2dba6e3ab3ca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-037.png",
+      "bytes": 525348,
+      "sha256": "eec98c7d95df8aab5b0c4e41a221a4f7c067e350a8011acd39055bc549774b1b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-038.png",
+      "bytes": 524912,
+      "sha256": "525d89e30151e8f10279ae40d989c0e9b13affaabfe9c1a3ed306f39f2d32f74"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-039.png",
+      "bytes": 523907,
+      "sha256": "b3b1837bdcc0340f2f4b0055f90292ba70e06b04fe305cc0f2444d66e3d01016"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-040.png",
+      "bytes": 523497,
+      "sha256": "5a2faf14109bb009f81d461646cd177a26554e1d567a02b9dd212d9195d319d5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-041.png",
+      "bytes": 522752,
+      "sha256": "c02908cfac836915f104e67f017a6c5ab22476f9cd572ebc279ccfaf8788e76e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-042.png",
+      "bytes": 523442,
+      "sha256": "5365420acd3858981963ffe2bedc368e9ec96f3f06e2a6220d1a0652eb08085c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-043.png",
+      "bytes": 522860,
+      "sha256": "a52681e73d6471dbfc160abadc8f2ac6a867b122cb17eaa991b7d6bc238a9ac8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-044.png",
+      "bytes": 521631,
+      "sha256": "2acf099ebfed1f54751afc938e39cc8b794c81f6dbc2a0303f7273961b1f9171"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-045.png",
+      "bytes": 520724,
+      "sha256": "62cb027fc57e0269861be11ee876e91da4e84583b1de1e1c6753a9f975104a2c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-046.png",
+      "bytes": 520574,
+      "sha256": "207f269b12fc4d786e6e4654163c445f7aa66c38e304df26dea559779c7541e8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-047.png",
+      "bytes": 520660,
+      "sha256": "736ba600f2b1d07e4f2b91041d40ca1b7bb79d579c198e06f2cc451e00eb6b39"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-048.png",
+      "bytes": 520312,
+      "sha256": "4658f3c6622a0ea28aea789d954f434989e34e0b23f8fc5841734798462477dd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-049.png",
+      "bytes": 518930,
+      "sha256": "56a308743514bde9d566ea32fc5593cbaa7989908aac5cd6b58f409f99700b29"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-050.png",
+      "bytes": 518635,
+      "sha256": "b0662e6c6571ee4aa7c272e7d7221a661a0469acd84f30912285dde46c759e58"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-051.png",
+      "bytes": 518080,
+      "sha256": "5102a7a23413b5b682b8313a6263a9a6b4aa642d24bae4a6402787ba7f4d3125"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-052.png",
+      "bytes": 516494,
+      "sha256": "f111b7931e90c0eb9af4958487b8afe3bcac01db5d7f8708645fbcc2dfe20e30"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-053.png",
+      "bytes": 516444,
+      "sha256": "db63a42f7dbdbcd73579e78c63808b0b2478c9da5140fa4dd6ae3fb4b3cf34b9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-054.png",
+      "bytes": 515557,
+      "sha256": "ac5856987ee5f553bc89ece10487da4b71095490f59c5bedae1f5a540f9da686"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-055.png",
+      "bytes": 514630,
+      "sha256": "1533ece851bc1195aaa4aec421a6a09d9d87d7aa50172ec38cf5b7d7d79244ab"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-056.png",
+      "bytes": 514229,
+      "sha256": "e79f414874cd226f67ff86b3647d5260c8f2a6950d114f85168b49a2ef16ac65"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges-057.png",
+      "bytes": 513575,
+      "sha256": "f40268b81a946cdb99decab0b63e9b54041e1574fd3fd894c0116c4cd93822a4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a/wedges.json",
+      "bytes": 9297,
+      "sha256": "45657692faedcd500ecf9bc2bd85735aff718449f154d8e29cfbc1c61f86fc27"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-02.command.json",
+      "bytes": 1042,
+      "sha256": "38391f1ad0c540d0135c31ca5bb2a2145837d64ad3350f76ce5ed5f30db912ce"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-02.engine.log",
+      "bytes": 1890,
+      "sha256": "d3a393df9451cc576111766d992130e2ea933cee18edcb5bfa3c6c027dd58934"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-02.stderr.log",
+      "bytes": 1717,
+      "sha256": "8ea5b1b09277d648f0282b03335257e210eeeb0c1ec132844c8e83612c026791"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-02.stdout.log",
+      "bytes": 205,
+      "sha256": "2684af7123e905b3e471ee22fac0f49ed415fe655d04f51227e7733211e37cf6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-03.command.json",
+      "bytes": 1047,
+      "sha256": "63718517c87a226cad6410f5c26a66da9dbcdf330da71af0916f5fc3a619f29b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-03.engine.log",
+      "bytes": 707,
+      "sha256": "ccb1633e3f808e454e792288cfd06f2597a269562bb591707057ff00f107ade8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-03.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-03.stdout.log",
+      "bytes": 204,
+      "sha256": "e671a1a6d0ac38bc608135fc5b714924cb911ced719786804b3fc033488c6e9d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-000.png",
+      "bytes": 319557,
+      "sha256": "f7cbaa6507a8e44af2e97f2c0d16fa498681f36ff001ea9bcb9aa4dc9d4c8d10"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-001.png",
+      "bytes": 319216,
+      "sha256": "0ff30267c673ec112a2a4d69ea64ab202507743a03614b0bbf393027ff3e8a51"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-002.png",
+      "bytes": 319130,
+      "sha256": "b3a9c5cf1b7bcd935bcd96ce775295b57900534fe749163aa895db0f0fab4a47"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-003.png",
+      "bytes": 319055,
+      "sha256": "719253c88bafd4dfb500d6fb46065e4e41f4f6581c3c591b09d8c6c3291e0ff0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-004.png",
+      "bytes": 318889,
+      "sha256": "61e99f53c8ee90b7d32a27031e331bab4d26ce67ea858f87f91658d00d50980f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-005.png",
+      "bytes": 318880,
+      "sha256": "b349c756a38ecefd728197fb30249a78d85514dc5f52205f525af2727a4a6181"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-006.png",
+      "bytes": 319221,
+      "sha256": "d171593bfb8ea4b218567e452e67c4f88e99abcb52c8840c42d6de9fb2610e2d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-007.png",
+      "bytes": 314972,
+      "sha256": "44131ca0e9f288d70d00102f27d32b5ea3e7ff60231489d73cdb31fe7ac7a2ae"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-008.png",
+      "bytes": 315247,
+      "sha256": "9c19bee9b00840f14220468869bc0733c825dd724e633684272b5fc65e2d3b50"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-009.png",
+      "bytes": 315037,
+      "sha256": "8d28a159696a191bf39156c9f9cce1a000c012887d8ca2aace2e1d4bacbe8f0d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-010.png",
+      "bytes": 314915,
+      "sha256": "43f8d31c20d0de38b5058bd3917fd4213c8d4580db86153c236fb7ca1d653cf4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-011.png",
+      "bytes": 315024,
+      "sha256": "6f6b25bc2b1be2a96348a497586576494c1d194dab33f97ec4cddfcd99477bc6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-012.png",
+      "bytes": 315033,
+      "sha256": "a5993d7f367aee858e5ce43b4d1fecbe43cf8786940e3cc0c4285d02b3338532"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-013.png",
+      "bytes": 315109,
+      "sha256": "d30259f5357acdbec5ee1956c719e0391cc80efe172d53a58e2547bc474edf30"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-014.png",
+      "bytes": 314822,
+      "sha256": "e4f4a4e5e99bab10c07121078612887898765aa18c15eab40fb30cb0711c35ef"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-015.png",
+      "bytes": 315128,
+      "sha256": "214250cf68e08944b3a7b19c40c0e0f111aa146f5b780f2d685fad40aa4bdeed"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-016.png",
+      "bytes": 315085,
+      "sha256": "e9763031f48ea587e031227825ab5393f3ee564a94181f5620e0db88de46b7e3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-017.png",
+      "bytes": 315098,
+      "sha256": "117ae8559cd50b6d67df70d88d2d4d523a7a0333d3ca46e4c60ea72a6e132060"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-018.png",
+      "bytes": 315111,
+      "sha256": "7fe80ec4bd065b5424d18ef9acecd6757afff790f268a8627a5e5934416adea8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-019.png",
+      "bytes": 314986,
+      "sha256": "a082dcab772e4390bf61862f0cf386e053fbe42dccd3b8a72f6d57bd8411ece5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-020.png",
+      "bytes": 314900,
+      "sha256": "e019c24d2a5ffe497503e30d164a0f4e5319e5bb99dac79cbe0f5849293d9bdf"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-021.png",
+      "bytes": 315133,
+      "sha256": "420e0d9f65cca58a8ade7f353c3a600363e423fb6d5a2b57beb0aa808b46cf80"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-022.png",
+      "bytes": 315518,
+      "sha256": "88c57687f94a4d2d5652fdd2a4dea02769b05af62c32d70230afbafe4d268bb9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-023.png",
+      "bytes": 314870,
+      "sha256": "8a0ae5cedccf7423532f74e6fe5ba4a97e29190c999b4eafd098f1f2567db147"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-024.png",
+      "bytes": 315300,
+      "sha256": "db9b26dc57e1f1578461fc98a9ad1e237a7879176ef5d7d3d3315df69634919f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core-025.png",
+      "bytes": 315426,
+      "sha256": "f9e4ec2020fbbd6b1c4004295dcbc56bcc6fdaf0cf14bf9dea10f971b942e382"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/core.json",
+      "bytes": 5560,
+      "sha256": "3e36f11a5390fd75c22374d945d7bb2968ae149c1b739569738d33710a531a43"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-000.png",
+      "bytes": 1091969,
+      "sha256": "df8e173c527a8df3c588edd2e679144a449760ab141610df9aadfeb68ec02ace"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-001.png",
+      "bytes": 1091973,
+      "sha256": "b1005b4b281c21af827d14395927d8b2e5e487fee5d748592f5135475d576243"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-002.png",
+      "bytes": 1091775,
+      "sha256": "69cfdf75583a9e460199324397c685c085a32332c25e3a0f9adbf4d73d49217c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-003.png",
+      "bytes": 1091804,
+      "sha256": "bd7fb51f4005757c214a3b70231907294cdbed7c249a4931d45a5b6c4e2048c5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-004.png",
+      "bytes": 1091811,
+      "sha256": "7037d905d0c4588267d8f348faf29202da3dfe792cdcccbb389ba1ec84d200b3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-005.png",
+      "bytes": 1091755,
+      "sha256": "d788fd61429991d9d7146d176e074985f237af5069023de4c754bb2ded12c4cd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-006.png",
+      "bytes": 1092090,
+      "sha256": "97e01b6b399b2caf546b4fb14d7d7a773f7276087d2a25184e4a140a4bcafeff"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-007.png",
+      "bytes": 908864,
+      "sha256": "98d17c1e92491f208b87a7402e00a178757bca7b9089be74284b580dac8732fd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-008.png",
+      "bytes": 911657,
+      "sha256": "7b7b7c96f4ffd1355258aacfb0cb50be17e89e6c3dd3570a2d3272c6b7d8a263"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-009.png",
+      "bytes": 913775,
+      "sha256": "8386da8f6e20961d807cd2c4d457e012058a62ca8ba5aa4051f165e8425d0885"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-010.png",
+      "bytes": 896339,
+      "sha256": "c2f021b6df9f382c93f0cd08005bd613c732210827b09aa4c65ae72cf9bf2b25"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-011.png",
+      "bytes": 883384,
+      "sha256": "8958f35f270d67fdbf943e155f9657bfec64f642f1bc13f7c6e125fd37505b5c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-012.png",
+      "bytes": 898462,
+      "sha256": "c4dd5c4a1d7604a9d0b4509bb655ac7b26fb3a60ee92253874b7f5c61b2a922d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-013.png",
+      "bytes": 910879,
+      "sha256": "faa9f36fbe30cb452ffa265931734d70335391e11c33374e6d4bb3d2c5b58632"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-014.png",
+      "bytes": 911568,
+      "sha256": "3bc48f8ac4eaa31c8eaff626e6736fe23ad104eefe483f75e0133607bc780df2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-015.png",
+      "bytes": 912264,
+      "sha256": "133b0b7fa4f85758ad1daf0da3471fb174796703a9309513aa43bd42ee2cb491"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-016.png",
+      "bytes": 915074,
+      "sha256": "4025bfe1320e99ed24e0afe3c15a123db24c564b58627b0888b6ce4c5a694be2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-017.png",
+      "bytes": 917009,
+      "sha256": "d1a0b333ed4d9a916e04369e7e19dd6972815a2e725a1057c1b47653bdead307"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-018.png",
+      "bytes": 920121,
+      "sha256": "91f68128b716a8ee7355d1d12502d0ee365e9ff4d84dd35461d1e4967e72fd8e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-019.png",
+      "bytes": 923446,
+      "sha256": "00dc352129c72b8590d0f1a81e5ff8fa40e7f045ae452f11405ec76f1397ee8c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-020.png",
+      "bytes": 926464,
+      "sha256": "c3fc21f1ac5468e668a432b436765b62cd4d8b0643d30c6a82e1aa6487fa51fe"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-021.png",
+      "bytes": 928061,
+      "sha256": "0228b9d38520ee976e3c0bc1071eb97a36fa2d0e3206e6e737175677d0867fbd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-022.png",
+      "bytes": 928446,
+      "sha256": "9f96c3d1b11d866862672df9ceb6d32f81fa2c6e0e17641fd529c021e5520238"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-023.png",
+      "bytes": 926795,
+      "sha256": "5f7bf236f92b59b675a90a3e2703dada2808d5bb3480ae4e5ab99f07f4144327"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-024.png",
+      "bytes": 924260,
+      "sha256": "31c287a20e1c7829d84ab773883997650176533061bc167f1b7dfd57db7c3abd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner-025.png",
+      "bytes": 921441,
+      "sha256": "c8dafebe15cb525f37a685ba9f206551a413f3f127157dd646f8e12d762e619c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/inner.json",
+      "bytes": 8437,
+      "sha256": "e0a8ef021187389a2d51aa43951e47febed3a2e09f7ea818bea765bbbe5f3e5f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-000.png",
+      "bytes": 567278,
+      "sha256": "3bb466a060041b970a8b6f27ba5774e6fc64408a913058df606a5e8fa7994149"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-001.png",
+      "bytes": 567254,
+      "sha256": "7cf2dec8745bed17ff8fe5deda6d67042c2529bcf8738d47055ee05b333e0116"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-002.png",
+      "bytes": 567067,
+      "sha256": "b42f029f6683881b64db9e925b2e2737c4d014027d5caf9522e772460d09a61e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-003.png",
+      "bytes": 567220,
+      "sha256": "22efa85468836398f6a369abb75293fb2daff0a70ea41cfebc706a39b295123a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-004.png",
+      "bytes": 567006,
+      "sha256": "13f915ee5f88bdac5ec57873169bf50fd066aea51375e79432d94655a51b6adc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-005.png",
+      "bytes": 567378,
+      "sha256": "aa1eff7ec05fca07e3f489731c381e4b77d4159462074ac21b96341c81d72b9a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-006.png",
+      "bytes": 568058,
+      "sha256": "70475ce4f0c6f9fc2a2e948fca2a741e4c2a075114ad94fbc4f3973ddcafea0c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-007.png",
+      "bytes": 536466,
+      "sha256": "762e89b52165592c705588d363ed52b796629b8851483339a54008dd6bf811e1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-008.png",
+      "bytes": 530481,
+      "sha256": "0f57234629251808501952513fb21f353c6a67df44aeeab9d448b9a4bcfb5075"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-009.png",
+      "bytes": 534987,
+      "sha256": "daf13f261616ca3da66c21a147b88f39be3eb9fb4b4e39302a1744d068cf8a51"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-010.png",
+      "bytes": 540788,
+      "sha256": "34e4a40a1bd5284a1890c6839fa4fc554406342c47ac4816624b3b807d616373"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-011.png",
+      "bytes": 535900,
+      "sha256": "ac61bf425a53eecacaf72b7eceb9c841a2b3662ba3050885e8d5822aa4937b72"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-012.png",
+      "bytes": 530849,
+      "sha256": "8e235d3e8a2b92cfc976ee660dc86ebce0424baa0bfe7fc8df1c697bb0254f45"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-013.png",
+      "bytes": 539958,
+      "sha256": "e16b76279fc13e19865fa8423a85497b325abb5a136e4bf1e2144f4dbe8cb6c7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-014.png",
+      "bytes": 539282,
+      "sha256": "9b88cc31cc1b8c82cb46ee5b73805ef5863d70fc2b40c381592e617e498cc640"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-015.png",
+      "bytes": 538636,
+      "sha256": "9e4c93778cee385fef6090d32d3f0f8602a4e716e4fd27f941ba2ab0692f6eca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-016.png",
+      "bytes": 538906,
+      "sha256": "bed2a0aa77f8faf5175f77bf8b8d8693a16c7c4cc7f8b6a00e94445950010880"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-017.png",
+      "bytes": 537393,
+      "sha256": "21edc4ba3ecac7920bdc8f4bc0a7c43bf7cce20f4adf2094fa8d5f3a9dd6480b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-018.png",
+      "bytes": 536916,
+      "sha256": "b1a11034ed6241eb3ba9934b378226dfa82a2b9ff124cd2c179fb71ae16c6454"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-019.png",
+      "bytes": 536342,
+      "sha256": "c4555f158c666fde74ed89dd88ecd23cace725b14645713434659495e67c69e7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-020.png",
+      "bytes": 535089,
+      "sha256": "65998a7f9a548ba735d7feb7a64d8ac90915002f82d5587cd865cbf19d6b4458"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-021.png",
+      "bytes": 534966,
+      "sha256": "4236ff251d251eee5c41adb2cb64d6bbd0d38423c56e812b8fb3ded3804cc45c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-022.png",
+      "bytes": 534455,
+      "sha256": "83afc5a132188e41a387b6d06c84f97dbc4e7b59ad97af726d7513b0b069804e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-023.png",
+      "bytes": 534722,
+      "sha256": "2a88a517732ff5d6c90276d8f009a92d712f4bd5b717733f7b9e952aaeb69c26"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-024.png",
+      "bytes": 533406,
+      "sha256": "5445bd1d0bc80f90ea5e215bc0f255e2a290b5f68424e87d9a646e3b52ac4a7c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-025.png",
+      "bytes": 533157,
+      "sha256": "0be913549645d6b3a5a1f8ab1d1cc09afc2997c97a6f1ffc3d4f9b8a504f1a22"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges-026.png",
+      "bytes": 533288,
+      "sha256": "1fefcf6b610b171a5153cf11ea2c005fcb4dc917c1069181a926bf7165e7e0c6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a-valid/wedges.json",
+      "bytes": 5816,
+      "sha256": "8f7a223d56c2b7bf5750e3c4ee8f618983be008ad1f653c8956c08fb94bd8165"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a.command.json",
+      "bytes": 1036,
+      "sha256": "8a5e56e1cc1beb05c1dc1a0609a0529491e131d97225cf1b02f1249f6229fd01"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a.engine.log",
+      "bytes": 706,
+      "sha256": "f5d8e66b7b10c03157e024da4bb1d488d6ccf71ff92277ebee158764db57d988"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a.stderr.log",
+      "bytes": 555,
+      "sha256": "4c1ba02ef08c39588f53862cbed0e439e9f51ab18b2c195dbf657720de9027b3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-a.stdout.log",
+      "bytes": 160,
+      "sha256": "21f2ba46836cd08b67fc8231bef3586acbf3c7bab5be035271946ca2c14428a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-000.png",
+      "bytes": 433771,
+      "sha256": "a2afe89e14b69235bbe3ff0567832ac8d7299a22a1839dc6fc0dcd321b0b52cd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-001.png",
+      "bytes": 433555,
+      "sha256": "989cf3de8f59f0702f31b857354ff66e6109efc7719f3bc5a973bee0c8104f7e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-002.png",
+      "bytes": 433731,
+      "sha256": "6e43d47c9f022e88e7d6cdb2f3960b069cf7834b15140f3d8c3002b7f83b0e43"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-003.png",
+      "bytes": 433633,
+      "sha256": "e8da1878d7009046828ecac600f3a442262caa45344c231d25d0236ac92e3f16"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-004.png",
+      "bytes": 432788,
+      "sha256": "292a748d136626bc07dc48f858fd5d539e5427000f749a5640b7e836ea19e647"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-005.png",
+      "bytes": 432664,
+      "sha256": "92873a8961040ef72474e4a96b95b3bcd893814d90ada2b13f28f95d3c2770ea"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-006.png",
+      "bytes": 432992,
+      "sha256": "7d308257c0a575dafa5842b2834826199d3481e710bef6734be40627b665e0df"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-007.png",
+      "bytes": 427730,
+      "sha256": "baa0c2fbf17f2af6c79035b121ca8431684c6938628096ba56d5423c60dbd228"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-008.png",
+      "bytes": 427789,
+      "sha256": "b35ee1b172245869296d88c45be2461e9c056b637d8a951b6c61aee70a970780"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-009.png",
+      "bytes": 427708,
+      "sha256": "4995ce552d2e327e37eff4707b626333d8b8b6a7db8974d19b21dc1eca499c9c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-010.png",
+      "bytes": 427811,
+      "sha256": "3e038f84e9fbb8ed8fbfc399205f15ea905bd1d89a7639d447cd6b4de901baf6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-011.png",
+      "bytes": 428052,
+      "sha256": "0c6d47ee4005302c508dfe522f78e715b11717cb4ec75d121c000531c15ee7df"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-012.png",
+      "bytes": 427913,
+      "sha256": "3f24a35d36a4aa3771d6d11d4e99be99c370423206c3fb4540612335e3b84bbd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-013.png",
+      "bytes": 427665,
+      "sha256": "13e05fc5f195655a99865227d94e76258b6930e4d6a44a9084c9c16902b08030"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-014.png",
+      "bytes": 427719,
+      "sha256": "657e6f4b6b0261aa2dad14c49ec36ad8fb45953fa1ee21f15b05e9bb68d48f16"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-015.png",
+      "bytes": 427452,
+      "sha256": "fb7ec4902020d358086466294f17263cb9d1e896488af3ae86797a61ac5fa153"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-016.png",
+      "bytes": 427863,
+      "sha256": "a185c2eeb60c9455e334cf6ef165745ab46bd83c334c6264e4ce4734511496a1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-017.png",
+      "bytes": 427812,
+      "sha256": "7fc7a9b9f0472f2a33a1d34b885c79fae90169e8c9ae264a6f81031929f82de5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-018.png",
+      "bytes": 427923,
+      "sha256": "21ce1e3bb618b431802694fc1cde1b4c5fc599b41207b3c8f8869421b84c7ed9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-019.png",
+      "bytes": 427527,
+      "sha256": "b317961a716b04593a29c840f98c0f10d247eb4326c2c2d0a79242ead0bcc60b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-020.png",
+      "bytes": 427667,
+      "sha256": "8c7741dcc759a298a0695aaaf268dae0b1e82dd6aa5db96e2637bad749416de6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-021.png",
+      "bytes": 427862,
+      "sha256": "ad2d966cd30187fd6306d2172097bd6bc4fba5d07ba88210838f5f57958f77b0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-022.png",
+      "bytes": 427990,
+      "sha256": "3a5aab5fba4ad4fa8d5fb6600e824ef5236a8005a1ac49eddca6b7f36da2cc3b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-023.png",
+      "bytes": 427803,
+      "sha256": "fcfc0d8bb4a75f788e73016ccd854d9afbc6de881cd3ca36362c23a15e25df64"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-024.png",
+      "bytes": 427956,
+      "sha256": "046f658051eb8b03c4d20c1c629b77b96d8dd6a14340d8a21e04e1dbe7f281a0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core-025.png",
+      "bytes": 427872,
+      "sha256": "2d2e30af770238b531436ae8d5d89ae223bccadf1f0a42f123d7393ad6d9c172"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/core.json",
+      "bytes": 5559,
+      "sha256": "2aadb19943b10e9579ef50094e5d99cecc8c814ac12098d340230f3648df6a62"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-000.png",
+      "bytes": 1246435,
+      "sha256": "e3996271bf89d35369ddafac7b73039446be83ca65f9daafaf543c36ddf080b5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-001.png",
+      "bytes": 1246384,
+      "sha256": "0fe02860335ee9c975b6652ea2fa8e8c7877e7227ad88be51d963634f70dc632"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-002.png",
+      "bytes": 1246336,
+      "sha256": "2705368803c35609fa58f188a25459121b2b3b93f8652a9314cbeca8d1f1bac7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-003.png",
+      "bytes": 1246414,
+      "sha256": "2fa1396571f93cb2ecde48d71a29e2b02e98b983750f21863f1136a5042c69ad"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-004.png",
+      "bytes": 1246459,
+      "sha256": "82640e1590defbae05f0deb9a6cf368ad5f92e3b712345a3ee7c108ff01eb230"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-005.png",
+      "bytes": 1246419,
+      "sha256": "9c11dc2d9ab8d1f357be86ed63aec50bc2b940be4758822075ef739c8a772092"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-006.png",
+      "bytes": 1246691,
+      "sha256": "c4ace9848e03b669220b2d3e2b2e025d7fc685cb754d2b78c3ebc5bb9d5be63f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-007.png",
+      "bytes": 1103245,
+      "sha256": "a32b60191a511e976608ab7b1887d8c2a257b8e6fa0389daef704666094542c0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-008.png",
+      "bytes": 1115572,
+      "sha256": "9322b04e9fbfe09fe5ba03ca67731f600b163a127ee06cd357a88574bdea045e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-009.png",
+      "bytes": 1109047,
+      "sha256": "87bc2ee3ff434d4bfd2cbe379504d047fb3876f35c2f1725c32490f2c2e8b10d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-010.png",
+      "bytes": 1124251,
+      "sha256": "67283585c4ffc66c2f79387428a045b970eadb67c1bb36663a6f02bdf25dc77d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-011.png",
+      "bytes": 1120047,
+      "sha256": "c837ea6bfc9a554b1d764d6305faab3b1ea8326a0f7ef2c22c8a66face96b125"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-012.png",
+      "bytes": 1126134,
+      "sha256": "ae3d57b958dfcba1d598b47ab73dff2e7acac4e41bf8d75ebf1f217fa5d5d6cd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-013.png",
+      "bytes": 1123462,
+      "sha256": "8031b4692098307778f02c3c83ec7cc9145c97921db8e26cadbff05fef48df0b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-014.png",
+      "bytes": 1124551,
+      "sha256": "6f1aca8ea85dbf771f898f9be714829f9f009a20cf651e15cf4d3f4f0833b92b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-015.png",
+      "bytes": 1124572,
+      "sha256": "a48b0beb07532ba8058ca2cbafdcfd22a2477d06bd8d0255cea1ab5fe8cd291b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-016.png",
+      "bytes": 1125565,
+      "sha256": "ef3bf97b60c8e6e535ec11975811ff8b4b75b26c23c4e821385b203e2c3ef6dd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-017.png",
+      "bytes": 1125011,
+      "sha256": "5f7680a6e2cfb42e54aa894e2c5f1393d9b740f88cdfb4e11ddcaa79e1af26d4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-018.png",
+      "bytes": 1124622,
+      "sha256": "8d0b0486e4fb1cf290e52f724b7e5771e5cb562a335a6023d1ee41f20984fefd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-019.png",
+      "bytes": 1125060,
+      "sha256": "42dc646842f04f20b0fe1a41e5cf8d70e0d6c9dd7f636daadb216207b8a5fbca"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-020.png",
+      "bytes": 1125184,
+      "sha256": "52db72fe53042099457d07d3b6163e27887d3a5271d00fbe3f759a054ef0516c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-021.png",
+      "bytes": 1124868,
+      "sha256": "1e9c8ac06734f3b6a0f0c7b6893f10dcf7945d458558cd916983fbc72e1186a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-022.png",
+      "bytes": 1125033,
+      "sha256": "b4e236cec96d449a44fae1d895f49ea52a875d5774e73cd9fc18cf8ae4722a52"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-023.png",
+      "bytes": 1124194,
+      "sha256": "6939bb2bcd74a64ff0dae111a6275adc6bc7450b822f8bb2e340e65989a7285f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-024.png",
+      "bytes": 1124175,
+      "sha256": "6e48a2c1b596253a49d888436518a12289f3b7c5d47eebb8a1df74d0afabf98f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner-025.png",
+      "bytes": 1124847,
+      "sha256": "11435cb7105062bc7457302274f955170fb2829c6041dcc2baef0e1085170579"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/inner.json",
+      "bytes": 8396,
+      "sha256": "f6fe3290da46ffdaed51bea95c50e276670643ec36fd34238e82a512cf5520e0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-000.png",
+      "bytes": 671893,
+      "sha256": "d9a4227da2e0f5e8facea07a8cc60ffe29bfb3e55bd7a419c628eb63b5bf1b82"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-001.png",
+      "bytes": 671728,
+      "sha256": "c901b086005335a47025b791bb0e57e5a744bc214057adb1470d1cb18837a38a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-002.png",
+      "bytes": 671927,
+      "sha256": "ebfe891f0c002fd43d29d7f4c0d24367fb81d7d555e0034bb0bf4eebfb0268a1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-003.png",
+      "bytes": 671950,
+      "sha256": "908cc5796de75aea4c3fd01e637a4a5d653c7d1e7294581b0c21894abda6fa0f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-004.png",
+      "bytes": 671857,
+      "sha256": "1dc7af0003632f9a19a7428e25ff834af2c25f08e6df461e83f3af1b1f299913"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-005.png",
+      "bytes": 671940,
+      "sha256": "ec443807e8671efc239da4fe92160855e9b76103e0c838686ba0d25711ef690b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-006.png",
+      "bytes": 672340,
+      "sha256": "e0c555f55ed443c5df19d0f414a4c3121d59711499d4226e341c72add980a63d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-007.png",
+      "bytes": 639880,
+      "sha256": "5c4e3004745f840e70ce937d31b3cc9a1e84974ffb1b95ecba65ad6f0774d544"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-008.png",
+      "bytes": 638614,
+      "sha256": "2e6064d78d82eb942cd421451075de33abbf2724c5f85543583c2ceac777dd41"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-009.png",
+      "bytes": 641987,
+      "sha256": "c6c4a9dd96095a4847192846d27af9a3a11cb8a7d0645ac62e966dab8cab5a0b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-010.png",
+      "bytes": 641578,
+      "sha256": "83f933b39778add3c98ce1776ce697018ad1b50b69703306b41846e67147f4e4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-011.png",
+      "bytes": 635987,
+      "sha256": "6a585ba2cf10acc6d5f19f95b7735721d161b15ef619a0b30abdccc4574350f9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-012.png",
+      "bytes": 641497,
+      "sha256": "467ffd83b4afddfa949e46278c9f1f46d564e9b4e1647f3016f18e6ce4f86a28"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-013.png",
+      "bytes": 640444,
+      "sha256": "7e3d8c03f4b3dd659492ca364f8ed53618a61747eff5d6cfcc7049ccb117dbd3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-014.png",
+      "bytes": 642059,
+      "sha256": "758fba7a121606b718103a71d30d555553a66f5527d617c4496687b6f0f0e3ec"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-015.png",
+      "bytes": 641503,
+      "sha256": "edee0b61f50dcfce4dc3b6c5a8966d805b905d8b4bd31ade3157c8c1d8720195"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-016.png",
+      "bytes": 641743,
+      "sha256": "087020d572314bf8d48288142cef3954f2ca9b3c6dfd8c81c0f57377e365177b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-017.png",
+      "bytes": 642011,
+      "sha256": "96a3645563f33205c44c9202af9a8096c550bf6d588924e9429bcebbd10ad412"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-018.png",
+      "bytes": 641820,
+      "sha256": "93d74d860475c0c1015feb263ea60768e06cbf4ae387de1ea00adc7857e44024"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-019.png",
+      "bytes": 641728,
+      "sha256": "5e0fa5c6dc2d8468cfcb9db079c3089ad39de281cceec1c550cadb6d5e8c79d7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-020.png",
+      "bytes": 641572,
+      "sha256": "fcefb3cc4e620fbb087b811221ea7792bf5669b2a3e12923ad6631a5778af858"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-021.png",
+      "bytes": 641896,
+      "sha256": "95c9343f9600e383239189a860d769c5461284022e2fdc796d2dede537627d3f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-022.png",
+      "bytes": 641817,
+      "sha256": "b00f9a5fa97b5b1f8a2c8bd6606ec1737b629d6c79cb514ebd5cd5a208ecaa3a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-023.png",
+      "bytes": 642760,
+      "sha256": "ecfa91f730013e077bed3eae62631c00dc76c0645d82bc9e6fb74528fcf4c796"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-024.png",
+      "bytes": 642528,
+      "sha256": "877e643632ffbab54e3d5aa88478283fa8507a0eda4f1257525875b1d3b65297"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges-025.png",
+      "bytes": 642875,
+      "sha256": "8c083e78ecb0f5e24244004dd49c8c414be474469199ab2d307a7f02e8c693b0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2/wedges.json",
+      "bytes": 5728,
+      "sha256": "b4b057fd1d10245d1a07df9a2af933be24a315852c0a4e16f3ad4208dbd0aec1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2-harness.gd.txt",
+      "bytes": 5737,
+      "sha256": "20b0dd3d048e235a7dcb11db6293f511f2a739cc7b819d59bf1171d1bfe521ab"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2.command.json",
+      "bytes": 1187,
+      "sha256": "5251f89a6ecab6aa73cb02218235dd2451e577479d9dee2645922a5423331729"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2.engine.log",
+      "bytes": 335,
+      "sha256": "7f9935051d5232a6b49fbddb47d5537afc9cbedd28a2267318081507e6a9c9ad"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2.stderr.log",
+      "bytes": 125,
+      "sha256": "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/before-rc2.stdout.log",
+      "bytes": 216,
+      "sha256": "f4bf968c80d6ffe1f8d2b9d8eb669769c1f671a71f11ec99e4bf2afd4aef4367"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-000.png",
+      "bytes": 312215,
+      "sha256": "e32b6205fcc79542f3432e10c5d07faaf34e7e57cac2e4f2529505c891e24292"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-001.png",
+      "bytes": 312303,
+      "sha256": "4fe63b1227b61c88347ea015e1906bb4216b10c953719874b197dfb5340656bb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-002.png",
+      "bytes": 311991,
+      "sha256": "246fdbe6990a7c071efa3ff3d424bdfb562c032d132ecdb93b8e616a417976b7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-003.png",
+      "bytes": 312219,
+      "sha256": "947e827fdfa78efb2af03eb8d9edc3eadc9fc898bdb05735f86e8f32bffdeef3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-004.png",
+      "bytes": 311515,
+      "sha256": "a734caa2ea414399d58e1d887778419769fe9570c61101b99b8906eeced5e722"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-005.png",
+      "bytes": 311615,
+      "sha256": "e57d5b25fb75e8cc64c10cd075586f319ee6fb49e3e1a9f3678b06255b862a0c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-006.png",
+      "bytes": 311701,
+      "sha256": "d3604912fc8505d5a9d6d169ebe531c205ce825d57f2e16a29c7958dc5994983"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-007.png",
+      "bytes": 314537,
+      "sha256": "40d3ef63aa787432e415b7a4f501013820e955b2c165de2705d0802f863e12be"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-008.png",
+      "bytes": 316178,
+      "sha256": "fc9b80482fcb7f3cc65b904f2d7babc89c96d5c4829d5a7f5b0d0f1fcd679a3d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-009.png",
+      "bytes": 309721,
+      "sha256": "175d3bba9bc0fc2688246664f90779327851cce961c1977cabed808c687b3652"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-010.png",
+      "bytes": 308975,
+      "sha256": "3a93102e4340c0624e1ee3c7a8124268b4f9cdc2ba6f448416741bb334ee4efd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-011.png",
+      "bytes": 309057,
+      "sha256": "fc9d1ad8f02645242a5bb0d261871a978ccd140637dc8e5af3507192e3b57287"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-012.png",
+      "bytes": 309070,
+      "sha256": "e1a0d98ec5e28f81aa471a48d866b527f935dbc3992adc498f9663581853b0ee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-013.png",
+      "bytes": 309051,
+      "sha256": "c168b74bd606a307b92dce3d3e1b8dd6c98e73999c7276b286197f7daa42be72"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-014.png",
+      "bytes": 308953,
+      "sha256": "f69b03c22a9b59c5dd08dfa94a8ee9f0a7a8b67ebae887a542aa66286165c79e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-015.png",
+      "bytes": 309221,
+      "sha256": "ea37e25a32b690739ec170f48f0ee0835e253a3dfbb8c3e1e31a3abaf23773c2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-016.png",
+      "bytes": 309205,
+      "sha256": "fa490235f2f0f08f00516ef710fba689441bb59b9a6b457f735e742382e44946"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-017.png",
+      "bytes": 309088,
+      "sha256": "4d91542a8cc23d6a4c1469dcb3591aa1635f64596c22f2c3fb7a663be89b3ee2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-018.png",
+      "bytes": 309329,
+      "sha256": "7b072bf67a9e16e946b7f941da9e62c351c0449fa22ddda2c7389017a95cd7c9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-019.png",
+      "bytes": 309097,
+      "sha256": "00de3c867f26360150dc3ac44700b9f89bd30a2106c23632cbadd83c0ee4ca0c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-020.png",
+      "bytes": 309267,
+      "sha256": "870f6c1ccd022f6d175ef2e183cf58f9464cc2115fa10893352a9f98594ddccc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-021.png",
+      "bytes": 309112,
+      "sha256": "0d25f42cbabe9ee363922e773ee6c2d28acaa9c818d18a30b3710d18eddd8d2d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-022.png",
+      "bytes": 309427,
+      "sha256": "24a4e85d9596b5901da461b33a5e14d9fa141e4f90db171d2de24f9f48407ca9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-023.png",
+      "bytes": 308961,
+      "sha256": "36428fce6a5d1220743ce613271c4caf6ae5241dc5cf465b071b3ed8e4649768"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-024.png",
+      "bytes": 309089,
+      "sha256": "3ee1395fc34a924e27044629254e5f584d2b5c2cb1adbcae20d46d7b3cd666fa"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core-025.png",
+      "bytes": 309501,
+      "sha256": "3e025aa4b25da6b0265aff4b97ebb1767d4603357468fcdcb7fb4704a630d3d6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/core.json",
+      "bytes": 5544,
+      "sha256": "9f32b445ccee2d729ecd4931397cbced750d4a26b89852e6f5380600a53aa00c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-000.png",
+      "bytes": 1084396,
+      "sha256": "88102aaeb21d7d562c9ebae8ab7acc54c4e6270dad05bc9ee25fd4795370efbb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-001.png",
+      "bytes": 1084482,
+      "sha256": "9d08b362e77fd81f0bb6efa5484b1ec008256ce2b34d5abcefd9c24ba1d5ef3a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-002.png",
+      "bytes": 1084267,
+      "sha256": "8efd4d8bbd479ec44ec25de73277552a75f50a622f058ff4b21b678036c895b6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-003.png",
+      "bytes": 1084359,
+      "sha256": "c5f95078a06ba2de0bf8d30a01cc07f478ace8bc325db3984a6f3f23a34925b4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-004.png",
+      "bytes": 1084435,
+      "sha256": "98a2c34bf2a6ff2bd93e0bc2a688bbd3cd5a63948060cd5b803253cb0a9bcb25"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-005.png",
+      "bytes": 1084307,
+      "sha256": "980551b930534e327c9b17a42443bd8f5aab9b2aea433d5f2f1d346c54717e10"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-006.png",
+      "bytes": 1084698,
+      "sha256": "aa374ae25203ab3e346fe8328fe30a1fce2c8b082e1f4a86b086f25dd9d3d9fc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-007.png",
+      "bytes": 1023368,
+      "sha256": "3e40a9dbbab8cef6245aa1ac31a1da9540f0cadc1c30e2452ed528dbe1adfcb4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-008.png",
+      "bytes": 1018564,
+      "sha256": "f6b47704c36e31236094a3b7b25b4cff7ecd9255e4c22e51667ec8abb786c4eb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-009.png",
+      "bytes": 1014019,
+      "sha256": "971f7fa73a2446fb7fd199b7ff00f82b912b91cbe3b0cbd7c5eac520e915797f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-010.png",
+      "bytes": 1008357,
+      "sha256": "c77522fdd772f5289343f485380fce7b39bbdf549934cdfdbe895aea4828bbee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-011.png",
+      "bytes": 1003200,
+      "sha256": "c0cec4a6fd918f1cedf2dfdf286ef51677ffc7dc5487ff5aebfe610c3fc23d1c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-012.png",
+      "bytes": 989929,
+      "sha256": "5df6930e573bc819e3afb667a9f67de53a468ef07dd571ddcefcb30642092691"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-013.png",
+      "bytes": 972999,
+      "sha256": "02b5dd7bf93c9430aab6db1e457adce6e984a8103ab8bee820c45eba2a642256"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-014.png",
+      "bytes": 955082,
+      "sha256": "de64013ad921ae249233031f188820988f8a0076e00c69d6eb95ede82928ea5c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-015.png",
+      "bytes": 940203,
+      "sha256": "7220397730bacfb3f0ea935ae26f0d94a4a7b6369e38c599955e9dd8ec93c403"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-016.png",
+      "bytes": 934463,
+      "sha256": "7a85bfa04bf142dfeb703ed3af4a88ac760447890993328bbcbb2837add4d043"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-017.png",
+      "bytes": 933920,
+      "sha256": "1785fb205fbdf76b3da20147b600fb13f603d5e2194b6f97a89438f3e12e77e5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-018.png",
+      "bytes": 933879,
+      "sha256": "46342b16010b46340e15ca68dfc5ec03c997502dd335ef15dffeaea77800a943"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-019.png",
+      "bytes": 934571,
+      "sha256": "aaccd99e1c68ae6a066bc86c36b5ad869f8ea1a4fad839bc300fa0a9db997854"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-020.png",
+      "bytes": 933715,
+      "sha256": "e59600e30c50c011558b4cd8ed5d614b2bff25615cb96a73f58a9899028b9895"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-021.png",
+      "bytes": 929065,
+      "sha256": "ec0a011cf9a92153a7a8ef3012a467debff2cee8c58989ba7c8c1e974dd22077"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-022.png",
+      "bytes": 921025,
+      "sha256": "b04a6a9267f1b5909a972d7f7126993bec7b0feff2db7a4eb273fb1834ab18c2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-023.png",
+      "bytes": 921405,
+      "sha256": "a5bf2e540cd3baceda33dd6b0e378ccd953bc6f00323ace351d3e82f911b9635"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-024.png",
+      "bytes": 921192,
+      "sha256": "19e90a5af632ffabf2148ecf3588ed711b74dd25b65c7ace90e9473b4868c6eb"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner-025.png",
+      "bytes": 920709,
+      "sha256": "f40b141f6e80fd2d365d70e7e46f20e84375c1b233cf5a74d0cf470345c674a4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/inner.json",
+      "bytes": 8377,
+      "sha256": "1de2305826952ea758d3b10e69d4aa1e69a290cf5c10713ea0b3b6c16bceb813"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-000.png",
+      "bytes": 559048,
+      "sha256": "670d1d814885a28f091b2c4f442b7fb7948ae3b7bae46aa3bcf3b8ca48212dc4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-001.png",
+      "bytes": 559098,
+      "sha256": "6762d78123745a2f9e05b6afe484be3b99ea0b144ce2cfe718459d399428c21d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-002.png",
+      "bytes": 558934,
+      "sha256": "700f7c0af4d0a9b81bccc9674d5d4de5f5f2a197fcb08f683ca17e36cab420c8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-003.png",
+      "bytes": 559052,
+      "sha256": "561516516dcb69c62595f1e2a95795d1354c1542f5eb8452d9d00eb32631455c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-004.png",
+      "bytes": 558786,
+      "sha256": "c6d31f746990ab8fb702362b6ed3235ea48c54d4da1b3ede1856655af2f2a20a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-005.png",
+      "bytes": 559036,
+      "sha256": "c79ff068de8d7e0735ad32330fcd42d59c0dbf167b045119084c722400d837dc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-006.png",
+      "bytes": 559792,
+      "sha256": "5b0bb5ae70ded22daac8e50fe76bedf26b05144540c49f66547e8dd0ec86348c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-007.png",
+      "bytes": 549357,
+      "sha256": "c61385594040dd72eb196b450d72870846673d6285d991e07ef91b56ec0f1616"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-008.png",
+      "bytes": 560717,
+      "sha256": "944aca22f0ed7e88af50590feb5d2b352a637adeeac389ad9340e5a15df76de3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-009.png",
+      "bytes": 555711,
+      "sha256": "4a1b55c7ded0b41f0f9171f554bccac04b8d67d103330476070fa334e0df9989"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-010.png",
+      "bytes": 564645,
+      "sha256": "b5ee2f516bca9c2a8abdf5dd27248caba1f89482deefad017a452a7af1c89160"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-011.png",
+      "bytes": 562461,
+      "sha256": "f99c9dad381e8b7871377382e958c0d12e7787a872caa61abd982bef599fb737"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-012.png",
+      "bytes": 558814,
+      "sha256": "3ff0a3a9200981f5eacd42a59be6bae685f60bf21fd3d998aeead30efa41bd06"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-013.png",
+      "bytes": 555484,
+      "sha256": "1051143275261184f9162f82804b69bd2d2f2a064bbccb1a5279dc8d8f01fee1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-014.png",
+      "bytes": 550876,
+      "sha256": "5f7d3f131d85e05bd14d9ecbb73b659ddcd330ad1901def7a18c57db19a6f024"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-015.png",
+      "bytes": 544985,
+      "sha256": "82c73de8554394041478837f599e1a56524106c6c6e53d610276ba6ebb01dd4b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-016.png",
+      "bytes": 541869,
+      "sha256": "7b01c6f0ecd28139a3122e4a82e50ad4fd5cbde6228bd20702924b65a5eada26"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-017.png",
+      "bytes": 540779,
+      "sha256": "6a7133786fc523debef5f357f6591f040f9441c87aebb886dcd356110da956c3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-018.png",
+      "bytes": 540046,
+      "sha256": "441041b364cb3b4ce87bdd2cc5886d09aa56d3f66b807f40d4ea7e2f0715c45d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-019.png",
+      "bytes": 539015,
+      "sha256": "c2169aef1e0e6999b43746daff6cf5dcc13353ad21a9320868ec11233ae644fa"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-020.png",
+      "bytes": 536350,
+      "sha256": "2f6d158c3c4c9d1aa248e87c649447796ca079940e5b33823ee5dc2ef6e852c7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-021.png",
+      "bytes": 534390,
+      "sha256": "a8e0666e8ccf4d4541aae0b8698ba8f3e046657874070bc96ece73bdf644583a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-022.png",
+      "bytes": 529665,
+      "sha256": "debf0643703f6e3d29ffacb3e36392498dce59da11c625ac01c448049872e940"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-023.png",
+      "bytes": 528974,
+      "sha256": "5fb09aa0834c2d656fe986fc89aad3abbcb471e654f8528583e3e582a261156e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-024.png",
+      "bytes": 527824,
+      "sha256": "35d86210441c00715c5e5f8c9f14692b0bde4158f83e9450a34639bf87980aa4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges-025.png",
+      "bytes": 527694,
+      "sha256": "d1fa1ab8d2e54022ffc25b505ee085baa1ae1e31b81bd87e607007b1ed467dc3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native/wedges.json",
+      "bytes": 5686,
+      "sha256": "0c81fd2a7413e2da7e58a2ffc80e8d3de973614a045892d1150821e4a59f47e6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native-01.command.json",
+      "bytes": 1093,
+      "sha256": "46607be673875b5001c235953e00856eb424dce77fb3fc26dca83537913d723d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native-01.engine.log",
+      "bytes": 707,
+      "sha256": "bbd8d2e03f9a83076b40b8cec927e1814ac60a0c618823c3b7fa40df723f6597"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native-01.stderr.log",
+      "bytes": 515,
+      "sha256": "a211750e318f18bd49bb234e0e095834e419365c8f5ac89282f2d575befb7526"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/blind-native-01.stdout.log",
+      "bytes": 204,
+      "sha256": "54c3eca3fb998685d39a166bc6a9f5923d01af5031677dd43caccebebc44a72d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/build_manifest.py",
+      "bytes": 1565,
+      "sha256": "e1faf773ba9dbb2e0a6034ca4963380b4a80de05a5e7be7ccf74ca2b410d7e23"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/build_playback.py",
+      "bytes": 2189,
+      "sha256": "3252740a753f90b5a33648973f6a16ecad0a2dafb0c4e3aba75e444c71b48d42"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-01.command.json",
+      "bytes": 917,
+      "sha256": "ce697e71f1b0feafad3fa60ab48790bf6e171e058561073e5da8eb19f573643e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-01.engine.log",
+      "bytes": 952,
+      "sha256": "abe3ed52ce1a5872c52b9b6d0e4b736bd80c88d57bacead7b5557970c5994144"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-01.stderr.log",
+      "bytes": 507,
+      "sha256": "a272c0ce16c75154906d21693320ed44bb00e10d3f91cb02de17e3884236f990"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-01.stdout.log",
+      "bytes": 457,
+      "sha256": "475dc8c858ab47f5f1c5509da75a9a149a46ec55492c7f3666c35d09be25df4f"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-02.command.json",
+      "bytes": 917,
+      "sha256": "0d1b6d605cf51ec26428bb1226cb26880eba39a059f73888649083f30503b691"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-02.engine.log",
+      "bytes": 952,
+      "sha256": "a932b342e630b271eefce37f6db82dea74f0201d6404fc8a36ea67d8693f33b4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-02.stderr.log",
+      "bytes": 507,
+      "sha256": "a272c0ce16c75154906d21693320ed44bb00e10d3f91cb02de17e3884236f990"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/canonical-02.stdout.log",
+      "bytes": 457,
+      "sha256": "b41e631ef96ec11051bf252dee8b3abf413622c972cefd71ea4b522f786b29df"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-01.command.json",
+      "bytes": 931,
+      "sha256": "9232db47f2e52656b06ac936796d69f8b300eec1830d7cca99a3ff6ec7e28a14"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-01.engine.log",
+      "bytes": 29958,
+      "sha256": "07dce7778f3940f3d5546d32674da13cceee0a0be2609336a5328a6f54491655"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-01.stderr.log",
+      "bytes": 29808,
+      "sha256": "eb1eae9d7e73353fdce866f72672bef30ad8739c936755a296b94e093cb62fba"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-01.stdout.log",
+      "bytes": 687,
+      "sha256": "d9a5122f43db61983e284953d25bcac07793043bfeeea34d419dec33f42d2584"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-02.command.json",
+      "bytes": 931,
+      "sha256": "0dbec8ae633f55d28028f0e21d5ed18913702618accd1fef4061bec62ce9dbee"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-02.engine.log",
+      "bytes": 31205,
+      "sha256": "e97edd6f042c2bca7436f6affa8403fda24548c7b3054c1ae81e1e5d24a5f256"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-02.stderr.log",
+      "bytes": 31011,
+      "sha256": "5d6768e34b26ffced76a7305364507ce5b6d80d3c626aab4a3f3f285afa12b4b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-02.stdout.log",
+      "bytes": 686,
+      "sha256": "c7d0e4a092b5c127562081b5b26b08c50171226e56003c42ebf71bc3ac1eacfc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-03.command.json",
+      "bytes": 931,
+      "sha256": "d5a765f601292af44f983d95bf37f8abef5b96bc84615ddae0df70ff091c9c77"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-03.engine.log",
+      "bytes": 1971,
+      "sha256": "9545b255d66e98f58356d4ec5e499246030ad3fb547235867fa9a5afd5f9eabc"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-03.stderr.log",
+      "bytes": 1384,
+      "sha256": "612364bd8f60512aac5579adb181520dc4302dc1e2a1cd6bc274f2d640cc66d8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-03.stdout.log",
+      "bytes": 614,
+      "sha256": "5c06a67edc3dac203b3b49c4cba40f9eab7f0f13bbfb5529313557baff5472aa"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-04.command.json",
+      "bytes": 931,
+      "sha256": "c55b64baaea856de5c55aae1ffcec5b847833149e2bf1ad381967b841a1df960"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-04.engine.log",
+      "bytes": 1192,
+      "sha256": "87f6c2c29cd8233d8bc8c609ff33e5c896a6a543871ce7f9148015a0242e27c5"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-04.stderr.log",
+      "bytes": 513,
+      "sha256": "f6df684034cfa44d0e41c17ee3ae846f39aef5f586689cd3d123e45dd5a46759"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-04.stdout.log",
+      "bytes": 691,
+      "sha256": "94440183105d3798ce5d3a57ee044ca6158f84f3092a12b39662027fb7072554"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-05.command.json",
+      "bytes": 931,
+      "sha256": "4c2c6106327a408ef8b284bf7cdb7b9b6269c4f43d4942cc990b8a7dfddfc484"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-05.engine.log",
+      "bytes": 1188,
+      "sha256": "f182e2402c3cebee26b2d1a9b7d74a4004df5c3b277431c38119fd7050565757"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-05.stderr.log",
+      "bytes": 513,
+      "sha256": "f6df684034cfa44d0e41c17ee3ae846f39aef5f586689cd3d123e45dd5a46759"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/collapse-load-05.stdout.log",
+      "bytes": 687,
+      "sha256": "383f9413d1b6ab3d3d6c851482e2906388b1e2195162969e219ca42b354b9dd3"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/full-import.stderr.log",
+      "bytes": 319,
+      "sha256": "dc17be295ae412fb5021569ae342352e6cac9989665a848b0d8a0dfe1dc661e4"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/full-import.stdout.log",
+      "bytes": 8192,
+      "sha256": "b8c5c4d9efe3a68c977571847ce142f50d4b0a85bfb385ca9b8c0a93d6125565"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-01.command.json",
+      "bytes": 925,
+      "sha256": "badaea0caafc64bd8c046123462617ece3a74800c65fdacca0c9e4a9d0076d40"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-01.engine.log",
+      "bytes": 515,
+      "sha256": "0a51e246b3f496391a3342b93d72828c63810ed465d516f7df3fe8229b49034d"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-01.stderr.log",
+      "bytes": 362,
+      "sha256": "ab1dfe7e728c2fd4732e52311a673aec7762af9223200401174d2e782643288a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-01.stdout.log",
+      "bytes": 160,
+      "sha256": "21f2ba46836cd08b67fc8231bef3586acbf3c7bab5be035271946ca2c14428a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-02.command.json",
+      "bytes": 925,
+      "sha256": "85b3768885dd220c6abd98a3467cc01fd96a63fba0a38e5d9419ac36f9abb3af"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-02.engine.log",
+      "bytes": 697,
+      "sha256": "87187d393d400e174b54296351dba6c40f35546ec72b8205ceb633792ff9a9a8"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-02.stderr.log",
+      "bytes": 511,
+      "sha256": "b523fc943479e4cd6325af3e77d13980aa231eca9c97b187a74ebb1886497f27"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-02.stdout.log",
+      "bytes": 198,
+      "sha256": "d7ece98aa2037837ac45b258327031cdad578ff6f08c844acdd01de25c020a7c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-03.command.json",
+      "bytes": 925,
+      "sha256": "ac3676c2c26f5fcb8db50d3d4afd67638e22d20155317e81379dc6e006cdf8fd"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-03.engine.log",
+      "bytes": 697,
+      "sha256": "c1c8070d95dc69913da05ab7d19eb43d78b4188d0c69abf3c6b55a23f2f35939"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-03.stderr.log",
+      "bytes": 511,
+      "sha256": "b523fc943479e4cd6325af3e77d13980aa231eca9c97b187a74ebb1886497f27"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/native-test-03.stdout.log",
+      "bytes": 198,
+      "sha256": "0ad6b90b23a73c216b7f0fef220df4d2d139e1429b38c485e40011e6d9ee724c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/preserve_probe_variants.py",
+      "bytes": 1902,
+      "sha256": "0b38f561443861ec58dbb39c1bc18fa6bf5d164f746aec90f2c27e703166f6db"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/probe-variants/load04-reconstructed.gd.txt",
+      "bytes": 4813,
+      "sha256": "02e78ab30f451cd07c4dfb95a38f0f2d7ae134c8b0dd034ffed7097dc2635eff"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/probe-variants/load05-frozen.gd.txt",
+      "bytes": 4541,
+      "sha256": "7e3bf33bf469bf34b41cefa052ee1cc8ccee67cd71f1e531d1605147cfaeec36"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/public/index.html",
+      "bytes": 6137,
+      "sha256": "50d04238a1d67f59b6bafbf4b81fa7610b96b38bc52832bfc7fc0c8f1fe113be"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/report.md",
+      "bytes": 8980,
+      "sha256": "a8b9a33a25139bf4d55153261cee2ef0f220c5d3969693a041d29cac01361958"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/reviewer-native.command.json",
+      "bytes": 927,
+      "sha256": "2ad5f26112c967b386e7c28cd862e8a5ffdbc7a51b4ad6af3764697ef3fcae93"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/reviewer-native.engine.log",
+      "bytes": 697,
+      "sha256": "c1c8070d95dc69913da05ab7d19eb43d78b4188d0c69abf3c6b55a23f2f35939"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/reviewer-native.stderr.log",
+      "bytes": 511,
+      "sha256": "b523fc943479e4cd6325af3e77d13980aa231eca9c97b187a74ebb1886497f27"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/reviewer-native.stdout.log",
+      "bytes": 198,
+      "sha256": "0ad6b90b23a73c216b7f0fef220df4d2d139e1429b38c485e40011e6d9ee724c"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/run-probe.ps1",
+      "bytes": 3503,
+      "sha256": "1431c4fefaaca4b86481c639a12b79b4897bfcbcb8dcc4d198b5d9009a704335"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-083/test-summary.json",
+      "bytes": 17942,
+      "sha256": "b77921a275151e95985ea6666c1dcc9d8fa0cb51d85069bad89d4fb73b8f6d7e"
+    }
+  ],
+  "status": "partial; dense load failure and human/audio/final flow acceptance pending"
+}

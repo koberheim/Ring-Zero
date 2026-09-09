@@ -1,0 +1,301 @@
+{
+	"actor_count": 2,
+	"backend": "gl_compatibility",
+	"core_hp": 172.600000000002,
+	"ended": false,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"event_wall_seconds": 1.181768,
+	"events": [
+		{
+			"core_hp": 200.0,
+			"energy": 10000.0,
+			"events": {
+				"broken_wedges": [
+					"(1, 2)",
+					"(1, 8)"
+				],
+				"collapsed_rings": [],
+				"core_lost": false,
+				"energy_awarded": 0.0,
+				"hits": [],
+				"kill_ids": [],
+				"relays_lost": [],
+				"spawned_ids": [],
+				"walls_broken": []
+			},
+			"tick": 68,
+			"wall_seconds": 1.181768
+		}
+	],
+	"final_state": {
+		"energy": 10000.0,
+		"rings": {
+			"1": {
+				"relay": {
+					"active": true
+				},
+				"relay_hp": 100.0,
+				"relay_max_hp": 100.0,
+				"wedges": {
+					"1": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"2": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"3": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"4": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"5": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"6": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"7": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"8": {
+						"hp": 0.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"9": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"10": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"11": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {},
+						"slot_count": 2
+					},
+					"12": {
+						"hp": 100.0,
+						"max_hp": 100.0,
+						"occupants": {
+							"0": {
+								"kind": "flak"
+							}
+						},
+						"slot_count": 2
+					}
+				}
+			}
+		}
+	},
+	"fixture": "diagnostic initial state; actual unaccelerated fixed-step events",
+	"frames": [
+		{
+			"file": "wedges-000.png",
+			"simulation_seconds": 0.0,
+			"tick": 0,
+			"wall_seconds": 0.016688
+		},
+		{
+			"file": "wedges-001.png",
+			"simulation_seconds": 0.166666666666667,
+			"tick": 10,
+			"wall_seconds": 0.18336
+		},
+		{
+			"file": "wedges-002.png",
+			"simulation_seconds": 0.35,
+			"tick": 21,
+			"wall_seconds": 0.366672
+		},
+		{
+			"file": "wedges-003.png",
+			"simulation_seconds": 0.533333333333333,
+			"tick": 32,
+			"wall_seconds": 0.55002
+		},
+		{
+			"file": "wedges-004.png",
+			"simulation_seconds": 0.716666666666667,
+			"tick": 43,
+			"wall_seconds": 0.733358
+		},
+		{
+			"file": "wedges-005.png",
+			"simulation_seconds": 0.9,
+			"tick": 54,
+			"wall_seconds": 0.916648
+		},
+		{
+			"file": "wedges-006.png",
+			"simulation_seconds": 1.06666666666667,
+			"tick": 64,
+			"wall_seconds": 1.083367
+		},
+		{
+			"file": "wedges-007.png",
+			"simulation_seconds": 1.25,
+			"tick": 75,
+			"wall_seconds": 1.266662
+		},
+		{
+			"file": "wedges-008.png",
+			"simulation_seconds": 1.43333333333333,
+			"tick": 86,
+			"wall_seconds": 1.449926
+		},
+		{
+			"file": "wedges-009.png",
+			"simulation_seconds": 1.6,
+			"tick": 96,
+			"wall_seconds": 1.616732
+		},
+		{
+			"file": "wedges-010.png",
+			"simulation_seconds": 1.78333333333333,
+			"tick": 107,
+			"wall_seconds": 1.800026
+		},
+		{
+			"file": "wedges-011.png",
+			"simulation_seconds": 1.96666666666667,
+			"tick": 118,
+			"wall_seconds": 1.983322
+		},
+		{
+			"file": "wedges-012.png",
+			"simulation_seconds": 2.15,
+			"tick": 129,
+			"wall_seconds": 2.166591
+		},
+		{
+			"file": "wedges-013.png",
+			"simulation_seconds": 2.31666666666667,
+			"tick": 139,
+			"wall_seconds": 2.333274
+		},
+		{
+			"file": "wedges-014.png",
+			"simulation_seconds": 2.48333333333333,
+			"tick": 149,
+			"wall_seconds": 2.500186
+		},
+		{
+			"file": "wedges-015.png",
+			"simulation_seconds": 2.66666666666667,
+			"tick": 160,
+			"wall_seconds": 2.683471
+		},
+		{
+			"file": "wedges-016.png",
+			"simulation_seconds": 2.83333333333333,
+			"tick": 170,
+			"wall_seconds": 2.850149
+		},
+		{
+			"file": "wedges-017.png",
+			"simulation_seconds": 3.01666666666667,
+			"tick": 181,
+			"wall_seconds": 3.033333
+		},
+		{
+			"file": "wedges-018.png",
+			"simulation_seconds": 3.18333333333333,
+			"tick": 191,
+			"wall_seconds": 3.200001
+		},
+		{
+			"file": "wedges-019.png",
+			"simulation_seconds": 3.35,
+			"tick": 201,
+			"wall_seconds": 3.366835
+		},
+		{
+			"file": "wedges-020.png",
+			"simulation_seconds": 3.53333333333333,
+			"tick": 212,
+			"wall_seconds": 3.55006
+		},
+		{
+			"file": "wedges-021.png",
+			"simulation_seconds": 3.7,
+			"tick": 222,
+			"wall_seconds": 3.716872
+		},
+		{
+			"file": "wedges-022.png",
+			"simulation_seconds": 3.88333333333333,
+			"tick": 233,
+			"wall_seconds": 3.899965
+		},
+		{
+			"file": "wedges-023.png",
+			"simulation_seconds": 4.05,
+			"tick": 243,
+			"wall_seconds": 4.066808
+		},
+		{
+			"file": "wedges-024.png",
+			"simulation_seconds": 4.23333333333333,
+			"tick": 254,
+			"wall_seconds": 4.250003
+		},
+		{
+			"file": "wedges-025.png",
+			"simulation_seconds": 4.41666666666667,
+			"tick": 265,
+			"wall_seconds": 4.433305
+		}
+	],
+	"gpu": "NVIDIA GeForce RTX 4080",
+	"kind": "wedges",
+	"mode": "normal",
+	"palette": 1,
+	"resolution": [
+		2560,
+		1440
+	],
+	"results_transition": "disabled only for aftermath world diagnostic",
+	"seed": 83083,
+	"ui_scale": 1.0,
+	"zoom": 1.3
+}

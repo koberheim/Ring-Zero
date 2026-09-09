@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.341 - Forward Mobile - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4080
+
+{"actors":128,"adapter_cap_events":8,"adapter_cap_pieces":96,"admission":{},"diagnostic":"actual high-ring collapse with densely occupied standing hardware; different fixture from canonical","during_frames":0,"during_median_ms":0,"effects":true,"frames":180,"max_frame_ms":19.214,"max_simulation_callback_ms":5.066,"median_frame_ms":16.683,"p95_frame_ms":17.884,"rings":12,"simulation_wall_ratio":0.99755399759789,"viewport":"(2560, 1440)","zoom":0.41}

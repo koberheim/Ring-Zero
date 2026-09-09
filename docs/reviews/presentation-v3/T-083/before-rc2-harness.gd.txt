@@ -1,0 +1,112 @@
+extends "res://tests/presentation/test_application.gd"
+var output := "res://docs/reviews/presentation-v3/T-083/before-a/"
+var mode := "normal"
+
+func _initialize() -> void:
+	create_timer(85.0).timeout.connect(func(): push_error("Collapse capture deadline"); quit(1))
+	call_deferred("_run")
+
+func fixture(kind: String) -> LiveSimulation:
+	var base: BalanceProfile = BalanceProfile.load_json("res://data/balance/testing.json").profile
+	var tuned: BalanceProfile = base.with_overrides({"pressure":{"spawn_per_second":0},"flak":{"damage":0}}).profile
+	var sim: LiveSimulation = LiveSimulation.create(tuned,5).simulation
+	sim.state.energy = 10000
+	if kind == "inner":
+		check(sim.purchase_ring().ok and sim.purchase_ring().ok,"Fixture public expansion")
+		for wedge in range(1,7): sim.state.rings[1].wedges[wedge].hp = 0.0
+		for ring in [2,3]: sim.state.rings[ring].wedges[7].hp = 0.0
+		sim.state.rings[1].wedges[7].hp = 6.7
+		add_machine(sim,7,192)
+	elif kind == "wedges":
+		for wedge in [2,8]:
+			sim.state.rings[1].wedges[wedge].hp = 6.7
+			add_machine(sim,wedge,192)
+	else:
+		# Diagnostic initial tombstone, followed by a genuine committed core hit.
+		var record: Dictionary = sim.state.rings[1]
+		record.collapsed = true
+		record.relay = {}
+		record.erase("relay_hp")
+		record.erase("relay_max_hp")
+		for plate in record.wedges.values():
+			plate.hp = 0.0
+			plate.occupants = {}
+			plate.erase("wall")
+		sim.core_hp = 6.7
+		add_machine(sim,7,96)
+	return sim
+
+func add_machine(sim: LiveSimulation, wedge: int, radius: float) -> void:
+	var band := (radius-96.0)/96.0
+	sim.pool.spawn({"position":PolarPosition.new(int(floorf(band))+1,wedge,band-floorf(band),0.5),"hp":100.0,"damage_per_second":6.0,"speed_ring_widths_per_second":1.0})
+
+func _run() -> void:
+	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with("--evidence-dir="): output = argument.trim_prefix("--evidence-dir=").trim_suffix("/")+"/"
+		if argument.begins_with("--mode="): mode = argument.trim_prefix("--mode=")
+	seed(83083)
+	root.size = Vector2i(2560,1440)
+	app = load("res://scenes/application.tscn").instantiate()
+	app.profile_path = "res://.godot/release-profiles/t083-%d/profile.json" % Time.get_ticks_usec()
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(app.profile_path.get_base_dir()))
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(output))
+	root.add_child(app)
+	await process_frame
+	# Keep the world visible after final-core loss for the required aftermath.
+	# This is a world diagnostic, not evidence of the application's results flow.
+	app.set_process(false)
+	for kind in (["wedges","inner","core"] if mode == "normal" else ["inner"]):
+		app.begin_run(false)
+		await process_frame
+		app.live.set_process(false)
+		var sim := fixture(kind)
+		app.live.simulation = sim
+		app.live.profile = sim.profile
+		app.live.last_error = ""
+		app.live.clock = FixedStepClock.new(60.0,app.live._simulation_tick)
+		app.live.sync_simulation()
+		app.live.apply_interface_settings({"effects":mode != "off","reduced_motion":mode == "reduced","ui_scale":1.0})
+		app.live.sun_phase = 0.0
+		app.live.sun.material.set_shader_parameter("palette",1)
+		app.live.camera.position = Vector2.ZERO
+		app.live._set_zoom(1.3)
+		app.live.camera.force_update_scroll()
+		await process_frame
+		await RenderingServer.frame_post_draw
+		var frames := []
+		var event_log := []
+		var next_capture := 0.0
+		var start := Time.get_ticks_usec()
+		app.live.clock = FixedStepClock.new(60.0,func(dt):
+			app.live._simulation_tick(dt)
+			var events: Dictionary = sim.last_events
+			if not events.broken_wedges.is_empty() or not events.collapsed_rings.is_empty() or events.core_lost:
+				event_log.append({"wall_seconds":float(Time.get_ticks_usec()-start)/1000000.0,"tick":sim._ticks,"events":events.duplicate(true),"energy":sim.state.energy,"core_hp":sim.core_hp}))
+		app.live.set_process(true)
+		var event_wall := -1.0
+		while true:
+			await process_frame
+			await RenderingServer.frame_post_draw
+			var wall := float(Time.get_ticks_usec()-start)/1000000.0
+			if not event_log.is_empty(): event_wall = event_log[0].wall_seconds
+			if wall >= next_capture:
+				var filename := "%s-%03d.png" % [kind,frames.size()]
+				check(root.get_texture().get_image().save_png(output+filename) == OK,"Frame "+filename)
+				frames.append({"file":filename,"wall_seconds":wall,"tick":sim._ticks,"simulation_seconds":sim.elapsed_seconds})
+				next_capture = wall+1.0/6.0
+			if event_wall >= 0 and frames.back().wall_seconds >= event_wall+3.15: break
+			if wall > 10.0: break
+		app.live.set_process(false)
+		check(event_wall >= 1.0,"At least one second before actual "+kind+" event")
+		check(event_wall >= 0 and frames.back().wall_seconds >= event_wall+3.0,"Three seconds of native aftermath "+kind)
+		check(app.live.last_error.is_empty(),"Fixture simulation valid "+kind)
+		var record := {"fixture":"diagnostic initial state; actual unaccelerated fixed-step events","kind":kind,"mode":mode,"seed":83083,"resolution":[2560,1440],"ui_scale":1.0,"zoom":1.3,"palette":1,"backend":RenderingServer.get_current_rendering_method(),"engine":Engine.get_version_info(),"gpu":RenderingServer.get_video_adapter_name(),"actor_count":sim.pool.active_count(),"event_wall_seconds":event_wall,"events":event_log,"frames":frames,"final_state":sim.state,"core_hp":sim.core_hp,"ended":sim.ended,"results_transition":"disabled only for aftermath world diagnostic"}
+		FileAccess.open(output+kind+".json",FileAccess.WRITE).store_string(JSON.stringify(record,"\t"))
+		app.show_start()
+		await process_frame
+	await app.audio.shutdown()
+	app.queue_free()
+	paused = false
+	await process_frame
+	print("T083 native capture: %d checks, %d failures" % [checks,failures])
+	quit(1 if failures else 0)
