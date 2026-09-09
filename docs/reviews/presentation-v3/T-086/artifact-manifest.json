@@ -1,0 +1,436 @@
+﻿{
+    "algorithm":  "SHA-256",
+    "excludes":  "artifact-manifest.json",
+    "files":  [
+                  {
+                      "path":  "after/focus-01-keyboard-1920x1080-100.png",
+                      "bytes":  275219,
+                      "sha256":  "bd431147b9424cadef7a24bddd759929e3a4108fc964a68fc3c21e4d2de25ca5"
+                  },
+                  {
+                      "path":  "after/focus-02-controller-1920x1080-100.png",
+                      "bytes":  274900,
+                      "sha256":  "250061e3756745e656d0343f8458b7ea417ebda2f0fe66fc6327ff513af664d5"
+                  },
+                  {
+                      "path":  "after/focus-traversal-000.png",
+                      "bytes":  275179,
+                      "sha256":  "d5edd8630561741466dc8953b134fdd93a4ddcbedfdd51ee140fa50598fe3ce1"
+                  },
+                  {
+                      "path":  "after/focus-traversal-001.png",
+                      "bytes":  275179,
+                      "sha256":  "d5edd8630561741466dc8953b134fdd93a4ddcbedfdd51ee140fa50598fe3ce1"
+                  },
+                  {
+                      "path":  "after/focus-traversal-002.png",
+                      "bytes":  275179,
+                      "sha256":  "d5edd8630561741466dc8953b134fdd93a4ddcbedfdd51ee140fa50598fe3ce1"
+                  },
+                  {
+                      "path":  "after/focus-traversal-003.png",
+                      "bytes":  275179,
+                      "sha256":  "d5edd8630561741466dc8953b134fdd93a4ddcbedfdd51ee140fa50598fe3ce1"
+                  },
+                  {
+                      "path":  "after/focus-traversal-004.png",
+                      "bytes":  275179,
+                      "sha256":  "d5edd8630561741466dc8953b134fdd93a4ddcbedfdd51ee140fa50598fe3ce1"
+                  },
+                  {
+                      "path":  "after/focus-traversal-005.png",
+                      "bytes":  274956,
+                      "sha256":  "97f7b59ce214fd3a01718e07ba65d51025c9f5cd7e17b9f5e24e13899d0b5296"
+                  },
+                  {
+                      "path":  "after/focus-traversal-006.png",
+                      "bytes":  274956,
+                      "sha256":  "97f7b59ce214fd3a01718e07ba65d51025c9f5cd7e17b9f5e24e13899d0b5296"
+                  },
+                  {
+                      "path":  "after/focus-traversal-007.png",
+                      "bytes":  274956,
+                      "sha256":  "97f7b59ce214fd3a01718e07ba65d51025c9f5cd7e17b9f5e24e13899d0b5296"
+                  },
+                  {
+                      "path":  "after/focus-traversal-008.png",
+                      "bytes":  274956,
+                      "sha256":  "97f7b59ce214fd3a01718e07ba65d51025c9f5cd7e17b9f5e24e13899d0b5296"
+                  },
+                  {
+                      "path":  "after/focus-traversal-009.png",
+                      "bytes":  274956,
+                      "sha256":  "97f7b59ce214fd3a01718e07ba65d51025c9f5cd7e17b9f5e24e13899d0b5296"
+                  },
+                  {
+                      "path":  "after/focus-traversal-010.png",
+                      "bytes":  275016,
+                      "sha256":  "d2cca4f33c29f3d96218b0da45bee6930d19e6f0a76cb1c23d7648603e8a9e77"
+                  },
+                  {
+                      "path":  "after/focus-traversal-011.png",
+                      "bytes":  275016,
+                      "sha256":  "d2cca4f33c29f3d96218b0da45bee6930d19e6f0a76cb1c23d7648603e8a9e77"
+                  },
+                  {
+                      "path":  "after/focus-traversal-012.png",
+                      "bytes":  275016,
+                      "sha256":  "d2cca4f33c29f3d96218b0da45bee6930d19e6f0a76cb1c23d7648603e8a9e77"
+                  },
+                  {
+                      "path":  "after/focus-traversal-013.png",
+                      "bytes":  275016,
+                      "sha256":  "d2cca4f33c29f3d96218b0da45bee6930d19e6f0a76cb1c23d7648603e8a9e77"
+                  },
+                  {
+                      "path":  "after/focus-traversal-014.png",
+                      "bytes":  275016,
+                      "sha256":  "d2cca4f33c29f3d96218b0da45bee6930d19e6f0a76cb1c23d7648603e8a9e77"
+                  },
+                  {
+                      "path":  "after/focus-traversal-015.png",
+                      "bytes":  275176,
+                      "sha256":  "e634984f08d96ade27c3dd40d4e43c759e00dc5ea26100a68933e813795c6abd"
+                  },
+                  {
+                      "path":  "after/focus-traversal-016.png",
+                      "bytes":  275176,
+                      "sha256":  "e634984f08d96ade27c3dd40d4e43c759e00dc5ea26100a68933e813795c6abd"
+                  },
+                  {
+                      "path":  "after/focus-traversal-017.png",
+                      "bytes":  275176,
+                      "sha256":  "e634984f08d96ade27c3dd40d4e43c759e00dc5ea26100a68933e813795c6abd"
+                  },
+                  {
+                      "path":  "after/focus-traversal-018.png",
+                      "bytes":  275176,
+                      "sha256":  "e634984f08d96ade27c3dd40d4e43c759e00dc5ea26100a68933e813795c6abd"
+                  },
+                  {
+                      "path":  "after/focus-traversal-019.png",
+                      "bytes":  275176,
+                      "sha256":  "e634984f08d96ade27c3dd40d4e43c759e00dc5ea26100a68933e813795c6abd"
+                  },
+                  {
+                      "path":  "after/focus-traversal-020.png",
+                      "bytes":  275034,
+                      "sha256":  "6a04bfb494629a70c030da5d1dad684ee2e252c4d797630ddf721b3ad73b7435"
+                  },
+                  {
+                      "path":  "after/focus-traversal-021.png",
+                      "bytes":  275034,
+                      "sha256":  "6a04bfb494629a70c030da5d1dad684ee2e252c4d797630ddf721b3ad73b7435"
+                  },
+                  {
+                      "path":  "after/focus-traversal-022.png",
+                      "bytes":  275034,
+                      "sha256":  "6a04bfb494629a70c030da5d1dad684ee2e252c4d797630ddf721b3ad73b7435"
+                  },
+                  {
+                      "path":  "after/focus-traversal-023.png",
+                      "bytes":  275034,
+                      "sha256":  "6a04bfb494629a70c030da5d1dad684ee2e252c4d797630ddf721b3ad73b7435"
+                  },
+                  {
+                      "path":  "after/focus-traversal-024.png",
+                      "bytes":  275034,
+                      "sha256":  "6a04bfb494629a70c030da5d1dad684ee2e252c4d797630ddf721b3ad73b7435"
+                  },
+                  {
+                      "path":  "after/manifest.json",
+                      "bytes":  7869,
+                      "sha256":  "461fa60d2fb39a250ad4f61d8c45479887f9990b9add5fee799e0b054746781c"
+                  },
+                  {
+                      "path":  "after/settings-1920x1080-100.png",
+                      "bytes":  274905,
+                      "sha256":  "7da100ecc6d66c830d344d52120293472e0e39d9802c17bd2e1382cb4cd5389c"
+                  },
+                  {
+                      "path":  "after/settings-1920x1080-130.png",
+                      "bytes":  308103,
+                      "sha256":  "386b969b836f2c6e38c9961e7ea8700b28dc46ec749c1acb93f5d5bfa7952397"
+                  },
+                  {
+                      "path":  "after/settings-2560x1440-100.png",
+                      "bytes":  367766,
+                      "sha256":  "0794bde87f79a39257ff02b30dda4c22c7ff8ab74b96db2128d7e943c510548e"
+                  },
+                  {
+                      "path":  "after/settings-2560x1440-130.png",
+                      "bytes":  395186,
+                      "sha256":  "8b033191e46fda3df78eeb96cb360163a869fd8afea431e08c2e1afd1b22a8f0"
+                  },
+                  {
+                      "path":  "after/start-1920x1080-100.png",
+                      "bytes":  997546,
+                      "sha256":  "4f9af55f385405a03f3da146609ab55c45a0c04abfce1376cf0f148dc15ecba7"
+                  },
+                  {
+                      "path":  "after/start-1920x1080-130.png",
+                      "bytes":  1014532,
+                      "sha256":  "56c6b6dde169e405a8b2fef71e9edd4ebdb74c8e75ecfd2ee9623c75fb9788d1"
+                  },
+                  {
+                      "path":  "after/start-2560x1440-100.png",
+                      "bytes":  1540734,
+                      "sha256":  "affb1abdf7c400df9a105d6c2520bd332b266369317eb12d7fa4df0b8d5a663b"
+                  },
+                  {
+                      "path":  "after/start-2560x1440-130.png",
+                      "bytes":  1558585,
+                      "sha256":  "c61acec817810ed93b95c628d99bf333bcd29fbf66014dd7e4e91abdb712b8a3"
+                  },
+                  {
+                      "path":  "after/states-off-hover-1920x1080-100.png",
+                      "bytes":  389913,
+                      "sha256":  "62f46d1eca9a97e1123b1c3e8444b848dfb8949a75c6a79a6dd3a6b275a5b7b8"
+                  },
+                  {
+                      "path":  "after/states-off-hover-1920x1080-130.png",
+                      "bytes":  404225,
+                      "sha256":  "63b1bdbffade07b057ad48f64418011e59eb999e2e3c78529ece262af7eee8d1"
+                  },
+                  {
+                      "path":  "after/states-off-hover-2560x1440-100.png",
+                      "bytes":  614037,
+                      "sha256":  "c16fff16051c97d85371020fb615f5cfbd49752bed93b926af7ccf3b6dbe9259"
+                  },
+                  {
+                      "path":  "after/states-off-hover-2560x1440-130.png",
+                      "bytes":  625636,
+                      "sha256":  "f31e0460c2ba240b7349b975502c61c2f7463f90930d4990cf945771fb2180a9"
+                  },
+                  {
+                      "path":  "after/states-on-hover-1920x1080-100.png",
+                      "bytes":  389882,
+                      "sha256":  "4b28eb3101daf7fc77f7b6c9eb4772d3bc71ed58ca28a5f658b614e3719fb420"
+                  },
+                  {
+                      "path":  "after/states-on-hover-1920x1080-130.png",
+                      "bytes":  404146,
+                      "sha256":  "9b779d8e585acb89b56145f43d467a372e099a8c29e5b0709dcea9a2b13706b5"
+                  },
+                  {
+                      "path":  "after/states-on-hover-2560x1440-100.png",
+                      "bytes":  614029,
+                      "sha256":  "60e36befdf4e693fca7807b2c24f3362ab0245e0614b5c09e8f42799ae7656c9"
+                  },
+                  {
+                      "path":  "after/states-on-hover-2560x1440-130.png",
+                      "bytes":  625533,
+                      "sha256":  "5179ac6701f60cccad8001b9ef0ea904da72f532477d2af04f4ab67e37cf5eb8"
+                  },
+                  {
+                      "path":  "after-capture.log",
+                      "bytes":  326,
+                      "sha256":  "7e97d3b3ad25dad54d047aec8ab604fd23fe239ab63a785120051819b9d00ab5"
+                  },
+                  {
+                      "path":  "after-capture.stderr.log",
+                      "bytes":  125,
+                      "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+                  },
+                  {
+                      "path":  "after-capture.stdout.log",
+                      "bytes":  207,
+                      "sha256":  "85c77df59d61ccc382bd0c95a288abb399307620dc22214973be27d003e14a59"
+                  },
+                  {
+                      "path":  "before/focus-01-keyboard-1920x1080-100.png",
+                      "bytes":  274400,
+                      "sha256":  "70855499e9db68bcfbce0ca4839dd038f6aa4b4fde0f9bacadfc4c12d428eb8a"
+                  },
+                  {
+                      "path":  "before/focus-02-controller-1920x1080-100.png",
+                      "bytes":  274471,
+                      "sha256":  "7769f960eecd107aaa840e8b4ddb06943422ca7a066e961aa6c2c380ae90db39"
+                  },
+                  {
+                      "path":  "before/manifest.json",
+                      "bytes":  4978,
+                      "sha256":  "8999eebef710921aac353b32ba18c776dd50bd428eaa4a6cd251783a71b05033"
+                  },
+                  {
+                      "path":  "before/settings-1920x1080-100.png",
+                      "bytes":  274306,
+                      "sha256":  "954706b54bd522939810db7eea10b89e182db56a0ab268c4f61bbad0585f6c30"
+                  },
+                  {
+                      "path":  "before/settings-1920x1080-130.png",
+                      "bytes":  307611,
+                      "sha256":  "989bb7bab6c13ebe6cd18342e2cdf2fc502993ac1c6043542d37fc6994dd64c5"
+                  },
+                  {
+                      "path":  "before/settings-2560x1440-100.png",
+                      "bytes":  368863,
+                      "sha256":  "0cb9bc9d8e6fe8a1f3c6bc5ab5f96729a0b36d8cfd7f4ae6e621728bdfd9cb47"
+                  },
+                  {
+                      "path":  "before/settings-2560x1440-130.png",
+                      "bytes":  396956,
+                      "sha256":  "bf36ddcbcf43c9556610bc715708068f03d1eb9fb66b0d1ff224a001c7c712b1"
+                  },
+                  {
+                      "path":  "before/start-1920x1080-100.png",
+                      "bytes":  996472,
+                      "sha256":  "116cdcfd2fa22d64eadf72750fb4f4e21d7990e87b27b727b2595fba48927cbb"
+                  },
+                  {
+                      "path":  "before/start-1920x1080-130.png",
+                      "bytes":  1005581,
+                      "sha256":  "94a7cd5c73c6dfdf86919f48b805b9f9e10c0fbe6d18d0d8876c8f45b1914d40"
+                  },
+                  {
+                      "path":  "before/start-2560x1440-100.png",
+                      "bytes":  1541001,
+                      "sha256":  "05c44100c595bf771e7cec2765ba1186716a2322c57e2fd277d705b58fc8e777"
+                  },
+                  {
+                      "path":  "before/start-2560x1440-130.png",
+                      "bytes":  1552131,
+                      "sha256":  "94a7909289717ca7b7dc586f19f0edb532514b5f5b2fd3e5b4c90c16a52961b0"
+                  },
+                  {
+                      "path":  "before/states-off-hover-1920x1080-100.png",
+                      "bytes":  390621,
+                      "sha256":  "f5390d521ccfb14fb9b0d9d219524f6bdca06191d7f48428a54cd9596b94a1b9"
+                  },
+                  {
+                      "path":  "before/states-off-hover-1920x1080-130.png",
+                      "bytes":  403263,
+                      "sha256":  "98d74ed195aa1e197ce62b4ddb79368d75ce54df7c4f50e241c2724670f595eb"
+                  },
+                  {
+                      "path":  "before/states-off-hover-2560x1440-100.png",
+                      "bytes":  618445,
+                      "sha256":  "647f21f9bd96f1f4d3bdc160f14fc7815395d8ec59f881bcc28ac7ae9298b1a4"
+                  },
+                  {
+                      "path":  "before/states-off-hover-2560x1440-130.png",
+                      "bytes":  629047,
+                      "sha256":  "d10cd878f15d96a045a356e160e15b823c87fc8e98d20a778dab0cf9fca424bd"
+                  },
+                  {
+                      "path":  "before/states-on-hover-1920x1080-100.png",
+                      "bytes":  392103,
+                      "sha256":  "1c18732c1a2b27950579fe2801c20072b4584a34e122bbb0607e1897fc56540f"
+                  },
+                  {
+                      "path":  "before/states-on-hover-1920x1080-130.png",
+                      "bytes":  404931,
+                      "sha256":  "176bc2be8880a0f29ca2fa735f416d170f3dcd74ab2c3e279ab87ead5a58f33b"
+                  },
+                  {
+                      "path":  "before/states-on-hover-2560x1440-100.png",
+                      "bytes":  621453,
+                      "sha256":  "7f1cf382ec8a4913ac5e56e74d8e93e982861eefc0377c8a76fd94cb5ab31fd0"
+                  },
+                  {
+                      "path":  "before/states-on-hover-2560x1440-130.png",
+                      "bytes":  632282,
+                      "sha256":  "8509bc8dc514c83ea724707b8a758669d5694f64ffaf6f0d4d6a6861030a02d4"
+                  },
+                  {
+                      "path":  "before-capture.stderr.log",
+                      "bytes":  125,
+                      "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+                  },
+                  {
+                      "path":  "before-capture.stdout.log",
+                      "bytes":  208,
+                      "sha256":  "c418536d2b4bb7b43bac95bd203ef86268faf36130902b52016cef4d7f097478"
+                  },
+                  {
+                      "path":  "focus-traversal.html",
+                      "bytes":  3210,
+                      "sha256":  "e0ca3aa8da04292546a8f6feb01e238f30b1886d29ae4e9f16ad041ed429a510"
+                  },
+                  {
+                      "path":  "recovery-failed/after-capture.log",
+                      "bytes":  213191,
+                      "sha256":  "2a8a94c23d75749ca9c19ad8cb2f416cb926f40846268bde1f2ed9dd79cf2199"
+                  },
+                  {
+                      "path":  "recovery-failed/after-capture.stderr.log",
+                      "bytes":  216221,
+                      "sha256":  "330d046cc369ac4383b41ca4a0d38fc25c6771ce14fa6c350b55f44dfd3f60e6"
+                  },
+                  {
+                      "path":  "recovery-failed/after-capture.stdout.log",
+                      "bytes":  207,
+                      "sha256":  "52b8b358a261e816dff4ec1f9eb34b0ebdf66198a03bdbc9180a618b4ca42f88"
+                  },
+                  {
+                      "path":  "recovery-import.log",
+                      "bytes":  2009,
+                      "sha256":  "5eb5cab88b8437dd0512ecdeb0d1a06fe357028a62302664023417addaaa1448"
+                  },
+                  {
+                      "path":  "recovery-import.stderr.log",
+                      "bytes":  319,
+                      "sha256":  "dc17be295ae412fb5021569ae342352e6cac9989665a848b0d8a0dfe1dc661e4"
+                  },
+                  {
+                      "path":  "recovery-import.stdout.log",
+                      "bytes":  2445,
+                      "sha256":  "cf3bfb39c094469539c204e415ef93519f3e550980e31f25253b328fd697fc5f"
+                  },
+                  {
+                      "path":  "reimport.stderr.log",
+                      "bytes":  319,
+                      "sha256":  "dc17be295ae412fb5021569ae342352e6cac9989665a848b0d8a0dfe1dc661e4"
+                  },
+                  {
+                      "path":  "reimport.stdout.log",
+                      "bytes":  2670,
+                      "sha256":  "edc5491067b452e92a6cf753e6719ca292794e25910a72fddba7b188bbb88e23"
+                  },
+                  {
+                      "path":  "report.md",
+                      "bytes":  7816,
+                      "sha256":  "827326845da2feccf6b1f673235a249f63fa4bc2d22726e9699e50bee827978e"
+                  },
+                  {
+                      "path":  "reviewer/acceptance.md",
+                      "bytes":  2434,
+                      "sha256":  "5ca1384a1c2c2335167b95e232f97d0a8dea9f57059019cc1c33b384ea93fde6"
+                  },
+                  {
+                      "path":  "reviewer/manifest.json",
+                      "bytes":  7869,
+                      "sha256":  "bcf2ea36b92640bfd0016ec5f513193dad94e71309eb907173e78755c9a2ec60"
+                  },
+                  {
+                      "path":  "reviewer/settings-1920x1080-130.png",
+                      "bytes":  308103,
+                      "sha256":  "386b969b836f2c6e38c9961e7ea8700b28dc46ec749c1acb93f5d5bfa7952397"
+                  },
+                  {
+                      "path":  "reviewer/stderr.log",
+                      "bytes":  125,
+                      "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+                  },
+                  {
+                      "path":  "reviewer/stdout.log",
+                      "bytes":  207,
+                      "sha256":  "85c77df59d61ccc382bd0c95a288abb399307620dc22214973be27d003e14a59"
+                  },
+                  {
+                      "path":  "source-manifest.json",
+                      "bytes":  3453,
+                      "sha256":  "1940dbe694911f6740ef5e58f7a3f5cad9583fbe017fc9a55ec84d2db3739b0d"
+                  },
+                  {
+                      "path":  "suite-run.txt",
+                      "bytes":  14670,
+                      "sha256":  "bab61bf497bff71405d181e73b749e15a673ccbccb73f81c0aa1b2b1e237cfe0"
+                  },
+                  {
+                      "path":  "test-summary.json",
+                      "bytes":  16013,
+                      "sha256":  "1afdfbe486da53ae9508ea1be21de81ad4e3e8044e1b85cd77cc965f5199c6af"
+                  }
+              ]
+}

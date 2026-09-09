@@ -1,0 +1,66 @@
+﻿{
+    "reference_commit":  "a42b7a8fb7cf85cae7f6385b1f0f0a24d310c037",
+    "status":  "uncommitted scoped delivery",
+    "files":  [
+                  {
+                      "path":  "src/presentation/industrial_theme.gd",
+                      "sha256":  "83141a8173ada94133fd41fef7ff08d18d701b1b4dcd0465c0dafd2ade447f38"
+                  },
+                  {
+                      "path":  "tests/presentation/capture_t086.gd",
+                      "sha256":  "cfa3ef7ffd833088ec41da2c64d91dc3e3617d3515c781ef90d14d7742dfa817"
+                  },
+                  {
+                      "path":  "tests/presentation/capture_t086.gd.uid",
+                      "sha256":  "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90"
+                  },
+                  {
+                      "path":  "project.godot",
+                      "sha256":  "98b268df64c2bab477e2427cff5cded6dc5c37cfe4f9ebc49ffa9e05f4d8f6e7"
+                  },
+                  {
+                      "path":  "assets/ui/controls/README.md",
+                      "sha256":  "e3185293b7443a8a4940c615f440f218ca46c429deab4bfba531575b8dddb534"
+                  },
+                  {
+                      "path":  "assets/ui/controls/select_arrow.svg",
+                      "sha256":  "636550ecabeb959ef5ef214d4630669aba50b24a99c5421d807e0b11082cd786"
+                  },
+                  {
+                      "path":  "assets/ui/controls/select_arrow.svg.import",
+                      "sha256":  "531b799eb5830b07ee30248ff90c83ca68c7c0e9f65a7d8b40120cdb6bbd4bba"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_checked.svg",
+                      "sha256":  "decc505f3ef24ae2a3fe4bcda39718d544ed023ef30beac463a42bd0c7fc874f"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_checked.svg.import",
+                      "sha256":  "db5c4180854491ffee572622ef0ca3ce2ba99dde21ede28238950e10241a5c7f"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_checked_disabled.svg",
+                      "sha256":  "521f206acc6a1d78b030069d86743a19290478965e8f23b4aba7dff208305d9d"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_checked_disabled.svg.import",
+                      "sha256":  "da69343376a2e8b15da17af6ecd2393604d0f5f659fc537162b0c6cd4cb1bff8"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_unchecked.svg",
+                      "sha256":  "70eedcff56dda42f96c4cbbaaf3a9df1fb79b9ac947a1989cb5f42c668a8d28c"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_unchecked.svg.import",
+                      "sha256":  "6bd65adacb9fb7a26c58d399ffc605740d05bc6b88f146de89e17c7d2e639f1b"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_unchecked_disabled.svg",
+                      "sha256":  "c4097b93a3d301c8fb0a1e7cf0e3bcff2ccb102ae237ce5d883cff06128b39f8"
+                  },
+                  {
+                      "path":  "assets/ui/controls/switch_unchecked_disabled.svg.import",
+                      "sha256":  "77bda8c6dabb773daa197057fb57e246334c15ce2127edf8ab213fd728e93f42"
+                  }
+              ]
+}

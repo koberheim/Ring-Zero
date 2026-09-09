@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36">
+<path d="M7 2H101V29L96 34H2V7Z" fill="#080f15" stroke="#657c88" stroke-width="2"/>
+<path d="M9 6H35V30H6V9Z" fill="#839ba8" stroke="#c0cbd0"/>
+<path d="M18 12V24M23 12V24" stroke="#30424d" stroke-width="2"/>
+<path d="M49 12H57V24H49ZM64 24V12H73M64 18H71M79 24V12H88M79 18H86" fill="none" stroke="#bdc9cf" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+
+<!-- Reimport after interrupted T-086 recovery. -->
