@@ -12,6 +12,8 @@ D-131 resolved; D-135 approval. Early brief/silhouettes are disjoint from A/D; f
 
 Named preparation tooling: `scripts/art/t092_silhouettes_blender.py` and `scripts/art/t092_silhouette_review.py`. A new isolated source `.blend` under `assets/art/source/presentation-v3-elites/` is part of the approved source-artifact delivery; never save over or replace the user's current file. No detailed asset production before the human gate.
 
+**Autonomous continuation lease — `ff1de6d`:** Latest shared steering permits provisional detailed production while the human result remains pending. F owns the original editable scope, T-092 evidence and new `scripts/art/t092_production_blender.py` / `scripts/art/t092_production_review.py`. Preserve v1 source/review; create versioned v2 source models and manifests. Human recognition is not marked passed. A's first controlled rerun passed; initial freeze is released. F has exclusive Blender access outside subsequent coordinated benchmark freezes; no Godot process or shared-view edits. Agree normal/emission/material conventions with A before export.
+
 ## Editable scope
 
 docs/art-prompts/presentation-v3-elites.md; assets/art/source/presentation-v3-elites/; assets/art/machines/ and enemy-specific material/animation outputs; scripts/art/elite production tooling; task-specific art-review fixtures. No application.gd/live_view.gd/release_view.gd edits; hand metadata to E. One exclusive live Blender lease.

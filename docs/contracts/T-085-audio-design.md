@@ -14,6 +14,8 @@ D-135; D-130 source strategy resolved. Generation source admission must pass bef
 
 ## Editable scope
 
+**Autonomous continuation lease — `ff1de6d`:** Latest shared steering reactivates the complete original isolated C scope below plus T-085 evidence. Investigate the failed free pilot, use bounded legitimate retries and implement the complete offline audio adapter/bus/event system; preserve source-admission failures without false shipping acceptance. Free ACE-Step percussive/mechanical source textures may also be locally edited into SFX within the already approved sonic direction, with exact provenance. Do not assume Stable Audio commercial eligibility. No paid access, accounts, quota evasion or shared application/live/release hooks. Coordinate Godot tests and source/assets freezes with Astra; initial A baseline freeze has been released.
+
 src/presentation/game_audio.gd; new src/audio/ helpers; assets/audio/; data/audio/; default_bus_layout.tres if introduced; scripts/audio/; docs/audio-generation-plan.md; task-specific audio tests and provenance. C does not edit application.gd/live_view.gd/release_view.gd while A/B/D/E holds them; final hook lease is scheduled separately.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.

@@ -1,4 +1,4 @@
-> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
+> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Latest steering: Kevin subsequently instructed "Continue to completion without stopping"; autonomous implementation/repair continues while failed and human-only acceptance results remain honestly recorded.
 
 # RING ZERO — Build plan
 
@@ -92,6 +92,8 @@ Recovery gate results: the first untouched RC2 matched control exceeded the maxi
 ## Historical plan and session records
 
 ### Crash recovery — 2026-09-08 machine date
+
+Latest continuation: Kevin instructed "Continue to completion without stopping" after the recovery report. Shared/individual contracts now permit autonomous diagnosis, repair, implementation and evidence collection through execution checkpoints, retaining failures and pending human-only results rather than ending at each one. Scope, free-audio budget, truthful acceptance and release restrictions remain. They Are Billions and Godot editor were absent on the continuation check. Controlled unchanged RC2 sample 02 passed (median 16.665 / p95 16.868 / max 16.934 ms, simulation/wall 1.000002667); the original failure is retained. A proceeds with renderer/cache proof, C with isolated audio, F with versioned provisional detailed Blender production. Subsequent timed runs remain coordinated exclusive freezes.
 
 Durable partial-art checkpoint: `f47f804` saves the six isolated Blender blockouts, source recipe and twelve-trial human review package. Artifact integrity and source preservation are verified; human recognition remains pending. This is a source/review checkpoint, not shipping art acceptance. After the T-081 stop, a read-only GPU context list showed They Are Billions, without proving active load or causation; Kevin was asked to save/close it before a controlled diagnostic retry. No process was closed automatically.
 

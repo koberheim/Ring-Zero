@@ -14,6 +14,8 @@ D-135; T-086's isolated toggle slice accepted. No D-layout lease active.
 
 ## Editable scope
 
+**Continuation lease — `ff1de6d`:** Latest user steering in the shared contract reactivates A's runtime/renderer lease for diagnosis, implementation and repair. They Are Billions and the Godot editor are no longer running (read-only process check). All other agents currently idle and Blender not rendering; initial source/assets/runtime freeze is confirmed. Preserve the original failed sample. Report new failures promptly and continue bounded repair without inventing a pass. Coordinate subsequent benchmark freezes with Astra.
+
 project.godot; scenes/application.tscn if needed; src/presentation/release_view.gd; src/presentation/solar_body.gdshader; src/presentation/industrial_space.gdshader; new src/presentation/lighting/ helpers; assets/art/materials/; task-specific presentation/performance probes. application.gd only for the agreed viewport/environment setup hook, under the exclusive lease.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.

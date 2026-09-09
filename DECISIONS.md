@@ -1,10 +1,10 @@
-> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
+> Current authority — 2026-09-09: Kevin approved Phase 14 / D-135 on 2026-09-09. Contracted implementation and delegation are authorized in the recorded dependency order. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Latest steering: Kevin subsequently instructed "Continue to completion without stopping"; autonomous implementation/repair continues while failed and human-only acceptance results remain honestly recorded.
 
 # RING ZERO — Decisions
 
 ## Current authority and later review
 
-**Updated:** crash recovery on 2026-09-08 local date; historical approval dates retained. **Current review:** D-135 continuation reaffirmed; T-086 early slice accepted at `7a85a88` (42/42 suites, independent 51/51 native checks). T-081 stopped on untouched RC2's first max-frame breach, 21.760 ms versus 20.3379 ms; no lighting edits or gate waiver. T-092 awaits the human silhouette trial; T-085's free pilot returned an API error with no audio. D-129/D-131 are resolved; D-132/D-133 remain standing corrections and D-134 numeric authority continues. T-079 remains a failed acceptance gate.
+**Updated:** crash recovery on 2026-09-08 local date; historical approval dates retained. **Current review:** D-135 continuation reaffirmed; T-086 early slice accepted at `7a85a88` (42/42 suites, independent 51/51 native checks). Kevin subsequently instructed continuation without stopping. The first RC2 max-frame failure (21.760 ms versus 20.3379 ms) is retained; controlled sample 02 passes all timing limits and A resumed implementation. F/C production and source diagnosis continue; human results and audio-source admission remain pending. D-129/D-131 are resolved; D-132/D-133 remain standing corrections and D-134 numeric authority continues. T-079 remains a failed acceptance gate.
 
 ## NEEDS YOUR DECISION — current pass
 

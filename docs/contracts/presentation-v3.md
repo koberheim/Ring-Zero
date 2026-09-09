@@ -3,6 +3,8 @@
 **Date:** 2026-09-09. **Status:** Approved by Kevin under D-135 on 2026-09-09; execute in dependency order.
 **Authority:** Kevin's critique response; D-129–D-134; fixed spec; CLAUDE.md. All task contracts below inherit this file.
 
+**Latest execution steering — 2026-09-08 local:** Kevin instructed, "Continue to completion without stopping," after the recovery checkpoint and reported renderer/audio/human-review blockers. Continue implementation, bounded diagnosis/repair and evidence collection autonomously within approved scope. Prior stop-and-return instructions no longer require ending the session at each failed sample or pending human response. Retain every failure, repair it where possible, and keep human-only results pending until supplied. Technical dependencies still require working, reviewed interfaces; provisional production may proceed while human review is pending, but neither a passing gate nor release approval is inferred. No spending, gameplay/spec change or outside messaging is added. This instruction supersedes conflicting execution-stop language in individual contracts.
+
 ## Scope and roles
 
 Astra plans, assigns one agent per workstream, reviews every delivery and integrates accepted changes/logs. Astra does not write feature code or resolve feature conflicts by implementing a fix; the owner repairs them. Sol owns engine/performance, Terra owns faithful state/readability projections, Luna owns presentation/audio/art. Separate Luna agents may own separate streams. At most three child agents run alongside Astra; a stream can yield and later resume with the same contract. No nested implementation delegation or extra uncontracted lanes.
