@@ -1,0 +1,170 @@
+{
+  "task": "T-092",
+  "candidate": "v1",
+  "status": "HUMAN GATE PENDING - no detailed production authorized by this package",
+  "source_commit": "7a85a88ab5ac2a00fd6bdf6e2c756542fbdd22a4",
+  "recovery_base": "a42b7a8fb7cf85cae7f6385b1f0f0a24d310c037 plus recovered T-086 changes (disjoint)",
+  "renderer": "Blender 5.2.1 LTS / Workbench",
+  "camera": {
+    "orthographic": true,
+    "tilt_from_vertical_degrees": 20,
+    "position": [
+      0,
+      -3.420201433,
+      9.396926208
+    ],
+    "orthographic_scale": 4.1,
+    "object_forward": "+Y",
+    "pivot_xyz": [
+      0,
+      0,
+      0
+    ]
+  },
+  "source_resolution": [
+    256,
+    256
+  ],
+  "trial_canvas_physical_pixels": [
+    16,
+    16
+  ],
+  "palette": "strict binary black and white from rendered alpha, 128 threshold after Lanczos reduction",
+  "ui_scale": "HTML compensates devicePixelRatio; reviewer must attest no magnification",
+  "zoom": "isolated diagnostic; no game camera",
+  "simulation_tick": null,
+  "active_actor_count": 0,
+  "seed_location": "reviewer-private/answer-key.json",
+  "normalization": {
+    "tunneler": {
+      "source_alpha_bounds": [
+        97,
+        34,
+        159,
+        214
+      ],
+      "resized_content": [
+        6,
+        16
+      ],
+      "offset_in_16px_canvas": [
+        5,
+        0
+      ],
+      "threshold": 128
+    },
+    "transfer": {
+      "source_alpha_bounds": [
+        48,
+        47,
+        208,
+        214
+      ],
+      "resized_content": [
+        15,
+        16
+      ],
+      "offset_in_16px_canvas": [
+        0,
+        0
+      ],
+      "threshold": 128
+    },
+    "foundry": {
+      "source_alpha_bounds": [
+        35,
+        49,
+        221,
+        193
+      ],
+      "resized_content": [
+        16,
+        12
+      ],
+      "offset_in_16px_canvas": [
+        0,
+        2
+      ],
+      "threshold": 128
+    },
+    "sapper": {
+      "source_alpha_bounds": [
+        43,
+        37,
+        213,
+        215
+      ],
+      "resized_content": [
+        15,
+        16
+      ],
+      "offset_in_16px_canvas": [
+        0,
+        0
+      ],
+      "threshold": 128
+    },
+    "breacher": {
+      "source_alpha_bounds": [
+        49,
+        30,
+        203,
+        196
+      ],
+      "resized_content": [
+        15,
+        16
+      ],
+      "offset_in_16px_canvas": [
+        0,
+        0
+      ],
+      "threshold": 128
+    },
+    "assembler": {
+      "source_alpha_bounds": [
+        19,
+        22,
+        212,
+        219
+      ],
+      "resized_content": [
+        16,
+        16
+      ],
+      "offset_in_16px_canvas": [
+        0,
+        0
+      ],
+      "threshold": 128
+    }
+  },
+  "orientation_scope": "two exact 2D sprite rotations per class (0 and 180 degrees); twelve-bearing live acceptance remains pending",
+  "original_blender_scene": {
+    "name": "Scene",
+    "file": "Untitled",
+    "objects": [
+      "Cube",
+      "Light",
+      "Camera"
+    ],
+    "preserved": true,
+    "lease_released": true
+  },
+  "shipping_outputs": null,
+  "normal_emission_animation": "not generated; waits for human gate",
+  "physical_floors_provisional": {
+    "elites": 16,
+    "assembler": 28,
+    "human_trial_all_classes": 16
+  },
+  "limitations": [
+    "No human answers yet",
+    "No runtime, crowd, star palette, live bearing, normal or motion acceptance claimed",
+    "Clay sheet is blockout geometry only",
+    "Normalized review tiles are not shipping atlas/pivot metadata"
+  ],
+  "gpu": null,
+  "driver": null,
+  "hardware_inspection": "Get-CimInstance Win32_VideoController denied by local access policy; no escalation needed for an isolated silhouette diagnostic. Hardware comparison/performance is not claimed."
+}

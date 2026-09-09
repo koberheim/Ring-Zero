@@ -1,0 +1,104 @@
+{
+  "result": "PASS artifact integrity only; human identification untested",
+  "twelve_trials": [
+    {
+      "trial": 1,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 2,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 3,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 4,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 5,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 6,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 7,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 8,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 9,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 10,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 11,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    },
+    {
+      "trial": 12,
+      "dimensions": [
+        16,
+        16
+      ],
+      "binary_black_white": true
+    }
+  ],
+  "class_count": 6,
+  "occurrences_each": 2,
+  "source_files_present": true
+}

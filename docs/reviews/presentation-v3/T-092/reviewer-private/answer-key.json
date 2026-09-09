@@ -1,0 +1,66 @@
+{
+  "seed": 920135,
+  "answers": [
+    {
+      "trial": 1,
+      "class": "assembler",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 2,
+      "class": "transfer",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 3,
+      "class": "tunneler",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 4,
+      "class": "sapper",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 5,
+      "class": "tunneler",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 6,
+      "class": "foundry",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 7,
+      "class": "assembler",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 8,
+      "class": "breacher",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 9,
+      "class": "transfer",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 10,
+      "class": "breacher",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 11,
+      "class": "sapper",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 12,
+      "class": "foundry",
+      "sprite_rotation_degrees": 0
+    }
+  ],
+  "gate": "At least 11/12 correct, no recurrent Tunneler/Transfer/Breacher confusion; human result required."
+}
