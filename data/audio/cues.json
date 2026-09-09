@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "status": "source_admission_pending",
+  "sources": {},
+  "cues": {
+    "weapon.flak.fire": {
+      "bus": "SFX",
+      "priority": 30,
+      "cooldown_seconds": 0.09,
+      "gain_db": -15,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "dry clustered metal crack and short gravel impact",
+      "variants": []
+    },
+    "weapon.flak.hit": {
+      "bus": "SFX",
+      "priority": 40,
+      "cooldown_seconds": 0.085,
+      "gain_db": -17,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "dry clustered metal crack and short gravel impact",
+      "variants": []
+    },
+    "weapon.mass_driver.fire": {
+      "bus": "SFX",
+      "priority": 30,
+      "cooldown_seconds": 0.09,
+      "gain_db": -15,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "capacitor snap, heavy recoil, dense metal impact",
+      "variants": []
+    },
+    "weapon.mass_driver.hit": {
+      "bus": "SFX",
+      "priority": 40,
+      "cooldown_seconds": 0.085,
+      "gain_db": -17,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "capacitor snap, heavy recoil, dense metal impact",
+      "variants": []
+    },
+    "weapon.emp.fire": {
+      "bus": "SFX",
+      "priority": 30,
+      "cooldown_seconds": 0.09,
+      "gain_db": -15,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "electrical pulse and falling ionized shimmer",
+      "variants": []
+    },
+    "weapon.emp.hit": {
+      "bus": "SFX",
+      "priority": 40,
+      "cooldown_seconds": 0.085,
+      "gain_db": -17,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "electrical pulse and falling ionized shimmer",
+      "variants": []
+    },
+    "weapon.lance.fire": {
+      "bus": "SFX",
+      "priority": 30,
+      "cooldown_seconds": 0.09,
+      "gain_db": -15,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "focused bright electrical cut and brief hot hiss",
+      "variants": []
+    },
+    "weapon.lance.hit": {
+      "bus": "SFX",
+      "priority": 40,
+      "cooldown_seconds": 0.085,
+      "gain_db": -17,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "focused bright electrical cut and brief hot hiss",
+      "variants": []
+    },
+    "weapon.point_defense.fire": {
+      "bus": "SFX",
+      "priority": 30,
+      "cooldown_seconds": 0.065,
+      "gain_db": -15,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "short precise mechanical tick and light metal ping",
+      "variants": []
+    },
+    "weapon.point_defense.hit": {
+      "bus": "SFX",
+      "priority": 40,
+      "cooldown_seconds": 0.085,
+      "gain_db": -17,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "short precise mechanical tick and light metal ping",
+      "variants": []
+    },
+    "machine.standard.destroy": {
+      "bus": "SFX",
+      "priority": 60,
+      "cooldown_seconds": 0.1,
+      "gain_db": -10,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "mechanism-specific ruptured metal and falling electrical tail",
+      "variants": []
+    },
+    "machine.elite.destroy": {
+      "bus": "SFX",
+      "priority": 70,
+      "cooldown_seconds": 0.1,
+      "gain_db": -10,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "mechanism-specific ruptured metal and falling electrical tail",
+      "variants": []
+    },
+    "machine.boss.destroy": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.1,
+      "gain_db": -10,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "mechanism-specific ruptured metal and falling electrical tail",
+      "variants": []
+    },
+    "wedge.fracture": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.2,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "short structural shear",
+      "variants": []
+    },
+    "ring.collapse": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 0.25,
+      "gain_db": -5,
+      "pitch_min": 0.98,
+      "pitch_max": 1.02,
+      "character": "cascading load-bearing metal failure, low mechanical mass",
+      "variants": []
+    },
+    "elite.tunneler.arrive": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct mechanism tell: tunneler",
+      "variants": []
+    },
+    "elite.tunneler.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.3,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct active mechanism: tunneler",
+      "variants": []
+    },
+    "elite.transfer.arrive": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct mechanism tell: transfer",
+      "variants": []
+    },
+    "elite.transfer.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.3,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct active mechanism: transfer",
+      "variants": []
+    },
+    "elite.foundry.arrive": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct mechanism tell: foundry",
+      "variants": []
+    },
+    "elite.foundry.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.3,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct active mechanism: foundry",
+      "variants": []
+    },
+    "elite.breacher.arrive": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct mechanism tell: breacher",
+      "variants": []
+    },
+    "elite.breacher.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.3,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct active mechanism: breacher",
+      "variants": []
+    },
+    "elite.sapper.arrive": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct mechanism tell: sapper",
+      "variants": []
+    },
+    "elite.sapper.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.3,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "distinct active mechanism: sapper",
+      "variants": []
+    },
+    "boss.assembler.arrive": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "large interlocking factory mechanism",
+      "variants": []
+    },
+    "boss.assembler.mechanic": {
+      "bus": "SFX",
+      "priority": 85,
+      "cooldown_seconds": 0.5,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "large interlocking factory mechanism",
+      "variants": []
+    },
+    "relay.lost": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 0.6,
+      "gain_db": -9,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "distinct restrained functional warning",
+      "variants": []
+    },
+    "relay.restored": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 0.6,
+      "gain_db": -9,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "distinct restrained functional warning",
+      "variants": []
+    },
+    "power.brownout": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 0.6,
+      "gain_db": -9,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "distinct restrained functional warning",
+      "variants": []
+    },
+    "core.low": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 2.0,
+      "gain_db": -9,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "distinct restrained functional warning",
+      "variants": []
+    },
+    "action.build": {
+      "bus": "SFX",
+      "priority": 55,
+      "cooldown_seconds": 0.08,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "tactile physical action build",
+      "variants": []
+    },
+    "action.repair": {
+      "bus": "SFX",
+      "priority": 55,
+      "cooldown_seconds": 0.08,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "tactile physical action repair",
+      "variants": []
+    },
+    "action.reclaim": {
+      "bus": "SFX",
+      "priority": 55,
+      "cooldown_seconds": 0.08,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "tactile physical action reclaim",
+      "variants": []
+    },
+    "action.denied": {
+      "bus": "UI",
+      "priority": 55,
+      "cooldown_seconds": 0.08,
+      "gain_db": -8,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "tactile physical action denied",
+      "variants": []
+    },
+    "solar.flare": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.3,
+      "gain_db": -9,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "electrical stellar ability flare",
+      "variants": []
+    },
+    "solar.emp": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.3,
+      "gain_db": -9,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "electrical stellar ability emp",
+      "variants": []
+    },
+    "solar.reverse": {
+      "bus": "SFX",
+      "priority": 80,
+      "cooldown_seconds": 0.3,
+      "gain_db": -9,
+      "pitch_min": 0.97,
+      "pitch_max": 1.03,
+      "character": "electrical stellar ability reverse",
+      "variants": []
+    },
+    "ui.hover": {
+      "bus": "UI",
+      "priority": 10,
+      "cooldown_seconds": 0.07,
+      "gain_db": -21,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control hover",
+      "variants": []
+    },
+    "ui.confirm": {
+      "bus": "UI",
+      "priority": 50,
+      "cooldown_seconds": 0.07,
+      "gain_db": -15,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control confirm",
+      "variants": []
+    },
+    "ui.back": {
+      "bus": "UI",
+      "priority": 50,
+      "cooldown_seconds": 0.07,
+      "gain_db": -15,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control back",
+      "variants": []
+    },
+    "ui.toggle": {
+      "bus": "UI",
+      "priority": 50,
+      "cooldown_seconds": 0.07,
+      "gain_db": -15,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control toggle",
+      "variants": []
+    },
+    "ui.error": {
+      "bus": "UI",
+      "priority": 50,
+      "cooldown_seconds": 0.07,
+      "gain_db": -15,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control error",
+      "variants": []
+    },
+    "ui.transition": {
+      "bus": "UI",
+      "priority": 50,
+      "cooldown_seconds": 0.07,
+      "gain_db": -15,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "quiet physical control transition",
+      "variants": []
+    },
+    "outcome.victory": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 1,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "short instrumental resolution",
+      "variants": []
+    },
+    "outcome.defeat": {
+      "bus": "SFX",
+      "priority": 100,
+      "cooldown_seconds": 1,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "short instrumental resolution",
+      "variants": []
+    },
+    "music.menu": {
+      "bus": "Music",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "lossless edited seamless instrumental menu",
+      "variants": []
+    },
+    "music.run_low": {
+      "bus": "Music",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "lossless edited seamless instrumental run_low",
+      "variants": []
+    },
+    "music.run_pressure": {
+      "bus": "Music",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "lossless edited seamless instrumental run_pressure",
+      "variants": []
+    },
+    "music.run_climax": {
+      "bus": "Music",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "lossless edited seamless instrumental run_climax",
+      "variants": []
+    },
+    "music.assembler": {
+      "bus": "Music",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -8,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "lossless edited seamless instrumental assembler",
+      "variants": []
+    },
+    "ambience.machinery": {
+      "bus": "Ambience",
+      "priority": 0,
+      "cooldown_seconds": 0,
+      "gain_db": -22,
+      "pitch_min": 1,
+      "pitch_max": 1,
+      "character": "subtle machinery resonance",
+      "variants": []
+    }
+  },
+  "tuning_note": "All gain dB, cooldown seconds and pitch ratios are provisional under D-134. No file is admitted merely by having a cue entry."
+}

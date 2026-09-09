@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-09-09T03:57:29.415730+00:00",
+  "client_version": "2.6.1",
+  "anonymous": true,
+  "attempt_count": 1,
+  "automatic_generation": false,
+  "request_file": "docs/reviews/presentation-v3/T-085/ace-original-request.json",
+  "spend_usd": 0,
+  "status": "failed",
+  "error_type": "AppError",
+  "error": "You have exceeded your ZeroGPU quota (180s requested vs. 0s left). Try again in 23:48:37. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens",
+  "last_job_status": "StatusUpdate(code=<Status.FINISHED: 'FINISHED'>, rank=0, queue_size=None, eta=None, success=False, time=datetime.datetime(2026, 9, 8, 23, 57, 31, 182678), progress_data=None, log=None, type='status')",
+  "partial_outputs": [],
+  "cancel_requested": true,
+  "finished_utc": "2026-09-09T03:57:32.425973+00:00"
+}

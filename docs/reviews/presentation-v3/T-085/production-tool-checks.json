@@ -1,0 +1,67 @@
+[
+  {
+    "check": "syntax prepare_mix.py",
+    "pass": true
+  },
+  {
+    "check": "syntax prepare_production.py",
+    "pass": true
+  },
+  {
+    "check": "syntax probe_ace_step.py",
+    "pass": true
+  },
+  {
+    "check": "syntax run_production_batch.py",
+    "pass": true
+  },
+  {
+    "check": "12 unique production sources",
+    "pass": true
+  },
+  {
+    "check": "offline request preparation",
+    "pass": true,
+    "returncode": 0,
+    "stdout": "Prepared only: E:\\AI Projects\\Games\\Ring Zero\\docs\\reviews\\presentation-v3\\T-085\\menu-request-prepared.json; no network request made\n",
+    "stderr": ""
+  },
+  {
+    "check": "unverified session rejected before network",
+    "pass": true,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"E:\\AI Projects\\Games\\Ring Zero\\scripts\\audio\\run_production_batch.py\", line 73, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"E:\\AI Projects\\Games\\Ring Zero\\scripts\\audio\\run_production_batch.py\", line 31, in main\n    raise ValueError(f'Submission blocked: {field} is not verified')\nValueError: Submission blocked: current_model_verified is not verified\n"
+  },
+  {
+    "check": "missing source rejected before render",
+    "pass": true,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"E:\\AI Projects\\Games\\Ring Zero\\scripts\\audio\\prepare_mix.py\", line 89, in <module>\n    main()\n    ~~~~^^\n  File \"E:\\AI Projects\\Games\\Ring Zero\\scripts\\audio\\prepare_mix.py\", line 48, in main\n    raise ValueError('Missing preserved source under assets/audio/source')\nValueError: Missing preserved source under assets/audio/source\n"
+  },
+  {
+    "check": "installed FFmpeg atrim filter help",
+    "pass": true
+  },
+  {
+    "check": "installed FFmpeg afade filter help",
+    "pass": true
+  },
+  {
+    "check": "installed FFmpeg adelay filter help",
+    "pass": true
+  },
+  {
+    "check": "installed FFmpeg amix filter help",
+    "pass": true
+  },
+  {
+    "check": "installed FFmpeg ebur128 filter help",
+    "pass": true
+  },
+  {
+    "check": "installed FFmpeg highpass filter help",
+    "pass": true
+  }
+]

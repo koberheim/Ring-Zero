@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-09-09T03:46:07.507208+00:00",
+  "client_version": "2.6.1",
+  "anonymous": true,
+  "attempt_count": 1,
+  "automatic_generation": false,
+  "request_file": "docs/reviews/presentation-v3/T-085/ace-pilot-request.json",
+  "spend_usd": 0,
+  "status": "failed",
+  "error_type": "TimeoutError",
+  "error": "",
+  "finished_utc": "2026-09-09T03:49:08.517807+00:00"
+}

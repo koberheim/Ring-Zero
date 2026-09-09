@@ -1,0 +1,105 @@
+{
+  "status": "prepared_not_generated",
+  "model": "acestep-v15-turbo",
+  "format": "flac",
+  "batch_size": 1,
+  "submission_gate": "Fresh live model/schema/terms/free-quota evidence required. Last attempt exhausted anonymous quota; do not submit until legitimate availability. No paid credits, account creation, quota hopping or automatic waiting/retries. One request then inspect output.",
+  "sources": [
+    {
+      "id": "menu",
+      "bpm": 60,
+      "seconds": 30,
+      "seed": 85100,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Quiet maintenance bay, slow harmonic suspension, deep machinery resonance, occasional distant metal articulation; no drum groove, subtle unresolved ending.",
+      "admitted": false
+    },
+    {
+      "id": "run_low",
+      "bpm": 80,
+      "seconds": 30,
+      "seed": 85101,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Low intensity industrial suspense bed, sparse precise metallic pulse, soft sub resonance, ample midrange space for effects, stable energy.",
+      "admitted": false
+    },
+    {
+      "id": "run_pressure",
+      "bpm": 80,
+      "seconds": 30,
+      "seed": 85102,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Medium intensity industrial tension, interlocking dry metal pulses, restrained electrical grain, same tempo and tonal center as a quiet run bed, avoid busy melody.",
+      "admitted": false
+    },
+    {
+      "id": "run_climax",
+      "bpm": 80,
+      "seconds": 30,
+      "seed": 85103,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. High tension industrial defensive action, dense low mechanical rhythm with clear gaps for warnings, narrow bright texture, no cymbal wash, stable energy.",
+      "admitted": false
+    },
+    {
+      "id": "assembler",
+      "bpm": 80,
+      "seconds": 30,
+      "seed": 85104,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Imposing machine assembly theme, very slow heavy metal presses against a precise pulse, low dissonant resonances, distinctive three-stroke mechanical motif.",
+      "admitted": false
+    },
+    {
+      "id": "outcomes",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85105,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Two separated short instrumental gestures with silence: warm restrained recovery release, then a low machinery shutdown resolving into emptiness, no melody quotation.",
+      "admitted": false
+    },
+    {
+      "id": "dry_metal",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85106,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse percussion study with isolated dry metal ticks, short brittle cracks and gravel rattles, generous silent gaps, no sustained harmony or drum kit.",
+      "admitted": false
+    },
+    {
+      "id": "heavy_mass",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85107,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse industrial percussion study, isolated deep press impacts, stressed sheet metal groans and heavy recoil transients separated by silence, no music bed.",
+      "admitted": false
+    },
+    {
+      "id": "electrical",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85108,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse experimental percussion source study, isolated capacitor snaps, electrical pulses, short bright cuts and falling ionized shimmer, silent gaps, no melody.",
+      "admitted": false
+    },
+    {
+      "id": "fracture",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85109,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse mechanical texture study, stressed material creaks escalating into separated brittle fracture clusters and long low debris cascades; generous gaps, no percussion beat.",
+      "admitted": false
+    },
+    {
+      "id": "servo",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85110,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse close mechanical source study, short servo movements, latch clicks, gear ratchets, relay switches and muted tool contacts separated by silence.",
+      "admitted": false
+    },
+    {
+      "id": "warning",
+      "bpm": 60,
+      "seconds": 20,
+      "seed": 85111,
+      "prompt": "Instrumental science-fiction station, D minor, dry mechanical mass, restrained stereo, no vocals, no artist imitation. Sparse restrained electronic source study, isolated clear two-tone and three-tone mechanical warning gestures, distinct rising and falling contours, generous silence, no alarm sirens.",
+      "admitted": false
+    }
+  ]
+}

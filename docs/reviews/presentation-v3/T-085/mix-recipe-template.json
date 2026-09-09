@@ -1,0 +1,20 @@
+{
+  "status": "example_only_replace_with_downloaded_source_and_auditioned_trim",
+  "output": "docs/reviews/presentation-v3/T-085/candidates/flak-fire-01.wav",
+  "layers": [
+    {
+      "path": "assets/audio/source/t085-production/dry-metal-original.flac",
+      "sha256": "REPLACE_WITH_SHA256",
+      "commercial_use_verified": false,
+      "download_verified": false,
+      "spend_usd": 0,
+      "terms_evidence": [],
+      "start_seconds": 0,
+      "duration_seconds": 0.35,
+      "fade_seconds": 0.01,
+      "gain_db": -12,
+      "delay_seconds": 0,
+      "highpass_hz": 80
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "recorded_utc": "2026-09-09T04:08:30.602215+00:00",
+  "status": "partial_adapter_and_production_preparation_ready; generation_quota_blocked; zero_admitted_audio",
+  "runtime_freeze_verified": true,
+  "files": [
+    {
+      "path": "data/audio/cues.json",
+      "bytes": 14212,
+      "sha256": "ba75aae81f717d8c56e2d25e30532ac24ba75f3b6b6dd1c0aa0f6999ceadf719"
+    },
+    {
+      "path": "docs/audio-generation-plan.md",
+      "bytes": 10410,
+      "sha256": "abd4a9a0c3e5a42c3d7cbfc36b33a2bb07778ab582d6ffe932fc164af24745a9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-api-info.json",
+      "bytes": 309330,
+      "sha256": "7e382452367182bcdda96a0a9431a89b08fe38b59d6254e5d1558f4028c5d0d2"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-client-original-retry.json",
+      "bytes": 857,
+      "sha256": "188e3900d219231379dc7196049f9f7cfb4194cd7efeffe55b571111b044166a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-client-retry.json",
+      "bytes": 394,
+      "sha256": "f211804fe93d980bfb6a6277a0272bc788aa73ec2bb2a4da4372149ff23a9a7b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-live-config.json",
+      "bytes": 386160,
+      "sha256": "cc887395e93533e3192c9db459ac6666d363f40631b88fccb0c29af725eae954"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-original-model-card.md",
+      "bytes": 5496,
+      "sha256": "69d69b89e313706b93b420b13aa6232259b207a1cd19b0b70358d166e8e451a0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-original-request.json",
+      "bytes": 869,
+      "sha256": "40791796cb78a432bd8f6ae1a795c5414d556d11f9280c42d0afa4b96ae860e6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-pilot-attempt.md",
+      "bytes": 5241,
+      "sha256": "69a499e0cc08591146c8659ffd943856f07f51a68caee1fc3ebb6630b482f3c1"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-pilot-event.json",
+      "bytes": 47,
+      "sha256": "3bb629c9da9369e7585d4bb80a96b4512a71001d05973619d3cdbf0331f20137"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-pilot-request-metadata.json",
+      "bytes": 7397,
+      "sha256": "2f1794157358d959dcb881c6459bd53735442c8f6a251759ae9f0387cf7bc9d0"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-pilot-request.json",
+      "bytes": 872,
+      "sha256": "f335ee26d15fb624f203cc658abf0f113c0246105061ba03dd7ff11eb2151e96"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-pilot-result.sse",
+      "bytes": 25,
+      "sha256": "d90c6d4a6992471a0b964c3801ab273e8d6b6e38beb87c7f1b27b136da881e59"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-space-LICENSE.txt",
+      "bytes": 1064,
+      "sha256": "05a6bce42a62636d2cfb24139cc008b6b899754e244175814bb5dd2f4a485357"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-space-status.json",
+      "bytes": 8848,
+      "sha256": "ec27f86e4a297091ea3d032a7cd6a093202ea94d2d5e3203c030826e506e0aed"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ace-xl-model-card.md",
+      "bytes": 4106,
+      "sha256": "9cd512227aa80bc7572d09c318d5e3acc584bad1a7b5230ea03fa07220dbb6db"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/audio-import.txt",
+      "bytes": 6892,
+      "sha256": "d19f5c414110c5bde58d6010ed6a402ae7b3a13d445ed83dac69ba5fe7d9221b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/audio-interface-handoff.md",
+      "bytes": 9112,
+      "sha256": "900a1de55b62bfa1af7ff3f58f03ce05ccba75013c087124a14f50cec7317ac6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/audio-test.txt",
+      "bytes": 1218,
+      "sha256": "12b30136aa218bdbd41a36b576a219675bf6db205b282d076e68d6a4f8fa12d9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-adelay.txt",
+      "bytes": 444,
+      "sha256": "a4c7ab0c07128feabb007e1bc16e2c665aa2534617f2f03803bff6cc12ca0204"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-afade.txt",
+      "bytes": 4996,
+      "sha256": "40c1d8e52a52ab2568e2f327950dfb50a03394a8d9cadf5f0500f0802927bd46"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-amix.txt",
+      "bytes": 935,
+      "sha256": "39b0ce3f5b1f7d2dc78a68ca41f387387193aff5b9776aed9ac70fc560512489"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-atrim.txt",
+      "bytes": 1462,
+      "sha256": "f68aac0dff35a0e3a2fe19929be24a840c07ad20e139ac9ebda33e79fe4ab509"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-ebur128.txt",
+      "bytes": 2957,
+      "sha256": "ce3e16e1c31d98e3c9a7fc39e0509c46b004032f6ddaf9b4e269e9ecf19f5fc7"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/ffmpeg-help-highpass.txt",
+      "bytes": 4257,
+      "sha256": "8fa220bc67b566a7d9325345d269c6dde46ab19b12d94d835ee5df7bbefe6699"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/hf-terms.html",
+      "bytes": 114631,
+      "sha256": "45c44c6de6a538c211297e792b0722baee185c47ee02864f5dcaab2ef724d559"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/hf-zerogpu.html",
+      "bytes": 217301,
+      "sha256": "9b3fc1c57592cf390cb9b89333204cbdd61184b75dbdb53185fe1113cdda8915"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/menu-request-prepared.json",
+      "bytes": 1276,
+      "sha256": "4cc34fa7d352699cdf1e780d2df5ca3745f3887a07b82aea8fad7485f429f752"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/mix-recipe-template.json",
+      "bytes": 609,
+      "sha256": "2c0c0a8027412a974b9e5f5532b438117d7bad2213a7e8a1b51857f1efe4b48b"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/pilot-evidence-manifest.json",
+      "bytes": 2734,
+      "sha256": "5a9466f6d12c763c2fb64c633fe1262af6770c9708c95886bac576e72e569844"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/preparation-manifest.json",
+      "bytes": 581,
+      "sha256": "f86f4f8fd940f7f14799520aff6807b16a1c4ce20139f05912574f341c1cae6a"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/production-recipes.json",
+      "bytes": 5533,
+      "sha256": "0296a36d423bdb66eb50d6a421d4a3422b6c00424e41d57503db1b4d43b763d6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/production-runbook.md",
+      "bytes": 7480,
+      "sha256": "f3c6ef9e13f48808e054fdb8424ec42f0aef12bc726d1ead5cfed66f355f6f0e"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/production-tool-checks.json",
+      "bytes": 2262,
+      "sha256": "aacaf58636d996494b4946f5b9b75d6c0f514e2046864cf5e9e16d6a892de3c9"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/session-review-template.json",
+      "bytes": 320,
+      "sha256": "81900318ed55fce466a25b3bc2929e50ceb58099c24c371fddab2286d45f82b6"
+    },
+    {
+      "path": "docs/reviews/presentation-v3/T-085/source-admission-preparation.md",
+      "bytes": 10276,
+      "sha256": "4c207446e93f238a9cc79176c4a76763250806364e4eb3e324dbd14d45c28502"
+    },
+    {
+      "path": "scripts/audio/prepare_mix.py",
+      "bytes": 4692,
+      "sha256": "31f0d5aa2e80645061017fcee6d3036991644ed782e4029612da50e2d247b3be"
+    },
+    {
+      "path": "scripts/audio/prepare_production.py",
+      "bytes": 1367,
+      "sha256": "c27892696f991ad35e11b71812357937a4e67d63cbb50c5ac79b0c20e19dc678"
+    },
+    {
+      "path": "scripts/audio/probe_ace_step.py",
+      "bytes": 2602,
+      "sha256": "3d3b21f7e1f6461b19a6f15245fe724b2ff90c37ea9c0dccc704c650feb5b23f"
+    },
+    {
+      "path": "scripts/audio/run_production_batch.py",
+      "bytes": 4260,
+      "sha256": "87c2db12d0383759d1ea8a94bd5b1abcbd99a4c7c19dfe818ba3f3883a9fe828"
+    },
+    {
+      "path": "src/audio/audio_director.gd",
+      "bytes": 8244,
+      "sha256": "3f2e6a721df4961f85cc73cb97b86cb7cc584cefbd29115b9b30c7ba1043adee"
+    },
+    {
+      "path": "src/audio/audio_director.gd.uid",
+      "bytes": 20,
+      "sha256": "56c21a7033618b3d19c33aed757aedf2ff4a01c0dbb27466e1aee773c50f3d38"
+    },
+    {
+      "path": "src/audio/cue_policy.gd",
+      "bytes": 2336,
+      "sha256": "69683cb0276f49265ac3ed200b484872d971e39e1c4f14338dd535d62dcb03df"
+    },
+    {
+      "path": "src/audio/cue_policy.gd.uid",
+      "bytes": 19,
+      "sha256": "d99ba717a5090deb19fc3999a60aeee0efd4d7a7c2792a2ea2ea47765ec01b59"
+    },
+    {
+      "path": "src/presentation/game_audio.gd",
+      "bytes": 5392,
+      "sha256": "0b5666412abb8933fc2734bf8e1f681ebcb0b017a66e5c7b786a4d92dd29f6a3"
+    },
+    {
+      "path": "tests/presentation/test_audio_director.gd",
+      "bytes": 3412,
+      "sha256": "d68e8bfecd73cea3e08f75ee481310c39b81bdd7eb394531b27bee92fcd09b70"
+    },
+    {
+      "path": "tests/presentation/test_audio_director.gd.uid",
+      "bytes": 20,
+      "sha256": "d6e0d172d49cb68953b00a8309661cdf79ce261bc95f475ccf7d6decca7c7470"
+    }
+  ]
+}
