@@ -1,7 +1,7 @@
 extends "res://tests/presentation/test_application.gd"
 
 func _run() -> void:
-	root.size = Vector2i(1440,810)
+	root.size = Vector2i(2560,1440)
 	app = load("res://scenes/application.tscn").instantiate()
 	app.profile_path = "res://.godot/release-profiles/perf-%d/profile.json" % Time.get_ticks_usec()
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(app.profile_path.get_base_dir()))
@@ -16,7 +16,7 @@ func _run() -> void:
 	app.live.profile = sim.profile
 	app.live.clock = FixedStepClock.new(60,app.live._simulation_tick)
 	app.live.sync_simulation()
-	app.live._set_zoom(0.23)
+	app.live._set_zoom(0.41)
 	app.live.camera.force_update_scroll()
 	for frame in 60: await process_frame
 	var frames: Array[float] = []
@@ -42,7 +42,7 @@ func _run() -> void:
 	draw_ms.sort()
 	quote_ms.sort()
 	var elapsed := (Time.get_ticks_usec()-start)/1e6
-	print(JSON.stringify({"actors":128,"rings":12,"effects":true,"frames":180,"median_frame_ms":frames[90],"p95_frame_ms":frames[171],"max_frame_ms":frames[-1],"median_sync_ms":sync_ms[90],"median_draw_ms":draw_ms[90],"median_quote_ms":quote_ms[90],"max_simulation_callback_ms":worst_sim,"simulation_wall_ratio":(sim.elapsed_seconds-simulated_start)/elapsed}))
+	print(JSON.stringify({"viewport":str(app.stage.size),"actors":128,"rings":12,"effects":true,"frames":180,"median_frame_ms":frames[90],"p95_frame_ms":frames[171],"max_frame_ms":frames[-1],"median_sync_ms":sync_ms[90],"median_draw_ms":draw_ms[90],"median_quote_ms":quote_ms[90],"max_simulation_callback_ms":worst_sim,"simulation_wall_ratio":(sim.elapsed_seconds-simulated_start)/elapsed}))
 	app.queue_free()
 	paused = false
 	await process_frame

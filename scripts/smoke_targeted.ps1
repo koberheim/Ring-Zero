@@ -1,10 +1,10 @@
 [CmdletBinding()]
 param(
     [string]$Executable = 'E:/AI Projects/Games/Ring Zero/exports/windows/RingZero.exe',
-    [double]$StartX = 307.5, [double]$StartY = 679,
-    [double]$QuitX = 750, [double]$QuitY = 679,
-    [double]$AbandonX = 720, [double]$AbandonY = 539,
-    [double]$BuildX = 846.5, [double]$BuildY = 388.3
+    [double]$StartX = 1878, [double]$StartY = 1264,
+    [double]$QuitX = 1166, [double]$QuitY = 1385,
+    [double]$AbandonX = 1280, [double]$AbandonY = 920,
+    [double]$BuildX = 1638.7, [double]$BuildY = 675.6
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -29,9 +29,9 @@ public static class RingZeroTargetedInput {
  }
  public static void Click(IntPtr h,int pid,double x,double y,bool right) {
    Guard(h,pid); RECT r; if(!GetClientRect(h,out r)) throw new Exception("Cannot read owned client rectangle");
-   double w=r.right-r.left, height=r.bottom-r.top, scale=Math.Min(w/1440.0,height/810.0);
+   double w=r.right-r.left, height=r.bottom-r.top, scale=Math.Min(w/2560.0,height/1440.0);
    if(scale<=0) throw new Exception("Invalid package client size");
-   int px=(int)Math.Round((w-1440*scale)/2+x*scale), py=(int)Math.Round((height-810*scale)/2+y*scale);
+   int px=(int)Math.Round((w-2560*scale)/2+x*scale), py=(int)Math.Round((height-1440*scale)/2+y*scale);
    if(px<0 || py<0 || px>=w || py>=height || px>32767 || py>32767) throw new Exception("Click outside owned client");
    uint packed=(uint)((py<<16)|(px&0xffff));
    Send(h,pid,0x0200,0,packed);

@@ -25,6 +25,6 @@ if (-not $taskProcess.WaitForExit($TimeoutSeconds*1000)) {
 $taskProcess.Refresh()
 $taskErrorText = Get-Content -LiteralPath (Join-Path $taskLogs 'stderr.log') -Raw
 Get-Content -LiteralPath (Join-Path $taskLogs 'stdout.log')
-if ($taskErrorText -match 'SCRIPT ERROR:|Parse Error:') { Write-Output $taskErrorText; exit 1 }
+if ($taskErrorText -match 'SCRIPT ERROR:|Parse Error:|Shader Error:|SHADER ERROR:') { Write-Output $taskErrorText; exit 1 }
 Write-Output "Exit $($taskProcess.ExitCode). Evidence: $taskLogs"
 exit $taskProcess.ExitCode

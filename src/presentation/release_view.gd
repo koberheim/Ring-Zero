@@ -13,6 +13,10 @@ var objective: Label
 var direction_cache := {}
 var arc_cache := {}
 var board_canvas: Node2D
+var board_viewport: SubViewport
+var board_sprite: Sprite2D
+var board_redraw_count := 0
+var board_cache_full := false
 var board_stamp: Array = []
 var band_meshes := {}
 var band_textures: Array[Texture2D] = []
@@ -24,12 +28,27 @@ var world_font: Font
 
 func _ready() -> void:
 	super._ready()
+	# Retaining CanvasItem commands still resubmits thousands of industrial
+	# detail draws every frame. Cache their raster at the native viewport size;
+	# camera, damage, selection and build changes invalidate it immediately.
+	board_viewport = SubViewport.new()
+	board_viewport.disable_3d = true
+	board_viewport.transparent_bg = true
+	board_viewport.world_2d = World2D.new()
+	board_viewport.size = Vector2i(get_viewport_rect().size)
+	board_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+	add_child(board_viewport)
 	board_canvas = Node2D.new()
-	board_canvas.z_index = -1
 	board_canvas.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	board_canvas.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	board_canvas.draw.connect(_render_board)
-	add_child(board_canvas)
+	board_viewport.add_child(board_canvas)
+	board_sprite = Sprite2D.new()
+	board_sprite.texture = board_viewport.get_texture()
+	board_sprite.centered = false
+	board_sprite.z_index = -1
+	board_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	add_child(board_sprite)
 	for tier in ["hot", "working", "cold"]:
 		band_textures.append(load("res://assets/art/bands/band_%s_01.png" % tier))
 	mount = load("res://assets/art/buildings/mount_01.png")
@@ -189,18 +208,55 @@ func _draw() -> void:
 
 func _refresh_board_cache() -> void:
 	if board_canvas == null or camera == null: return
-	var stamp: Array = [camera.zoom.x,selected_cell,selected_slot,detail_hover_cell,detail_hover_slot,build_mode,tactical,ring_count]
+	camera.force_update_scroll()
+	var canvas := get_viewport().get_canvas_transform()
+	var viewport_size := Vector2i(get_viewport_rect().size)
+	var stamp: Array = [canvas.x,canvas.y,viewport_size,selected_cell,selected_slot,detail_hover_cell,detail_hover_slot,build_mode,tactical,ring_count]
 	for ring in state.get("rings",{}):
 		var record: Dictionary = state.rings[ring]
 		stamp.append(record.get("collapsed",false))
 		stamp.append(record.get("relay_hp",0)>0)
 		for plate in record.wedges.values():
-			stamp.append(ceili(plate.hp/plate.max_hp*12.0))
+			stamp.append(ceili(plate.hp/plate.max_hp*(100.0 if tactical else 12.0)))
 			stamp.append(plate.occupants.hash())
 			stamp.append(plate.has("wall"))
-	if tactical or stamp != board_stamp:
+	var coverage := canvas*board_sprite.transform
+	var cached_size := Vector2(board_viewport.size)
+	var uncovered := not board_cache_full and (coverage.origin.x>0.01 or coverage.origin.y>0.01 or coverage.origin.x+cached_size.x<viewport_size.x-0.01 or coverage.origin.y+cached_size.y<viewport_size.y-0.01)
+	if stamp != board_stamp or uncovered:
 		board_stamp = stamp
+		var extent := _board_extent()
+		board_cache_full = extent*2*absf(canvas.x.x)<=viewport_size.x and extent*2*absf(canvas.y.y)<=viewport_size.y
+		var raster := canvas
+		if board_cache_full:
+			# At strategic zoom the entire fortress fits. Anchor its native raster
+			# in world space so WASD and shake move one texture, without redrawing.
+			board_viewport.size = viewport_size
+			raster.origin = Vector2(viewport_size)*0.5
+		else:
+			# Close inspections retain a bounded 256 native-pixel margin per edge.
+			# Repaint only when panning exposes geometry outside that coverage.
+			board_viewport.size = viewport_size+Vector2i(512,512)
+			raster.origin += Vector2(256,256)
+		board_viewport.canvas_transform = raster
+		board_sprite.transform = raster.affine_inverse()
 		board_canvas.queue_redraw()
+		board_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+
+func _board_extent() -> float:
+	var outer_ring := maxi(state.rings.size(),maxi(selected_cell.x,detail_hover_cell.x))
+	if build_mode != &"": outer_ring=maxi(outer_ring,state.rings.size()+1)
+	var extent := grid.ring_bounds(maxi(1,outer_ring)).y+64.0
+	if tactical:
+		for ring in state.rings:
+			for wedge in state.rings[ring].wedges:
+				var plate: Dictionary=state.rings[ring].wedges[wedge]
+				for slot in plate.occupants:
+					var kind: StringName=plate.occupants[slot].kind
+					if kind==&"occlusion_screen": extent=maxf(extent,grid.ring_bounds(ring).y+float(profile.value("occlusion_screen.shadow_rings"))*PolarGrid.RING_WIDTH+8)
+					if Vector2i(ring,wedge)==selected_cell and slot==selected_slot and kind in [&"flak",&"mass_driver",&"lance_emitter"]:
+						extent=maxf(extent,grid.ring_bounds(ring).y+float(profile.value(String(kind)+".range_ring_widths"))*PolarGrid.RING_WIDTH+8)
+	return extent
 
 func _band_mesh(cell: Vector2i) -> ArrayMesh:
 	if band_meshes.has(cell): return band_meshes[cell]
@@ -315,6 +371,7 @@ func _draw_wall(cell: Vector2i, bounds: Vector2) -> void:
 
 func _render_board() -> void:
 	if camera == null: return
+	board_redraw_count += 1
 	var zoom := camera.zoom.x
 	var draws: Array[Dictionary] = []
 	for cell in cells:
