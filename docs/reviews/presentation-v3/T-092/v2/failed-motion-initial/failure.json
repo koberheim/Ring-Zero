@@ -1,0 +1,84 @@
+{
+  "gate": "mechanical movement present",
+  "result": "FAIL initial sequence identical pixels",
+  "classes": {
+    "assembler": {
+      "file_hashes": [
+        "8947e35851a916353ced44dfd43b555bdc515f63c2041fad417e4146ab79248c",
+        "6267a7a373428b389c9792367b07c859cf577850a0ffe08aa155ec61a54d70d7",
+        "93a2c289a3ebc4ff210ad7d61478c2828b3f0de6f122dd61bfee1e52cb43883a",
+        "65c7339d1b1d80c409a611921707f9cdb17c0457d2b2c455a31abad0d19ce1c0",
+        "7c9acacaf4be70f89a6da3650125e9d2f050cf72285e313a0a3c73cb36c01d0d",
+        "fae74c28415ad29dfc99d354ab5520852e8eb0c7ec44ac971bc544d40cf7cd2b",
+        "043c8a46ec416de0d0ba66578cc48ad6a52ca5bb59526ae47c07bb56d1bb13eb",
+        "be7d5b424e279af9f6ef6ff98209bb593df0a04a4f1962b81236a9162481e59f"
+      ],
+      "unique_decoded_pixel_frames": 1
+    },
+    "breacher": {
+      "file_hashes": [
+        "68dddd496cf7caab35285202df9bb684148c7153bb10cf482d5f6eda787f8ea7",
+        "b6cfe1581c24016b7eb345a0cb3631c05fc61b239e3bac2581d9eaafa15f29b6",
+        "517580c6d416d62ee8c1a5fb6fec162d33d750ce827ba1e6b5014e8cefce1337",
+        "2d39e4461187922b33d4003d4e3ac82b4b11b9410de09c8ed475604d986cb47b",
+        "9d65b9ec2481518d6e98446531e95af773a7c6e3132496aa0cb4df0ecf534587",
+        "a5c670083d95ab4c6d837300fd64851bf938116ef6840d13c562f4603fd58855",
+        "03a6935bfdd0984897d6d66dcccc6e4c31b569c51d6a5743ef69e7492f27f145",
+        "235a0b33107234f3d26ccfc17df610504c5e19b1758159361817ce2d4820d19e"
+      ],
+      "unique_decoded_pixel_frames": 1
+    },
+    "foundry": {
+      "file_hashes": [
+        "397adbef8551601bbc8e154076253174d9e53a7cea1a0b4f34237dc2a0815b0a",
+        "bca98b16c9b1921342b5c534451a6b202f184b3f51a8e2edd34953fa9c070f91",
+        "e435389655db0d2341b1baaf73c2f3722bc9c5b7cd4a608035f798d54717950d",
+        "e52bbdd5cc950cebc7c6871c6096544b7df88fb51314f9d0c8536fe3da71200d",
+        "b98e8afc1ceb58025be21b2ee813b139a37ec2e78484490c39447153e09a4f4e",
+        "68ec5066df641bd73311b579725d2db3211a478e88ea7e605986acee5f5e46af",
+        "66f50b59ffa556d4366795a55e65f2dda782161eb50ee8401ac9dc27c16b147c",
+        "20141f3e6c59516043558b9ffb0073c092b4eb4272145296eca240cdac72019c"
+      ],
+      "unique_decoded_pixel_frames": 1
+    },
+    "sapper": {
+      "file_hashes": [
+        "23edd4bc4c5b5b6c790e982dc5670e855f581e3d7b66156ab0c469899fc0021d",
+        "829e4c7b9d07d5ff87c3d0b9d92c402fcf2e5095e23020c6a06d5a71dabb3fac",
+        "84c056ebbfbab113031a625ff9a26d6651d601f01b9baf5b81e9e7a43486d934",
+        "d9c3a92afa4b5637eddfa7686366a2921c156ac9e3293be2e38ac32a7cc68e41",
+        "a300dcabd80cfe3096313ea6608cec2dd64380df8351babf7ad243fa118b8fb5",
+        "4302af4a30454a99234753e2df2d2ee5bf73c14bd5c435e66a95d6f46f47a274",
+        "1c803bca0b3cde64a689106a83fb1634c435e422e388173b70bc12fdd0f857b4",
+        "8280a282d0fdfe828d5926e5634f1594d988469a5728a88ede66503a56c2e7ae"
+      ],
+      "unique_decoded_pixel_frames": 1
+    },
+    "transfer": {
+      "file_hashes": [
+        "3c7639cc1f661754f18ae10da554817af25a1a4f40131af0b1965d18a1749875",
+        "0c733df4fcfeaf6bb24cbee58b077f2201be83bb9bcaaf4e091d8c6a914e0d4e",
+        "f1206741e5c8fe61c499f19434404a31d37f3edd62847e961a123a5d322216a3",
+        "9872b9b57bf4f514df9b5bfcc0bf9c09bee240dcc1d437a5df187199c5e46f3e",
+        "aa901d5c338017e8e136738a4f5244509fbc22ac361fb32b6eff2addc934b890",
+        "08be2ca5947a46363954979ad7d20168bfd3d57f0e9a3d89afdfddabd275b113",
+        "79994dcb9a70ac1cd69525276f12217d8d2f1fbd8a9667cfce186ad9db7120a6",
+        "2f9f57c379dd42c96039fe942f46179eae58011d1c143fe0c521688e2a02249d"
+      ],
+      "unique_decoded_pixel_frames": 1
+    },
+    "tunneler": {
+      "file_hashes": [
+        "0557efce81684d613b1126c3db2ef4c9541c634e8ba00ca2aa0da8c5bd26a938",
+        "be5d921f7a5e143d840796a765617067334130163225a6afa6a94a2559071567",
+        "efd7c7a9459afc1b5961e40f54bf731fa7af93a62dd842cead90a0fbb0c82d23",
+        "2a00cbd741376b0cb031823d60c77b3798c499725ee853e4240b8a99ab6e6de0",
+        "421c4b88d34384b8f7556851c166b0bdb42967a83342c57e23a22ad7dd91e49a",
+        "3d932b6ca07a66e479757ac706641f33ccde12b8acc04b29e815abe8bc43a747",
+        "f8707c5f54da3f08dbb0a91a8459d53c00ab88a231a81b4619a44ce1de4caaf8",
+        "96d287c65f06881544d2f8f33b370e20de2cb4118e8d955d812e4b0e7ca26a59"
+      ],
+      "unique_decoded_pixel_frames": 1
+    }
+  }
+}

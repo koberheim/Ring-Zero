@@ -1,0 +1,67 @@
+{
+  "candidate": "v2",
+  "seed": 920136,
+  "answers": [
+    {
+      "trial": 1,
+      "class": "breacher",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 2,
+      "class": "foundry",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 3,
+      "class": "assembler",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 4,
+      "class": "assembler",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 5,
+      "class": "foundry",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 6,
+      "class": "transfer",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 7,
+      "class": "sapper",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 8,
+      "class": "breacher",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 9,
+      "class": "tunneler",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 10,
+      "class": "tunneler",
+      "sprite_rotation_degrees": 180
+    },
+    {
+      "trial": 11,
+      "class": "sapper",
+      "sprite_rotation_degrees": 0
+    },
+    {
+      "trial": 12,
+      "class": "transfer",
+      "sprite_rotation_degrees": 180
+    }
+  ],
+  "status": "Human result pending; do not show key before answers."
+}

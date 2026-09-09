@@ -1,0 +1,1086 @@
+{
+  "schema": "ring-zero-elite-art/2",
+  "status": "PROVISIONAL - human recognition and native acceptance pending",
+  "source_commit": "7ac07505e4e4b4ff36fa59ef48f258c165db9bb8",
+  "production_base": "ff1de6d",
+  "source_blend": "res://assets/art/source/presentation-v3-elites/v2/t092_industrial_elites_v2r1.blend",
+  "renderer": "Blender 5.2.1 LTS / Cycles CPU; maps 8 samples, beauty16 samples + denoising",
+  "map_conventions": {
+    "albedo": "sRGB straight RGBA, unlit material colors, no baked lights or glow",
+    "normal": "linear-data RGBA; RGB = (camera-right X, camera-up Y, viewer-positive Z)*0.5+0.5; neutral (128,128,255); model Geometry Normal transformed WORLD->CAMERA with explicit Z inversion",
+    "emission": "linear RGB cold color/mask, same straight alpha, no baked glow; intensity supplied by runtime",
+    "alpha": "8-bit grayscale coverage; RGBA map alpha matches this mask",
+    "filtering": "albedo reduced in linear light with alpha weighting; normals alpha-weighted then renormalized; emission linear; RGB extended4px beyond coverage without changing alpha",
+    "import": "lossless, mipmaps on, repeat disabled; normal is data/no sRGB; no green inversion in export; use NORMAL_MAP conversion or adapter green flip exactly once if required by Godot 2D path"
+  },
+  "camera": {
+    "tilt_degrees_from_vertical": 20,
+    "side": "camera on negative Y",
+    "ground_plane": "XY",
+    "height_axis": "+Z",
+    "forward": "+Y projects up in frame",
+    "pivot_source_xyz": [
+      0,
+      0,
+      0
+    ],
+    "pivot_uv": [
+      0.5,
+      0.5
+    ],
+    "note": "already20deg projected; preserve source pivot and validate any parent squash in live all-bearing seating"
+  },
+  "runtime_usage": {
+    "frame_formula": "frame = floor(presentation_phase_seconds / period_seconds * 8) % 8; event-gate mechanisms using existing state/events; reduced motion freezes frame0",
+    "mechanism_scope": "Local mechanical presentation only; compression/reach/recoil do not move simulation actors or invent attacks/hops/growth. Assembler hull growth remains driven by real state outside this loop.",
+    "bearing": "Frame points up. Current release uses point.angle()-PI/2 to make up-pointing sprite face inward; E must preserve authoritative heading. Rotate normal XY consistently with sprite.",
+    "floor_formula": "canvas_world_size = max(world_canvas_size, physical_floor_px / (world_to_physical_pixel_scale * min_occupied_extent_fraction)); physical scale includes viewport/window scale. Physical_floor refers to occupied silhouette extent, not full transparent canvas.",
+    "acceptance": "Human, native all-bearing/palette/crowd/performance gates are still pending."
+  },
+  "classes": {
+    "tunneler": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/tunneler_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/tunneler_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/tunneler_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/tunneler_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        256
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        64.0,
+        64.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          48,
+          21,
+          80,
+          108
+        ],
+        [
+          47,
+          21,
+          80,
+          108
+        ],
+        [
+          48,
+          21,
+          80,
+          108
+        ],
+        [
+          48,
+          21,
+          81,
+          108
+        ],
+        [
+          48,
+          21,
+          80,
+          108
+        ],
+        [
+          48,
+          21,
+          81,
+          108
+        ],
+        [
+          48,
+          21,
+          80,
+          108
+        ],
+        [
+          47,
+          21,
+          80,
+          108
+        ]
+      ],
+      "world_canvas_size": 15,
+      "physical_floor_px": 16,
+      "min_occupied_extent_fraction": 0.6328125,
+      "source_orthographic_extent_units": 3.65,
+      "period_seconds": 0.8,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "motion": "drill rotation",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          3.75,
+          10.19531
+        ],
+        [
+          3.86719,
+          10.19531
+        ],
+        [
+          3.75,
+          10.19531
+        ],
+        [
+          3.86719,
+          10.19531
+        ],
+        [
+          3.75,
+          10.19531
+        ],
+        [
+          3.86719,
+          10.19531
+        ],
+        [
+          3.75,
+          10.19531
+        ],
+        [
+          3.86719,
+          10.19531
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    },
+    "transfer": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/transfer_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/transfer_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/transfer_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/transfer_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        256
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        64.0,
+        64.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          19,
+          16,
+          109,
+          112
+        ],
+        [
+          19,
+          17,
+          109,
+          112
+        ],
+        [
+          19,
+          19,
+          109,
+          114
+        ],
+        [
+          19,
+          20,
+          109,
+          116
+        ],
+        [
+          19,
+          21,
+          109,
+          117
+        ],
+        [
+          19,
+          20,
+          109,
+          116
+        ],
+        [
+          19,
+          19,
+          109,
+          114
+        ],
+        [
+          19,
+          17,
+          109,
+          112
+        ]
+      ],
+      "world_canvas_size": 15,
+      "physical_floor_px": 16,
+      "min_occupied_extent_fraction": 0.734375,
+      "source_orthographic_extent_units": 3.65,
+      "period_seconds": 1.0,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875
+      ],
+      "motion": "launch rail compression",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          10.54688,
+          11.25
+        ],
+        [
+          10.54688,
+          11.13281
+        ],
+        [
+          10.54688,
+          11.13281
+        ],
+        [
+          10.54688,
+          11.25
+        ],
+        [
+          10.54688,
+          11.25
+        ],
+        [
+          10.54688,
+          11.25
+        ],
+        [
+          10.54688,
+          11.13281
+        ],
+        [
+          10.54688,
+          11.13281
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    },
+    "foundry": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/foundry_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/foundry_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/foundry_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/foundry_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        256
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        64.0,
+        64.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          12,
+          16,
+          116,
+          99
+        ],
+        [
+          12,
+          15,
+          116,
+          99
+        ],
+        [
+          12,
+          14,
+          116,
+          99
+        ],
+        [
+          12,
+          12,
+          116,
+          99
+        ],
+        [
+          12,
+          11,
+          116,
+          99
+        ],
+        [
+          12,
+          12,
+          116,
+          99
+        ],
+        [
+          12,
+          14,
+          116,
+          99
+        ],
+        [
+          12,
+          15,
+          116,
+          99
+        ]
+      ],
+      "world_canvas_size": 21,
+      "physical_floor_px": 16,
+      "min_occupied_extent_fraction": 0.796875,
+      "source_orthographic_extent_units": 3.75,
+      "period_seconds": 1.2,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.15,
+        0.3,
+        0.45,
+        0.6,
+        0.75,
+        0.9,
+        1.05
+      ],
+      "motion": "processing jaw",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          17.0625,
+          13.61719
+        ],
+        [
+          17.0625,
+          13.78125
+        ],
+        [
+          17.0625,
+          13.94531
+        ],
+        [
+          17.0625,
+          14.27344
+        ],
+        [
+          17.0625,
+          14.4375
+        ],
+        [
+          17.0625,
+          14.27344
+        ],
+        [
+          17.0625,
+          13.94531
+        ],
+        [
+          17.0625,
+          13.78125
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    },
+    "sapper": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/sapper_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/sapper_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/sapper_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/sapper_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        256
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        64.0,
+        64.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          18,
+          12,
+          110,
+          108
+        ],
+        [
+          17,
+          12,
+          111,
+          109
+        ],
+        [
+          16,
+          10,
+          112,
+          111
+        ],
+        [
+          14,
+          8,
+          114,
+          112
+        ],
+        [
+          13,
+          8,
+          115,
+          113
+        ],
+        [
+          14,
+          8,
+          114,
+          112
+        ],
+        [
+          16,
+          10,
+          112,
+          111
+        ],
+        [
+          17,
+          12,
+          111,
+          109
+        ]
+      ],
+      "world_canvas_size": 15,
+      "physical_floor_px": 16,
+      "min_occupied_extent_fraction": 0.7421875,
+      "source_orthographic_extent_units": 3.85,
+      "period_seconds": 1.6,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4
+      ],
+      "motion": "radial probe reach",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          10.78125,
+          11.25
+        ],
+        [
+          11.01562,
+          11.36719
+        ],
+        [
+          11.25,
+          11.83594
+        ],
+        [
+          11.71875,
+          12.1875
+        ],
+        [
+          11.95312,
+          12.30469
+        ],
+        [
+          11.71875,
+          12.1875
+        ],
+        [
+          11.25,
+          11.83594
+        ],
+        [
+          11.01562,
+          11.36719
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    },
+    "breacher": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/breacher_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/breacher_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/breacher_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/breacher_alpha.png",
+      "frame_size": [
+        128,
+        128
+      ],
+      "atlas_size": [
+        512,
+        256
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        64.0,
+        64.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          128,
+          128
+        ],
+        [
+          128,
+          0,
+          128,
+          128
+        ],
+        [
+          256,
+          0,
+          128,
+          128
+        ],
+        [
+          384,
+          0,
+          128,
+          128
+        ],
+        [
+          0,
+          128,
+          128,
+          128
+        ],
+        [
+          128,
+          128,
+          128,
+          128
+        ],
+        [
+          256,
+          128,
+          128,
+          128
+        ],
+        [
+          384,
+          128,
+          128,
+          128
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          22,
+          10,
+          105,
+          101
+        ],
+        [
+          22,
+          10,
+          105,
+          101
+        ],
+        [
+          22,
+          11,
+          105,
+          101
+        ],
+        [
+          22,
+          11,
+          105,
+          101
+        ],
+        [
+          22,
+          11,
+          105,
+          101
+        ],
+        [
+          22,
+          11,
+          105,
+          101
+        ],
+        [
+          22,
+          11,
+          105,
+          101
+        ],
+        [
+          22,
+          10,
+          105,
+          101
+        ]
+      ],
+      "world_canvas_size": 15,
+      "physical_floor_px": 16,
+      "min_occupied_extent_fraction": 0.6875,
+      "source_orthographic_extent_units": 3.65,
+      "period_seconds": 0.8,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "motion": "ram recoil",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          9.72656,
+          10.66406
+        ],
+        [
+          9.72656,
+          10.66406
+        ],
+        [
+          9.72656,
+          10.54688
+        ],
+        [
+          9.72656,
+          10.54688
+        ],
+        [
+          9.72656,
+          10.54688
+        ],
+        [
+          9.72656,
+          10.54688
+        ],
+        [
+          9.72656,
+          10.54688
+        ],
+        [
+          9.72656,
+          10.66406
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    },
+    "assembler": {
+      "albedo": "res://assets/art/machines/presentation_v3_v2/assembler_albedo.png",
+      "normal": "res://assets/art/machines/presentation_v3_v2/assembler_normal.png",
+      "emission": "res://assets/art/machines/presentation_v3_v2/assembler_emission.png",
+      "alpha": "res://assets/art/machines/presentation_v3_v2/assembler_alpha.png",
+      "frame_size": [
+        256,
+        256
+      ],
+      "atlas_size": [
+        1024,
+        512
+      ],
+      "layout": [
+        4,
+        2
+      ],
+      "frame_count": 8,
+      "pivot_pixels": [
+        128.0,
+        128.0
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          256,
+          256
+        ],
+        [
+          256,
+          0,
+          256,
+          256
+        ],
+        [
+          512,
+          0,
+          256,
+          256
+        ],
+        [
+          768,
+          0,
+          256,
+          256
+        ],
+        [
+          0,
+          256,
+          256,
+          256
+        ],
+        [
+          256,
+          256,
+          256,
+          256
+        ],
+        [
+          512,
+          256,
+          256,
+          256
+        ],
+        [
+          768,
+          256,
+          256,
+          256
+        ]
+      ],
+      "content_bounds_by_frame": [
+        [
+          19,
+          27,
+          222,
+          211
+        ],
+        [
+          19,
+          27,
+          221,
+          211
+        ],
+        [
+          19,
+          27,
+          218,
+          211
+        ],
+        [
+          19,
+          27,
+          216,
+          211
+        ],
+        [
+          19,
+          27,
+          214,
+          211
+        ],
+        [
+          19,
+          27,
+          216,
+          211
+        ],
+        [
+          19,
+          27,
+          218,
+          211
+        ],
+        [
+          19,
+          27,
+          221,
+          211
+        ]
+      ],
+      "world_canvas_size": 34,
+      "physical_floor_px": 28,
+      "min_occupied_extent_fraction": 0.72265625,
+      "source_orthographic_extent_units": 4.65,
+      "period_seconds": 2.0,
+      "frame_timestamps_seconds": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75
+      ],
+      "motion": "accretion feeding clamps",
+      "projected_visible_extent_world_units_by_frame": [
+        [
+          26.96094,
+          24.4375
+        ],
+        [
+          26.82812,
+          24.4375
+        ],
+        [
+          26.42969,
+          24.4375
+        ],
+        [
+          26.16406,
+          24.4375
+        ],
+        [
+          25.89844,
+          24.4375
+        ],
+        [
+          26.16406,
+          24.4375
+        ],
+        [
+          26.42969,
+          24.4375
+        ],
+        [
+          26.82812,
+          24.4375
+        ]
+      ],
+      "footprint_note": "Projected artwork extent, not a collision/rule footprint. Ground pivot is center; do not use this metadata to change simulation geometry."
+    }
+  }
+}

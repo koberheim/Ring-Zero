@@ -1,0 +1,103 @@
+{
+  "status": "artifact integrity only; not human or native gate",
+  "classes": {
+    "tunneler": {
+      "frames": 8,
+      "unique_beauty_frames": 8,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.005719896677428116,
+      "min_viewer_normal_z_opaque": 0.3019607843137255,
+      "min_occupied_extent_fraction": 0.6328125,
+      "pivot_fixed_pixels": [
+        64.0,
+        64.0
+      ]
+    },
+    "transfer": {
+      "frames": 8,
+      "unique_beauty_frames": 5,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.006331360245143802,
+      "min_viewer_normal_z_opaque": 0.24705882352941178,
+      "min_occupied_extent_fraction": 0.734375,
+      "pivot_fixed_pixels": [
+        64.0,
+        64.0
+      ]
+    },
+    "foundry": {
+      "frames": 8,
+      "unique_beauty_frames": 5,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.005536385100440411,
+      "min_viewer_normal_z_opaque": 0.30980392156862746,
+      "min_occupied_extent_fraction": 0.796875,
+      "pivot_fixed_pixels": [
+        64.0,
+        64.0
+      ]
+    },
+    "sapper": {
+      "frames": 8,
+      "unique_beauty_frames": 5,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.005969373805238987,
+      "min_viewer_normal_z_opaque": 0.1450980392156862,
+      "min_occupied_extent_fraction": 0.7421875,
+      "pivot_fixed_pixels": [
+        64.0,
+        64.0
+      ]
+    },
+    "breacher": {
+      "frames": 8,
+      "unique_beauty_frames": 5,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.005964526705017681,
+      "min_viewer_normal_z_opaque": 0.10588235294117654,
+      "min_occupied_extent_fraction": 0.6875,
+      "pivot_fixed_pixels": [
+        64.0,
+        64.0
+      ]
+    },
+    "assembler": {
+      "frames": 8,
+      "unique_beauty_frames": 5,
+      "map_alpha_identical": true,
+      "frame_border_clear": true,
+      "no_black_albedo_rgb_at_transparent_edge": true,
+      "normal_unit_length_max_error": 0.005907491519452579,
+      "min_viewer_normal_z_opaque": 0.07450980392156858,
+      "min_occupied_extent_fraction": 0.72265625,
+      "pivot_fixed_pixels": [
+        128.0,
+        128.0
+      ]
+    }
+  },
+  "normal_calibration": {
+    "probe": "tunneler raw normal frame0 pixel(128,128), known horizontal roof",
+    "expected_rgb_approx": [
+      128,
+      171,
+      247
+    ],
+    "actual_rgba": [
+      127,
+      171,
+      247,
+      255
+    ]
+  }
+}
