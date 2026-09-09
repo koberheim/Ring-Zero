@@ -1,8 +1,231 @@
-> Current authority ? 2026-09-08: Kevin has authorized autonomous release-candidate design, implementation, assets and QA on release/v1.0-candidate. Earlier phase approval stops are superseded within this branch. See docs/RELEASE-CANDIDATE.md and docs/RELEASE-REPORT.md for current scope, evidence and external release limitations. Historical entries below are preserved.
+> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Decisions
 
 ## Current authority and later review
+
+**Updated:** 2026-09-09. **Current review:** D-135, Phase 14 plan sign-off; implementation and delegation have not started. D-129/D-131 are resolved; D-132/D-133 record the two process corrections; D-134 extends numeric authority. The retained RC2 aggregate is 42/42, not 39. T-079 remains a failed acceptance gate.
+
+## NEEDS YOUR DECISION — current pass
+
+This pass has **one pending approval**, D-135. D-130 was resolved by Kevin during planning: use free AI audio generation through online tools. Older dated briefings below are historical; D-127's unscheduled wall rule and D-034 branding review are not silently resolved.
+
+| Decision | Needed resolution | Blocks |
+|---|---|---|
+| D-135 | Sign off Phase 14, T-081–T-093 and their written contracts | All implementation/delegation in this pass |
+
+## Presentation performance pass — 2026-09-09
+
+The verification record is [critique-2026-09-09-verification.md](docs/reviews/critique-2026-09-09-verification.md). The two §8 process findings are recorded separately in D-132 and D-133. D-129/D-131 are Kevin's supplied resolutions, not proposals. Kevin subsequently resolved D-130 during planning.
+
+### D-129 — Ship bounded Containment for v1.0
+**Date:** 2026-09-09
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Decided
+**Source:** Spec §§1–2; critique §5 and §8; Kevin's review instructions
+
+**What this is about**
+The implemented 900-second victory changed the endless-run premise without a formal decision. This records the actual shipping choice and its design cost.
+
+**The options**
+Option A: keep the bounded 15-minute Containment run for v1.0. Option B: restore an endless run before v1.0.
+
+**What we get**
+A deliberate, bounded first-release mode with an understandable win condition and testable duration.
+
+**What it costs us**
+The full §2 arc of watching radius climb and then fall is consciously deferred; surviving a timer can end before the fortress's decline.
+
+**What happens if we're wrong**
+A weaker ending or replay incentive would need a later mode/design review, not an undocumented timer change.
+
+**My recommendation**
+Option A, matching Kevin's explicit resolution.
+
+**Blocking:** Clears the run-structure decision for this pass. Does not clear implementation before plan sign-off.
+
+**Resolution - 2026-09-09**
+Kevin keeps bounded 15-minute Containment as v1.0's shipping mode. This supersedes §1's endless framing for v1.0 only. §2's “watch it climb, then watch it fall” arc is consciously deferred. Endless/survival is recorded as post-v1 scope, without implementation tasks in this phase. The design spec remains untouched. This is a decision recorded now, not a claim of earlier approval.
+
+### D-130 — Audio source, creative brief and spending authority
+**Date:** 2026-09-09
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Decided — free online AI generation
+**Source:** Spec §§3, 15; critique workstream C; D-035
+
+**What this is about**
+The critique asks for a proper sound palette and score. Kevin referred to three supplied decisions but supplied D-129 and D-131 only; no D-130 sourcing/budget resolution was present.
+
+**The options**
+Option A: original in-house audio with no purchases. Option B: commercially licensed library assets within a stated budget. Option C: commissioned work with a stated budget and rights brief. Option D: Kevin's supplied approach, free online AI generation followed by local editing and mixing.
+
+**What we get**
+An auditable source/licensing boundary and enough direction to finish, rather than merely wire, the audio experience.
+
+**What it costs us**
+Licensed/commissioned work may cost money; original production costs time. Each needs a deliberate quality review.
+
+**What happens if we're wrong**
+Uncleared rights, unsuitable music or an invented budget would block distribution and waste integration work.
+
+**My recommendation**
+Option D, as Kevin directed. Use a cohesive edited industrial sound palette and restrained evolving score; verify each free source's actual download and commercial-use conditions. No purchase is assumed.
+
+**Blocking:** Source strategy is cleared; T-085 delegation/production still waits for D-135. The selected free service's access, download and commercial-use terms must pass the source check before an asset is admitted.
+
+**Resolution - 2026-09-09**
+Kevin instructs: “Develop a plan to utilize free ai audio generation through online tools.” Use free online AI generation for the music and sound source material, with local editing/mastering and in-game mixing. No paid generation, subscription, asset purchase or commission is authorized. The concrete shortlist, free-service fallback and source-admission checks are in `docs/audio-generation-plan.md` and T-085's contract. Free access is not assumed to grant commercial game rights; retain the applicable terms and provenance. Source or access failure is reported, not worked around with paid service. The proposed musical/sonic character is part of D-135's plan review.
+
+### D-131 — Silhouette-first elite and Assembler art exceptions
+**Date:** 2026-09-09
+**Tier:** 2
+**Decided by:** Kevin
+**Status:** 🟢 Approved
+**Source:** Spec §10.2 and §15; D-120, D-128; T-079 failure; Kevin's review instructions
+
+**What this is about**
+The current elite set loses mechanic identity under minification and overlap. D-120 already allowed rank emission and D-128 allowed separate cold hues, but neither solves the silhouette failure.
+
+**The options**
+Option A: allow stronger elite/Assembler silhouettes and self-illuminated accents without the no-glow/one-cold-accent restriction. Option B: retain the restrictive source treatment.
+
+**What we get**
+Elites can communicate their mechanic through major form, visible scale and self-illumination; standards provide a restrained visual baseline.
+
+**What it costs us**
+Additional silhouette, mixed-crowd and three-star-palette acceptance; illumination must not obscure danger or turn standards into elites.
+
+**What happens if we're wrong**
+Overbright or similar-looking elites would fail the actual-size identity gate and return for revision.
+
+**My recommendation**
+Option A, with silhouette recognition independently tested without color.
+
+**Blocking:** Clears the elite/Assembler constraint change for T-092. Full pass implementation still awaits plan approval.
+
+**Resolution - 2026-09-09**
+Kevin drops the no-glow / one-cold-accent rule for elites and the Assembler. Silhouette comes first, form follows mechanic, self-illuminated accents are allowed, and there must be a minimum on-screen size floor. Standard machines keep the existing restrained treatment so elites read as exceptions. D-120's wider art direction stands. This supersedes only conflicting elite/Assembler restrictions, including an exact-one-accent reading; it does not authorize a wider palette or art-direction reset. The floor's numeric value is provisional under D-134.
+
+### D-132 — Failed acceptance gates block the release-candidate label
+**Date:** 2026-09-09
+**Tier:** 1
+**Decided by:** Kevin
+**Status:** 🟢 Decided — standing rule
+**Source:** Critique §8 finding 1; T-079; Kevin's explicit release-gate instruction
+
+**What this is about**
+T-079 explicitly failed, yet RC2 shipped using candidate assets without closing that acceptance gate. Passing engineering suites was allowed to substitute for visual acceptance.
+
+**The options**
+Option A: required acceptance failures stop promotion and are brought to Kevin. Option B: record deferral and keep promoting the candidate.
+
+**What we get**
+A candidate label that means all required gates have passed, with evidence and an accountable reviewer.
+
+**What it costs us**
+A failed art, performance or human review can stop the delivery schedule.
+
+**What happens if we're wrong**
+If a gate is inappropriate, Kevin must explicitly change it prospectively in a decision; Astra cannot silently relax or waive it.
+
+**My recommendation**
+Option A, as directed.
+
+**Blocking:** Every release-candidate label, tag, package promotion and release report. A branch with a historical candidate name is not gate evidence.
+
+**Resolution - 2026-09-09**
+A failed required acceptance gate blocks the release-candidate label. Report the failure and its evidence to Kevin; do not defer it and continue candidate promotion. T-079 remains failed until its mapped checks are re-run and accepted. Existing RC2 evidence is historical and does not retroactively pass. No blanket waiver is granted by this decision or by plan sign-off. Regression deliveries return to their agent for repair; downstream advancement through an unresolved gate stops.
+
+### D-133 — Record spec departures before implementation
+**Date:** 2026-09-09
+**Tier:** 1
+**Decided by:** Astra
+**Status:** 🟢 Decided — standing process
+**Source:** Critique §8 finding 2; CLAUDE.md decision discipline; D-129
+
+**What this is about**
+The bounded run was disclosed in release prose but lacked a formal decision against the fixed spec. The process failed to distinguish changing a number from changing the kind of run.
+
+**The options**
+Option A: map every spec departure to an explicitly resolved Tier 2 decision before implementation. Option B: rely on release prose or generalized autonomy.
+
+**What we get**
+A clear trail from specification to user resolution to task, contract, implementation and acceptance evidence.
+
+**What it costs us**
+Small documentation and review overhead before changes to mechanics or creative scope.
+
+**What happens if we're wrong**
+An ambiguous departure returns to Kevin instead of being absorbed as numeric tuning.
+
+**My recommendation**
+Option A.
+
+**Blocking:** Any newly proposed rule, creative choice or spec departure; unrelated already approved work is unaffected.
+
+**Resolution - 2026-09-09**
+Astra records this process correction at Kevin's request. D-129 now explicitly records the historical timed-run departure, its v1-only scope and deferred radius arc. Future spec-level changes require their own Kevin-approved Tier 2 resolution before coding, cross-referenced in BUILD-PLAN.md, TASKS.md and the owning contract. D-033/D-134 never authorize a rule change disguised as a numeric constant. Keep the spec unchanged.
+
+### D-134 — Extend provisional tuning authority to presentation numbers
+**Date:** 2026-09-09
+**Tier:** 1
+**Decided by:** Kevin
+**Status:** 🟢 Decided
+**Source:** D-033; Kevin's review instructions
+
+**What this is about**
+Presentation work needs iteration on values without repeated parameter-sheet approvals, while creative and rule authority stays with Kevin.
+
+**The options**
+Option A: extend D-033's numeric delegation to approved presentation systems. Option B: require individual value approval.
+
+**What we get**
+Fast, measurable iteration on clarity, light, motion and responsive layout.
+
+**What it costs us**
+Provisional values require visible recording and may need adjustment after actual play or hardware measurement.
+
+**What happens if we're wrong**
+A number that changes a mechanic, hides required information or cannot meet the performance gate must be raised rather than treated as routine tuning.
+
+**My recommendation**
+Option A, matching Kevin's instruction.
+
+**Blocking:** Clears numeric tuning for approved systems after plan approval; does not clear creative choices or waive acceptance.
+
+**Resolution - 2026-09-09**
+Kevin permits Astra and its contracted agents to set light radii/falloff, bloom thresholds, shake magnitude/decay, effect durations, LOD zoom thresholds, spacing and type-scale tokens on their own authority. Record values as provisional in versioned presentation data/tokens and TASKS.md delivery notes, with units and rationale. Existing D-033 numeric gameplay authority continues normally. Rules, new creative choices, changes to D-120, spending and acceptance waivers still require Kevin.
+
+### D-135 — Approve the six-workstream presentation performance pass
+**Date:** 2026-09-09
+**Tier:** 2
+**Decided by:** PENDING — needs Kevin
+**Status:** 🟡 Awaiting plan sign-off
+**Source:** Spec §§2–4, 8, 10–12, 15, 17–18; critique §6; BUILD-PLAN.md Phase 14
+
+**What this is about**
+This is the requested single pre-build checkpoint. The plan proposes concrete presentation scope and sequencing, incorporating corrected critique premises.
+
+**The options**
+Option A: approve Phase 14 and T-081–T-093 contracts as written, including D-130's free online AI audio plan. Option B: revise named scope, gates or visual choices first.
+
+**What we get**
+Lighting and depth, weapon/collapse performance, authored audio, a cohesive responsive instrument interface, readable swarm/grid/radar, and silhouette-led elites with release-blocking evidence.
+
+**What it costs us**
+A substantial production/QA pass, including human identification and listening gates. It is not a promise that five small changes alone establish commercial AA quality.
+
+**What happens if we're wrong**
+Failed gates stop advancement and return to Kevin; new creative/rule questions receive separate decisions.
+
+**My recommendation**
+Option A. First toggle styling, then backend/cache proof, then an early collapse slice. Approve the proposed instrument composition, weapon signatures, elite mechanic silhouettes and result memorial described in the contracts. Keep UI scale; retain north-up gameplay and deterministic timing.
+
+**Blocking:** All implementation and delegation in Phase 14. No approval inferred from this written recommendation.
+
+### Historical authority summary — superseded for this pass
 
 **Updated:** 2026-09-08. Kevin authorizes feature completion and delegates non-art choices, to be logged and highlighted for later confirmation. This supersedes earlier individual phase/design approval stops. UI direction is explicitly gritty industrial sci-fi. **Final world art direction is now decided (D-120, resolving D-030)** — see `docs/art-direction-style-guide.md` and `docs/art-asset-pipeline.md`. That pass also produced two rule/UI decisions: D-121 (wedge destruction destroys occupants, with salvage refund) and D-122 (Alt-held tactical overlay); both need implementation.
 

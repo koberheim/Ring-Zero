@@ -1,6 +1,114 @@
-> Current authority ? 2026-09-08: Kevin has authorized autonomous release-candidate design, implementation, assets and QA on release/v1.0-candidate. Earlier phase approval stops are superseded within this branch. See docs/RELEASE-CANDIDATE.md and docs/RELEASE-REPORT.md for current scope, evidence and external release limitations. Historical entries below are preserved.
+> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Tasks
+
+## Phase 14 — Presentation performance (plan awaiting sign-off)
+
+**Updated:** 2026-09-09. **Current review:** D-135. No task below is assigned or begun. D-129/D-130/D-131 are resolved; D-132/D-133 are standing process corrections; D-134 covers provisional numeric presentation tuning. These task IDs were explicitly requested by Kevin for this planning phase. Earlier status summaries are historical; their RC label does not pass the open T-079 gate.
+
+All tasks inherit [the shared contract](docs/contracts/presentation-v3.md). Full dependencies, editable paths, output shape, evidence and failure handling are in each individual contract. The baseline is 42 suites, not the older 39. Astra reviews; agents implement.
+
+| ID | Task | Owner | Status | Notes |
+|---|---|---|---|---|
+| T-081 | Renderer, lighting and cache performance proof | Sol | ⚪ Not started | Stream A; [contract](docs/contracts/T-081-renderer-lighting.md). D-135 blocks delegation. |
+| T-082 | Distinct weapon, hit and death performance | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-082-combat-feedback.md). D-135 blocks delegation. |
+| T-083 | Ring collapse vertical slice and catastrophe gate | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-083-ring-collapse.md). D-135 blocks delegation. |
+| T-084 | Camera impulse and purposeful interface motion | Luna | ⚪ Not started | Stream B; [contract](docs/contracts/T-084-motion-language.md). D-135 blocks delegation. |
+| T-085 | Free online AI audio, score and event mix | Luna | ⚪ Not started | Stream C; [contract](docs/contracts/T-085-audio-design.md). D-135 blocks delegation. |
+| T-086 | CheckButton quick win and complete instrument theme | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-086-theme-toggles.md). D-135 blocks delegation. |
+| T-087 | Responsive native composition and correct map framing | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-087-responsive-layout.md). D-135 blocks delegation. |
+| T-088 | Start, HUD, pause, settings, controls and outcome composition | Luna | ⚪ Not started | Stream D; [contract](docs/contracts/T-088-screen-presentation.md). D-135 blocks delegation. |
+| T-089 | Fortress state, structural depth and remaining T-079 asset failures | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-089-fortress-readability.md). D-135 blocks delegation. |
+| T-090 | Swarm LOD and elite visibility at strategic zoom | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-090-swarm-lod.md). D-135 blocks delegation. |
+| T-091 | Readable ring integrity and power instrument | Terra | ⚪ Not started | Stream E; [contract](docs/contracts/T-091-integrity-instrument.md). D-135 blocks delegation. |
+| T-092 | Mechanic-led elite and Assembler art | Luna | ⚪ Not started | Stream F; [contract](docs/contracts/T-092-elite-art.md). D-135 blocks delegation. |
+| T-093 | Integrated acceptance, full-run QA and candidate decision | Sol; Astra reviews | ⚪ Not started | Stream ALL; [contract](docs/contracts/T-093-integrated-gates.md). D-135 blocks delegation. |
+
+### T-081 — Done condition
+
+Native six-ring before/after at fixed camera and all three palettes visibly shows a consistent core-to-frontier light gradient, form on one head at all twelve bearings, corona bleed and a bright weapon sample without bloomed text or clipped white hardware. Demonstrate cache coverage/invalidation under pan, zoom, Alt, damage, collapse, reduced motion and palette/HP changes. All 42+ suites and native cache checks pass. Every matched performance sample stays within the shared 10% envelope; otherwise STOP and report. Record the backend choice and exact project/SubViewport settings. No full art pass or downstream renderer integration before this gate passes.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** RC2/native Compatibility/lighting Compatibility/Mobile comparator captures, sample logs and delta table; all-palette six-ring lighting frame set; cache/pan/Alt clips. **Dependencies:** D-135; T-086's isolated toggle slice accepted. No D-layout lease active.
+
+### T-082 — Done condition
+
+A five-weapon blind clip set is correctly identified in at least 9/10 shuffled trials after one reference demonstration; no sound is needed for visual identity. Every actual hit retains its correct origin/target and damage tick; two simultaneous weapons remain distinguishable. Missing/dead target references, full effect pool, pause/quit/retry, reduced motion and effects-off are safe. Deaths do not spawn persistent nodes or mutate simulation state. 42+ suites and matched performance remain green.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Same-fixture five-weapon before/after sequences, mixed-combat recording, effects-off/reduced-motion comparison and pool lifetime/stress measurements. **Dependencies:** T-081 and early T-083 adapter accepted; T-087 layout and E's shared-view integration frozen; C/F assets admitted or explicit nonfinal adapter stubs used only in isolated development.
+
+### T-083 — Done condition
+
+Retain a native real-time video OR timestamped lossless frame sequence spanning at least 1 s before and 3 s after collapse, including simultaneous wedge losses, inner-ring collapse and final-core loss. A muted unlabeled clip lets Kevin/designated unfamiliar reviewer state that an entire ring was lost, locate it and distinguish it from one damaged wedge; failure blocks advancement. Check actual ring removal/occupants/rewards on the original simulation tick, one cosmetic collapse admission per event, bounded fragments and cleanup after pause/retry/quit. 42+ suites and performance pass. Early visual slice can be accepted separately, but T-083 is not Done until the final C sound and integrated sequence pass.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Matched RC2 and new collapse videos/frame sequences, reduced-motion and effects-off versions, event/tick logs, muted comprehension result and final audio version. **Dependencies:** T-081 accepted; starts before T-087's rewrite. Final audible acceptance also depends on T-085.
+
+### T-084 — Done condition
+
+Native before/after sequences show materially different small-hit and ring-collapse impulses without losing the aiming location. Reduced motion disables camera displacement and spatial UI transitions; essential states remain immediate. Fast repeated open/close/cancel and controller focus preserve action and screen order, with no leaked tweens/nodes or input lock. Stored result values never depend on the count-up. 42+ suites and native performance pass.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Same-event small/large impulse clips, reduced-motion and rapid navigation clips, pointer-transform/focus regression results. **Dependencies:** T-082, T-087 and T-088 static screen composition accepted; D hands shared files to B.
+
+### T-085 — Done condition
+
+Source register verifies $0 spend, generation/download availability, exact applicable commercial-use terms and any license eligibility; unresolved rights block asset admission. Five-minute headphones review and a fifteen-minute mixed-game recording show no obvious loop seam, clipping, repeated short stock-like cue fatigue or masked critical warning. A blind left/right danger test scores at least 9/10; five weapon identities score 9/10 after a reference. Different north/south threats have visual support because stereo alone cannot prove full 360-degree localization. Mute/bus sliders, saved levels, pause, rapid scene changes and quit pass; 42+ suites and native performance remain green. Human listening acceptance is recorded, not asserted by code.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Before/after native audio loopback on identical action traces, indexed cue audition reel, 5/15-minute mixes, source and edit manifest, bus/peak/voice-count measurements and listener results. **Dependencies:** D-135; D-130 source strategy resolved. Generation source admission must pass before using outputs. B's event contract for final wiring; exclusive integration lease for application/view hooks.
+
+### T-086 — Done condition
+
+Early toggle slice is separately reviewable with on/off/disabled/hover/focus before/after and actual settings persistence/input checks; no tiny default engine switch or arrow remains. Full completion requires a screen/widget state inventory with every used type accounted for, no unintended default icons/font fallbacks, readable disabled text and focus at 1080/1440 and 100/130% scale. 42+ suites pass; capture T-086 early slice before A begins. T-086 stays In progress until full theme integration passes.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Start/settings before/after plus native widget contact sheet covering all states, type/spacing token sheet and focus traversal clips. **Dependencies:** D-135 for the isolated first slice; remainder after T-081 and T-083 visual adapter freeze. No overlapping A lease.
+
+### T-087 — Done condition
+
+All screen matrix sizes in the shared contract have no clipped essential controls, overlapping labels or unreachable actions. Initial one-ring fortress is centered in usable map area at 1080/1440/ultrawide; user pan is never forcibly recentered by a frame update. Actual mouse/controller placement, WASD held movement, wheel zoom, radar focus, Alt labels and cancel work after repeated resizing and scale changes. Verify direct native buffers at 1080/1440; 4K layout is checked without asserting a 4K frame target. All 42+ suites, cache checks and required 1440p performance pass. Changes to viewport/cache dimensions cannot silently leave stale light or picking coordinates.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Matched screen matrix before/after, resize/picking video, viewport/buffer dimension log and performance/cache report. **Dependencies:** T-081 lighting/cache contract, T-083 early adapter and full T-086 tokens accepted. Exclusive D lease; A/B/E view writers stopped.
+
+### T-088 — Done condition
+
+Opening affordance, selected build, run goal, current threat and pause state can be located without scattered orphan labels. Start/options/results fit the shared native screen matrix including 130% scale; all controls are reachable by keyboard/controller. Peak image and radius graph match the actual recorded run; absent history is explicitly unavailable. Reward total equals the existing durable summary once, and zero-kill QA scenes are labeled in evidence. Victory, defeat, practice, abandonment, save-error and retry states all pass. Astra reviews actual captures; Kevin's final screen acceptance remains part of T-093. 42+ suites and performance pass.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Full screen before/after gallery, short controller navigation recording, real-run result example with peak/history verification and error/empty states. **Dependencies:** T-087 accepted; E supplies truthful radar/status projections; B/C supply frozen effects/audio IDs for final integration.
+
+### T-089 — Done condition
+
+A twenty-subject T-079 disposition matrix identifies the live replacement/path for each original candidate. Every applicable non-elite close, strategic, yellow-star, twelve-bearing/seating and material/repeat check passes; red/white palette compatibility is added. Critical wedge/bearing is correctly located within two seconds in at least 9/10 shuffled native strategic trials, color and grayscale. Broken wedges and disconnected lights match actual state during damage/repair/reclaim. Surfaces do not hide buildability or invert Tractor direction. 42+ suites and performance pass; unresolved original failures are blockers rather than renamed deferred watch items.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Original and live replacement asset matrix, all-bearing mounted contact sheets, six/twelve-ring state captures, seam/damage overlays and timed identification results. **Dependencies:** T-081 and T-087 frozen; D releases shared views. T-086 fonts/tokens; coordinate any Blender session with F.
+
+### T-090 — Done condition
+
+128-machine shipping and separately 800/1,000-machine live stress captures show the dominant threat bearing within two seconds in at least 9/10 shuffled trials. The historical 1,031-sprite diagnostic is reproduced separately and improved using the live LOD/elite projection; retain original composition and annotate changed presentation floors. Five elites and boss remain locatable in mixed crowds at 1080/1440 across three palettes and grayscale; floor is measured in physical pixels after UI/frame scale. LOD threshold crossings do not flicker or change state. 42+ suites and production performance pass; stress timing is reported separately and cannot be described as 128-cap shipping performance.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Shipping/stress/historical crowd before/after, physical-size measurements, zoom/pan threshold clips, density projection tests and timed trials. **Dependencies:** Pure new helper can be prepared after T-081 while D owns views; final integration after T-087 and F's T-092 assets/size metadata. No E view edits during D.
+
+### T-091 — Done condition
+
+At twelve rings, every band is at least 6 physical pixels at the 1080/1440 primary layouts, or an explicitly reviewed reflow preserves equivalent individual access. A shuffled healthy/critical/broken/relay-down/brownout fixture yields correct failing ring and bearing within two seconds in 9/10 trials, including grayscale/reduced motion. Click/focus mapping remains exact for all twelve rings and wedge boundaries after resize. No status is sourced from stale cached presentation. 42+ suites and performance pass.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Same-state before/after radar at 1/6/12 rings and 1080/1440/ultrawide, state symbol key, mapping checks and timed trials. **Dependencies:** T-087 layout rectangle and T-089 state mapping; T-086 tokens. E owns radar implementation, D later composes around its frozen preferred size.
+
+### T-092 — Done condition
+
+Before detailed production, six classes score at least 11/12 correct on a shuffled monochrome 16 px silhouette trial after a reference demonstration, with no recurrent Tunneler/Transfer/Breacher confusion. Kevin/designated reviewer supplies the human result. All final assets pass close, actual strategic physical floor, three star palettes, mixed swarm and all twelve bearings/live seating; motion does not detach pivots or reverse apparent heading. Boss reads as accreted machinery rather than a larger standard hull. Normals/emission have documented conventions and no black alpha fringe. 42+ suites, import/export validation and final E crowd gate pass. Any silhouette or T-079 identity failure is brought to Kevin before advancing.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Before/after unlabeled silhouettes, full-resolution contact sheet, native live all-bearing and three-palette crowd captures, animation frame strips/clips, source/prompts/hashes and model export recipe. **Dependencies:** D-131 resolved; D-135 approval. Early brief/silhouettes are disjoint from A/D; final in-engine acceptance needs T-081/T-087 and E's integration slot.
+
+### T-093 — Done condition
+
+Astra signs the per-task acceptance matrix from independent reproduction; all 42+ suites, identity/state/input/save checks and matched performance pass. All required human art/comprehension/listening results are recorded and passed. T-079 is explicitly closed, not merely referenced. Full-duration natural-run and defeat evidence is retained; diagnostic fixtures are labeled. Final package identifies the tested source and passes owned-window lifecycle and archive/hash checks. A failure means no new candidate label/package promotion and an immediate report to Kevin with the repair owner.
+
+**Reviewer:** Astra independently reproduces technical/visual checks; Kevin/designated reviewer supplies the named human result. **Evidence:** Final matrix/index with before/after per stream, full-run recordings/traces, aggregate tests, native timing deltas, memory/resource observations, package lifecycle results and hash manifest. **Dependencies:** All six streams accepted, including final T-083 sound, T-089 non-elite matrix, T-090 crowd gate and T-092 elite matrix; no unresolved acceptance failure.
+
+### Session record — 2026-09-09
+
+Plan and contracts prepared after full critique verification. No delegation/implementation performed. D-129 keeps 15-minute Containment for v1 only; post-v1 endless/survival has no implementation task here. D-130 now selects free online AI audio generation with $0 spend. D-131 grants silhouette-first elite/Assembler exceptions; wider D-120 stands. D-132 blocks RC promotion through failed acceptance; D-133 requires a formal decision before a spec departure; D-134 extends provisional numeric authority. T-079 remains failed until T-089/T-092's mapped asset checks and T-093's final review close it. The T-086 quick slice precedes T-081; the early T-083 visual gate precedes the broad layout rewrite. No task is called Done for a partial delivery.
+
+## Historical task records
+
+Earlier status summaries below are retained as history; the Phase 14 section above is current.
 
 | Marker | Status | Meaning |
 |---|---|---|

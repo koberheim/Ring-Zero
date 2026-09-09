@@ -1,6 +1,89 @@
-> Current authority ? 2026-09-08: Kevin has authorized autonomous release-candidate design, implementation, assets and QA on release/v1.0-candidate. Earlier phase approval stops are superseded within this branch. See docs/RELEASE-CANDIDATE.md and docs/RELEASE-REPORT.md for current scope, evidence and external release limitations. Historical entries below are preserved.
+> Current authority — 2026-09-09: Presentation performance pass is PLANNING ONLY, awaiting Kevin's sign-off. D-129/D-131 are resolved; D-134 extends provisional numeric authority. Creative/rule choices remain Kevin's. Astra writes contracts, delegates, reviews and integrates; agents implement. Failed acceptance gates block candidate promotion (D-132). Historical autonomy statements below do not override this instruction.
 
 # RING ZERO — Build plan
+
+## Phase 14 — Presentation performance and acceptance recovery
+
+**Updated:** 2026-09-09. **Status:** Plan ready for Kevin's review, not authorized for implementation. This is the active planning phase requested by Kevin, so T-081–T-093 are explicitly requested planning entries under D-002; they are not assignments or an unapproved future-mode backlog.
+
+The [verified critique](docs/reviews/critique-2026-09-09-verification.md) corrects the mandatory-renderer-switch and zero-animation premises while confirming the CheckButton gap and failed T-079 crowd gate. D-129 keeps the 15-minute v1 mode, D-130 selects free online AI audio, D-131 grants the elite exception, D-132 blocks candidate promotion through failed gates, D-133 requires formal spec departures, and D-134 delegates provisional presentation numbers. D-135 is the single pre-build sign-off.
+
+**Objective:** turn state depiction into convincing light, mass, action, threat and aftermath while keeping the existing game rules intact. All six workstreams must pass; the five quick wins are milestones, not a substitute for the rest. RC2 is the reference build, not evidence of visual acceptance. No new RC label is allowed while T-079 or any new required gate remains failed.
+
+### Six workstreams and ownership
+
+| Stream | Accountable implementer | Tasks | Dependencies and handoff | Exit check |
+|---|---|---|---|---|
+| A — Rendering and illumination | Sol, engine/performance | T-081 | After D's toggle-only slice; exclusive renderer/view lease. Freeze backend, cache/world ownership and material/light API before D layout. | Shared light across six rings and all palettes; normals/depth correct; world glow excludes UI; 42+ suites and every required sample within 10%. |
+| B — Combat, collapse and motion | Luna, feedback agent | T-082–T-084 | A first; early T-083 slice before D rewrite. Full combat/motion follows D/E integration and C's event/audio contract. | Distinct five-weapon clips; ring loss understood from muted sequence; coherent decaying impulse; reduced motion/input/cleanup correct. |
+| C — Sound design and score | Luna, audio agent | T-085 | D-130 resolved; source/license admission first. Isolated audio assets/helper can run alongside B/D/F. Shared view hooks get a later exclusive lease. | Free admitted sources, authored music/SFX identity, direction/priority/mix checks and human headphones review; no paid spend. |
+| D — Theme, layout and screen composition | Luna, UI agent | T-086–T-088 | Toggle-only first; full theme/layout after A and early B adapter. Screen composition after E's instrument API. No A/D overlap. | Complete control states; native responsive 1080/1440/ultrawide and correct transformed input; coherent start/HUD/pause/settings/results; human screen review. |
+| E — Fortress, swarm and integrity readability | Terra, faithful state projection | T-089–T-091 | New LOD helper can be prepared while D edits views. Integrate after T-087 and F's accepted asset handoff. State/rules read-only. | Threat/ring/bearing identified within two seconds; production and stress crowds distinguished; all non-elite T-079 failures closed. |
+| F — Elite/Assembler art and mechanical motion | Luna, technical-art agent | T-092 | Brief/silhouettes early, disjoint from runtime views. Exclusive Blender lease; final live acceptance with A/D/E. | Black/white identity first, then all-palette/all-bearing mixed-swarm gates, source/normal/emission/animation metadata complete. |
+
+T-093 is the final cross-stream verification task, owned by Sol for QA tooling/execution and reviewed by Astra; it is not a seventh implementation workstream. Astra delegates and reviews all deliveries and integrates accepted commits/logs. Astra does not implement fixes. Written contracts are in [docs/contracts/presentation-v3.md](docs/contracts/presentation-v3.md) and the individual T-081–T-093 files linked in TASKS.md.
+
+### Sequence and why it differs from the critique
+
+1. **After sign-off, T-086's isolated CheckButton/arrow slice first.** Capture on/off/disabled/focus states in the actual start/settings screens; land this small visible change without touching layout or renderer. T-086 is still incomplete until its full theme inventory passes.
+2. **Retire rendering risk immediately: T-081.** Establish the untouched RC2 control, demonstrate Compatibility glow/light composition, compare Mobile at the same intent, and choose the measured backend. A switch is an option, not a prerequisite: Godot 4.7 supports Compatibility glow. A >10% frame-budget result stops advancement and goes to Kevin, even if another mode looks faster. This phase includes the separate-World2D cache proof the critique missed.
+3. **Early collapse gate, with disjoint production in parallel.** B produces T-083's visual vertical slice and freezes its event/geometry adapter. C validates the free online audio route and builds its pilot bank. F makes silhouettes and depth models. Three agents plus Astra fill the available slots; no extra fan-out. Any failed acceptance check is reported immediately. Passing the visual slice allows the next milestone, but final audible collapse acceptance remains open until C integrates.
+4. **D completes theme and rewrites layout: T-086 remainder, then T-087.** C and F can continue only in their isolated files. No A or B edits to the views; D preserves their frozen interfaces. This order prevents a later wholesale rewrite from discarding finished UI motion.
+5. **E integrates fortress/readability, T-089–T-091.** It can prepare its pure LOD helper earlier if a slot frees, but cannot edit D's views. F supplies accepted silhouettes/assets/pivots for E's actual-size projection. F's final live gate and E's mixed-crowd gate are reviewed together: an asset handoff is a milestone, not a falsely completed T-092. D then takes back the views for T-088's static screen compositions.
+6. **C integrates final view/audio hooks, then B completes T-082/T-084 and final T-083.** These are separate exclusive leases, after D's static layout is frozen. D does not race B for the same files. Recheck all screen and performance gates on the final combination.
+7. **T-093 source freeze and release decision.** Clean import, all 42+ suites, native performance, resolution/controller/input/persistence matrix, unaccelerated full run, defeat/retry and repeated-session cleanup. Re-run every original T-079 row against the live replacement and record human art/comprehension/listening results. Only after all pass may the packaging owner create/promote a new candidate and run package lifecycle/hash checks.
+
+This order keeps the requested cheap visible fix first, the GPU/cache risk second and the spec's catastrophe-comprehension gate early. Audio and art production overlap with implementation where files are disjoint. Broad layout precedes detailed UI motion. It favors inspectable milestones over six agents editing presentation code at once.
+
+### Visual proposal for sign-off
+
+Keep D-120's lit industrial hardware over near-black void, D-123's 20-degree ground projection and the existing Barlow family. The hero is the player's constructed place illuminated by its star. Interface housings describe function: a thin telemetry instrument, a recessed build dock, tactile controls and a grounded message strip. Remove ornamental orphan rules, repeated full-panel shadows and redundant result totals. The main design emphasis is the fortress; text stays quiet, aligned and useful.
+
+Provisional semantic palette: Void **#05090D**, Housing **#101B25**, Recess **#172732**, Steel **#647C88**, Warm signal **#DFB36B**, Readout **#F0E5CB**. Existing cold-family threat hues remain governed by D-120/D-128/D-131; status has shape/pattern redundancy. Typography uses Barlow Regular for reading, SemiBold for actions and SemiCondensed for headings/instruments. Starting 1080p-equivalent type tokens: 16 secondary, 18 body, 24 instrument, 32 section, 72 title; spacing 4/8/12/16/24/32. Scale/reflow from these tokens; do not uniformly enlarge an already oversized 1440p form. Values are provisional under D-134, not new palette authority.
+
+Proposed arrangement:
+
+```text
+START                               LIVE
+[fortress/star hero] [operation]     [energy | integrity | pressure | time | pause]
+[title + short goal] [choices]       [build dock] [usable map / fortress] [integrity]
+[secondary navigation] [Start]       [context/help strip]                [threat]
+
+PAUSE                               RESULT
+[recognizable dimmed live fortress]  [peak fortress + radius history] [outcome]
+          [Resume]                  [single saved reward + details]  [Retry]
+          [Settings / Abandon]      [Return]
+```
+
+The proposed combat signatures and six elite silhouette motifs are stated explicitly in T-082/T-092. The audio character, free tools, prompts and production steps are in [docs/audio-generation-plan.md](docs/audio-generation-plan.md). Approving D-135 approves these bounded presentation proposals; new creative/rule choices still return to Kevin.
+
+### Performance, evidence and release checks
+
+Reference: [native-performance.txt](docs/reviews/presentation-v2/native-performance.txt), Godot 4.7.2/RTX 4080, native 2560×1440, 12 rings/128 actors/effects on/zoom 0.41. Median 16.668 ms; p95 16.760 ms; max 18.489 ms. Maximum permitted matched frame times are **18.3348 / 18.4360 / 20.3379 ms** respectively. Simulation/wall ratio must remain >=0.99. Three paired samples are retained individually. A failing sample is reported rather than averaged away; environment mismatch prevents a claimed comparative pass. Add uncapped headroom diagnostics and the pan/Alt cases without replacing the requested baseline.
+
+Retain all **42** RC2 suites and add meaningful regressions for changed behavior. A failure returns to the owner, not a weakened test. Later lighting effects, larger responsive buffers, audio and LOD can also regress performance, so recheck on each integrated stream, not only after the backend decision. The shipping cap stays 128; 800/1,000 live actors and the 1,031-sprite T-079 crowd are explicitly separate stress/visual fixtures.
+
+Every stream has matched native before/after evidence under `docs/reviews/presentation-v3/`, using the existing release harness's root-viewport capture method. T-083 includes timestamped motion evidence; C includes audio, not screenshots masquerading as listening evidence. Primary checks cover 1080p, 1440p, 21:9, 100/130% UI scale, all star palettes, controller/keyboard/mouse, reduced motion and effects-off. T-087 additionally checks 720p compatibility, 16:10 and 4K layout/input; it does not promise 4K frame rate on untested hardware.
+
+Human comprehension/readability/listening gates are specified in contracts. Astra inspects and tests independently; Kevin or his designated reviewer supplies the human results. No outside messages are sent to recruit reviewers. Final acceptance cannot be invented by an agent. D-132 prohibits promotion with any required pending/failed gate.
+
+### Scope boundaries and known contingencies
+
+- No spec edits, endless/survival mode, new campaign/enemy catalogue, altered victory/routing/damage, higher production cap, outermost-only Wall rule or gameplay slow motion. Endless/survival remains post-v1 by D-129.
+- Keep UI scale and existing control remapping/controller support. Responsive layout must preserve access rather than cut options.
+- Use bounded read-only run history for outcome presentation; it neither changes rewards nor pretends a fixture is a full run.
+- Free online audio availability and exact license eligibility remain source checks, not assumed facts. Failure is reported; no paid fallback is authorized.
+- Blender is for reproducible models, normals and motion where needed. F owns the live-session lease; E's structural asset work uses a later reserved slot if needed. Never overwrite Kevin's current file.
+- The T-079 gate includes all original subjects, not just the six elite/boss assets. Explicit live replacements can close obsolete-candidate rows only with equivalent tests.
+- Steam account activation, publishing and unsupported commercial-quality claims are not automatically cleared by these presentation gates.
+
+### Session record — 2026-09-09
+
+Astra read the complete supplied critique first, checked cited code and original evidence, corrected its renderer/zero-animation/current-size premises, confirmed the CheckButton and historical art failures, and identified separate-World2D cache interaction as an additional risk. Current retained baseline is 42/42. D-129/D-131 were recorded from Kevin's supplied resolutions; D-130 was subsequently resolved to free online AI generation. Two standing process corrections and numeric authority are recorded in D-132–D-134. Task contracts are written before delegation. No feature code, assets, runtime settings or package was changed. **STOP: present this plan and await D-135 sign-off.**
+
+## Historical plan and session records
+
+The earlier phase/status summaries below are historical. Phase 14 above is the current authority and review state.
 
 **Updated:** 2026-09-08
 **Authority:** [RING ZERO Design Spec.txt](RING%20ZERO%20Design%20Spec.txt), v0.1, read end to end.
