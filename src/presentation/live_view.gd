@@ -191,6 +191,9 @@ func _simulation_tick(delta_seconds: float) -> void:
 			var payload := simulation.pool.payload_for(id)
 			effect_grid.ring_count = maxi(1,payload.position.ring)
 			effect_positions[id] = effect_grid.polar_to_world(payload.position)
+	# Successful step replaces state. Retain its prior reference only until the
+	# presentation hook has copied geometry lost by this exact committed tick.
+	var before_state: Dictionary = simulation.state
 	var result := simulation.step(delta_seconds)
 	simulation_cpu_usec += Time.get_ticks_usec() - started
 	if not result.ok:
@@ -202,6 +205,7 @@ func _simulation_tick(delta_seconds: float) -> void:
 		feedback_label.text = "Live test stopped. Simulation error."
 		return
 	var events: Dictionary = result.events
+	_presentation_committed_tick(before_state,events,simulation._ticks)
 	_capture_hits(events)
 	run_kill_count += events.kill_ids.size()
 	if events.core_lost:
@@ -219,6 +223,9 @@ func _simulation_tick(delta_seconds: float) -> void:
 	elif not events.walls_broken.is_empty():
 		var cell: Vector2i = events.walls_broken.back()
 		feedback_label.text = "Wall on ring %d / wedge %d broken." % [cell.x, cell.y]
+
+func _presentation_committed_tick(_before: Dictionary, _events: Dictionary, _tick: int) -> void:
+	pass
 
 # Called after simulated ticks, or explicitly after isolated test fixture setup.
 func sync_simulation() -> void:

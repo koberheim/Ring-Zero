@@ -8,7 +8,9 @@ var machines := {}
 var sun: Sprite2D
 var sun_phase := 0.0
 var tactical := false
-var destruction: Array[Dictionary] = []
+const CollapseFeedback = preload("res://src/presentation/effects/collapse_feedback.gd")
+var collapse_feedback := CollapseFeedback.new()
+var collapse_simulation: LiveSimulation
 var objective: Label
 var direction_cache := {}
 var arc_cache := {}
@@ -147,16 +149,15 @@ func _input(event: InputEvent) -> void:
 	super._input(event)
 
 func _process(delta: float) -> void:
+	if collapse_simulation != simulation:
+		collapse_feedback.clear()
+		collapse_simulation = simulation
 	super._process(delta)
 	_refresh_board_cache()
 	if not get_tree().paused:
 		if not interface_settings.reduced_motion: sun_phase += minf(delta,0.05)
-		for effect in destruction: effect.life -= delta
-		destruction = destruction.filter(func(effect): return effect.life > 0)
-		camera.offset = Vector2.ZERO
-		if not destruction.is_empty() and not interface_settings.reduced_motion:
-			var strength: float = minf(1.0,destruction[-1].life)*2.0/camera.zoom.x
-			camera.offset = Vector2(sin(sun_phase*71),cos(sun_phase*53))*strength
+	collapse_feedback.advance(delta,get_tree().paused,interface_settings.effects)
+	camera.offset = collapse_feedback.camera_impulse(camera.zoom,interface_settings.reduced_motion,interface_settings.effects)
 	if sun != null:
 		sun.material.set_shader_parameter("phase",sun_phase)
 		sun.material.set_shader_parameter("activity",clampf(float(simulation.elapsed_seconds)/900.0,0.2,1.0))
@@ -179,13 +180,25 @@ func _simulation_tick(delta: float) -> void:
 	super._simulation_tick(delta)
 	if simulation != null and not simulation.run_is_practice and simulation.elapsed_seconds >= RunRules.OPERATION_SECONDS:
 		clock.paused = true
-	if application_host == null or not last_error.is_empty(): return
-	var events: Dictionary = simulation.last_events
-	if not events.hits.is_empty(): application_host.audio.play("shot")
-	if not events.broken_wedges.is_empty() or not events.collapsed_rings.is_empty():
-		application_host.audio.play("breach")
-		for cell in events.broken_wedges:
-			if destruction.size() < 32: destruction.append({"point":grid.polar_to_world(PolarPosition.new(cell.x,cell.y,0.95,0.5)),"life":1.2})
+
+func _presentation_committed_tick(before: Dictionary, events: Dictionary, tick: int) -> void:
+	if collapse_simulation != simulation:
+		collapse_feedback.clear()
+		collapse_simulation = simulation
+	var cues := collapse_feedback.admit(before,events,tick)
+	if not interface_settings.effects: collapse_feedback.events.clear()
+	if application_host == null: return
+	if not events.hits.is_empty(): application_host.audio.play("shot") # T-082 replaces weapon compatibility.
+	for cue in cues:
+		var screen_point: Vector2 = get_viewport().get_canvas_transform()*cue.point
+		var pan := clampf(screen_point.x/get_viewport_rect().size.x*2.0-1.0,-1,1)
+		application_host.audio.emit_cue(cue.id,pan,1.0)
+
+func apply_interface_settings(settings: Dictionary) -> void:
+	super.apply_interface_settings(settings)
+	if collapse_feedback != null:
+		if not settings.effects: collapse_feedback.events.clear()
+		if camera != null and (settings.reduced_motion or not settings.effects): camera.offset = Vector2.ZERO
 
 func _record_command(action: String, args: Dictionary, result: Dictionary) -> Dictionary:
 	if application_host != null and result.ok: application_host.audio.play("solar" if action == "cast_ability" else "build")
@@ -561,9 +574,4 @@ func _draw_combat_feedback() -> void:
 			draw_polyline(outline,Color(COLD,0.75),1/zoom,true)
 			if kind == "breacher": draw_line(Vector2(-radius,0),Vector2(radius,0),COLD,1/zoom)
 		draw_set_transform(Vector2.ZERO)
-	if not interface_settings.reduced_motion:
-		for effect in destruction:
-			var age: float = 1.2-effect.life
-			for index in 8:
-				var point: Vector2 = effect.point+Vector2.from_angle(index*TAU/8)*age*35
-				draw_line(point,point+Vector2(3,4),Color(WARM,effect.life/1.2),2)
+	if interface_settings.effects: collapse_feedback.draw(self,zoom,interface_settings.reduced_motion,{"heads":heads,"mount":mount,"bands":band_textures,"wall":wall_texture,"terrain":terrain_textures})
