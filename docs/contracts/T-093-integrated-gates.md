@@ -10,6 +10,8 @@ All six streams accepted, including final T-083 sound, T-089 non-elite matrix, T
 
 ## Editable scope
 
+**Isolated harness preparation lease — Astra, 2026-09-09, base `f8411ff`:** Sol/A may implement a new task-specific natural-run/strategy harness and evidence under T-093 while B/E/D implement disjoint source. Existing gameplay, presentation, export metadata and old diagnostic fixtures remain read-only. No Godot execution until the current runtime owner explicitly hands off; no claim of final integrated acceptance from preparation. Preserve the natural-run constraints below. Full native execution follows final interfaces; preparing this test does not waive human/source gates or permit RC promotion.
+
 tests/presentation/ and tests/performance/ targeted final harness work; scripts/ existing test/export/package tools if required by changed layout; docs/reviews/presentation-v3/; final release report and package metadata only after gate approval. Feature fixes return to their owners.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.
@@ -27,6 +29,10 @@ Astra signs the per-task acceptance matrix from independent reproduction; all 42
 Final matrix/index with before/after per stream, full-run recordings/traces, aggregate tests, native timing deltas, memory/resource observations, package lifecycle results and hash manifest. Save under `docs/reviews/presentation-v3/T-093/`, including a pass/fail table, actual commands, source identity and the shared fixture metadata. Preserve before evidence.
 
 ## Handoff and review
+
+Continuation preparation (Astra source audit): `tests/performance/play_operation.gd` is an accelerated deterministic purchase bot, not native full-duration evidence. `test_release_candidate.gd` and `capture_release.gd` explicitly assign elapsed_seconds=900 and remain diagnostic lifecycle fixtures only. Final QA needs a separate native application harness with real fixed-step wall pacing, no elapsed/core/energy/target state assignments after a normal start, and logged successful/failed ordinary player commands. A deterministic strategy may be rehearsed separately to choose a legitimate sequence; preserve those outcomes and label the automated player. Final evidence records at least the complete natural run, actual outcome, pause/retry behavior, simulation versus monotonic wall time, frame timestamps/video and independent persisted reward readback. Do not assert victory merely because a harness loop reached its end. The isolated test profile must not alter the user profile.
+
+The existing `scripts/smoke_targeted.ps1` assumes a2560x1440 logical frame and scales input to it; after T-087, adapt this owned-window checker to measured native client coordinates. Keep PID/window guards and avoid global input/focus. Existing export tooling uses pinned Mono4.7.2 templates while gameplay probes use standard4.7.2; record both identities and verify the actual exported backend. Do not update RC metadata or promote the package while source/human gates remain pending.
 
 Plain-English executive report of choices, implementation architecture by owner, asset/audio provenance, provisional values, exclusions, evidence and remaining external Steam/commercial requirements.
 

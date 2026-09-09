@@ -324,3 +324,5 @@ Presentation replacement completed - 2026-09-08: version 1.0.0-rc2 now renders a
 
 
 **2026-09-09 art/preparation checkpoint:** F delivered six detailed Blender mechanisms with eight poses each and24 aligned atlases; Astra inspected form/material sheets and independently verified281 hashes. Asset interface accepted provisionally for E; human and native crowd gates remain pending. E receives isolated readability-helper/audit preparation only; D receives read-only theme/layout preparation using the frontend-design skill. B alone owns shared views/runtime until early collapse handoff.
+
+**2026-09-09 next integration checkpoint:** B source67a49cb passed full47/47 and independent native40/40; E preparationf97dcf7 independently2690/2690 and D memory4704c1d independently24/24. Canonical and bounded collapse timings pass; dense120-hardware collapse111.127ms remains an explicit failure with B profiling ownership. D now owns full theme/native layout/runtime, E only new versioned structural assets. Human/audio/final-core integration gates remain pending. No T083 completion, T079 closure or candidate promotion is claimed.

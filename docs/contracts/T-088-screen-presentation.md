@@ -10,6 +10,8 @@ T-087 accepted; E supplies truthful radar/status projections; B/C supply frozen 
 
 ## Editable scope
 
+**Isolated D helper preparation — Astra, 2026-09-09:** While B finishes collapse, D may implement new `src/presentation/ui/run_memory.gd` and a focused task-specific test/evidence file. This helper accepts truthful samples/captured images supplied by a future host, bounds retained history/image memory, handles reset/no-data/actual peak identity, and never writes simulation/progression. No view hook or existing source edits yet. Native image capture and composition still wait for the full D lease; Godot runs require the current owner's explicit handoff. Do not call a supplied diagnostic sample natural-run evidence.
+
 application.gd/live_view.gd/release_view.gd/instrument_strip.gd in exclusive D screen lease; new src/presentation/ui/ and bounded run-memory helper; task-specific screen tests. No persistent progression/schema changes without review.
 
 All other files are read-only unless Astra revises the contract before granting a new lease. No owner writes the three planning logs; submit delivery facts for Astra to review and record.

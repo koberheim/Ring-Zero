@@ -6,11 +6,15 @@ This task inherits [the shared Phase 14 contract](presentation-v3.md), including
 
 ## Dependencies
 
+**Active full D lease — Astra, 2026-09-09:** B's corrected early event adapter is reviewed and source frozen; root independently passed native40/40, E2690/2690 and D memory24/24, with full47/47 checkpoint. D now owns all editable paths below, the approved scope extensions, `industrial_theme.gd`, new `ui_tokens.gd`, UI controls and task-specific T-086/T-087 fixtures/evidence. Root accepts the compact token/layout plan in the preparation notes for implementation. Complete theme/native layout first, preserve B's per-tick hook and A's paired caches, then freeze usable-map/input/token APIs for E. T-088 shared screen integration follows that review; its isolated memory helper is already accepted. D receives the sole Godot runtime lease after root's completed checks. E may produce only new unreferenced assets in parallel. Request all-work freeze before performance. B's dense transient111ms failure remains open for profiling, and human/source gates remain pending; continuation does not waive them.
+
 T-081 lighting/cache contract, T-083 early adapter and full T-086 tokens accepted. Exclusive D lease; A/B/E view writers stopped.
 
 ## Editable scope
 
 **Reviewed later D scope extension — Astra, 2026-09-09:** Once the full D lease activates, include `src/presentation/controller_pointer.gd` for native physical-pixel speed and resize clamping. Include `src/core/pc_settings.gd` only for backward-compatible independent `[audio]` UI/Ambience keys, with absent-key defaults inherited from loaded Effects/Music; no profile/cloud/input-schema change. Include `src/presentation/game_audio.gd` only for saved bus mapping and approved C integration. C's runtime is frozen; preserve director/source admission behavior. This is scope preparation, not authority to edit while B holds views.
+
+Include the factual fixed-resolution description in `scripts/README.md` and task-specific updates to obsolete fixed-stage assertions in `test_application.gd`/`test_native_presentation.gd`, replaced by stronger current native-buffer/state/input checks. Preserve unrelated assertions and old diagnostic evidence.
 
 src/presentation/application.gd; src/presentation/live_view.gd; src/presentation/release_view.gd; src/presentation/camera_navigation.gd; src/presentation/instrument_strip.gd; scenes/application.tscn/project.godot only for approved layout/stretch settings. Task-specific layout/input tests. Preserve A's renderer choice.
 
