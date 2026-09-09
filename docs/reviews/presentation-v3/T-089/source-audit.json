@@ -1,0 +1,189 @@
+﻿{
+    "schema":  "ring-zero-t089-source-audit/1",
+    "recorded_utc":  "2026-09-09T04:23:18.0915512Z",
+    "preparation_base":  "c76a45c",
+    "current_head":  "f8411ff72f7d382bb0182ac5d088f745154e2603",
+    "release_view_sha256":  "09be47e95e499a85356f68bf2a341ba9c0212432dba7ba2d88a56b795420dc86",
+    "twenty_subjects":  [
+                            {
+                                "name":  "Hot band",
+                                "original_path":  "assets/art/bands/band_hot_01.png",
+                                "original_sha256":  "623844d03311a1fad5c8f752d5f6f5b9f23d4fa8be22f64b1414f42d4f8d8a0e",
+                                "current_sha256":  "623844d03311a1fad5c8f752d5f6f5b9f23d4fa8be22f64b1414f42d4f8d8a0e",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Cold band",
+                                "original_path":  "assets/art/bands/band_cold_01.png",
+                                "original_sha256":  "e795e107172fcf8d8f0ed7754d5de647e8d618afcc1e834c845915d73dd49ab8",
+                                "current_sha256":  "e795e107172fcf8d8f0ed7754d5de647e8d618afcc1e834c845915d73dd49ab8",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Damage sheet",
+                                "original_path":  "assets/art/decals/damage_sheet_01.png",
+                                "original_sha256":  "340289604756b0fe47730fb138fbd0328e9ddf6cc19488a5bc2f9af8833da2ed",
+                                "current_sha256":  "340289604756b0fe47730fb138fbd0328e9ddf6cc19488a5bc2f9af8833da2ed",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Flak",
+                                "original_path":  "assets/art/buildings/head_flak.png",
+                                "original_sha256":  "1fd19c9eefdd0b96e1e5737d5ef72adf46b57fa4c584386ce94ebb4c3c8941c2",
+                                "current_sha256":  "1fd19c9eefdd0b96e1e5737d5ef72adf46b57fa4c584386ce94ebb4c3c8941c2",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "EMP Node",
+                                "original_path":  "assets/art/buildings/head_emp_node.png",
+                                "original_sha256":  "3c73e93cfc37602d023a3e2ebd6b50143dee89af8126e8df83bcf3817ba5081a",
+                                "current_sha256":  "3c73e93cfc37602d023a3e2ebd6b50143dee89af8126e8df83bcf3817ba5081a",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Lance Emitter",
+                                "original_path":  "assets/art/buildings/head_lance_emitter.png",
+                                "original_sha256":  "ceb4bb9356e9d00f4dc3da56f59fa9910b6a3ee5fee86cb628e44884d934ab0c",
+                                "current_sha256":  "ceb4bb9356e9d00f4dc3da56f59fa9910b6a3ee5fee86cb628e44884d934ab0c",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Point Defense",
+                                "original_path":  "assets/art/buildings/head_point_defense.png",
+                                "original_sha256":  "7248a3fa3ed3beaa3db7140b256d7a78200905144491c73b96ccdd5c1322a230",
+                                "current_sha256":  "7248a3fa3ed3beaa3db7140b256d7a78200905144491c73b96ccdd5c1322a230",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Relay",
+                                "original_path":  "assets/art/buildings/head_relay.png",
+                                "original_sha256":  "7e66c705925a0ac8cd512d61d41c1ee55b3319c9b29d85092120d023590ea97b",
+                                "current_sha256":  "7e66c705925a0ac8cd512d61d41c1ee55b3319c9b29d85092120d023590ea97b",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Repair Node",
+                                "original_path":  "assets/art/buildings/head_repair_node.png",
+                                "original_sha256":  "5b6122d2034825d34bc4864e9b5f5dfe07b547a8cb6de4b2adade9cf32533c62",
+                                "current_sha256":  "5b6122d2034825d34bc4864e9b5f5dfe07b547a8cb6de4b2adade9cf32533c62",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Armor Plating",
+                                "original_path":  "assets/art/buildings/head_armor_plating.png",
+                                "original_sha256":  "791872e2daf362799e229d5d254b93d6455c192b63b1be2baf365296753f6b81",
+                                "current_sha256":  "791872e2daf362799e229d5d254b93d6455c192b63b1be2baf365296753f6b81",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Deflector Wall",
+                                "original_path":  "assets/art/walls/wall_deflector_01.png",
+                                "original_sha256":  "de09adaeae07bb6a9888a364d636222cd8c8f292732d58ef7f3d5383f34025e1",
+                                "current_sha256":  "de09adaeae07bb6a9888a364d636222cd8c8f292732d58ef7f3d5383f34025e1",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Debris Field",
+                                "original_path":  "assets/art/terrain/terrain_debris_field_01.png",
+                                "original_sha256":  "3b28a81f0c1f05dc6b9ed84d7709cddc0e82590c5354dcc91a3774b81405d2a2",
+                                "current_sha256":  "3b28a81f0c1f05dc6b9ed84d7709cddc0e82590c5354dcc91a3774b81405d2a2",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Tractor Lane",
+                                "original_path":  "assets/art/terrain/terrain_tractor_lane_01.png",
+                                "original_sha256":  "774e0ff78852afe37d0e75211290be8c35cad01c2c661eeca4658513daf0f4de",
+                                "current_sha256":  "774e0ff78852afe37d0e75211290be8c35cad01c2c661eeca4658513daf0f4de",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Occlusion Screen",
+                                "original_path":  "assets/art/terrain/terrain_occlusion_screen_01.png",
+                                "original_sha256":  "d1e0ad93be34a991ec58d0937c50c5a6b0aa12e74f2291fb7dde33c98e928b87",
+                                "current_sha256":  "d1e0ad93be34a991ec58d0937c50c5a6b0aa12e74f2291fb7dde33c98e928b87",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Tunneler",
+                                "original_path":  "assets/art/machines/elite_tunneler.png",
+                                "original_sha256":  "89a3cbf0543127e3110a032dc11cdf8a712927e4dd9d9ef1bec56c385f530a6b",
+                                "current_sha256":  "89a3cbf0543127e3110a032dc11cdf8a712927e4dd9d9ef1bec56c385f530a6b",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Transfer",
+                                "original_path":  "assets/art/machines/elite_transfer.png",
+                                "original_sha256":  "81289545c1df792b1e2a3d9bd8f551350ee66bb4fd6ae690d8c6f45d9a229611",
+                                "current_sha256":  "81289545c1df792b1e2a3d9bd8f551350ee66bb4fd6ae690d8c6f45d9a229611",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Foundry",
+                                "original_path":  "assets/art/machines/elite_foundry.png",
+                                "original_sha256":  "e03a729a3460d00613d81dfd6a26234dfe49db046b17693a77fb073a1adf315f",
+                                "current_sha256":  "e03a729a3460d00613d81dfd6a26234dfe49db046b17693a77fb073a1adf315f",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Sapper",
+                                "original_path":  "assets/art/machines/elite_sapper.png",
+                                "original_sha256":  "752bd5b01b3f837188128353c8117477215bbe64e134c8c926bd8ef4ee76f112",
+                                "current_sha256":  "752bd5b01b3f837188128353c8117477215bbe64e134c8c926bd8ef4ee76f112",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Breacher",
+                                "original_path":  "assets/art/machines/elite_breacher.png",
+                                "original_sha256":  "2c48af948956af0c296929b4722a2e15a86ff8045a83470d957ab8eb30dfccbc",
+                                "current_sha256":  "2c48af948956af0c296929b4722a2e15a86ff8045a83470d957ab8eb30dfccbc",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            },
+                            {
+                                "name":  "Assembler",
+                                "original_path":  "assets/art/machines/assembler.png",
+                                "original_sha256":  "1deeadabe8c1cb97f129387f59c593664ea4ce4db1d1989559ad5873a94e226c",
+                                "current_sha256":  "1deeadabe8c1cb97f129387f59c593664ea4ce4db1d1989559ad5873a94e226c",
+                                "original_unchanged":  true,
+                                "native_current_acceptance":  "PENDING",
+                                "original_report":  "docs/reviews/T-079-production-assets.md"
+                            }
+                        ]
+}

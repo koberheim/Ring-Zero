@@ -1,0 +1,113 @@
+﻿{
+    "schema":  "ring-zero-t090-preparation/1",
+    "recorded_utc":  "2026-09-09T04:24:09.7599437Z",
+    "source_base":  "c76a45c",
+    "status":  "LOGICAL PREPARATION PASS; INTEGRATION AND HUMAN GATES PENDING",
+    "artifacts":  [
+                      {
+                          "path":  "src/presentation/readability/swarm_lod.gd",
+                          "bytes":  6074,
+                          "sha256":  "ae49a76b614e6cb52e1c880cd4786c97ef184728f8c825df49b72b143c810069"
+                      },
+                      {
+                          "path":  "src/presentation/readability/fortress_status.gd",
+                          "bytes":  1730,
+                          "sha256":  "8a8a4c0b030b7f2bccaddc857bd9434494c8d0e4db499a4923eab089a5496a13"
+                      },
+                      {
+                          "path":  "src/presentation/readability/integrity_layout.gd",
+                          "bytes":  1816,
+                          "sha256":  "6308e18f4bd97f156c53da2894d0209a12c5f4dc70033435e30c352f037144a5"
+                      },
+                      {
+                          "path":  "tests/presentation/test_t090_readability.gd",
+                          "bytes":  8478,
+                          "sha256":  "95c3f4942da2d0d117b2bda8addfd8b0375eac6383195e1b9fa930e09fc5dee5"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-089/.gdignore",
+                          "bytes":  1,
+                          "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-089/preparation-disposition.md",
+                          "bytes":  8191,
+                          "sha256":  "eee0ac2d4def5e01f5ba45c3e8489cc2a5c1e6c9de002c863de48ee232a2cba6"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-089/source-audit.json",
+                          "bytes":  14060,
+                          "sha256":  "af5804f51932d1dd6fded1a65dd81bc41944074c46e859876082b6a6566d9eb5"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/.gdignore",
+                          "bytes":  1,
+                          "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-01.command.json",
+                          "bytes":  701,
+                          "sha256":  "25bfa10ae1ed7ef68bcd8d1545cc40ba2ac42cd9526be78afccb0f96582d0157"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-01.engine.log",
+                          "bytes":  1151,
+                          "sha256":  "c1485d1c80813dc6efaca479b5a5b4f8a716da753eb20a0041f4424f7f76348f"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-01.stderr.log",
+                          "bytes":  1037,
+                          "sha256":  "545bc820fc51e75d948e5ebfdac74446de6584ac303102d014b7a03ec7a60f09"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-01.stdout.log",
+                          "bytes":  130,
+                          "sha256":  "e5bec72cab666cca7377baa4cc143d32e9e027c21c4204f60f9a847a6ef876d4"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-02.command.json",
+                          "bytes":  701,
+                          "sha256":  "5d98dd55d0f97e3268718ba6ffd47a3bc120270cacded4367946074d0873f091"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-02.engine.log",
+                          "bytes":  250,
+                          "sha256":  "87d80385ec110ddab808150065f4753cf3637e2e0a34c311b57cba1680fdfd08"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-02.stderr.log",
+                          "bytes":  125,
+                          "sha256":  "354f6b41afac0af85c870c4ddfdbe208e44ad5223ae6d89aba867d4090718998"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-02.stdout.log",
+                          "bytes":  130,
+                          "sha256":  "8ddc5732aff35099219588b8a39ac4f4a754259e66bc536f7a2f6783faafe559"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/PREPARATION-HANDOFF.md",
+                          "bytes":  4463,
+                          "sha256":  "2ac56b3f83a3683069212192c905e9cf834d31aa6b606196b2543ddda9b7b37f"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/preparation-test-results.md",
+                          "bytes":  2682,
+                          "sha256":  "e3a1c73c24b086e28c70b4f21b5ecdb41deba93810f7045fd196acba3f792073"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-090/run-preparation.ps1",
+                          "bytes":  2005,
+                          "sha256":  "eab4adbbd26d2c8aff77c90b63b961e686ab22300f049771199cd20b28dda9dc"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-091/.gdignore",
+                          "bytes":  1,
+                          "sha256":  "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+                      },
+                      {
+                          "path":  "docs/reviews/presentation-v3/T-091/PREPARATION-HANDOFF.md",
+                          "bytes":  2818,
+                          "sha256":  "08131abcb6c4c60e755f90d17e25a9aeb0480dabef75c29c7ada957a3bb00193"
+                      }
+                  ]
+}
